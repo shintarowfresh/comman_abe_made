@@ -549,6 +549,7 @@
             width: 50%;
             padding: 2em 15px;
             text-align: center;
+            height: 750px;
 
             &:first-child {
                 border-right: 5px solid $bg-color;
@@ -613,7 +614,7 @@
         }
 
         &.company .content {
-            background-image: url(../img/page-head-03.jpg);
+            background-image: url(../img/page-head-07.jpg);
         }
         &.contact .content {
             background-image: url(../img/page-head-05.jpg);
@@ -621,6 +622,12 @@
         &.works .content {
             background-image: url(../img/page-head-02.jpg);
         }
+    }
+
+    .post-type-archive-work .content {
+        background-image: url(../img/page-head-06.jpg);
+        background-repeat: no-repeat;
+        background-position: top right;
     }
 
     /*カンマンに出来ることページの調整*/
