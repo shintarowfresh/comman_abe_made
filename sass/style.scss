@@ -267,6 +267,16 @@
         }
     }
 
+    /*お見積もり価格表調整*/
+    .price {
+        .three-one {
+            .three >li {
+                width: 96% ;
+                display: block ;
+            }
+        }
+    }
+
 
 }//600
 
@@ -589,6 +599,30 @@
         background-size: 120px;
     }
 
+
+    /*下層ページの背景*/
+    .page {
+        .content {
+            background-image: url(../img/page-head-01.jpg);
+            background-repeat: no-repeat;
+            background-position: top right;
+        }
+
+        &.price .content {
+            background-image: url(../img/page-head-04.jpg);
+        }
+
+        &.company .content {
+            background-image: url(../img/page-head-03.jpg);
+        }
+        &.contact .content {
+            background-image: url(../img/page-head-05.jpg);
+        }
+        &.works .content {
+            background-image: url(../img/page-head-02.jpg);
+        }
+    }
+
     /*カンマンに出来ることページの調整*/
     .page-template-no-sidebar-php {
         .content {
@@ -747,6 +781,16 @@
         width: 300px;
         padding-bottom: 30px;
         display: block;
+    }
+
+    /*お見積もり価格表調整*/
+    .price {
+        .three-one {
+            .three >li {
+                width: 29.8%;
+                display: inline-block;
+            }
+        }
     }
 
 
