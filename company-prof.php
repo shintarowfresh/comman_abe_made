@@ -17,7 +17,11 @@
     <div class="inner">
 
         <div class="section">
-            <h2 class="sec_title"><i class="fa fa-file-image-o"></i>会社近景</h2>
+
+            <div class="hr">
+                <span class="line"></span>
+                <h6>会社近景</h6>
+            </div>
 
             <div class="my-gallery swipeshow">
                 <ul class="slides">
