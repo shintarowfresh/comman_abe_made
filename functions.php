@@ -277,3 +277,15 @@ function SearchFilter($query) {
 }
 
 add_action( 'pre_get_posts','SearchFilter' );
+
+
+//bodyのクラスにページスラッグ
+function pagename_class($classes = '') {
+    if (is_page()) {
+        $page = get_page(get_the_ID());
+        $classes[] = $page->post_name;
+    }
+    return $classes;
+}
+
+add_filter('body_class','pagename_class');
