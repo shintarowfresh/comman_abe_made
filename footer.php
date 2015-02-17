@@ -12,10 +12,14 @@
         <div class="social content_width">
 
             <div class="inner">
+
                 <div class="sns-section">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/sns-tw-head.jpg" alt="カンマンのTwitter">
                     <a class="twitter-timeline" href="https://twitter.com/konkatsusns/lists/comman-staff" data-widget-id="555579654145200128">https://twitter.com/konkatsusns/lists/comman-staffのツイート</a>
                 </div>
+
                 <div class="sns-section">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/sns-fb-head.jpg" alt="カンマンのfacebookページ">
                     <div class="fb-like-box" data-href="https://www.facebook.com/comman.inc" data-height="450" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="false"></div>
                 </div>
             </div>
@@ -27,10 +31,14 @@
         <div class="social content_width">
 
             <div class="inner">
+
                 <div class="sns-section">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/sns-tw-head.jpg" alt="カンマンのTwitter">
                     <a class="twitter-timeline" href="https://twitter.com/konkatsusns/lists/comman-staff" data-widget-id="555579654145200128">https://twitter.com/konkatsusns/lists/comman-staffのツイート</a>
                 </div>
+
                 <div class="sns-section">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/sns-fb-head.jpg" alt="カンマンのfacebookページ">
                     <div class="fb-like-box" data-href="https://www.facebook.com/comman.inc" data-height="450" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="false"></div>
                 </div>
             </div>
@@ -60,10 +68,14 @@
         <div class="social content_width">
 
             <div class="inner">
+
                 <div class="sns-section">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/sns-tw-head.jpg" alt="カンマンのTwitter">
                     <a class="twitter-timeline" href="https://twitter.com/konkatsusns/lists/comman-staff" data-widget-id="555579654145200128">https://twitter.com/konkatsusns/lists/comman-staffのツイート</a>
                 </div>
+
                 <div class="sns-section">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/sns-fb-head.jpg" alt="カンマンのfacebookページ">
                     <div class="fb-like-box" data-href="https://www.facebook.com/comman.inc" data-height="450" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="false"></div>
                 </div>
             </div>
