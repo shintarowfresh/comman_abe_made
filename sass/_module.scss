@@ -62,7 +62,7 @@
         top: 50%;
         height: 1px;
         width: 100%;
-        background: $main;
+        background: rgba( $main , .5 );
         left: 0;
     }
 
@@ -72,7 +72,7 @@
         margin: 0;
         z-index: 2;
         position: relative;
-        color: $main;
+        color: rgba( $main , .75 );
         font-weight: bold;
         font-size: 1.5em;
     }
