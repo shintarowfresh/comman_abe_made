@@ -40,9 +40,9 @@
 
            </aside>
 
-            <aside>
-                <a href="http://www.s-henkan.com/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/banner/c2.jpg" alt="C2"></a>
-            </aside>
+    <aside class="banner--square">
+        <a href="http://www.s-henkan.com/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/banner/c2.jpg" alt="C2"></a>
+    </aside>
 
             <aside>
                 広告枠
