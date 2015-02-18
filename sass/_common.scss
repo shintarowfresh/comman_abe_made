@@ -761,7 +761,7 @@ nav.menu {
 
 .no-js {
     .panel {
-        display: block;
+        display: block !important;
     }
 }
 
@@ -1272,6 +1272,11 @@ nav.menu {
 
         .fb_iframe_widget, .fb_iframe_widget[style], .fb_iframe_widget iframe[style], .fb_iframe_widget span {
             width:100% !important;
+        }
+
+        >img {
+            margin: 0 auto;
+            display: block;
         }
     }
 }
