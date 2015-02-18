@@ -1,21 +1,15 @@
-//ローダーの読み込み制御
-/*jQuery(function () {
-    'use strict';
-    jQuery('.wrapper').css('display', 'none');
-    jQuery('#loader_bg ,#loader').css('display', 'block');
-});
-jQuery(window).load(function ($) { //全ての読み込みが完了したら実行
-    'use strict';
-    jQuery('#loader_bg').delay(900).fadeOut(800);
-    jQuery('#loader').delay(600).fadeOut(500);
-    jQuery('.wrapper').css('display', 'block');
+/*$(window).load(function ($) {
+    $('#loader_bg').delay(900).fadeOut(800);
+    $('#loader').delay(600).fadeOut(500);
+    $('#wrapper').css('display', 'block');
 
     function stopload() {
-            $('#wrap').css('display', 'block');
-            $('#loader-bg').delay(900).fadeOut(800);
-            $('#loader').delay(600).fadeOut(300);
-        }
-        //10秒たったら強制的にロード画面を非表示
+        $('#wrapper').css('display', 'block');
+        $('#loader_bg').delay(900).fadeOut(800);
+        $('#loader').delay(600).fadeOut(300);
+    }
+
+    //10秒たったら強制的にロード画面を非表示
 
     $(function () {
         setTimeout(function () {
@@ -23,6 +17,7 @@ jQuery(window).load(function ($) { //全ての読み込みが完了したら実�
         }, 10000);
     });
 });*/
+
 
 jQuery(document).ready(function () {
     'use strict';
@@ -37,9 +32,11 @@ jQuery(document).ready(function () {
     //ヘッダーにあるハンバーガーボタンの制御
     $('.panel').css('display', 'none');
     $(".panel_btn_pc").click(function () {
+        $('.variable').css('display', 'block');
         $(".panel").slideToggle(200, function(){
             $('.panel .variable >div').fadeIn();
         });
+
         $(".panel_btn_icon").toggleClass("close");
         return false;
     });
