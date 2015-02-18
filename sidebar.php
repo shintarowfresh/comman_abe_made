@@ -10,7 +10,9 @@
 <div id="sidebar" class="sidebar">
 
     <?php if( is_child('works')):?>
-ページ。
+
+    <a href="http://www.s-henkan.com/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/banner/c2.jpg" alt="C2"></a>
+
     <?php else :?>
 
     <div id="fix" class="fix">
@@ -39,8 +41,7 @@
            </aside>
 
             <aside>
-                モバイル対応の最適解
-                C2
+                <a href="http://www.s-henkan.com/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/banner/c2.jpg" alt="C2"></a>
             </aside>
 
             <aside>
