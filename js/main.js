@@ -158,7 +158,6 @@ jQuery(document).ready(function () {
     });
 
     //ヘッダーにあるハンバーガーボタンの制御
-    $(".panel").hide();
     $(".panel_btn_pc").click(function () {
         $(".panel").slideToggle(200);
         $(".panel_btn_icon").toggleClass("close");
