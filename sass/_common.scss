@@ -13,13 +13,13 @@
 body {
     font-family: $body-font;
     font-size: 16px;
-    background: $bg-color;
     color: #6E5B5B;
 }
 
 a {
     color: $main;
     @include transition(all .3s ease-in-out 0);
+    @include transition-duration(.3s);
     @include opacity(1);
 
     &:hover {
@@ -61,7 +61,7 @@ h3 {
 
     &.sub_title {
         font-family: helvetica,sans-serif ;
-        font-size:4em;
+        font-size:3.6em;
         font-weight:800;
         margin-bottom:0;
         margin-top: 10px;
@@ -151,6 +151,7 @@ p{
 /* はみ出しを回避 */
 .wrapper {
     overflow: hidden;
+    background: $bg-color;
 }
 
 /* 基本コンテナの幅と高さ */
@@ -214,6 +215,7 @@ p{
     margin-bottom: .6em;
     border: 1px solid #d5d5d5;
     @include transition(all .3s ease-in-out 0);
+    @include transition-duration(.3s);
 
     &:hover {
         @include opacity(0.7);
@@ -587,6 +589,15 @@ span.meta.tag a {
 }
 
 
+/*searchフォーム調整*/
+#searchform {
+
+    .screen-reader-text {
+        display: block;
+        margin-bottom: .5em;
+    }
+}
+
 
 
 
@@ -697,6 +708,7 @@ nav.menu {
                 display: block;
                 border-top: 1px solid $main;
                 @include transition(all .3s ease-in-out 0);
+                @include transition-duration(.3s);
                 width: 0;
                 margin-bottom: 4px;
             }
@@ -753,12 +765,14 @@ nav.menu {
 //開閉するパネル部分
 .panel {
     display: none;
+    overflow: hidden;
     background: $bg-color;
     @include box-shadow(0px 0px 3px 0px rgba(0,0,0,0.1) inset);
     padding: 2em 0;
     border-bottom: 1px solid rgba( $main, 0.35 );
 
     .variable {
+        display: none;
         min-height: 340px;
 
         >div {
@@ -770,7 +784,10 @@ nav.menu {
 }
 
 .no-js {
-    .panel {
+    .panel,
+    .variable,
+    .variable >div
+    {
         display: block !important;
     }
 }
@@ -1153,6 +1170,7 @@ nav.menu {
         margin: -1px 0 0 -7px;
         background: #fff;
         @include transition(all .3s ease-in-out 0);
+        @include transition-duration(.3s);
 
         &:before , &:after {
             display: block;
@@ -1164,6 +1182,7 @@ nav.menu {
             height: 2px;
             background: #fff;
             @include transition(all .3s ease-in-out 0);
+            @include transition-duration(.3s);
         }
 
         &:before {
@@ -1287,6 +1306,7 @@ nav.menu {
         >img {
             margin: 0 auto;
             display: block;
+            width: 300px;
         }
     }
 }
@@ -1346,6 +1366,11 @@ ul.foot_navi {
             &:first-child {
                 margin-top: 0;
                 border-top: none;
+            }
+
+            &.title {
+                border: none;
+                padding: 0;
             }
         }
     }
@@ -1548,7 +1573,9 @@ ul.foot_navi {
     padding: .6em;
     margin-bottom: 1em;
     @include transition(all .3s ease-in-out 0);
+    @include transition-duration(.3s);
     @include clearfix;
+
 
     &:hover {
         background: rgba(211, 33, 23, 0.08);
@@ -1560,6 +1587,7 @@ ul.foot_navi {
         display: block;
         text-decoration: none;
         color: $main;
+
 
         &:hover {
             @include opacity(1);
@@ -1598,6 +1626,7 @@ ul.foot_navi {
                     margin-left: -7px;
                     @include opacity(1);
                     @include transition(all .3s ease-in-out 0);
+                    @include transition-duration(.3s);
                 }
 
                 &:after {
@@ -1612,6 +1641,7 @@ ul.foot_navi {
                     margin-top: -7px;
                     margin-left: -1px;
                     @include transition(all .3s ease-in-out 0);
+                    @include transition-duration(.3s);
                 }
 
                 &:hover {
@@ -1633,6 +1663,7 @@ ul.foot_navi {
     .shutter {
         margin-bottom: 2em;
         display: none;
+
 
         h3 {
             color: $sub;
@@ -1933,6 +1964,7 @@ ul.foot_navi {
 
     .fa {
         @include transition(all .3s ease-in-out 0);
+        @include transition-duration(.3s);
         margin-left: 0;
         @include opacity(1);
     }
@@ -2291,6 +2323,7 @@ ul.foot_navi {
     @include border-radius(4px);
     margin-top: 1em;
     @include transition(all .3s ease-in-out 0);
+    @include transition-duration(.3s);
     padding-bottom: 1.5em;
 
     &:hover {
@@ -2421,7 +2454,9 @@ ul.foot_navi {
 
 
 div#gform_wrapper_1 {
+
     .gform_body {
+
         .gfield {
             margin: 2em 0;
 
@@ -2448,6 +2483,7 @@ div#gform_wrapper_1 {
                 @include border-radius(3px);
                 padding: 10px 5px;
                 @include transition(all .3s ease-in-out 0);
+                @include transition-duration(.3s);
 
                 &:focus {
                     @include box-shadow(0 0 5px rgba(0, 0, 0, 0.4) inset);
@@ -2456,8 +2492,10 @@ div#gform_wrapper_1 {
 
             .name_first {
             }
+
             input[type=radio] {
                 margin-left: 5px;
+                margin-top: 5px !important;
             }
         }
         .gform_page_footer {
@@ -2475,6 +2513,8 @@ div#gform_wrapper_1 {
             }
         }
     }
+
+
 }
 
 
@@ -2582,6 +2622,7 @@ div#gform_wrapper_1 {
             @include box-shadow(0 0 5px rgba(0, 0, 0, 0.25));
             color: #fff;
             @include transition(all .3s ease-in-out 0);
+            @include transition-duration(.3s);
 
             &:hover {
                 color: #fff;
