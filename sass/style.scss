@@ -600,6 +600,15 @@
         background-size: 120px;
     }
 
+    /*searchフォーム調整*/
+    #searchform {
+
+        .screen-reader-text {
+            display: inline-block;
+            margin-bottom: .5em;
+        }
+    }
+
 
     /*下層ページの背景*/
     .page {
@@ -607,6 +616,7 @@
             background-image: url(../img/page-head-01.jpg);
             background-repeat: no-repeat;
             background-position: top right;
+            background-size: 300px;
         }
 
         &.price .content {
@@ -628,6 +638,7 @@
         background-image: url(../img/page-head-06.jpg);
         background-repeat: no-repeat;
         background-position: top right;
+        background-size: 300px;
     }
 
     /*カンマンに出来ることページの調整*/
@@ -772,6 +783,7 @@
                 @include box-shadow(0 0 5px rgba(0, 0, 0, 0.25));
                 color: #fff;
                 @include transition(all .3s ease-in-out 0);
+                @include transition-duration(.3s);
 
                 &:hover {
                     color: #fff;
