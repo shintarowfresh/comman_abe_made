@@ -23,14 +23,7 @@
 
         <title><?php wp_title(); ?></title>
 
-        <meta name="description" content="<?php bloginfo( 'description' ); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <style type="text/css">
-            .panel {
-                display: none;
-            }
-        </style>
 
         <!--アイコンフォント-->
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
@@ -60,15 +53,6 @@
                 "//b.st-hatena.com/js/bookmark_button.js"], function() {
             })
             // ]]></script>
-
-        <!--ローダー-->
-        <div id="loader_bg">
-
-            <div id="loader">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/load.gif" width="300" height="300" alt="カンマンローディング"/>
-            </div>
-
-        </div>
 
         <div id="wrapper" class="wrapper">
 
