@@ -121,7 +121,7 @@
 
 
             <!--開閉するパネル部分-->
-            <div class="panel">
+            <div class="panel" style="display:none;">
                 <div class="variable">
                     <div class="col clearfix">
                         <div class="box_1 facebook_like_center">
