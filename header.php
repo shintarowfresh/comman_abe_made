@@ -43,35 +43,6 @@
         ?>
 
         <?php wp_head(); ?>
-        <?php if( is_home() ) :?>
-
-        <script type="text/javascript">
-
-            $(function () {
-
-                //トップページのフェードしてる画像
-                $('.bgs').bgswitcher({
-                    images: [
-                        "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs01.png",
-                        "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs02.png",
-                        "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs03.png",
-                        "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs04.png"
-                    ],
-                    interval: "4000",
-                });
-            });
-
-        </script>
-
-        <?php elseif(is_page('company')): ?>
-        <!--会社概要ページ　google-map用-->
-        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCrytOY8q8mDgKCf-Ht3FfJa8yu_SCJWBg&sensor=true"></script>
-        <?php else :?>
-        <?php endif ; ?>
-
-        <?php if(!is_mobile()):?>
-        <script src="<?php echo get_template_directory_uri(); ?>/js/pc-only.js"></script>
-        <?php endif ;?>
 
     </head>
 
