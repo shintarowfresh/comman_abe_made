@@ -62,9 +62,9 @@ function comman_scripts() {
         wp_enqueue_script( 'comment-reply' );
     // メインの js
     wp_enqueue_script( 'modernizr-js', get_template_directory_uri() . '/js/modernizr.js', array() ,null ,true );
-    wp_enqueue_script( 'script-js', get_template_directory_uri() . '/js/script.min.js', array() ,null );
-    wp_enqueue_script( 'swipeshow-js', get_template_directory_uri() . '/js/jquery.swipeshow.min.js', array() ,null );
-    wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array() ,null );
+    wp_enqueue_script( 'script-js', get_template_directory_uri() . '/js/script.min.js', array() ,null ); //必ずヘッダで読む
+    wp_enqueue_script( 'swipeshow-js', get_template_directory_uri() . '/js/jquery.swipeshow.min.js', array() ,null ,true );
+    wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array() ,null ,true );
 
     if (is_home())
     wp_enqueue_script( 'bgswitcher-js', get_template_directory_uri() . '/js/jquery.bgswitcher.js', array() ,null );
