@@ -24,16 +24,15 @@ get_header(); ?>
 
        <div class="inner">
 
-           <div class="social-btn">
-           <ul>
-               <li class="tt"><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a></li>
-               <li class="ff"><div class="fb-like" data-href="https://www.facebook.com/comman.inc" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div></li>
-               <li class="gg"><div class="g-plusone" data-annotation="inline" data-width="300"></div></li>
-           </ul>
-
-           </div>
-
            <h2>世界のウェブサイトの数は1000000000を突破しました。</h2>
+
+           <div class="social-btn">
+               <ul>
+                   <li class="tt"><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a></li>
+                   <li class="ff"><div class="fb-like" data-href="https://www.facebook.com/comman.inc" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div></li>
+                   <li class="gg"><div class="g-plusone" data-annotation="inline" data-width="300"></div></li>
+               </ul>
+           </div>
 
            <p>ちなみにこれ「10<strong>おく</strong>」です。</p>
 
