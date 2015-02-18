@@ -13,7 +13,7 @@ get_header(); ?>
 
         <div class="inner">
             <ul>
-                <li><a href="/company/#move-map">地図を見る</a></li>
+                <li><a href="/company/#map_canvas">地図を見る</a></li>
                 <li><a href="/company/#move-tel">電話をかける</a></li>
                 <li><a href="/contact/">メールフォーム</a></li>
             </ul>
