@@ -70,7 +70,7 @@ get_header(); ?>
             </section>
 
             <footer>
-                <a class="btn" href="<?php the_field('link_url'); ?>" target="_blank">訪問する</a>
+                <a class="btn" href="<?php the_field('link_url'); ?>" target="_blank">訪問する <i class="fa fa-external-link"></i></a>
             </footer>
 
         </article>
