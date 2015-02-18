@@ -2,6 +2,9 @@
 
 @import "compass";
 
+/*このCSSはSASS+Compassでコンパイルされてます。*/
+
+
 /*ブラウザのデフォルトをリセット*/
 @import "compass/reset/";
 
@@ -185,7 +188,6 @@
         .box_1 , .box_2 , .box_3 {
             float: left;
             margin-right: 1.77%;
-            background: #fff;
             overflow: hidden;
 
             h3 {
@@ -392,16 +394,6 @@
 
     //グリッド4分割カラム
     .col {
-
-        div {
-        }
-
-        li {
-        }
-
-        .box_1 , .box_2 , .box_3 {
-        }
-
         .box_1 {
             width: 23.22%;
         }
@@ -425,6 +417,7 @@
                 @include box-shadow(0 0 3px rgba(0, 0, 0, 0.1));
                 @include border-radius(2px);
                 @include min-height (17em);
+                background: #fff;
             }
         }
     }
@@ -608,7 +601,6 @@
             margin-bottom: .5em;
         }
     }
-
 
     /*下層ページの背景*/
     .page {
@@ -812,8 +804,21 @@
         }
     }
 
+    /*サイドバーのバナー調整*/
+    .banner--square {
+        /*正方形のバナー*/
+        height: 300px;
+    }
 
 }//950
+
+
+
+
+
+
+
+
 
 /* ブレイクポイント調整用 */
 @media screen and (min-width: 1100px) {
@@ -852,6 +857,13 @@
     }
 
 }//1100
+
+
+
+
+
+
+
 
 /*ブレイクポイント・パソコン用*/
 @media screen and (min-width: 1280px) {
