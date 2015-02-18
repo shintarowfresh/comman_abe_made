@@ -398,12 +398,6 @@ p {
 *
 * Description of section, whether or not it has media queries, etc.
 */
-/*ローディング画面のコントロール*/
-img#loading {
-  display: inline-block;
-  margin: 0 auto;
-}
-
 /*埋め込みビデオのレスポンシブ*/
 .video {
   position: relative;
@@ -484,29 +478,6 @@ img#loading {
 
 .swipeshow .dot-item:active .dot, .swipeshow .dot-item.active .dot {
   background-color: white;
-}
-
-/*ページ読み込み時のアニメーション制御*/
-#loader_bg {
-  display: none;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  background: #e63016;
-  z-index: 1;
-}
-
-#loader {
-  display: none;
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  margin: -150px auto auto -150px;
-  z-index: 2;
-  left: 50%;
-  top: 50%;
 }
 
 /*はてブアイコンをアイコンフォントの風に*/
@@ -841,6 +812,7 @@ nav.menu .blog a:before {
   background-position: 50%;
 }
 
+/*トップページの記事風リード文*/
 .read-first {
   margin-top: 2em;
   margin-bottom: 5em;
@@ -1221,6 +1193,53 @@ ul.foot_navi li a {
 .copyright {
   text-align: center;
   padding: 2em 0 1em;
+}
+
+#footer {
+  font-family: 游ゴシック, YuGothic, KoburinaGo-W3-83pv-RKSJ-H, "こぶりなゴシック W3", KoburinaGoStd-W3, "こぶりなゴシック Std W3", Helvetica, Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+#footer .foot, #footer .foot__info {
+  padding: 3em 0;
+}
+#footer .foot__info {
+  background: #455A64;
+  color: #CFD8DC;
+}
+#footer .foot__info .inner > img {
+  width: 400px;
+  display: block;
+  margin: 0 auto;
+}
+#footer .foot__info h6 {
+  margin-bottom: .4em;
+  color: #fff;
+}
+#footer .foot__info h6 img {
+  width: 200px;
+}
+#footer .foot__info a {
+  color: #fff;
+  text-decoration: none;
+}
+#footer .foot__info ul li {
+  margin-bottom: .5em;
+}
+#footer .foot__info ul li:rast-child {
+  margin-bottom: none;
+}
+#footer .foot__info p {
+  font-size: .8em;
+}
+#footer .foot__info .box_1 {
+  padding: 0 5px 2em;
+}
+#footer .hr .line {
+  background: #546E7A;
+}
+#footer .hr h6 {
+  background: #455A64;
+  color: #90A4AE;
+  margin-bottom: 0;
 }
 
 /**
