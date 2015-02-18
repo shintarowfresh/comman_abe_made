@@ -721,6 +721,12 @@ nav.menu .blog a:before {
   padding: 2em 0;
   border-bottom: 1px solid rgba(211, 33, 23, 0.35);
 }
+.panel .variable {
+  min-height: 340px;
+}
+.panel .variable > div {
+  display: none;
+}
 
 .no-js .panel {
   display: block !important;

@@ -27,6 +27,23 @@ jQuery(window).load(function ($) { //全ての読み込みが完了したら実�
 jQuery(document).ready(function () {
     'use strict';
 
+    //ヘッダーにあるハンバーガーボタンの制御
+    $(".panel_btn").click(function () {
+        $("nav.menu").slideToggle(200);
+        $(".panel_btn_icon").toggleClass("close");
+        return false;
+    });
+
+    //ヘッダーにあるハンバーガーボタンの制御
+    $('.panel').css('display', 'none');
+    $(".panel_btn_pc").click(function () {
+        $(".panel").slideToggle(200, function(){
+            $('.panel .variable >div').fadeIn();
+        });
+        $(".panel_btn_icon").toggleClass("close");
+        return false;
+    });
+
     //フォーム系の挙動
     var $wpcf7 = $('.wpcf7-form');
     var $wpcf7V = $('.wpcf7-form.invalid');
@@ -147,22 +164,6 @@ jQuery(document).ready(function () {
         });
     });
 
-
-
-
-    //ヘッダーにあるハンバーガーボタンの制御
-    $(".panel_btn").click(function () {
-        $("nav.menu").slideToggle(200);
-        $(".panel_btn_icon").toggleClass("close");
-        return false;
-    });
-
-    //ヘッダーにあるハンバーガーボタンの制御
-    $(".panel_btn_pc").click(function () {
-        $(".panel").slideToggle(200);
-        $(".panel_btn_icon").toggleClass("close");
-        return false;
-    });
 
 
 
