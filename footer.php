@@ -158,11 +158,6 @@
     </script>
    <?php endif ;?>
 
-<?php if(is_mobile()):?>
-<?php else :?>
-<script src="<?php echo get_template_directory_uri(); ?>/js/pc-only.js"></script>
-<?php endif ;?>
-
         <?php wp_footer(); ?>
     </body>
 

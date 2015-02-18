@@ -26,6 +26,12 @@
         <meta name="description" content="<?php bloginfo( 'description' ); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <style type="text/css">
+            .panel {
+                display: none;
+            }
+        </style>
+
         <!--アイコンフォント-->
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
         <!-- google web fonts-->
@@ -37,31 +43,35 @@
         ?>
 
         <?php wp_head(); ?>
-
         <?php if( is_home() ) :?>
-        <script>//トップページのスライダー制御
-            $(function() {
 
-                $('.img_sec').css('opacity','0').delay(2000).animate({'opacity':'1'} , function(){
-                    $('.bgs').delay(5000).bgswitcher({
-                        images: [
-                            "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs01.png",
-                            "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs02.png",
-                            "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs03.png",
-                            "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs04.png"
-                        ],
-                        interval: "7000",
-                    });
+        <script type="text/javascript">
+
+            $(function () {
+
+                //トップページのフェードしてる画像
+                $('.bgs').bgswitcher({
+                    images: [
+                        "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs01.png",
+                        "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs02.png",
+                        "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs03.png",
+                        "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs04.png"
+                    ],
+                    interval: "4000",
                 });
             });
+
         </script>
+
         <?php elseif(is_page('company')): ?>
         <!--会社概要ページ　google-map用-->
         <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCrytOY8q8mDgKCf-Ht3FfJa8yu_SCJWBg&sensor=true"></script>
         <?php else :?>
         <?php endif ; ?>
 
-
+        <?php if(!is_mobile()):?>
+        <script src="<?php echo get_template_directory_uri(); ?>/js/pc-only.js"></script>
+        <?php endif ;?>
 
     </head>
 
@@ -82,12 +92,14 @@
 
         <!--ローダー-->
         <div id="loader_bg">
-            <div  id="loader">
+
+            <div id="loader">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/load.gif" width="300" height="300" alt="カンマンローディング"/>
             </div>
+
         </div>
 
-        <div class="wrapper">
+        <div id="wrapper" class="wrapper">
 
             <!--ヘッダー部分-->
             <div class="head">
@@ -119,7 +131,6 @@
 
             </div><!--/.haed-->
 
-
             <!--開閉するパネル部分-->
             <div class="panel" style="display:none;">
                 <div class="variable">
@@ -135,19 +146,19 @@
                             <ul>
 
                                 <?php
-$args = array( 'posts_per_page' => 5 );
-$myposts = get_posts( $args );
-foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-                                <?php
-$cat = get_the_category();
-if ($cat[0]->parent !=0 ) {
-    $parent= get_category($cat[0]->parent) ;
-    $catname = $parent->cat_name; //カテゴリー名
-    $catslug = $parent->slug; //スラッグ名
-} else {
-    $catname = $cat[0]->cat_name; //カテゴリー名
-    $catslug = $cat[0]->slug; //スラッグ名
-}
+                                $args = array( 'posts_per_page' => 5 );
+                                $myposts = get_posts( $args );
+                                foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+                                                                <?php
+                                $cat = get_the_category();
+                                if ($cat[0]->parent !=0 ) {
+                                    $parent= get_category($cat[0]->parent) ;
+                                    $catname = $parent->cat_name; //カテゴリー名
+                                    $catslug = $parent->slug; //スラッグ名
+                                } else {
+                                    $catname = $cat[0]->cat_name; //カテゴリー名
+                                    $catslug = $cat[0]->slug; //スラッグ名
+                                }
                                 ?>
 
                                 <li>
@@ -167,7 +178,7 @@ if ($cat[0]->parent !=0 ) {
                             <h3><i class="fa fa-youtube-play faa-pulse animated"></i>カンマンチャンネルの最新動画</h3>
 
                             <div class="video">
-                                <iframe width="560" height="315" src="//www.youtube.com/embed/V4xvr2fkF5Q?list=PLuFK1lOCb7Od20M1WaIh7doNg6GmJ5eGJ?modestbranding=1?showinfo=0?theme=light&color=white" frameborder="0" allowfullscreen></iframe>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/V4xvr2fkF5Q?list=PLuFK1lOCb7Od20M1WaIh7doNg6GmJ5eGJ" frameborder="0" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div><!--/.col-->
