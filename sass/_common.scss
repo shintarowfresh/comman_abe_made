@@ -161,9 +161,6 @@ p{
     margin: 0 1.565%;
 }
 
-.inner {
-}
-
 /**
 * #.# 使い回すモジュール
 *
@@ -873,7 +870,8 @@ nav.menu {
 }
 
 .read-first {
-    margin: 5em 0;
+    margin-top: $mmb;
+    margin-bottom: 5em;
 
     .social-btn {
         margin-bottom: 1em;
@@ -882,6 +880,7 @@ nav.menu {
             li {
                 display: inline-block;
                 vertical-align: top;
+                margin: 0 .5em 1em 0;
 
                 &.tt{
                     width: 100px;
@@ -901,6 +900,7 @@ nav.menu {
 
                 &.gg {
                     width: 100px;
+                    margin-bottom: 0;
                 }
             }
         }
@@ -949,7 +949,6 @@ nav.menu {
         }
     }
 
-
     p {
         line-height: 1.6;
         max-width: 760px;
@@ -986,6 +985,10 @@ nav.menu {
         }
 
 
+    }
+
+    .btn-works {
+        margin-top: 1em;
     }
 }
 
@@ -1047,6 +1050,7 @@ nav.menu {
         ul {
         }
     }
+
     p.center {
         text-align: center;
     }
@@ -1058,9 +1062,9 @@ nav.menu {
     max-width: 1600px;
 }
 
+/*モバイルのみで表示されるお問い合わせボタン*/
 .index_info {
-
-    margin-bottom: 3em;
+    margin-bottom: $mmb;
 
     h3{
         font-size: 1.2em;
@@ -1126,9 +1130,6 @@ nav.menu {
         }
     }
 
-}
-
-.page-title {
 }
 
 /* トップページ制作実績 */
