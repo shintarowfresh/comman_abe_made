@@ -351,7 +351,7 @@ p {
 }
 
 .section {
-  margin-bottom: 4em;
+  margin-bottom: 2em;
 }
 .section:last-child {
   margin-bottom: 0;
@@ -836,7 +836,8 @@ nav.menu .blog a:before {
 }
 
 .read-first {
-  margin: 5em 0;
+  margin-top: 2em;
+  margin-bottom: 5em;
 }
 .read-first .social-btn {
   margin-bottom: 1em;
@@ -844,6 +845,7 @@ nav.menu .blog a:before {
 .read-first .social-btn ul li {
   display: inline-block;
   vertical-align: top;
+  margin: 0 .5em 1em 0;
 }
 .read-first .social-btn ul li.tt {
   width: 100px;
@@ -859,6 +861,7 @@ nav.menu .blog a:before {
 }
 .read-first .social-btn ul li.gg {
   width: 100px;
+  margin-bottom: 0;
 }
 .read-first h2 {
   color: #000;
@@ -921,6 +924,9 @@ nav.menu .blog a:before {
 .read-first ul.problem li .fa {
   color: #D32117;
 }
+.read-first .btn-works {
+  margin-top: 1em;
+}
 
 .balloon {
   position: relative;
@@ -977,8 +983,9 @@ nav.menu .blog a:before {
   max-width: 1600px;
 }
 
+/*モバイルのみで表示されるお問い合わせボタン*/
 .index_info {
-  margin-bottom: 3em;
+  margin-bottom: 2em;
 }
 .index_info h3 {
   font-size: 1.2em;
