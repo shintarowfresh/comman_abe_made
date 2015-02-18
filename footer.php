@@ -4,7 +4,7 @@
  */
 ?>
 
-    <!-- footer -->
+
     <div id="footer" class="footer" role="contentinfo">
 
         <?php if(is_home()): ?>
@@ -93,23 +93,67 @@
         <?php endif; ?>
 
 
-
-
-
+       <!--トップへのボタン-->
         <a class="btn btn_full to_top"><i class="fa fa-angle-double-up"></i> Top</a>
 
-        <div class="content_width">
-            <div class="inner">
-                <div class="foot_form">
 
-                </div>
+
+
+
+        <div class="foot content_width">
+            <div class="inner">
+
                 <ul class="foot_navi">
                     <li><a href="/privacypolicy/">プライバシーポリシー</a></li>
                     <li><a href="/sitepolicy/">サイトポリシー</a></li>
                 </ul>
-                <p class="copyright"><i class="fa fa-copyright"></i> Comman.inc</p>
+
+                <div>
+                    メールを送る
+                    コンタクトフォームから問い合わせる
+                </div>
+
+                <div>
+                    人と技術と人を繋ぐ
+                </div>
+
             </div><!--/.inner-->
+
         </div><!--/.content_width-->
+
+        <div class="foot__info">
+            <div class="inner">
+
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/foot-info.png" alt="カンマンについて">
+
+                <div class="col">
+                    <div class="box_1">
+                        <h6><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/foot-name.png" alt="株式会社カンマン"></h6>
+                        <p><i class="fa fa-copyright"></i> Comman.inc</p>
+                    </div>
+                    <div class="box_1">
+                        <ul>
+                            <li><a href="/privacypolicy/">プライバシーポリシー</a></li>
+                            <li><a href="/sitepolicy/">サイトポリシー</a></li>
+                        </ul>
+                    </div>
+                    <div class="box_1">
+                       <h6>adress</h6>
+                        <p>〒770-0943<br>徳島県徳島市<br>中昭和町2丁目39番地5</p>
+                        <p><a href="/company/"><i class="fa fa-map-marker"></i> GoogleMapで見る</a></p>
+                    </div>
+                    <div class="box_1">
+                       <h6>phone/fax</h6>
+                        <p><i class="fa fa-phone"></i> 088-611-2333</p>
+                        <p><i class="fa fa-fax"></i> 088-611-2332</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
     </div><!--/.footer-->
 </div><!--/.wrapper-->
 
