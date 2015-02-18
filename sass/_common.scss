@@ -68,11 +68,10 @@ h3 {
 
         span {
             font-family: 'Playfair Display SC', serif;
-            color:$main;
+            color:transparent;
             font-weight:bold;
             font-size:.9em;
             position: relative;
-            visibility: hidden;
 
             &:before {
                 font-family: icomoon;
@@ -82,6 +81,7 @@ h3 {
                 visibility: visible;
                 bottom: .35em;
                 left: .05em;
+                color: $main;
             }
         }
     }

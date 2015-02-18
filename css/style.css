@@ -126,11 +126,10 @@ h3.sub_title {
 }
 h3.sub_title span {
   font-family: 'Playfair Display SC', serif;
-  color: #D32117;
+  color: transparent;
   font-weight: bold;
   font-size: .9em;
   position: relative;
-  visibility: hidden;
 }
 h3.sub_title span:before {
   font-family: icomoon;
@@ -140,6 +139,7 @@ h3.sub_title span:before {
   visibility: visible;
   bottom: .35em;
   left: .05em;
+  color: #D32117;
 }
 
 h4.sub_title {
