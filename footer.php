@@ -99,66 +99,98 @@
         <a class="btn btn_full to_top"><i class="fa fa-angle-double-up"></i> Top</a>
 
         <div class="content_width">
-
             <div class="inner">
-
                 <div class="foot_form">
 
                 </div>
-
                 <ul class="foot_navi">
                     <li><a href="/privacypolicy/">プライバシーポリシー</a></li>
                     <li><a href="/sitepolicy/">サイトポリシー</a></li>
                 </ul>
-
                 <p class="copyright"><i class="fa fa-copyright"></i> Comman.inc</p>
             </div><!--/.inner-->
         </div><!--/.content_width-->
     </div><!--/.footer-->
-
 </div><!--/.wrapper-->
 
+
+
+
+
+
 <?php if( is_post_type_archive('work') || is_tax() || is_archive() ) :?>
-    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.autopager-1.0.0.js"></script>
-    <script>
-        //  最大ページ数取得
-        var maxpage = <?php echo $wp_query->max_num_pages; ?>;
 
-        jQuery('#loading').css('display', 'none');
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.autopager-1.0.0.js"></script>
+<script>
+    //  最大ページ数取得
+    var maxpage = <?php echo $wp_query->max_num_pages; ?>;
 
-        if(maxpage == 1) {
-            jQuery('#next').css('display','none');
-        } else {
-            jQuery('#next').css('display','block');
-        };
+    jQuery('#loading').css('display', 'none');
 
-        jQuery.autopager({
-            content: '.container',// 読み込むコンテンツ
-            link: '#next a', // 次ページへのリンク
-            autoLoad: false,// スクロールの自動読込み解除
+    if(maxpage == 1) {
+        jQuery('#next').css('display','none');
+    } else {
+        jQuery('#next').css('display','block');
+    };
 
-            start: function(current, next){
-                jQuery('#loading').css('display', 'block');
-                jQuery('#next a').css('display', 'none');
-            },
+    jQuery.autopager({
+        content: '.container',// 読み込むコンテンツ
+        link: '#next a', // 次ページへのリンク
+        autoLoad: false,// スクロールの自動読込み解除
 
-            load: function(current, next){
-                jQuery('#loading').css('display', 'none');
-                jQuery('#next a').css('display', 'block');
-                if( current.page >= maxpage ){ //最後のページ
-                    jQuery('#next a').hide(); //次ページのリンクを隠す
-                }
+        start: function(current, next){
+            jQuery('#loading').css('display', 'block');
+            jQuery('#next a').css('display', 'none');
+        },
+
+        load: function(current, next){
+            jQuery('#loading').css('display', 'none');
+            jQuery('#next a').css('display', 'block');
+            if( current.page >= maxpage ){ //最後のページ
+                jQuery('#next a').hide(); //次ページのリンクを隠す
             }
-        });
+        }
+    });
 
-        jQuery('#next a').click(function(){ // 次ページへのリンクボタン
-            jQuery.autopager('load'); // 次ページを読み込む
-            return false;
+    jQuery('#next a').click(function(){ // 次ページへのリンクボタン
+        jQuery.autopager('load'); // 次ページを読み込む
+        return false;
+    });
+</script>
+
+<?php elseif(is_page('company')): ?>
+
+<!--会社概要ページ　google-map用-->
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCrytOY8q8mDgKCf-Ht3FfJa8yu_SCJWBg&sensor=true"></script>
+
+<?php elseif( is_home() ) :?>
+
+<script type="text/javascript">
+
+    $(function () {
+
+        //トップページのフェードしてる画像
+        $('.bgs').bgswitcher({
+            images: [
+                "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs01.png",
+                "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs02.png",
+                "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs03.png",
+                "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs04.png"
+            ],
+            interval: "4000",
         });
-    </script>
-   <?php endif ;?>
+    });
+
+</script>
+
+<?php endif ;?>
+
+<?php if(!is_mobile()):?>
+<script src="<?php echo get_template_directory_uri(); ?>/js/pc-only.js"></script>
+<?php endif ;?>
 
         <?php wp_footer(); ?>
+
     </body>
 
 </html>
