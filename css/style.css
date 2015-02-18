@@ -723,7 +723,7 @@ nav.menu .blog a:before {
 }
 
 .no-js .panel {
-  display: block;
+  display: block !important;
 }
 
 /*開閉パネルの中身*/
@@ -1146,6 +1146,10 @@ nav.menu .blog a:before {
 }
 .social .sns-section .fb_iframe_widget, .social .sns-section .fb_iframe_widget[style], .social .sns-section .fb_iframe_widget iframe[style], .social .sns-section .fb_iframe_widget span {
   width: 100% !important;
+}
+.social .sns-section > img {
+  margin: 0 auto;
+  display: block;
 }
 
 /**
@@ -2124,6 +2128,9 @@ div#gform_wrapper_1 .gform_body .ginput_container textarea:focus {
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4) inset;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4) inset;
 }
+div#gform_wrapper_1 .gform_body .ginput_container input[type=radio] {
+  margin-left: 5px;
+}
 div#gform_wrapper_1 .gform_body .gform_page_footer .button {
   background: #638199;
   border: none;
@@ -2289,6 +2296,36 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover {
 }
 
 /*ポチレバ*/
+/*横線のあるスタイル*/
+.hr {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  align-content: center;
+  margin: 2em 0;
+}
+.hr br {
+  display: none;
+}
+.hr .line {
+  position: absolute;
+  top: 50%;
+  height: 1px;
+  width: 100%;
+  background: rgba(211, 33, 23, 0.5);
+  left: 0;
+}
+.hr h6 {
+  display: inline-block;
+  background: #fff;
+  margin: 0;
+  z-index: 2;
+  position: relative;
+  color: rgba(211, 33, 23, 0.75);
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
 /*ブレイクポイントタブレット用*/
 @media screen and (min-width: 600px) {
   h3.sub_title {
@@ -2479,6 +2516,12 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover {
   .under-post-cont .btns a {
     float: right;
     margin-left: 1em;
+  }
+
+  /*お見積もり価格表調整*/
+  .price .three-one .three > li {
+    width: 96%;
+    display: block;
   }
 }
 /*タブレット横・パソコン用*/
@@ -2699,6 +2742,7 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover {
     width: 50%;
     padding: 2em 15px;
     text-align: center;
+    height: 750px;
   }
   .social .sns-section:first-child {
     border-right: 5px solid rgba(211, 33, 23, 0.04);
@@ -2739,6 +2783,31 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover {
     background: url(../img/top-notice.png) no-repeat;
     background-position: 95% 0;
     background-size: 120px;
+  }
+
+  /*下層ページの背景*/
+  .page .content {
+    background-image: url(../img/page-head-01.jpg);
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+  .page.price .content {
+    background-image: url(../img/page-head-04.jpg);
+  }
+  .page.company .content {
+    background-image: url(../img/page-head-07.jpg);
+  }
+  .page.contact .content {
+    background-image: url(../img/page-head-05.jpg);
+  }
+  .page.works .content {
+    background-image: url(../img/page-head-02.jpg);
+  }
+
+  .post-type-archive-work .content {
+    background-image: url(../img/page-head-06.jpg);
+    background-repeat: no-repeat;
+    background-position: top right;
   }
 
   /*カンマンに出来ることページの調整*/
@@ -2873,6 +2942,12 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover {
     padding-bottom: 30px;
     display: block;
   }
+
+  /*お見積もり価格表調整*/
+  .price .three-one .three > li {
+    width: 29.8%;
+    display: inline-block;
+  }
 }
 /* ブレイクポイント調整用 */
 @media screen and (min-width: 1100px) {
@@ -2933,7 +3008,6 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover {
 
   .panel {
     padding: 0 0 2em;
-    display: none;
   }
 
   /*トップページイメージセクションの部分*/
