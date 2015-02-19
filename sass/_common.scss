@@ -587,7 +587,7 @@ span.meta.tag a {
     position: relative;
     padding-top: 1em;
     padding-bottom: 1em;
-    border-bottom: 1px solid $main;
+    border-bottom: 1px solid rgba( $main , .1 );
 
     .variable {
         overflow: hidden;
@@ -1127,14 +1127,21 @@ nav.menu {
 /* ×になるボタン */
 .panel_btn , .panel_btn_pc {
     display: inline-block;
-    background: #D32117;
+    background: $main;
     width: 40px;
     height: 40px;
     position: relative;
     @include border-radius(50%);
     float: right;
+    @include box-shadow(0 2px 6px rgba(0, 0, 0, 0.26));
 
     &:hover {
+        opacity: 1;
+    }
+
+    &:active {
+        @include box-shadow(0 2px 10px rgba(0, 0, 0, 0.5));
+        background: rgba( $main , .8 )
     }
 
     .panel_btn_icon {
@@ -1422,6 +1429,7 @@ ul.foot_navi {
 /*パンくず*/
 .breadcrumb {
     padding: 5px;
+    font-size: .85rem;
 
     .pan-home {
         &:before {
@@ -2074,7 +2082,7 @@ ul.foot_navi {
             border-bottom: 2px solid rgba( $main ,  .3 );
             margin-top: 3em;
             padding: .8em .3em 1em;
-            font-weight: bold;
+            font-weight: 500;
             background: rgba( $main , .02 );
             @include border-radius(2px);
 
@@ -2146,7 +2154,7 @@ ul.foot_navi {
                     background: $sub;
                     color: #fff;
                     margin-right: .3em;
-                    width: 1em;
+                    width: 1.2em;
                     display: inline-block;
                     text-align: center;
                     @include border-radius(50%);
@@ -2321,9 +2329,10 @@ ul.foot_navi {
         }
 
         .title {
-            margin: .6em 0;
-            font-size: 1.5em;
+            margin: .3em 0 .6em;
+            font-size: 1.25em;
             line-height: 1.4;
+            font-weight: 600;
         }
     }
 
