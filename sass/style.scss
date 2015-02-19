@@ -279,8 +279,13 @@
         }
     }
 
-
 }//600
+
+
+
+
+
+
 
 /*タブレット横・パソコン用*/
 @media screen and (min-width: 950px) {
@@ -324,6 +329,7 @@
     .breadcrumb {
         padding: 1em;
     }
+
     .page-title {
         background: $bg-color;
         padding: 1em 1.5em 2em;
@@ -350,12 +356,14 @@
 
         ul {
             overflow: hidden;
+
             li {
                 float: left;
                 background: none;
                 margin-bottom: 0;
                 padding:5px;
                 font-size:1em;
+                height: auto;
 
                 i {
                     display: none;
@@ -370,7 +378,7 @@
                 }
 
                 a {
-                    top: 0;
+                    padding:0;
 
                     &:hover {
                         background: none;
@@ -844,11 +852,9 @@
                 }
 
                 a {
-                    &:hover {
-                    }
                     &:before {
                         display:block;
-                        margin-top:-2px;
+                        margin: 0;
                     }
                 }
             }
@@ -898,6 +904,10 @@
                 a {
                     display: inline-block;
                     margin-left: -10px;
+
+                    &:before {
+                        margin-right: 5px;
+                    }
                 }
             }
         }

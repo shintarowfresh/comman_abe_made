@@ -154,7 +154,7 @@ h3.sub_title span:before {
   font-size: .67em;
   position: absolute;
   visibility: visible;
-  bottom: .35em;
+  bottom: .19em;
   left: .05em;
   color: #c62828;
 }
@@ -613,16 +613,14 @@ nav.menu {
   display: none;
   float: none;
   margin-top: 2em;
-  margin-bottom: 2em;
 }
 nav.menu ul {
   overflow: hidden;
 }
 nav.menu li {
   float: none;
-  background: #e8e8e8;
-  padding: 10px;
-  margin-bottom: 7px;
+  height: 48px;
+  padding-left: 6px;
 }
 nav.menu li:last-child {
   margin-right: 0;
@@ -654,8 +652,7 @@ nav.menu li a {
   font-size: .85em;
   color: #000;
   letter-spacing: .5px;
-  position: relative;
-  top: 5px;
+  padding-top: 8px;
 }
 nav.menu li a span, nav.menu li a span.head_nav_disc {
   display: block;
@@ -686,10 +683,11 @@ nav.menu li a:before {
   font-family: FontAwesome;
   float: left;
   font-size: 1.5em;
-  margin-right: .4em;
   color: #B6A3A3;
   line-height: 1.5em;
-  top: -3px;
+  width: 24px;
+  text-align: center;
+  margin-right: 32px;
 }
 
 /*ヘッダーグローバルナビのアイコンフォント指定*/
@@ -1045,6 +1043,14 @@ nav.menu .blog a:before {
   -webkit-border-radius: 50%;
   border-radius: 50%;
   float: right;
+  -moz-transition: all 0.3s 0;
+  -o-transition: all 0.3s 0;
+  -webkit-transition: all 0.3s 0;
+  transition: all 0.3s 0;
+  -moz-transition-duration: 0.1s;
+  -o-transition-duration: 0.1s;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
   -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
   -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
@@ -2706,6 +2712,7 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover {
     margin-bottom: 0;
     padding: 5px;
     font-size: 1em;
+    height: auto;
   }
   nav.menu ul li i {
     display: none;
@@ -2717,7 +2724,7 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover {
     background: none;
   }
   nav.menu ul li a {
-    top: 0;
+    padding: 0;
   }
   nav.menu ul li a:hover {
     background: none;
@@ -3102,7 +3109,7 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover {
   }
   nav.menu ul li a:before {
     display: block;
-    margin-top: -2px;
+    margin: 0;
   }
 }
 /*ブレイクポイント・パソコン用*/
@@ -3137,6 +3144,9 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover {
   nav.menu ul li a {
     display: inline-block;
     margin-left: -10px;
+  }
+  nav.menu ul li a:before {
+    margin-right: 5px;
   }
 
   .panel {
