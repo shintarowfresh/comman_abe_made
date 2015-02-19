@@ -330,6 +330,10 @@
         line-height: 6em;
         margin-right: 0;
 
+        br {
+            display: none;
+        }
+
         &.to_top {
             color: rgba(255, 255, 255, 0.7);
             background: #000;
@@ -373,6 +377,11 @@
                 @include opacity(1);
             }
         }
+    }
+
+    .btn__full {
+        height: 8em;
+        line-height: 8em;
     }
 
     h4.sub_title {

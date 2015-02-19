@@ -2538,6 +2538,37 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover {
   font-size: 1.5em;
 }
 
+/* 点滅 */
+.blinking {
+  -webkit-animation: blink 1.5s ease-in-out infinite alternate;
+  -moz-animation: blink 1.5s ease-in-out infinite alternate;
+  animation: blink 1.5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*ブレイクポイントタブレット用*/
 @media screen and (min-width: 600px) {
   h3.sub_title {
@@ -2784,6 +2815,9 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover {
     line-height: 6em;
     margin-right: 0;
   }
+  .btn br, .btn__sq br, .btn__works br, .btn__full br, .btn__sns br {
+    display: none;
+  }
   .btn.to_top, .to_top.btn__sq, .to_top.btn__works, .to_top.btn__full, .to_top.btn__sns {
     color: rgba(255, 255, 255, 0.7);
     background: #000;
@@ -2834,6 +2868,11 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover {
     margin-left: 1em;
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     opacity: 1;
+  }
+
+  .btn__full {
+    height: 8em;
+    line-height: 8em;
   }
 
   h4.sub_title {
