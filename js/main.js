@@ -20,8 +20,10 @@ jQuery(document).ready(function () {
         return false;
     });
 
+    /*ふわっとなる挙動*/
+    $("head").append('<style>.content { opacity: 0;-ms-filter:"alpha( opacity=0 )";filter: alpha( opacity=0 ); }</style>');
     $(' .content_full').fadeMover({
-        'effectType': 1,
+        'effectType': 3,
         'inSpeed': 500,
         'outSpeed': 500,
         'nofadeOut': 'nonmover'
@@ -49,7 +51,7 @@ jQuery(document).ready(function () {
         } else {
             if ($(this).hasClass('wpcf7-not-valid')) {
 
-            } else {
+            }else{
                 $(this).css('background', '#FAF9E3');
             }
         }
