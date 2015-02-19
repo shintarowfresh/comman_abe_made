@@ -23,3 +23,8 @@ $body-font :'Roboto', 游ゴシック, YuGothic, Meiryo, sans-serif;
 $eng-font : 'Roboto', sans-serif;
 
 $head-font : 'Noto Sans Japanese','Roboto', 游ゴシック, YuGothic, Meiryo, sans-serif;
+
+
+@import "icon/*.png";
+
+@include all-icon-sprites;

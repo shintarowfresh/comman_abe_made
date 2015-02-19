@@ -817,6 +817,13 @@ nav.menu {
     }
 }
 
+#panel {
+    .variable {
+        .col {
+        }
+    }
+}
+
 /*開閉パネルの中身*/
 .latest_list {
 
@@ -1415,6 +1422,35 @@ ul.foot_navi {
 
         .box_1 {
             padding: 0 5px 2em;
+        }
+
+        .mail-sns {
+            text-align: right;
+
+            ul {
+                li {
+                    display: inline-block;
+
+                    a {
+                        width: 75px;
+                        height: 75px;
+                        display: block;
+                        background-size: 100%;
+
+                        &.icon-yt {
+                            background-position: 0 -150px;
+                        }
+
+                        &.icon-line {
+                            background-position: 0 -70px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .icon-mail {
+
         }
     }
 
