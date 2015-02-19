@@ -15,9 +15,11 @@ $body_text_color: rgb(110, 91, 91);
 $mmb:2em; //モバイルビューでセクションのマージン
 $mb:6.5em; //PCビューセクションのマージン
 
-//書体
-$body-font : 游ゴシック, YuGothic, KoburinaGo-W3-83pv-RKSJ-H, 'こぶりなゴシック W3', KoburinaGoStd-W3, 'こぶりなゴシック Std W3', Helvetica, Arial, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 
-$content-font : 'Noto Sans', sans-serif;
+//書体
+$body-font :'Roboto', 游ゴシック, YuGothic, Meiryo, sans-serif;
 
 $eng-font : 'Roboto', sans-serif;
+
+$head-font : 'Noto Sans Japanese','Roboto', 游ゴシック, YuGothic, Meiryo, sans-serif;

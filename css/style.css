@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*このCSSはSASS+Compassでコンパイルされてます。*/
 /*ブラウザのデフォルトをリセット*/
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -63,7 +64,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 * モバイルCP共通で指定出来るCSSを設定。モバイルファーストで組んでいるのでモバイルに当たるCSS
 */
 body {
-  font-family: 游ゴシック, YuGothic, KoburinaGo-W3-83pv-RKSJ-H, "こぶりなゴシック W3", KoburinaGoStd-W3, "こぶりなゴシック Std W3", Helvetica, Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-family: "Roboto", 游ゴシック, YuGothic, Meiryo, sans-serif;
   font-size: 16px;
   color: #6E5B5B;
 }
@@ -88,6 +89,10 @@ a:hover {
 a img {
   display: block;
 }
+a img:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+}
 
 img {
   max-width: 100%;
@@ -107,6 +112,10 @@ ul {
 }
 
 /*タイポ系*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Noto Sans Japanese", "Roboto", 游ゴシック, YuGothic, Meiryo, sans-serif;
+}
+
 h1 {
   font-size: 1.7em;
 }
@@ -175,7 +184,7 @@ h4.sub_title span:before {
 }
 
 h5.sub_title {
-  font-family: 游ゴシック, YuGothic, KoburinaGo-W3-83pv-RKSJ-H, "こぶりなゴシック W3", KoburinaGoStd-W3, "こぶりなゴシック Std W3", Helvetica, Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-family: "Roboto", 游ゴシック, YuGothic, Meiryo, sans-serif;
   font-size: 1.6em;
   position: static;
   text-align: center;
@@ -242,7 +251,6 @@ p {
 .date {
   color: #D32117;
   font-weight: bold;
-  font-family: "Roboto", sans-serif;
 }
 .date:before {
   font-family: FontAwesome;
@@ -344,7 +352,6 @@ p {
   float: none;
   margin-right: 0;
   width: 100%;
-  font-family: "Noto Sans", sans-serif;
 }
 
 .cat_icon {
@@ -933,7 +940,6 @@ nav.menu .blog a:before {
 * Description of section, whether or not it has media queries, etc.
 */
 .content {
-  font-family: "Noto Sans", sans-serif;
   background: #fff;
   padding: 2em 1.565%;
 }
@@ -1196,7 +1202,7 @@ ul.foot_navi li a {
 }
 
 #footer {
-  font-family: 游ゴシック, YuGothic, KoburinaGo-W3-83pv-RKSJ-H, "こぶりなゴシック W3", KoburinaGoStd-W3, "こぶりなゴシック Std W3", Helvetica, Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-family: "Roboto", 游ゴシック, YuGothic, Meiryo, sans-serif;
 }
 #footer .foot, #footer .foot__info {
   padding: 3em 0;
@@ -2131,7 +2137,6 @@ ul.foot_navi li a {
   display: inline-block;
   font-size: 3em;
   margin-top: .3em;
-  font-family: "Roboto", sans-serif;
   font-weight: bold;
   line-height: .8;
 }
@@ -2139,7 +2144,6 @@ ul.foot_navi li a {
   display: inline-block;
   font-size: .5em;
   margin-left: .3em;
-  font-family: 游ゴシック, YuGothic, KoburinaGo-W3-83pv-RKSJ-H, "こぶりなゴシック W3", KoburinaGoStd-W3, "こぶりなゴシック Std W3", Helvetica, Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   font-weight: normal;
 }
 .price-table .price-month {
@@ -2157,14 +2161,13 @@ ul.foot_navi li a {
   display: inline-block;
   font-size: 1.6em;
   margin-top: .2em;
-  font-family: "Roboto", sans-serif;
   font-weight: bold;
 }
 .price-table .price-month span.money span {
   display: inline-block;
   font-size: .5em;
   margin-left: .3em;
-  font-family: 游ゴシック, YuGothic, KoburinaGo-W3-83pv-RKSJ-H, "こぶりなゴシック W3", KoburinaGoStd-W3, "こぶりなゴシック Std W3", Helvetica, Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-family: "Roboto", 游ゴシック, YuGothic, Meiryo, sans-serif;
   font-weight: normal;
 }
 .price-table ul {
@@ -2632,7 +2635,7 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover {
   }
 
   h5.sub_title {
-    font-family: 游ゴシック, YuGothic, KoburinaGo-W3-83pv-RKSJ-H, "こぶりなゴシック W3", KoburinaGoStd-W3, "こぶりなゴシック Std W3", Helvetica, Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-family: "Roboto", 游ゴシック, YuGothic, Meiryo, sans-serif;
     font-size: 2em;
     position: relative;
     color: rgba(153, 153, 153, 0.67);

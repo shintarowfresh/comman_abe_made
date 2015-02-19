@@ -28,6 +28,10 @@ a {
 
     img{
         display: block;
+
+        &:hover {
+            @include opacity(0.6);
+        }
     }
 }
 
@@ -47,6 +51,10 @@ ul {
 }
 
 /*タイポ系*/
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: $head-font;
+}
 
 h1 {
     font-size: 1.7em;
@@ -199,7 +207,6 @@ p{
 .date {
     color: $main;
     font-weight: bold;
-    font-family: $eng-font;
 
     &:before {
         font-family: FontAwesome;
@@ -298,7 +305,6 @@ p{
         float: none;
         margin-right: 0;
         width: 100%;
-        font-family: $content-font;
     }
 }
 
@@ -995,7 +1001,6 @@ nav.menu {
 * Description of section, whether or not it has media queries, etc.
 */
 .content{
-    font-family: $content-font;
     background: #fff;
     padding: 2em 1.565%;
 
@@ -2415,7 +2420,6 @@ ul.foot_navi {
                 display: inline-block;
                 font-size: 3em;
                 margin-top: .3em;
-                font-family: $eng-font;
                 font-weight: bold;
                 line-height: .8;
 
@@ -2424,7 +2428,6 @@ ul.foot_navi {
                     display: inline-block;
                     font-size: .5em;
                     margin-left: .3em;
-                    font-family: $body-font;
                     font-weight: normal;
                 }
             }
@@ -2446,7 +2449,6 @@ ul.foot_navi {
                 display: inline-block;
                 font-size: 1.6em;
                 margin-top: .2em;
-                font-family: $eng-font;
                 font-weight: bold;
 
 
