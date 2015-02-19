@@ -98,7 +98,8 @@
         <a class="btn__full to_top"><i class="fa fa-angle-double-up"></i> Top</a>
 
         <?php if(is_home()): ?>
-
+        <?php elseif(is_page('contact')): ?>
+        <?php elseif(is_archive()): ?>
         <?php else: ?>
 
         <?php
@@ -150,9 +151,6 @@
                 </div>
             </div>
         </div>
-
-        <!--トップへのボタン-->
-        <a class="btn__full to_top"><i class="fa fa-angle-double-up"></i> Top</a>
 
 
     </div><!--/.footer-->
