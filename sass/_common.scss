@@ -1842,9 +1842,14 @@ ul.foot_navi {
 
     a {
         position: absolute;
+        margin-top: 0;
     }
 }
 
+/*次を読み込むくるくる*/
+#loading {
+    margin: 0 auto;
+}
 
 
 
