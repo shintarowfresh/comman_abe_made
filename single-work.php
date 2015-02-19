@@ -118,7 +118,7 @@ get_header(); ?>
             </ul>
         </div>
 
-        <a class="btn" href="/work/">制作実績一覧へ戻る</a>
+        <a class="btn" href="/work/">制作実績<br>一覧へ戻る</a>
 
     </div><!--/.inner-->
 </div><!--/.content-->
