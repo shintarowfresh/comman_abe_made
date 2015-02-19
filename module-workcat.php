@@ -19,7 +19,7 @@
         $terms = get_terms( $taxonomy , $args );
 
         if ( count( $terms ) != 0 ) {
-            echo '<ul>';
+            echo '<ul class="tarm-list">';
             // タームのリスト $terms を $term に格納してループ
             foreach ( $terms as $term ) {
                 // タームのURLを取得
@@ -43,7 +43,6 @@
         }?>
 
        <h3>提供しているサービスの一覧</h3>
-
 
         <?php wp_nav_menu( array(
             'theme_location'=>'init-cat',

@@ -94,7 +94,7 @@
 
 
        <!--トップへのボタン-->
-        <a class="btn btn_full to_top"><i class="fa fa-angle-double-up"></i> Top</a>
+        <a class="btn__full to_top"><i class="fa fa-angle-double-up"></i> Top</a>
 
 
 

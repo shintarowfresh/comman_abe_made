@@ -34,10 +34,9 @@
 
             <header>
 
-                <time><?php the_time( 'Y.n.j' ); ?></time>
-
                 <span class="meta tag"><i class="fa fa-tags"></i> <?php the_tags( '', '' ); ?></span>
 
+                <time><?php the_time( 'Y.n.j' ); ?></time>
 
                 <?php if( is_single() ) :?>
                 <h2 class="title">
@@ -98,22 +97,20 @@
 
                     <ul>
                         <li class="b-twitter">
-                            <a class="btn-sq" href="http://twitter.com/share?url=<?php echo $canonical_url_encode;?>&text=<?php echo $title_encode;?>" onclick="window.open(this.href, 'FBwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i>Twitter<span><?php if(function_exists('get_scc_twitter')) echo get_scc_twitter(); ?></span></a>
+                            <a class="btn__sns" href="http://twitter.com/share?url=<?php echo $canonical_url_encode;?>&text=<?php echo $title_encode;?>" onclick="window.open(this.href, 'FBwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i>Twitter<span><?php if(function_exists('get_scc_twitter')) echo get_scc_twitter(); ?></span></a>
                         </li>
                         <li class="b-fb">
-                            <a class="btn-sq" href="http://www.facebook.com/share.php?u=<?php echo $canonical_url_encode;?>" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-facebook-official"></i>いいね！<span><?php if(function_exists('get_scc_facebook')) echo get_scc_facebook(); ?></span></a>
+                            <a class="btn__sns" href="http://www.facebook.com/share.php?u=<?php echo $canonical_url_encode;?>" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-facebook-official"></i>いいね！<span><?php if(function_exists('get_scc_facebook')) echo get_scc_facebook(); ?></span></a>
                         </li>
                         <li class="b-hatena">
-                            <a class="btn-sq" href="http://b.hatena.ne.jp/add?mode=confirm&url=<?php echo $canonical_url_encode;?>&title=<?php echo $title_encode;?>" onclick="window.open(this.href, 'FBwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-hatena"></i>はてブ<span><?php if(function_exists('get_scc_hatebu')) echo get_scc_facebook(); ?></span></a>
+                            <a class="btn__sns" href="http://b.hatena.ne.jp/add?mode=confirm&url=<?php echo $canonical_url_encode;?>&title=<?php echo $title_encode;?>" onclick="window.open(this.href, 'FBwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-hatena"></i>はてブ<span><?php if(function_exists('get_scc_hatebu')) echo get_scc_facebook(); ?></span></a>
                         </li>
                         <li class="b-pocket">
-                            <a class="btn-sq" href="http://getpocket.com/edit?url=<?php echo $canonical_url_encode;?>&title=<?php echo $title_encode;?>" onclick="window.open(this.href, 'FBwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa icon-pocket"></i>pocket<span><?php if(function_exists('get_scc_pocket')) echo get_scc_facebook(); ?></span></a>
+                            <a class="btn__sns" href="http://getpocket.com/edit?url=<?php echo $canonical_url_encode;?>&title=<?php echo $title_encode;?>" onclick="window.open(this.href, 'FBwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa icon-pocket"></i>pocket<span><?php if(function_exists('get_scc_pocket')) echo get_scc_facebook(); ?></span></a>
                         </li>
                     </ul>
 
                 </div><!--/.share-->
-
-                <p>宣伝セクション</p>
 
             </div><!--/.cta-->
 

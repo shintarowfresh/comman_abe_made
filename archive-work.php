@@ -20,7 +20,7 @@ get_header(); ?>
        カンマンは技術力を武器に、あなたの「かなえたいこと」を強力にサポート出来ます。
        </p>
 
-        <a class="btn-works" href="/works/">「カンマンの出来ること」を見てみる <i class="fa fa-arrow-circle-o-right"></i></a>
+        <a class="btn__works" href="/works/">「カンマンの出来ること」を見てみる <i class="fa fa-arrow-circle-o-right"></i></a>
 
         <?php get_template_part( 'module','workcat' ); ?>
 

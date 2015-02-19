@@ -54,8 +54,6 @@ get_header(); ?>
 
            <ul class="problem">
                <li><i class="fa fa-check-square-o"></i> webページを作りたいけど、誰に頼んでいいかわからない！　<strong>しっかり作ってサポートしてくれる人は誰？</strong></li>
-               <li><i class="fa fa-check-square-o"></i> webページはあるけど、上手く使えているか、<strong>心配！</strong></li>
-               <li><i class="fa fa-check-square-o"></i> webページはあるけど、集客に結びつけられない！</li>
                <li><i class="fa fa-check-square-o"></i> webページを管理する人と上手くコミュニケーション出来ない。<strong>何を言っているのかわからない！</strong></li>
                <li><i class="fa fa-check-square-o"></i> web担当者の<strong>モチベーションが落ちている！</strong></li>
            </ul>
@@ -80,8 +78,8 @@ get_header(); ?>
 
            <p>あなたのwebを使った発信のお手伝いが出来れば幸いです。</p>
 
-           <a class="btn-works" href="/message/">カンマンの出来ることはこちら <i class="fa fa-arrow-circle-o-right"></i></a>
-           <a class="btn-works" href="/message/">簡単なフォームからお問い合わせを送る <i class="fa fa-arrow-circle-o-right"></i></a>
+           <a class="btn__works" href="/message/">カンマンの出来ることはこちら <i class="fa fa-arrow-circle-o-right"></i></a>
+           <a class="btn__works" href="/message/">フォームからお問い合わせを送る <i class="fa fa-arrow-circle-o-right"></i></a>
 
        </div>
     </div><!--/.read-first-->
@@ -129,7 +127,7 @@ get_header(); ?>
 
         </div><!--/inner-->
 
-        <a href="/work/" class="btn btn_full">実績一覧</a>
+        <a href="/work/" class="btn__full">実績一覧</a>
 
     </div><!--/.work_showcase-->
 

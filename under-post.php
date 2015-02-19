@@ -6,8 +6,8 @@
 <h5 class="sub_title st1">カンマンの制作実績</h5>
 
 <div class="btns">
-<a class="btn-works" href="/work/">制作実績一覧を見る <i class="fa fa-arrow-circle-o-right"></i></a>
-<a class="btn-works" href="/contact/">お問い合わせ <i class="fa fa-pencil-square-o"></i></a>
+<a class="btn__works" href="/work/">制作実績一覧を見る <i class="fa fa-arrow-circle-o-right"></i></a>
+<a class="btn__works" href="/contact/">お問い合わせ <i class="fa fa-pencil-square-o"></i></a>
 </div>
 
 <ul class="three">

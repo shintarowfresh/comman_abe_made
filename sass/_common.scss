@@ -233,6 +233,8 @@ p{
     }
 }
 
+
+/*ボタンをまとめて設定*/
 .btn {
     background: $main;
     color: #fff;
@@ -241,20 +243,72 @@ p{
     width: 100px;
     line-height: 100px;
     text-align: center;
-    margin: 0 auto;
+    margin: 2em auto 0;
     @include border-radius(50%);
     text-decoration: none;
+    @include box-shadow(0 2px 6px rgba(0, 0, 0, 0.16));
 }
 
-.to_top {
-    margin-top: 2em;
-}
-
-.btn-sq {
+.btn__sq {
+    @extend .btn;
     display: block;
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     padding: 8px 15px;
     @include border-radius(3px);
+}
+
+.btn__works {
+    @extend .btn;
+    border: 1px solid $main;
+    background: #fff;
+    min-width: 64px;
+    padding: 0 8px;
+    @include border-radius(4px);
+    display: inline-block;
+    height: 36px;
+    width: auto;
+    line-height: 36px;
+    color: $main;
+
+    .fa {
+        @include transition(all .3s ease-in-out 0);
+        @include transition-duration(.3s);
+        margin-left: 0;
+        @include opacity(1);
+    }
+
+    &:hover {
+        background: $main;
+        color: #fff;
+        @include opacity(1);
+
+        .fa {
+            margin-left: 1em;
+            @include opacity(1);
+        }
+    }
+}
+
+.btn__full {
+    @extend .btn;
+
+    &.to_top {
+        margin-top: 0;
+    }
+}
+
+.btn__sns {
+    @extend .btn;
+    padding: 0 8px;
+    line-height: 36px;
+    height: 36px;
+    margin: 0 4px 4px 0;
+}
+
+p {
+    .btn__works{
+        margin-top: 0;
+    }
 }
 
 .title {
@@ -961,12 +1015,9 @@ nav.menu {
 
 
     }
-
-    .btn-works {
-        margin-top: 1em;
-    }
 }
 
+/*吹き出しの装飾*/
 .balloon {
     position: relative;
     display: inline-block;
@@ -974,6 +1025,8 @@ nav.menu {
     z-index: 0;
     padding: 1em;
     color: #fff;
+    @include box-shadow(0 2px 6px rgba(0, 0, 0, 0.16));
+    @include border-radius(2px);
 
     &:after {
         content: "";
@@ -1061,23 +1114,23 @@ nav.menu {
                 display: block;
                 width: 100%;
                 height: 100%;
-                font-size: .75em;
+                font-size: 12px;
                 position: relative;
+                letter-spacing: -.05em;
 
                 &:before {
                     font-family: FontAwesome;
                     color: $t_w;
                     display: block;
-                    background: #d5d5d5;
                     @include border-radius(50%);
                     margin: 0 auto .2em;
                     text-decoration: none;
-                    font-size: 3em;
-                    height: 85px;
-                    width: 85px;
-                    line-height: 89px;
+                    font-size: 24px;
+                    height: 56px;
+                    width: 56px;
+                    line-height: 2.5;
                     @include text-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
-                    border: 2px solid rgba(0, 0, 0, 0.07);
+                    @include box-shadow(0 2px 6px rgba(0, 0, 0, 0.28));
                 }
             }
 
@@ -1233,17 +1286,8 @@ nav.menu {
             margin: 0;
         }
     }
-
-    .btn {
-        margin-top: 2em;
-    }
 }
 
-.index_blog {
-    .btn {
-        margin-top: 2em;
-    }
-}
 
 .sub {
     .sidebar_title {
@@ -1267,12 +1311,11 @@ nav.menu {
     background: #fff;
 
     .sns-section {
-
         background: #fff;
         width: 100%;
         height: 500px;
-
         @include mb;
+        overflow: hidden;
 
 
         &:first-child {
@@ -1582,12 +1625,6 @@ ul.foot_navi {
     }
 }
 
-.related-work {
-    .btn {
-        margin-top: 2em;
-    }
-}
-
 
 
 /*制作実績archive*/
@@ -1721,21 +1758,31 @@ ul.foot_navi {
         margin-bottom: 0;
         margin-top: 1em;
 
+        &.tarm-list {
+            li a {
+                background: $main;
+                color: #fff;
+            }
+        }
+
         li {
             display: inline-block;
             margin: 0 .5em .5em 0 ;
 
             a {
-                @include min-height(44px);
-                line-height: 44px;
+                @include min-height(18px);
+                @include min-width(64px);
+                line-height: 1.2;
                 text-decoration: none;
-                padding: 0 1em;
+                padding: 10px 8px;
                 display: block;
                 color: $main;
                 font-size: .8em;
                 @include border-radius(2px);
                 border: 1px solid $main;
                 background: #fff;
+                @include box-shadow(0 1px 4px rgba(0, 0, 0, 0.28));
+                text-align: center;
 
                 &:hover {
                     background: #000;
@@ -1903,6 +1950,8 @@ ul.foot_navi {
             padding: 1em;
             display: block;
             border: 1px solid $main;
+            @include box-shadow(0 2px 6px rgba(0, 0, 0, 0.16));
+            @include border-radius(2px);
 
             &:hover {
                 background: $main;
@@ -2001,32 +2050,7 @@ ul.foot_navi {
     background-image: url(../img/works-icon-04.png);
 }
 
-.btn-works {
-    text-decoration: none;
-    border: 1px solid $main;
-    background: #fff;
-    padding: 1em 1.5em;
-    @include border-radius(2px);
-    display: inline-block;
 
-    .fa {
-        @include transition(all .3s ease-in-out 0);
-        @include transition-duration(.3s);
-        margin-left: 0;
-        @include opacity(1);
-    }
-
-    &:hover {
-        background: $main;
-        color: #fff;
-        @include opacity(1);
-
-        .fa {
-            margin-left: 1em;
-            @include opacity(1);
-        }
-    }
-}
 
 
 
@@ -2048,7 +2072,6 @@ ul.foot_navi {
 
         .title {
             font-size: 2em;
-            margin: 1em 0;
             color: #111;
             font-weight: bold;
         }
@@ -2229,6 +2252,11 @@ ul.foot_navi {
         background: #f2f2f2;
         border: 1px solid #d5d5d5;
         @include border-radius(2px);
+        @include box-shadow(0 2px 8px rgba(0, 0, 0, 0.08) inset);
+
+        >*:last-child {
+            margin-bottom: 0;
+        }
     }
 
     .share {
@@ -2240,6 +2268,7 @@ ul.foot_navi {
             li{
                 float: left;
                 margin: 0 15px 15px 0;
+                padding-right: 15px;
 
                 &.b-twitter a {
                     background: #008fde;
@@ -2266,6 +2295,11 @@ ul.foot_navi {
                     color: #fff;
                     background: #d5d5d5;
                     font-size: .8em;
+                    padding: 8px;
+                    margin: 0;
+                    height: auto;
+                    line-height: 1;
+                    @include border-radius(2px);
 
                     span {
                         background: #fff;
@@ -2352,7 +2386,7 @@ ul.foot_navi {
 
         a {
             float: right;
-            margin-bottom: 1em;
+            margin: 0 4px 1em;
         }
     }
 
