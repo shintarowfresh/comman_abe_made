@@ -1,26 +1,7 @@
-/*$(window).load(function ($) {
-    $('#loader_bg').delay(900).fadeOut(800);
-    $('#loader').delay(600).fadeOut(500);
-    $('#wrapper').css('display', 'block');
-
-    function stopload() {
-        $('#wrapper').css('display', 'block');
-        $('#loader_bg').delay(900).fadeOut(800);
-        $('#loader').delay(600).fadeOut(300);
-    }
-
-    //10秒たったら強制的にロード画面を非表示
-
-    $(function () {
-        setTimeout(function () {
-            stopload();
-        }, 10000);
-    });
-});*/
-
-
 jQuery(document).ready(function () {
     'use strict';
+
+    var $panel = $('#panel');
 
     //ヘッダーにあるハンバーガーボタンの制御
     $(".panel_btn").click(function () {
@@ -30,16 +11,25 @@ jQuery(document).ready(function () {
     });
 
     //ヘッダーにあるハンバーガーボタンの制御
-    $('.panel').css('display', 'none');
     $(".panel_btn_pc").click(function () {
-        $('.variable').css('display', 'block');
-        $(".panel").slideToggle(200, function(){
+        $panel.slideToggle(200, function () {
             $('.panel .variable >div').fadeIn();
         });
 
         $(".panel_btn_icon").toggleClass("close");
         return false;
     });
+
+    $(' .content_full').fadeMover({
+        'effectType': 1,
+        'inSpeed': 500,
+        'outSpeed': 500,
+        'nofadeOut': 'nonmover'
+    });
+    $('.content ').fadeMover({'outDelay': 300});
+    $('.content_full').fadeMover({'outDelay': 1000});
+
+
 
     //フォーム系の挙動
     var $wpcf7 = $('.wpcf7-form');
@@ -52,12 +42,12 @@ jQuery(document).ready(function () {
             $(this).val('必須項目です').css('color', '#E7ABAB')
                 .one('focus', function () {
                     $(this).val('').css({
-                    'color':'',
-                    'background': ''
+                        'color': '',
+                        'background': ''
                     });
                 });
         } else {
-            if($(this).hasClass('wpcf7-not-valid')) {
+            if ($(this).hasClass('wpcf7-not-valid')) {
 
             } else {
                 $(this).css('background', '#FAF9E3');
@@ -95,7 +85,9 @@ jQuery(document).ready(function () {
         // 移動先を数値で取得
         var position = target.offset().top;
         // スムーススクロール
-        jQuery('body,html').animate({scrollTop: position}, speed, 'swing');
+        jQuery('body,html').animate({
+            scrollTop: position
+        }, speed, 'swing');
         return false;
     });
 
@@ -129,11 +121,15 @@ jQuery(document).ready(function () {
 
     //会社概要の外観部分のスライドショー制御
     $(".my-gallery").swipeshow({
-        autostart: true,    /* Set to `false` to keep it steady */
-        interval: 4000,     /* Time between switching slides (ms) */
-        speed: 1000,         /* Animation speed (ms) */
-        friction: 0.6,      /* Bounce-back behavior; use `0` to disable */
-        mouse: true        /* enable mouse dragging controls */
+        autostart: true,
+        /* Set to `false` to keep it steady */
+        interval: 4000,
+        /* Time between switching slides (ms) */
+        speed: 1000,
+        /* Animation speed (ms) */
+        friction: 0.6,
+        /* Bounce-back behavior; use `0` to disable */
+        mouse: true /* enable mouse dragging controls */
     });
 
 
@@ -151,21 +147,21 @@ jQuery(document).ready(function () {
 
 
 
-    //グローバルナビを押したときの挙動
-    jQuery('#globalnavi a').click(function () {
-        $('body').stop(true).animate({
-            marginTop: "30px",
-            opacity: 'toggle'
-        }, {
-            duration: 500,
-        });
-    });
+    /*    //グローバルナビを押したときの挙動
+        jQuery('#globalnavi a').click(function () {
+            $('body').stop(true).animate({
+                marginTop: "30px",
+                opacity: 'toggle'
+            }, {
+                duration: 500,
+            });
+        });*/
 
 
 
 
 
-    //ボタン(id:move-page-top)のクリックイベント
+    //上に戻るボタン
     $('.to_top').click(function () {
         //ページトップへ移動する
         $('html,body').animate({
@@ -222,8 +218,8 @@ function initialize() {
         featureType: "all"
     }];
     var styledMapOptions = {
-        name: 'カンマンスタイル'
-    },
+            name: 'カンマンスタイル'
+        },
         lopanType = new google.maps.StyledMapType(styleOptions, styledMapOptions);
     map.mapTypes.set('noText', lopanType);
     map.setMapTypeId('noText');
