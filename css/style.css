@@ -58,6 +58,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+.icon-sprite, .icon-fb, .icon-line, .icon-yt {
+  background-image: url('../img/icon-s48ba756a63.png');
+  background-repeat: no-repeat;
+}
+
+.icon-fb {
+  background-position: 0 0;
+}
+
+.icon-line {
+  background-position: 0 -150px;
+}
+
+.icon-yt {
+  background-position: 0 -300px;
+}
+
 /**
 * #.# デバイス共通のcss
 *
@@ -1308,6 +1325,24 @@ ul.foot_navi li a {
 }
 #footer .foot__info .box_1 {
   padding: 0 5px 2em;
+}
+#footer .foot__info .mail-sns {
+  text-align: right;
+}
+#footer .foot__info .mail-sns ul li {
+  display: inline-block;
+}
+#footer .foot__info .mail-sns ul li a {
+  width: 75px;
+  height: 75px;
+  display: block;
+  background-size: 100%;
+}
+#footer .foot__info .mail-sns ul li a.icon-yt {
+  background-position: 0 -150px;
+}
+#footer .foot__info .mail-sns ul li a.icon-line {
+  background-position: 0 -70px;
 }
 #footer .hr .line {
   background: #546E7A;
@@ -2569,6 +2604,18 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover {
     opacity: 1;
   }
 }
+.icon-fb {
+  background-position: 0 0;
+}
+
+.icon-line {
+  background-position: 0 -150px;
+}
+
+.icon-yt {
+  background-position: 0 -300px;
+}
+
 /*ブレイクポイントタブレット用*/
 @media screen and (min-width: 600px) {
   h3.sub_title {
@@ -2756,7 +2803,7 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover {
     width: 48.2%;
   }
   .col .box_2 {
-    width: 48.25%;
+    width: 48%;
   }
   .col .box_3 {
     width: 73.24%;

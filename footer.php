@@ -124,6 +124,25 @@
         <div class="foot__info">
             <div class="inner">
 
+                <div class="col mail-sns">
+                    <div class="box_2">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/foot-mail.png" alt="メールアドレス">
+                    </div>
+
+                    <div class="box_2">
+
+                       <ul>
+                           <li><a class="icon-fb" href="https://www.facebook.com/comman.inc" target="_blank"></a></li>
+                           <li><a class="icon-yt" href="https://www.youtube.com/channel/UCGj6L4LXylu7hZtHuObHECQ" target="_blank"></a></li>
+                           <li><a class="icon-line" href="http://www.comman.co.jp/%E3%82%AB%E3%83%B3%E3%83%9E%E3%83%B3line%E5%A7%8B%E3%82%81%E3%81%9F%E3%82%88%E3%83%BC%EF%BC%81%E7%A4%BE%E5%93%A1%E3%81%8C%E5%BC%B5%E3%82%8A%E4%BB%98%E3%81%84%E3%81%A6%E3%81%BF%E3%82%93%E3%81%AA/"></a></li>
+                       </ul>
+
+
+
+                    </div>
+
+                </div><!--/.col-->
+
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/foot-info.png" alt="カンマンについて">
 
                 <div class="col">
@@ -148,9 +167,9 @@
                         <p><i class="fa fa-fax"></i> 088-611-2332</p>
                     </div>
 
-                </div>
-            </div>
-        </div>
+                </div><!--/.col-->
+            </div><!--/.inner-->
+        </div><!--/.foot__info-->
 
 
     </div><!--/.footer-->
