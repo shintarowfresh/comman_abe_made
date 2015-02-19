@@ -1432,6 +1432,40 @@ ul.foot_navi {
 
 }
 
+.site-gallery {
+    overflow: hidden;
+    background: #000;
+
+    li {
+        float: left;
+        @include box-sizing(border-box);
+        width: 20%;
+        border: 1px solid #000;
+
+        .gallery-thum {
+            width: 100%;
+            height: 0;
+            padding-bottom: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            min-width: 100%;
+            max-width: 100%;
+            height: auto;
+            @include opacity(0.5);
+            @include transition(all .3s ease-in-out 0);
+            @include transition-duration(.3s);
+
+            &:hover {
+                @include opacity(1);
+            }
+        }
+    }
+}
 
 
 

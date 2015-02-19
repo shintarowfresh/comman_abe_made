@@ -57,6 +57,7 @@
         // 記事下の制作実績
         get_template_part( 'under','post' ); ?>
 
+
         <?php elseif( is_page('contact') ): ?>
         <?php elseif( is_page('price') ): ?>
         <?php elseif( is_page('company') ): ?>
@@ -96,22 +97,20 @@
        <!--トップへのボタン-->
         <a class="btn__full to_top"><i class="fa fa-angle-double-up"></i> Top</a>
 
+        <?php if(is_home()): ?>
 
+        <?php else: ?>
+
+        <?php
+        // サイトギャラリー
+        get_template_part( 'gallery' ); ?>
+
+        <?php endif; ?>
 
 
 
         <div class="foot content_width">
             <div class="inner">
-
-                <ul class="foot_navi">
-                    <li><a href="/privacypolicy/">プライバシーポリシー</a></li>
-                    <li><a href="/sitepolicy/">サイトポリシー</a></li>
-                </ul>
-
-                <div>
-                    メールを送る
-                    コンタクトフォームから問い合わせる
-                </div>
 
                 <div>
                     人と技術と人を繋ぐ
@@ -152,6 +151,8 @@
             </div>
         </div>
 
+        <!--トップへのボタン-->
+        <a class="btn__full to_top"><i class="fa fa-angle-double-up"></i> Top</a>
 
 
     </div><!--/.footer-->
