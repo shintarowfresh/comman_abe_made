@@ -13,7 +13,7 @@
         <a href="<?php echo home_url(); ?>/work/">制作実績</a>
     </div>
 
-    <div class="this-post">
+    <div class="this-post  blinking">
         <?php the_title(''); ?> 様
     </div>
 
@@ -47,7 +47,7 @@
 
 
     <?php /*--- 記事タイトル --- */ ?>
-    <div class="this-post">この記事</div>
+    <div class="this-post blinking">この記事</div>
 
 
 
@@ -61,7 +61,7 @@
     </div>
         <?php } ?>
 
-    <div class="this-post">
+    <div class="this-post blinking">
         <?php the_title(''); ?>
     </div>
 
@@ -95,7 +95,7 @@ $allcats = array_reverse($allcats);
     </div>
     <?php endforeach; ?>
     <?php /*--- 最下層のカテゴリ名を表示 --- */ ?>
-    <div class="this-post"><?php single_cat_title(); ?></div>
+    <div class="this-post blinking"><?php single_cat_title(); ?></div>
 
 
 
@@ -113,7 +113,7 @@ $allcats = array_reverse($allcats);
     </div>
     <?php endforeach; ?>
     <?php /*--- タグ名の表示 --- */ ?>
-    <div class="this-post"><?php single_cat_title(); ?></div>
+    <div class="this-post blinking"><?php single_cat_title(); ?></div>
 
 
 
@@ -123,7 +123,7 @@ $allcats = array_reverse($allcats);
 
     <?php elseif( is_author() ) : //投稿者ページの場合 ?>
 
-    <div class="this-post">
+    <div class="this-post blinking">
         投稿者 : <?php the_author_meta('display_name', get_query_var('author')); ?>
     </div>
 
@@ -131,7 +131,7 @@ $allcats = array_reverse($allcats);
 
     <?php elseif( is_search() ) : //投稿者ページの場合 ?>
 
-    <div class="this-post">
+    <div class="this-post blinking">
         検索結果
     </div>
 
