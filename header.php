@@ -60,8 +60,8 @@
             <div class="head">
 
                 <div class="variable">
-                    <a class="panel_btn" href=""><span class="panel_btn_icon"></span></a>
-                    <a class="panel_btn_pc" href=""><span class="panel_btn_icon"></span></a>
+                    <a class="panel_btn  nonmover" href=""><span class="panel_btn_icon"></span></a>
+                    <a class="panel_btn_pc  nonmover" href=""><span class="panel_btn_icon"></span></a>
 
                     <div class="logo">
                         <h1>
@@ -87,7 +87,7 @@
             </div><!--/.haed-->
 
             <!--開閉するパネル部分-->
-            <div id="panel" class="panel" style="display:none;">
+            <div id="panel" class="panel " style="display:none;">
                 <div class="variable">
                     <div class="col clearfix">
                         <div class="box_1 facebook_like_center">

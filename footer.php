@@ -95,7 +95,7 @@
 
 
        <!--トップへのボタン-->
-        <a class="btn__full to_top"><i class="fa fa-angle-double-up"></i> Top</a>
+        <a class="btn__full to_top  nonmover"><i class="fa fa-angle-double-up"></i> Top</a>
 
         <?php if(is_home()): ?>
         <?php elseif(is_page('contact')): ?>
