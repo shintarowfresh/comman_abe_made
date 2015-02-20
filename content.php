@@ -14,7 +14,7 @@
 
                 <?php if( is_single() ) : ?>
 
-            <?php the_post_thumbnail('single-eye'); ?>
+            <?php echo get_the_post_thumbnail($post->ID, 'single-eye',array('data-lazy' => 'false')); ?>
 
                 <?php else :?>
 
