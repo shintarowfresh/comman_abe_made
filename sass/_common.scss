@@ -175,12 +175,8 @@ p{
     margin: 0 1.565%;
 }
 
-.no-js {
-}
 
-.content_full,
-.content,
-#footer {
+.no-js {
 }
 
 
@@ -815,6 +811,21 @@ nav.menu {
             display: none;
         }
     }
+<<<<<<< HEAD
+=======
+}
+
+.no-js {
+    #panel {
+        display: block;
+
+        .variable,
+        .variable >div {
+            display: block;
+        }
+    }
+
+>>>>>>> b1397e0e9836d52ec1d05b8a1411453b6dff2475
 }
 
 /*開閉パネルの中身*/

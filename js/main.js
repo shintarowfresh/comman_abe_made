@@ -2,6 +2,7 @@ jQuery(document).ready(function () {
     'use strict';
 
 
+
     //制作実績ページの制作カテゴリー用シャッター
     $('#shutter').click(function () {
         $('.shutter').slideToggle(200);
@@ -9,6 +10,7 @@ jQuery(document).ready(function () {
         $('.cat_list').toggleClass("open");
         return false;
     });
+
 
     /*ふわっとなる挙動*/
     $(' .content_full').fadeMover({
