@@ -1,6 +1,17 @@
 jQuery(document).ready(function () {
     'use strict';
 
+    /*ふわっとなる挙動*/
+    $(' .content_full').fadeMover({
+        'effectType': 1,
+        'nofadeOut': 'nonmover'
+    });
+    $('.content ').fadeMover({'outDelay': 300});
+    $('.content_full').fadeMover({'outDelay': 1000});
+    $('#footer').fadeMover({'outDelay': 2000});
+
+
+
     var $panel = $('#panel');
 
     //ヘッダーにあるハンバーガーボタンの制御
@@ -19,17 +30,6 @@ jQuery(document).ready(function () {
         $(".panel_btn_icon").toggleClass("close");
         return false;
     });
-
-    /*ふわっとなる挙動*/
-    $("head").append('<style>.content { opacity: 0;-ms-filter:"alpha( opacity=0 )";filter: alpha( opacity=0 ); }</style>');
-    $(' .content_full').fadeMover({
-        'effectType': 3,
-        'inSpeed': 500,
-        'outSpeed': 500,
-        'nofadeOut': 'nonmover'
-    });
-    $('.content ').fadeMover({'outDelay': 300});
-    $('.content_full').fadeMover({'outDelay': 1000});
 
 
 
