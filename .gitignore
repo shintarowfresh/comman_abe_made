@@ -1,9 +1,10 @@
 #ファイル
-.DS_store
-.scssc
-.xml
+*.DS_store
+*.scssc
+*.xml
 
 #ディレクトリ
-
+.sass-cache/
+node_modules/
 
 #ワイルドカード
