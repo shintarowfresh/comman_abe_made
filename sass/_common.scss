@@ -163,7 +163,7 @@ p{
 }
 
 /* はみ出しを回避 */
-.wrapper {
+#wrapper {
     overflow: hidden;
     background: $bg-color;
 }
@@ -174,6 +174,15 @@ p{
     padding: 0 1.565%;
     margin: 0 1.565%;
 }
+
+.no-js {
+}
+
+.content_full,
+.content,
+#footer {
+}
+
 
 /**
 * #.# 使い回すモジュール
@@ -787,8 +796,11 @@ nav.menu {
     }
 }
 
+.no-js {
+}
+
 //開閉するパネル部分
-.panel {
+#panel {
     display: none;
     overflow: hidden;
     background: $bg-color;
@@ -801,24 +813,6 @@ nav.menu {
 
         >div {
             display: none;
-        }
-    }
-
-
-}
-
-.no-js {
-    .panel,
-    .variable,
-    .variable >div
-    {
-        display: block !important;
-    }
-}
-
-#panel {
-    .variable {
-        .col {
         }
     }
 }
@@ -1375,6 +1369,7 @@ ul.foot_navi {
 }
 
 #footer {
+    background: rgba(249, 235, 235, 1);
 
     .foot {
         padding: 3em 0;
@@ -1744,6 +1739,7 @@ ul.foot_navi {
 
         &:hover {
             @include opacity(1);
+            cursor: pointer;
         }
 
         a {
@@ -1817,7 +1813,6 @@ ul.foot_navi {
         margin-bottom: 2em;
         display: none;
 
-
         h3 {
             color: $sub;
         }
@@ -1860,12 +1855,6 @@ ul.foot_navi {
                 }
             }
         }
-    }
-}
-
-.no-js {
-    .shutter {
-        display: block;
     }
 }
 

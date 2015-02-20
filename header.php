@@ -5,7 +5,8 @@
  * <head> セクション
  *
  */
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <!--[if lt IE 7]>
 <html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]>
@@ -24,6 +25,11 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <?php
+wp_deregister_script('jquery');
+wp_enqueue_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', array() ,null );
+        ?>
+
         <?php wp_head(); ?>
 
     </head>
@@ -41,8 +47,8 @@
             <div class="head">
 
                 <div class="variable">
-                    <a class="panel_btn  nonmover" href=""><span class="panel_btn_icon"></span></a>
-                    <a class="panel_btn_pc  nonmover" href=""><span class="panel_btn_icon"></span></a>
+                    <a class="panel_btn  nonmover" href="javascript:void(0)"><span class="panel_btn_icon" return false;></span></a>
+                    <a class="panel_btn_pc  nonmover" href="javascript:void(0)"><span class="panel_btn_icon" return false;></span></a>
 
                     <div class="logo">
                         <h1>

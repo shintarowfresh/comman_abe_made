@@ -1,6 +1,26 @@
 jQuery(document).ready(function () {
     'use strict';
 
+
+    //制作実績ページの制作カテゴリー用シャッター
+    $('#shutter').click(function () {
+        $('.shutter').slideToggle(200);
+        $('.btn_cross').toggleClass("close");
+        $('.cat_list').toggleClass("open");
+        return false;
+    });
+
+    /*ふわっとなる挙動*/
+    $(' .content_full').fadeMover({
+        'effectType': 1,
+        'nofadeOut': 'nonmover'
+    });
+    $('.content ').fadeMover({'outDelay': 300});
+    $('.content_full').fadeMover({'outDelay': 1000});
+    $('#footer').fadeMover({'outDelay': 2000});
+
+
+
     var $panel = $('#panel');
 
     //ヘッダーにあるハンバーガーボタンの制御
@@ -19,17 +39,6 @@ jQuery(document).ready(function () {
         $(".panel_btn_icon").toggleClass("close");
         return false;
     });
-
-    /*ふわっとなる挙動*/
-    $("head").append('<style>.content { opacity: 0;-ms-filter:"alpha( opacity=0 )";filter: alpha( opacity=0 ); }</style>');
-    $(' .content_full').fadeMover({
-        'effectType': 3,
-        'inSpeed': 500,
-        'outSpeed': 500,
-        'nofadeOut': 'nonmover'
-    });
-    $('.content ').fadeMover({'outDelay': 300});
-    $('.content_full').fadeMover({'outDelay': 1000});
 
 
 
@@ -137,34 +146,9 @@ jQuery(document).ready(function () {
 
 
 
-    //制作実績ページの制作カテゴリー用シャッター
-    $('.shutter').css('display', 'none');
-    $('a#shutter').click(function () {
-        $('.shutter').slideToggle(200);
-        $('.btn_cross').toggleClass("close");
-        $('.cat_list').toggleClass("open");
-        return false;
-    });
-
-
-
-
-    /*    //グローバルナビを押したときの挙動
-        jQuery('#globalnavi a').click(function () {
-            $('body').stop(true).animate({
-                marginTop: "30px",
-                opacity: 'toggle'
-            }, {
-                duration: 500,
-            });
-        });*/
-
-
-
-
 
     //上に戻るボタン
-    $('.to_top').click(function () {
+    $('#to_top').click(function () {
         //ページトップへ移動する
         $('html,body').animate({
             scrollTop: 0

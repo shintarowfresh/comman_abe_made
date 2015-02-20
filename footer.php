@@ -3,8 +3,6 @@
  * フッター
  */
 ?>
-
-
     <div id="footer" class="footer" role="contentinfo">
 
         <?php if(is_home()): ?>
@@ -95,7 +93,7 @@
 
 
        <!--トップへのボタン-->
-        <a class="btn__full to_top  nonmover"><i class="fa fa-angle-double-up"></i> Top</a>
+        <a id="to_top" class="btn__full to_top nonmover" href="#"><i class="fa fa-angle-double-up"></i> Top</a>
 
         <?php if(is_home()): ?>
         <?php elseif(is_page('contact')): ?>
