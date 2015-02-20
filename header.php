@@ -5,8 +5,7 @@
  * <head> セクション
  *
  */
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <!--[if lt IE 7]>
 <html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]>
@@ -28,11 +27,12 @@
         <!--アイコンフォント-->
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
         <!-- google web fonts-->
-        <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto:100,700,400|Playfair+Display+SC:700,400' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:100,700,400' rel='stylesheet' type='text/css'>
+
 
         <?php
-        wp_deregister_script('jquery');
-        wp_enqueue_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', array() ,null );
+wp_deregister_script('jquery');
+wp_enqueue_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', array() ,null );
         ?>
 
         <?php wp_head(); ?>
@@ -45,14 +45,6 @@
 <![endif]-->
 
         <div id="fb-root"></div>
-        <script type="text/javascript">// <![CDATA[
-            $script([
-                "//platform.twitter.com/widgets.js",
-                "//connect.facebook.net/ja_JP/all.js#xfbml=1",
-                "https://apis.google.com/js/plusone.js",
-                "//b.st-hatena.com/js/bookmark_button.js"], function() {
-            })
-            // ]]></script>
 
         <div id="wrapper" class="wrapper">
 
@@ -60,8 +52,8 @@
             <div class="head">
 
                 <div class="variable">
-                    <a class="panel_btn  nonmover" href=""><span class="panel_btn_icon"></span></a>
-                    <a class="panel_btn_pc  nonmover" href=""><span class="panel_btn_icon"></span></a>
+                    <a class="panel_btn  nonmover" href="javascript:void(0)"><span class="panel_btn_icon" return false;></span></a>
+                    <a class="panel_btn_pc  nonmover" href="javascript:void(0)"><span class="panel_btn_icon" return false;></span></a>
 
                     <div class="logo">
                         <h1>
@@ -87,7 +79,7 @@
             </div><!--/.haed-->
 
             <!--開閉するパネル部分-->
-            <div id="panel" class="panel " style="display:none;">
+            <div id="panel" class="panel ">
                 <div class="variable">
                     <div class="col clearfix">
                         <div class="box_1 facebook_like_center">

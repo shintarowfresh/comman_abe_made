@@ -32,7 +32,7 @@ get_header(); ?>
 
                 <div id="next">
                     <a class="btn nonmover" href="<?php echo next_posts(0, false); ?>">次を読み込む</a>
-                    <img id="loading" src="<?php echo get_template_directory_uri() ?>/img/icon-loading.gif" alt="読み込み中"  width="29" height="29">
+                    <img id="loading" src="<?php echo get_template_directory_uri() ?>/img/icon-loading.gif" alt="読み込み中">
                 </div>
 
             </div><!--/.main-->

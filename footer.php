@@ -3,8 +3,6 @@
  * フッター
  */
 ?>
-
-
     <div id="footer" class="footer" role="contentinfo">
 
         <?php if(is_home()): ?>
@@ -95,7 +93,7 @@
 
 
        <!--トップへのボタン-->
-        <a class="btn__full to_top  nonmover"><i class="fa fa-angle-double-up"></i> Top</a>
+        <a id="to_top" class="btn__full to_top nonmover" href="#"><i class="fa fa-angle-double-up"></i> Top</a>
 
         <?php if(is_home()): ?>
         <?php elseif(is_page('contact')): ?>
@@ -173,6 +171,9 @@
 
 
     </div><!--/.footer-->
+
+<img class="load" src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon-loading.gif" alt="ローディング">
+
 </div><!--/.wrapper-->
 
 
@@ -250,6 +251,16 @@
 <?php if(!is_mobile()):?>
 <script src="<?php echo get_template_directory_uri(); ?>/js/pc-only.js"></script>
 <?php endif ;?>
+
+
+<script type="text/javascript">// <![CDATA[
+    $script([
+        "//platform.twitter.com/widgets.js",
+        "//connect.facebook.net/ja_JP/all.js#xfbml=1",
+        "https://apis.google.com/js/plusone.js",
+        "//b.st-hatena.com/js/bookmark_button.js"], function() {
+    })
+    // ]]></script>
 
         <?php wp_footer(); ?>
 
