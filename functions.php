@@ -44,7 +44,6 @@ endif;
 add_action( 'after_setup_theme', 'comman_setup' );
 
 
-
 /**
  * スクリプトとスタイルのエンキュー、アクションフック
  */
@@ -54,6 +53,7 @@ function comman_scripts() {
     wp_enqueue_style( 'body-style', get_stylesheet_directory_uri() . '/style.css', array() ,null );
     wp_enqueue_style( 'main-style', get_stylesheet_directory_uri() . '/css/style.css', array() ,null  );
     wp_enqueue_style( 'swipeshow-style', get_stylesheet_directory_uri() . '/css/jquery.swipeshow.css', array() ,null );
+    wp_enqueue_style( 'main-style', get_stylesheet_directory_uri() . '/css/style.css', array() ,null  );
     wp_enqueue_style( 'fa-anime-style', get_stylesheet_directory_uri() . '/css/font-awesome-animation.min.css', array() ,null );
     wp_enqueue_style( 'icon-style', get_stylesheet_directory_uri() . '/css/icomoon/style.css', array() ,null );
 
@@ -61,12 +61,17 @@ function comman_scripts() {
     // コメント用スクリプト
     if ( is_singular() )
         wp_enqueue_script( 'comment-reply' );
+
     // メインの js
     wp_enqueue_script( 'swipeshow-js', get_template_directory_uri() . '/js/jquery.swipeshow.min.js', array() ,null ,true );
     wp_enqueue_script( 'fade-js', get_template_directory_uri() . '/js/jquery.fademover.js', array() ,null ,true );
     wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array() ,null ,true );
     wp_enqueue_script( 'modernizr-js', get_template_directory_uri() . '/js/modernizr.js', array() ,null ,true );
     wp_enqueue_script( 'script-js', get_template_directory_uri() . '/js/script.min.js', array() ,null ); //必ずヘッダで読む
+
+    if (is_page('company'))
+        wp_enqueue_script( 'swipeshow-js', get_template_directory_uri() . '/js/jquery.swipeshow.min.js', array() ,null ,true );
+
 
     if (is_home())
     wp_enqueue_script( 'bgswitcher-js', get_template_directory_uri() . '/js/jquery.bgswitcher.js', array() ,null );
