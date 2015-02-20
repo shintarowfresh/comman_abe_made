@@ -97,6 +97,13 @@
     100% {opacity:1;}
 }
 
+.load {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -15px -15px 0 0;
+    z-index: -3;
+}
 
 @import "icon/*.png";
 

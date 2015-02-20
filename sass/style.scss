@@ -41,6 +41,8 @@
     .img_sec {
         height: 250px;
         margin-bottom: -1px;
+        position: relative;
+        z-index: 2;
     }
 
     .three-one {
