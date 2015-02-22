@@ -7,7 +7,9 @@ $(window).on('load',function (){
         footer = $("#footer"),
         footerHeight = footer.outerHeight(),
         footerPosition = footer.position(),
-        footerTop = footerPosition.top;
+        footerTop = footerPosition.top,
+    panelHeight = $('#panel').outerHeight(),
+        catlistHeight = $('.cat_list').outerHeight();
 
     $(window).on('resize',function () {
         windowHeight = $(this).height();
@@ -19,12 +21,11 @@ $(window).on('load',function (){
 
 
             var scrollTop = $(this).scrollTop(),
-                visibleBottom = scrollTop + windowHeight,
+            visibleBottom = scrollTop + windowHeight,
                 targetBottom = targetPosition.top + targetHeight,
                 footerPosition = footer.position(),
                 footerTop = footerPosition.top;
 
-            console.log(targetBottom);
 
             if (visibleBottom >= targetBottom) {
 
