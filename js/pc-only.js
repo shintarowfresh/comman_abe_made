@@ -8,8 +8,10 @@ $(window).on('load',function (){
         footerHeight = footer.outerHeight(),
         footerPosition = footer.position(),
         footerTop = footerPosition.top,
-    panelHeight = $('#panel').outerHeight(),
-        catlistHeight = $('.cat_list').outerHeight();
+        panelHeight = $('#panel').outerHeight(),
+        catlistHeight = $('.cat_list').outerHeight(),
+        mainHeight = $('.main').outerHeight(),
+        subHeight = $('.sub').outerHeight();
 
     $(window).on('resize',function () {
         windowHeight = $(this).height();
@@ -19,13 +21,15 @@ $(window).on('load',function (){
 
         $(window).on('scroll',function () {
 
-
             var scrollTop = $(this).scrollTop(),
-            visibleBottom = scrollTop + windowHeight,
+                visibleBottom = scrollTop + windowHeight,
                 targetBottom = targetPosition.top + targetHeight,
                 footerPosition = footer.position(),
                 footerTop = footerPosition.top;
 
+            if (subHeight > mainHeight) {
+                $('.main').height(subHeight);
+            }
 
             if (visibleBottom >= targetBottom) {
 
@@ -47,7 +51,7 @@ $(window).on('load',function (){
             } else {
 
                 target.css({
-                    'position':'static'
+                    'position':'static',
                 });
             }
         });
