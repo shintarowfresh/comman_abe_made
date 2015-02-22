@@ -1,7 +1,12 @@
 jQuery(document).ready(function () {
     'use strict';
 
-
+    //タップの反応を改善
+    $('a').on('click touchend', function(e) {
+        var el = $(this);
+        var link = el.attr('href');
+        window.location = link;
+    });
 
     //制作実績ページの制作カテゴリー用シャッター
     $('#shutter').click(function () {
