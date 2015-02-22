@@ -87,6 +87,7 @@ h3 {
             font-weight:bold;
             font-size:.9em;
             position: relative;
+            margin-right: .15em;
 
             &:before {
                 font-family: icomoon;
@@ -94,8 +95,8 @@ h3 {
                 font-size: .67em;
                 position: absolute;
                 visibility: visible;
-                bottom: .19em;
-                left: .05em;
+                bottom: -0.02em;
+                left: 0;
                 color: $main;
             }
         }
@@ -118,6 +119,7 @@ h4 {
             font-size:.9em;
             position: relative;
             visibility: hidden;
+            margin-right: .15em;
 
             &:before {
                 font-family: icomoon;
@@ -125,8 +127,8 @@ h4 {
                 font-size: .67em;
                 position: absolute;
                 visibility: visible;
-                bottom: .15em;
-                left: .05em;
+                bottom: -0.02em;
+                left: 0;
             }
         }
     }
@@ -2332,7 +2334,7 @@ ul.foot_navi {
 
             li{
                 float: left;
-                margin: 0 15px 15px 0;
+                margin: 0 0 15px 0;
                 padding-right: 15px;
 
                 &.b-twitter a {

@@ -164,6 +164,7 @@ h3.sub_title span {
   font-weight: bold;
   font-size: .9em;
   position: relative;
+  margin-right: .15em;
 }
 h3.sub_title span:before {
   font-family: icomoon;
@@ -171,8 +172,8 @@ h3.sub_title span:before {
   font-size: .67em;
   position: absolute;
   visibility: visible;
-  bottom: .19em;
-  left: .05em;
+  bottom: -0.02em;
+  left: 0;
   color: #c62828;
 }
 
@@ -191,6 +192,7 @@ h4.sub_title span {
   font-size: .9em;
   position: relative;
   visibility: hidden;
+  margin-right: .15em;
 }
 h4.sub_title span:before {
   font-family: icomoon;
@@ -198,8 +200,8 @@ h4.sub_title span:before {
   font-size: .67em;
   position: absolute;
   visibility: visible;
-  bottom: .15em;
-  left: .05em;
+  bottom: -0.02em;
+  left: 0;
 }
 
 h5.sub_title {
@@ -2099,7 +2101,7 @@ ul.foot_navi li a {
 }
 .single .share ul li {
   float: left;
-  margin: 0 15px 15px 0;
+  margin: 0 0 15px 0;
   padding-right: 15px;
 }
 .single .share ul li.b-twitter a {
@@ -2605,9 +2607,8 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover {
 }
 .load {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  margin: -15px -15px 0 0;
+  top: 49.5%;
+  left: 49.5%;
   z-index: -3;
 }
 
@@ -2731,16 +2732,18 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover {
     font-size: 1em;
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
     opacity: 0.7;
-    font-family: YuGothic, '游ゴシック', sans-serif;
     margin-left: 10px;
     line-height: 1;
+    font-family: "Noto Sans Japanese", "Roboto", 游ゴシック, YuGothic, Meiryo, sans-serif;
   }
   .top-copy .bigtext {
     font-size: 3em;
     line-height: 1;
+    font-weight: 200;
   }
   .top-copy .bigtext span {
-    font-size: .8em;
+    font-size: .75em;
+    font-weight: 300;
   }
   .top-copy .small-text {
     line-height: 1.5;
@@ -3357,11 +3360,15 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover {
     /*正方形のバナー*/
     height: 300px;
   }
+
+  .single .share ul li {
+    margin-right: 15px;
+  }
 }
 /* ブレイクポイント調整用 */
 @media screen and (min-width: 1100px) {
   .variable {
-    padding: 0 20px;
+    padding: 4px 20px;
   }
 
   .breadcrumb {
