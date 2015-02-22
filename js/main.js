@@ -2,7 +2,7 @@ jQuery(document).ready(function () {
     'use strict';
 
     //タップの反応を改善
-    $('a').on('click touchend', function(e) {
+    $('.logo a , #globalnavi a').on('click touchend', function(e) {
         var el = $(this);
         var link = el.attr('href');
         window.location = link;
