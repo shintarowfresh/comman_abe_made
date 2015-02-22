@@ -3455,4 +3455,10 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover {
     font-size: 1.4em;
   }
 }
-/*ジャバスクリプトを切っているとき*/
+.fix.no-fixed {
+  position: static;
+}
+.fix.is-fixed {
+  position: fixed;
+  bottom: 0;
+}
