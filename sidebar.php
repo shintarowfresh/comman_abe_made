@@ -44,13 +44,13 @@
         <a href="http://www.s-henkan.com/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/banner/c2.jpg" alt="C2"></a>
     </aside>
 
-           <aide>
-               <img src="http://placehold.it/300x300" />
-           </aide>
-
-    <aide>
+    <aside>
         <img src="http://placehold.it/300x300" />
-    </aide>
+    </aside>
+
+    <aside>
+        <img src="http://placehold.it/300x300" />
+    </aside>
 
             <aside>
                 広告枠
