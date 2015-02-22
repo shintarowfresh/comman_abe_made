@@ -1,0 +1,14 @@
+.fix{
+
+    &.no-fixed {
+        position: static;
+    }
+
+    &.is-fixed {
+        position: fixed;
+        bottom: 0;
+    }
+
+
+
+}
