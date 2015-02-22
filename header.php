@@ -49,6 +49,8 @@ wp_enqueue_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/j
 
         <div id="wrapper" class="wrapper">
 
+            <img class="load" src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon-loading.gif" alt="ローディング">
+
             <!--ヘッダー部分-->
             <div class="head">
 
