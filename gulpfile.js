@@ -21,7 +21,6 @@ gulp.task('ple', function() {
         autoprefixer: {
             "browsers": ["last 4 versions", "ie 7"]
         },
-
     }))
     .pipe(gulp.dest('./css/'));
 });
