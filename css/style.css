@@ -16,7 +16,7 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
-  padding: 0;Ｓ
+  padding: 0;
   border: 0;
   font: inherit;
   font-size: 100%;
@@ -804,6 +804,7 @@ nav.menu .blog a:before {
 }
 #panel .variable {
   min-height: 280px;
+  padding: 0;
 }
 #panel .variable > div {
   display: none;

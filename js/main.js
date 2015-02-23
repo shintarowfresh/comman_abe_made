@@ -1,6 +1,8 @@
 jQuery(document).ready(function () {
     'use strict';
 
+    $("a[href^='http://']").not('[href*="'+location.hostname+'"]').attr('target','_blank').addClass('nonmover');
+
     //タップの反応を改善
     $('.logo a , #globalnavi a').on('click touchend', function(e) {
         var el = $(this);
@@ -17,14 +19,17 @@ jQuery(document).ready(function () {
     });
 
 
-    /*ふわっとなる挙動*/
-    $(' .content_full').fadeMover({
-        'effectType': 1,
-        'nofadeOut': 'nonmover'
-    });
-    $('.content ').fadeMover({'outDelay': 300});
-    $('.content_full').fadeMover({'outDelay': 1000});
-    $('#footer').fadeMover({'outDelay': 2000});
+    //ふわっとなる挙動
+        $(' .content_full').fadeMover({
+            'effectType': 1,
+            'nofadeOut': 'nonmover'
+        });
+        $('.content').fadeMover({'outDelay': 300});
+        $('#panel').fadeMover({'outDelay': 600});
+        $('.content_full').fadeMover({'outDelay': 1000});
+        $('#footer').fadeMover({'outDelay': 2000});
+        $('#breadcrumb').fadeMover({'outDelay': 2000});
+
 
 
 
