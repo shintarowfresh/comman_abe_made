@@ -1,5 +1,5 @@
 <div class="cat_list">
-    <a id="shutter" class="nonmover">
+    <a id="shutter" class="nonmover" href="javascript:void(0)">
         <span class="btn_cross"></span>
         <span>実績をカテゴリーから探す</span>
     </a>

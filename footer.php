@@ -168,12 +168,7 @@
                 </div><!--/.col-->
             </div><!--/.inner-->
         </div><!--/.foot__info-->
-
-
     </div><!--/.footer-->
-
-<img class="load" src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon-loading.gif" alt="ローディング">
-
 </div><!--/.wrapper-->
 
 
