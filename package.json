@@ -1,15 +1,16 @@
 {
   "name": "comman_custom",
   "version": "1.0.0",
-  "description": "",
+  "description": "test",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "shintarowfresh",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.8.10",
+    "gulp-compass": "^2.0.3",
     "gulp-pleeease": "^1.1.0",
     "gulp-plumber": "^0.6.6",
     "gulp-ruby-sass": "^1.0.0-alpha.3",
