@@ -177,10 +177,13 @@ p{
     margin: 0 1.565%;
 }
 
-
 .no-js {
+    .content,
+    .content_full,
+    #footer {
+        opacity: 1;
+    }
 }
-
 
 .content,
 .content_full,
