@@ -4,15 +4,35 @@ var sass = require('gulp-ruby-sass');
 var pleeease = require('gulp-pleeease');
 var plumber = require('gulp-plumber');
 var compass = require('gulp-compass');
+var csscomb = require('gulp-csscomb');
+var cssmin = require('gulp-cssmin');
+var rename = require('gulp-rename');
 
-// Sass(SCSS)ビルドタスク
-gulp.task('sass', function () {
 
-    return sass('sass/style.scss',{style: 'expanded'})
+gulp.task('cssmin', function () {
+    gulp.src('css/style.css')
+    .pipe(cssmin())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('css'));
+});
+
+gulp.task('css', function () {
+    return gulp.src('./css/*.css')
+    .pipe(csscomb())
+    .pipe(pleeease({
+        autoprefixer: {
+            "browsers": ["last 2 versions"]
+        },
+        minifier: false
+    }))
+    .pipe(gulp.dest('./css'));
+});
+
+gulp.task('sass', function() {
+    return sass('./sass/*scss')
     .on('error', function (err) {
         console.error('Error!', err.message);
     })
-
     .pipe(gulp.dest('./css'));
 });
 
@@ -28,15 +48,17 @@ gulp.task('ple', function() {
 
 gulp.task('compass', function() {
     gulp.src('./saaa/*.scss')
+    .pipe(plumber())
     .pipe(compass({
-        config_file: './config.rb',
+        config_file: 'config.rb',
+        css: '/css',
+        sass: '/sass/'
     }))
-    .pipe(gulp.dest('app/assets/temp'));
 });
 
 gulp.task('watch', function() {
     gulp.watch(['./sass/*.scss'], ['compass']);
-    return gulp.watch(['./css/*.css'], ['ple']);
+    return gulp.watch(['./css/*.css'], ['css']);
 });
 
 gulp.task('default',['compass']);
