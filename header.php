@@ -15,20 +15,24 @@
 <!--[if gt IE 8]><!-->
 <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 
-    <head>
+<head>
 
-        <meta charset="<?php bloginfo( 'charset' ); ?>" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta charset="<?php bloginfo( 'charset' ); ?>" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <title><?php wp_title(); ?></title>
+<title><?php wp_title(); ?></title>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <?php wp_head(); ?>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 
-    </head>
+<?php wp_head(); ?>
 
-    <body <?php body_class(); ?> onload="initialize();">
+</head>
+
+<body <?php body_class(); ?> onload="initialize();">
         <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
