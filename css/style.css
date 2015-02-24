@@ -2121,6 +2121,9 @@ ul.foot_navi li a {
 .single .share ul li.b-pocket a {
   background: #EE4257;
 }
+.single .share ul li.b-pocket a i:before {
+  font-family: icomoon;
+}
 .single .share ul li i {
   margin-right: .25em;
 }
