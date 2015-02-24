@@ -176,6 +176,9 @@ h3.sub_title span:before {
   left: 0;
   color: #c62828;
 }
+h3 .fa {
+  color: #c62828;
+}
 
 h4.sub_title {
   font-family: "Roboto", sans-serif;
