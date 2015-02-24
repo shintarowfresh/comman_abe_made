@@ -118,7 +118,7 @@
 
             <div class="author">
 
-                <h3>この記事を書いた人</h3>
+                <h3><i class="fa fa-pencil"></i> この記事を書いた人</h3>
 
                 <div class="sep">
                    <div class="thum">
@@ -134,7 +134,7 @@
             </div><!--/.author-->
 
             <div class="one-more-post">
-                <h3>もう１記事どうぞ！</h3>
+                <h3><i class="fa fa-newspaper-o"></i> もう１記事どうぞ！</h3>
 
                 <ul class="tab">
                     <li class="select"><i class="fa fa-link"></i> 関連記事</li>
