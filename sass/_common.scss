@@ -2354,6 +2354,12 @@ ul.foot_navi {
 
                 &.b-pocket a {
                     background: #EE4257;
+
+                    i {
+                        &:before {
+                            font-family: icomoon;
+                        }
+                    }
                 }
 
                 i {
