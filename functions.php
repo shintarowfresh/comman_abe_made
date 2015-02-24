@@ -53,9 +53,10 @@ function comman_scripts() {
     wp_enqueue_style( 'body-style', get_stylesheet_directory_uri() . '/style.css', array() ,null );
     wp_enqueue_style( 'swipeshow-style', get_stylesheet_directory_uri() . '/css/jquery.swipeshow.css', array() ,null );
     wp_enqueue_style( 'main-style', get_stylesheet_directory_uri() . '/css/style.css', array() ,null  );
-    wp_enqueue_style( 'main-style', get_stylesheet_directory_uri() . '/css/style.css', array() ,null  );
     wp_enqueue_style( 'fa-anime-style', get_stylesheet_directory_uri() . '/css/font-awesome-animation.min.css', array() ,null );
     wp_enqueue_style( 'icon-style', get_stylesheet_directory_uri() . '/css/icomoon/style.css', array() ,null );
+    wp_enqueue_style( 'fa-style', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array() ,null );
+    wp_enqueue_style( 'gf-style', 'http://fonts.googleapis.com/css?family=Roboto:100,700,400', array() ,null );
 
 
     // コメント用スクリプト
@@ -63,11 +64,11 @@ function comman_scripts() {
         wp_enqueue_script( 'comment-reply' );
 
     // メインの js
-    wp_enqueue_script( 'swipeshow-js', get_template_directory_uri() . '/js/jquery.swipeshow.min.js', array() ,null ,true );
-    wp_enqueue_script( 'fade-js', get_template_directory_uri() . '/js/jquery.fademover.js', array() ,null ,true );
-    wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array() ,null ,true );
-    wp_enqueue_script( 'modernizr-js', get_template_directory_uri() . '/js/modernizr.js', array() ,null ,true );
-    wp_enqueue_script( 'script-js', get_template_directory_uri() . '/js/script.min.js', array() ,null ); //必ずヘッダで読む
+    wp_enqueue_script( 'swipeshow-js', get_template_directory_uri() . '/js/jquery.swipeshow.min.js', array('jquery') ,null ,true );
+    wp_enqueue_script( 'fade-js', get_template_directory_uri() . '/js/jquery.fademover.js', array('jquery') ,null ,true );
+    wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array('jquery') ,null ,true );
+    wp_enqueue_script( 'modernizr-js', get_template_directory_uri() . '/js/modernizr.js', array('jquery') ,null ,true );
+    wp_enqueue_script( 'script-js', get_template_directory_uri() . '/js/script.min.js', array('jquery') ,null );
 
     if (is_page('company'))
         wp_enqueue_script( 'swipeshow-js', get_template_directory_uri() . '/js/jquery.swipeshow.min.js', array() ,null ,true );
@@ -108,6 +109,7 @@ register_sidebar( $args = array(
         // ウィジェットタイトルの後に配置する HTML
         'after_title'   => '</h3>' )
 );
+
 
 /**
 * コンテンツエリアの最大許容幅を設定

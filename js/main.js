@@ -1,4 +1,4 @@
-jQuery(document).ready(function () {
+jQuery(function ($) {
     'use strict';
 
     $("a[href^='http://']").not('[href*="'+location.hostname+'"]').attr('target','_blank').addClass('nonmover');
@@ -98,7 +98,7 @@ jQuery(document).ready(function () {
 
 
     // #で始まるアンカーをクリックした場合に処理
-    jQuery('a[href^=#]').click(function () {
+    $('a[href^=#]').click(function () {
         // スクロールの速度
         var speed = 600; // ミリ秒
         // アンカーの値取得

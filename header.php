@@ -24,18 +24,6 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-        <!--アイコンフォント-->
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-        <!-- google web fonts-->
-        <link href='http://fonts.googleapis.com/css?family=Roboto:100,700,400' rel='stylesheet' type='text/css'>
-
-
-        <?php
-wp_deregister_script('jquery');
-wp_enqueue_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', array() ,null );
-        ?>
-
         <?php wp_head(); ?>
 
     </head>

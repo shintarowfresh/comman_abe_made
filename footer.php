@@ -225,7 +225,7 @@
 
 <script type="text/javascript">
 
-    $(function () {
+    jQuery(function ($) {
 
         //トップページのフェードしてる画像
         $('.bgs').bgswitcher({
