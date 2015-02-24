@@ -14,6 +14,10 @@
 /*ブレイクポイントタブレット用*/
 @media screen and (min-width: 600px) {
 
+    .logo {
+        margin-top: 7px;
+    }
+
     h3 {
         &.sub_title {
             font-size:6em;
@@ -499,8 +503,10 @@
 
     //グリッド4分割カラム
     .col {
+        padding: 0;
+
         .box_1 {
-            width: 23.22%;
+            width: 22.89%;
         }
     }
 
@@ -969,7 +975,7 @@
     .variable {
         width: 1280px;
         margin: 0 auto;
-        padding: 30px 30px 24px;
+        padding: 20px 30px;
         overflow: hidden;
     }
 

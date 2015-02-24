@@ -128,7 +128,7 @@ h4 {
                 position: absolute;
                 visibility: visible;
                 bottom: -0.02em;
-                left: 0;
+                left: .07em;
             }
         }
     }
@@ -663,7 +663,8 @@ span.meta.tag a {
 }
 
 div.logo {
-    margin-bottom: 10px;
+    position: relative;
+
     h1{
         a{
             height: 33px;
@@ -809,12 +810,10 @@ nav.menu {
     overflow: hidden;
     background: rgba(251, 237, 237, 1);
     @include box-shadow(0px 0px 3px 0px rgba(0,0,0,0.1) inset);
-    padding: 2em 0;
     border-bottom: 1px solid rgba( $main, 0.35 );
 
     .variable {
         min-height: 280px;
-        padding: 0;
 
         >div {
             display: none;

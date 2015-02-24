@@ -201,7 +201,7 @@ h4.sub_title span:before {
   position: absolute;
   visibility: visible;
   bottom: -0.02em;
-  left: 0;
+  left: .07em;
 }
 
 h5.sub_title {
@@ -675,7 +675,7 @@ span.meta.tag a {
 }
 
 div.logo {
-  margin-bottom: 10px;
+  position: relative;
 }
 div.logo h1 a {
   height: 33px;
@@ -799,12 +799,10 @@ nav.menu .blog a:before {
   -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1) inset;
   -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1) inset;
   box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1) inset;
-  padding: 2em 0;
   border-bottom: 1px solid rgba(198, 40, 40, 0.35);
 }
 #panel .variable {
   min-height: 280px;
-  padding: 0;
 }
 #panel .variable > div {
   display: none;
@@ -2627,6 +2625,10 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover {
 
 /*ブレイクポイントタブレット用*/
 @media screen and (min-width: 600px) {
+  .logo {
+    margin-top: 7px;
+  }
+
   h3.sub_title {
     font-size: 6em;
   }
@@ -3029,8 +3031,11 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover {
     display: block;
   }
 
+  .col {
+    padding: 0;
+  }
   .col .box_1 {
-    width: 23.22%;
+    width: 22.89%;
   }
 
   .panel {
@@ -3407,7 +3412,7 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover {
   .variable {
     width: 1280px;
     margin: 0 auto;
-    padding: 30px 30px 24px;
+    padding: 20px 30px;
     overflow: hidden;
   }
 
