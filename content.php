@@ -34,9 +34,9 @@
 
             <header>
 
-                <span class="meta tag"><i class="fa fa-tags"></i> <?php the_tags( '', '' ); ?></span>
-
                 <time><?php the_time( 'Y.n.j' ); ?></time>
+
+                <span class="meta tag"><i class="fa fa-tags"></i> <?php the_tags( '', '' ); ?></span>
 
                 <?php if( is_single() ) :?>
                 <h2 class="title">
@@ -187,7 +187,7 @@
                                             </h3>
 
                                             <div class="share-count">
-                                                <span><i class="fa fa-twitter-square"></i><?php if(function_exists('get_scc_twitter')) echo get_scc_twitter(); ?></span> <span><i class="fa fa-facebook-official"></i><?php if(function_exists('get_scc_facebook')) echo get_scc_facebook(); ?></span> <span><i class="fa fa-hatena"></i><?php if(function_exists('get_scc_hatebu')) echo get_scc_facebook(); ?></span>
+                                                <span><i class="fa fa-twitter-square"></i><?php if(function_exists('scc_get_share_twitter')) echo scc_get_share_twitter(); ?></span> <span><i class="fa fa-facebook-official"></i><?php if(function_exists('scc_get_share_facebook')) echo scc_get_share_facebook(); ?></span> <span><i class="fa fa-hatena"></i><?php if(function_exists('scc_get_share_hatebu')) echo scc_get_share_facebook(); ?></span>
                                             </div>
                                         </div>
                                     </div>
