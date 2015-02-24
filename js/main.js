@@ -20,7 +20,7 @@ jQuery(function ($) {
 
 
     //ふわっとなる挙動
-        $(' .content_full').fadeMover({
+        $('.content_full').fadeMover({
             'effectType': 1,
             'nofadeOut': 'nonmover'
         });
