@@ -17,12 +17,10 @@
 
 <head>
 
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-<title><?php wp_title(); ?></title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title><?php wp_title(); ?></title>
 
 <!--[if lt IE 9]>
 <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
