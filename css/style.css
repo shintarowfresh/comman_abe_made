@@ -978,10 +978,6 @@ span.meta.tag a
     border-bottom: 1px solid rgba(198, 40, 40, .1);
     background: #fff;
 }
-.head .variable
-{
-    overflow: hidden;
-}
 
 div.logo
 {
@@ -1568,6 +1564,8 @@ nav.menu .blog a:before
 .panel_btn_pc
 {
     position: relative;
+    z-index: 100;
+    top: -3px;
 
     display: inline-block;
     float: right;
@@ -3477,6 +3475,11 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover
     left: 49.5%;
 }
 
+.main-title
+{
+    font-weight: 600;
+}
+
 .icon-fb
 {
     background-position: 0 0;
@@ -4061,6 +4064,8 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover
 
     .panel_btn_pc
     {
+        top: 0;
+
         display: block;
     }
 

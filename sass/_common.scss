@@ -664,7 +664,6 @@ span.meta.tag a {
     border-bottom: 1px solid rgba( $main , .1 );
 
     .variable {
-        overflow: hidden;
     }
 
 }
@@ -1197,6 +1196,8 @@ nav.menu {
     @include transition(all .3s ease-in-out 0);
     @include transition-duration(.1s);
     @include box-shadow(0 2px 6px rgba(0, 0, 0, 0.26));
+    z-index: 100;
+    top: -3px;
 
     &:hover {
         opacity: 1;

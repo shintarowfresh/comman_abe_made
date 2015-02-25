@@ -679,9 +679,6 @@ span.meta.tag a {
   padding-bottom: 1em;
   border-bottom: 1px solid rgba(198, 40, 40, 0.1);
 }
-.head .variable {
-  overflow: hidden;
-}
 
 div.logo {
   position: relative;
@@ -1140,6 +1137,8 @@ nav.menu .blog a:before {
   -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
   -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
+  z-index: 100;
+  top: -3px;
 }
 .panel_btn:hover, .panel_btn_pc:hover {
   opacity: 1;
@@ -2623,6 +2622,10 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover {
   z-index: -3;
 }
 
+.main-title {
+  font-weight: 600;
+}
+
 .icon-fb {
   background-position: 0 0;
 }
@@ -3041,6 +3044,7 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover {
 
   .panel_btn_pc {
     display: block;
+    top: 0;
   }
 
   .col {
