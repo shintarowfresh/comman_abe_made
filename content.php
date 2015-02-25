@@ -51,7 +51,7 @@
 
                 <div class="share-count">
 
-                    <span><?php if(function_exists('scc_get_share_total()')) echo scc_get_share_total(); ?><span>shares</span></span>
+                    <span><?php if(function_exists('scc_get_share_total')) echo scc_get_share_total(); ?><span>shares</span></span>
 
                 </div>
 
