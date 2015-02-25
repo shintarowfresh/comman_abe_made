@@ -47,13 +47,15 @@ gulp.task('ple', function() {
 });
 
 gulp.task('compass', function() {
-    gulp.src('./saaa/*.scss')
+    gulp.src('./sass/*.scss')
     .pipe(plumber())
     .pipe(compass({
-        config_file: 'config.rb',
-        css: '/css',
-        sass: '/sass/'
+        config_file: './config.rb',
+        css: 'css',
+        sass: 'sass'
     }))
+
+    .pipe(gulp.dest('./css'));
 });
 
 gulp.task('watch', function() {
