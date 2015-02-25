@@ -622,7 +622,7 @@ p .btn__works {
 }
 
 /*タグリンクの見た目を整える*/
-span.meta.tag a {
+.meta.tag a {
   background: #d5d5d5;
   margin: 0 10px 5px 0;
   padding: 3px 1em;
@@ -631,28 +631,38 @@ span.meta.tag a {
   border-radius: 10px;
   color: #6C6C6C;
   text-decoration: none;
-  font-size: .8em;
+  font-size: .75em;
+  font-weight: bold;
   display: inline-block;
 }
 
 .share-count {
   margin-top: 10px;
   color: #999;
+  color: #999;
 }
-.share-count span {
-  margin-right: 10px;
+.share-count > span {
+  font-weight: bold;
 }
-.share-count span .fa {
+.share-count > span > span {
+  margin-left: .3em;
+  font-weight: normal;
+}
+.share-count > span .fa {
   margin-right: 5px;
 }
-.share-count span .fa-twitter-square {
+.share-count > span .fa-twitter-square {
   color: #55acee;
 }
-.share-count span .fa-facebook-official {
+.share-count > span .fa-facebook-official {
   color: #315096;
 }
-.share-count span .fa-hatena {
+.share-count > span .fa-hatena {
   color: #008fde;
+}
+
+.archive .share-count {
+  margin: 0;
 }
 
 /*個別記事の最後のpを調整*/
@@ -2848,7 +2858,7 @@ div#gform_wrapper_1 .gform_body .gform_page_footer .button:hover {
     margin-right: 15px;
   }
   .archive article h2.title {
-    margin: .5em 0 .7em;
+    margin: .3em 0 0;
   }
   .archive article section {
     color: #666;

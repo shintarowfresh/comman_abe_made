@@ -594,23 +594,30 @@ p {
 }
 
 /*タグリンクの見た目を整える*/
-span.meta.tag a {
+.meta.tag a {
     background: #d5d5d5;
     margin: 0 10px 5px 0;
     padding: 3px 1em;
     @include border-radius(10px);
     color: #6C6C6C;
     text-decoration: none;
-    font-size: .8em;
+    font-size: .75em;
+    font-weight: bold;
     display: inline-block;
 }
 
 .share-count {
     margin-top: 10px;
     color: #999;
+    color: #999;
 
-    span {
-        margin-right: 10px;
+    >span {
+        font-weight: bold;
+
+        >span {
+            margin-left: .3em;
+            font-weight: normal;
+        }
 
         .fa {
             margin-right: 5px;
@@ -627,6 +634,11 @@ span.meta.tag a {
         .fa-hatena {
             color: #008fde;
         }
+    }
+}
+.archive {
+    .share-count {
+        margin: 0;
     }
 }
 
