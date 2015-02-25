@@ -64,7 +64,7 @@ get_header(); ?>
 
            <h3><i class="fa fa-question-circle"></i> カンマンは何ができるの？　他とどう違うの？</h3>
 
-           <p>カンマンはwebページ制作・システム開発の分野で<strong class="good">12年の実績</strong>がある徳島のweb制作会社です。</p>
+           <p>カンマンはホームページ制作・システム開発の分野で<strong class="good">16年の実績</strong>がある徳島のホームページ制作会社です。</p>
 
            <p>webページを作ることはもちろん、運用や集客面でのサポートも、また、ネットを使って起きたトラブルにもトータルでサポート出来る確かな技術力をもってます。</p>
 
@@ -78,8 +78,8 @@ get_header(); ?>
 
            <p>あなたのwebを使った発信のお手伝いが出来れば幸いです。</p>
 
-           <a class="btn__works" href="/message/">カンマンの出来ることはこちら <i class="fa fa-arrow-circle-o-right"></i></a>
-           <a class="btn__works" href="/message/">フォームからお問い合わせを送る <i class="fa fa-arrow-circle-o-right"></i></a>
+           <a class="btn__works" href="/message/">カンマンについて、より詳しく <i class="fa fa-arrow-circle-o-right"></i></a>
+           <a class="btn__works" href="/contact/">フォームからお問い合わせを送る <i class="fa fa-arrow-circle-o-right"></i></a>
 
        </div>
     </div><!--/.read-first-->
