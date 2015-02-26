@@ -248,7 +248,11 @@
 <?php endif ;?>
 
 
-<script type="text/javascript">// <![CDATA[
+
+
+        <?php wp_footer(); ?>
+        
+        <script type="text/javascript">// <![CDATA[
     $script([
         "//platform.twitter.com/widgets.js",
         "//connect.facebook.net/ja_JP/all.js#xfbml=1",
@@ -256,8 +260,6 @@
         "//b.st-hatena.com/js/bookmark_button.js"], function() {
     })
     // ]]></script>
-
-        <?php wp_footer(); ?>
 
     </body>
 
