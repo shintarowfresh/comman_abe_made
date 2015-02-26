@@ -8,27 +8,38 @@
 
     <article <?php post_class(); ?>>
 
-        <div class="content-thum">
+
 
             <?php if(has_post_thumbnail()): ?>
 
                 <?php if( is_single() ) : ?>
 
-            <?php echo get_the_post_thumbnail($post->ID, 'single-eye',array('data-lazy' => 'false')); ?>
+        <div class="content-thum">
+
+                <?php echo get_the_post_thumbnail($post->ID, 'single-eye',array('data-lazy' => 'false')); ?>
+
+        </div><!--/.content-thum-->
 
                 <?php else :?>
 
-                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+        <div class="content-thum">
+                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+        </div><!--/.content-thum-->
 
                 <?php endif ;?>
 
             <?php else :?>
 
-            <a href="<?php the_permalink(); ?>"><img src="http://devimg.com/150x150" width="150" height="150"></a>
+                <?php if( is_single() ) : ?>
+                <?php else :?>
+        <div class="content-thum">
+            <a href="<?php the_permalink(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/no-thum.png" alt="サムネイルはありません"></a>
+        </div><!--/.content-thum-->
+                <?php endif ;?>
 
             <?php endif; ?>
 
-        </div>
+
 
         <div class="content-main">
 
@@ -167,11 +178,11 @@
                                         <div class="thum">
                                             <?php if(has_post_thumbnail()): ?>
 
-                                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a>
+                                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
 
                                             <?php else :?>
 
-                                            <a href="<?php the_permalink(); ?>"><img src="http://devimg.com/150x150" width="150" height="150"></a>
+                                            <a href="<?php the_permalink(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/no-thum.png" alt="サムネイルはありません"></a>
 
                                             <?php endif; ?>
 
@@ -229,11 +240,11 @@
                                         <div class="thum">
                                             <?php if(has_post_thumbnail()): ?>
 
-                                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a>
+                                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
 
                                             <?php else :?>
 
-                                            <a href="<?php the_permalink(); ?>"><img src="http://devimg.com/150x150" width="150" height="150"></a>
+                                            <a href="<?php the_permalink(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/no-thum.png" alt="サムネイルはありません"></a>
 
                                             <?php endif; ?>
 
