@@ -225,10 +225,10 @@
 
 <script type="text/javascript">
 
-    jQuery(function ($) {
+    jQuery(function () {
 
         //トップページのフェードしてる画像
-        $('.bgs').bgswitcher({
+        jQuery('.bgs').bgswitcher({
             images: [
                 "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs01.png",
                 "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs02.png",
