@@ -26,6 +26,11 @@
 <script type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
+<?php
+wp_deregister_script('jquery');
+wp_enqueue_script('jquery', '//code.jquery.com/jquery-1.11.2.min.js', array() );
+?>
+
 <?php wp_head(); ?>
 
 </head>
