@@ -1,264 +1,165 @@
 <?php
 /**
- * フッター
+ * ヘッダー
+ *
+ * <head> セクション
+ *
  */
-?>
-    <div id="footer" class="footer" role="contentinfo">
+?><!DOCTYPE html>
+<!--[if lt IE 7]>
+<html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]>
+<html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]>
+<html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 
-        <?php if(is_home()): ?>
+    <head>
 
-        <div class="social content_width">
+        <meta charset="<?php bloginfo( 'charset' ); ?>" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-            <div class="inner">
+        <title><?php wp_title(); ?></title>
 
-                <div class="sns-section">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/sns-tw-head.jpg" alt="カンマンのTwitter">
-                    <a class="twitter-timeline" href="https://twitter.com/konkatsusns/lists/comman-staff" data-widget-id="555579654145200128">https://twitter.com/konkatsusns/lists/comman-staffのツイート</a>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <?php wp_head(); ?>
+
+    </head>
+
+    <body <?php body_class(); ?> onload="initialize();">
+        <!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+        <div id="fb-root"></div>
+
+        <div id="wrapper" class="wrapper">
+
+            <img class="load" src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon-loading.gif" alt="ローディング">
+
+            <!--ヘッダー部分-->
+            <div class="head">
+
+                <div class="variable">
+                    <a class="panel_btn  nonmover" href="javascript:void(0)"><span class="panel_btn_icon" return false;></span></a>
+                    <a class="panel_btn_pc  nonmover" href="javascript:void(0)"><span class="panel_btn_icon" return false;></span></a>
+
+                    <div class="logo">
+                        <h1>
+                            <a href="<?php echo home_url(); ?>">
+                                <?php bloginfo('name'); ?>
+                            </a>
+                        </h1>
+                    </div>
+
+                    <nav id="globalnavi" class="menu" role="navigation">
+
+                        <?php
+                        wp_nav_menu(
+                            array(
+                                'theme_location'  => 'primary',
+                                'container'         => '',
+                            )); ?>
+
+                    </nav>
+
                 </div>
 
-                <div class="sns-section">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/sns-fb-head.jpg" alt="カンマンのfacebookページ">
-                    <div class="fb-like-box" data-href="https://www.facebook.com/comman.inc" data-height="450" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="false"></div>
-                </div>
+            </div><!--/.haed-->
+
+            <!--開閉するパネル部分-->
+            <div id="panel" class="panel ">
+                <div class="variable">
+                    <div class="col clearfix">
+                        <div class="box_1 facebook_like_center">
+                            <p><i class="fa fa-thumbs-o-up faa-bounce animated"></i>カンマンの最新情報はFacebookページでも配信しています！</p>
+
+                            <div class="fb-like" data-href="https://www.facebook.com/comman.inc" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                        </div>
+
+                        <div class="box_2 latest_list">
+                            <h3><i class="fa fa-bolt faa-vertical animated"></i>新着</h3>
+                            <ul>
+
+                                <?php
+                                $args = array( 'posts_per_page' => 5 );
+                                $myposts = get_posts( $args );
+                                foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+                                                                <?php
+                                $cat = get_the_category();
+                                if ($cat[0]->parent !=0 ) {
+                                    $parent= get_category($cat[0]->parent) ;
+                                    $catname = $parent->cat_name; //カテゴリー名
+                                    $catslug = $parent->slug; //スラッグ名
+                                } else {
+                                    $catname = $cat[0]->cat_name; //カテゴリー名
+                                    $catslug = $cat[0]->slug; //スラッグ名
+                                }
+                                ?>
+
+                                <li>
+                                    <span class="<?php echo $catslug; ?> meta_cat_icon"><?php echo $catname; ?></span>
+                                    <a href="<?php the_permalink();?>"><?php the_title(); ?></a>
+                                    <span>(<?php the_time('Y.n.j'); ?>)</span>
+                                </li>
+
+                                <?php endforeach; /* ループの終了 */ ?>
+                                <?php wp_reset_postdata(); /* 取得したデータのリセット */ ?>
+
+                            </ul>
+                        </div>
+
+                        <div class="box_1">
+
+                            <h3><i class="fa fa-youtube-play faa-pulse animated"></i>カンマンチャンネルの最新動画</h3>
+
+                            <div class="video">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/V4xvr2fkF5Q?list=PLuFK1lOCb7Od20M1WaIh7doNg6GmJ5eGJ" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div><!--/.col-->
+                </div><!--/.variable-->
+            </div><!--/.panel-->
+
+            <?php if (is_home())://トップページのみ ?>
+
+            <!--お知らせバナー-->
+            <div class="head_top_news content_full">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/bosyu.png" alt="募集する">
+                <img class="news_banner_mobile" src="<?php echo get_stylesheet_directory_uri(); ?>/img/bannar_news_mobile.png" alt="プログラマー募集" />
             </div>
 
-        </div><!--/.social-->
+            <!--画像イメージ領域-->
+            <div class="img_sec content_full">
 
-        <?php elseif( is_post_type_archive('work') || is_tax() ) :?>
+                <div class="bgs"></div><!--スライダーの画像はヘッダー内で差し替え-->
 
-        <div class="social content_width">
-
-            <div class="inner">
-
-                <div class="sns-section">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/sns-tw-head.jpg" alt="カンマンのTwitter">
-                    <a class="twitter-timeline" href="https://twitter.com/konkatsusns/lists/comman-staff" data-widget-id="555579654145200128">https://twitter.com/konkatsusns/lists/comman-staffのツイート</a>
+                <!--トップページのコピー部分-->
+                <div class="top-copy">
+                    <p class="bigtext">
+                        iT<span>で</span><br>
+                        人<span>と</span>技術<span>と</span>人<span>を</span><br>
+                        繋<span class="just">いでいく</span>
+                    </p>
+                    <p class="small-text">
+                        カンマンはすべての発信する人を応援する<br>
+                        徳島のWeb制作会社です。
+                    </p>
                 </div>
 
-                <div class="sns-section">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/sns-fb-head.jpg" alt="カンマンのfacebookページ">
-                    <div class="fb-like-box" data-href="https://www.facebook.com/comman.inc" data-height="450" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="false"></div>
-                </div>
             </div>
 
-        </div><!--/.social-->
+            <?php elseif( is_post_type_archive('work') || is_tax() ) :?>
 
-        <?php elseif( is_archive() ): ?>
-
-        <?php
-        // 記事下の制作実績
-        get_template_part( 'under','post' ); ?>
-
-        <?php elseif( is_single() ): ?>
-
-        <?php
-        // 記事下の制作実績
-        get_template_part( 'under','post' ); ?>
-
-
-        <?php elseif( is_page('contact') ): ?>
-        <?php elseif( is_page('price') ): ?>
-        <?php elseif( is_page('company') ): ?>
-
-        <?php
-        // 記事下の制作実績
-        get_template_part( 'under','post' ); ?>
-
-        <div class="social content_width">
-
-            <div class="inner">
-
-                <div class="sns-section">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/sns-tw-head.jpg" alt="カンマンのTwitter">
-                    <a class="twitter-timeline" href="https://twitter.com/konkatsusns/lists/comman-staff" data-widget-id="555579654145200128">https://twitter.com/konkatsusns/lists/comman-staffのツイート</a>
-                </div>
-
-                <div class="sns-section">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/sns-fb-head.jpg" alt="カンマンのfacebookページ">
-                    <div class="fb-like-box" data-href="https://www.facebook.com/comman.inc" data-height="450" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="false"></div>
-                </div>
+            <div class="banner-sec">
             </div>
 
-        </div><!--/.social-->
+            <?php else :?>
 
-        <?php elseif( is_page() ): ?>
+            <?php
+            // パンくずを読み込む
+            get_template_part( 'breadcrumb' ); ?>
 
-        <?php
-        // 記事下の制作実績
-        get_template_part( 'under','post' ); ?>
-
-        <?php else: ?>
-
-        <?php endif; ?>
-
-
-       <!--トップへのボタン-->
-        <a id="to_top" class="btn__full to_top nonmover" href="#"><i class="fa fa-angle-double-up"></i> Top</a>
-
-        <?php if(is_home()): ?>
-        <?php elseif(is_page('contact')): ?>
-        <?php elseif(is_archive()): ?>
-        <?php else: ?>
-
-        <?php
-        // サイトギャラリー
-        get_template_part( 'gallery' ); ?>
-
-        <?php endif; ?>
-
-
-
-        <div class="foot content_width">
-            <div class="inner">
-
-                <div>
-                    人と技術と人を繋ぐ
-                </div>
-
-            </div><!--/.inner-->
-
-        </div><!--/.content_width-->
-
-        <div class="foot__info">
-            <div class="inner">
-
-                <div class="col mail-sns">
-                    <div class="box_2">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/foot-mail.png" alt="メールアドレス">
-                    </div>
-
-                    <div class="box_2">
-
-                       <ul>
-                           <li><a class="icon-fb" href="https://www.facebook.com/comman.inc" target="_blank"></a></li>
-                           <li><a class="icon-yt" href="https://www.youtube.com/channel/UCGj6L4LXylu7hZtHuObHECQ" target="_blank"></a></li>
-                           <li><a class="icon-line" href="http://www.comman.co.jp/%E3%82%AB%E3%83%B3%E3%83%9E%E3%83%B3line%E5%A7%8B%E3%82%81%E3%81%9F%E3%82%88%E3%83%BC%EF%BC%81%E7%A4%BE%E5%93%A1%E3%81%8C%E5%BC%B5%E3%82%8A%E4%BB%98%E3%81%84%E3%81%A6%E3%81%BF%E3%82%93%E3%81%AA/"></a></li>
-                       </ul>
-
-
-
-                    </div>
-
-                </div><!--/.col-->
-
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/foot-info.png" alt="カンマンについて">
-
-                <div class="col">
-                    <div class="box_1">
-                        <h6><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/foot-name.png" alt="株式会社カンマン"></h6>
-                        <p><i class="fa fa-copyright"></i> Comman.inc</p>
-                    </div>
-                    <div class="box_1">
-                        <ul>
-                            <li><a href="/privacypolicy/">プライバシーポリシー</a></li>
-                            <li><a href="/sitepolicy/">サイトポリシー</a></li>
-                        </ul>
-                    </div>
-                    <div class="box_1">
-                       <h6>adress</h6>
-                        <p>〒770-0943<br>徳島県徳島市<br>中昭和町2丁目39番地5</p>
-                        <p><a href="/company/"><i class="fa fa-map-marker"></i> GoogleMapで見る</a></p>
-                    </div>
-                    <div class="box_1">
-                       <h6>phone/fax</h6>
-                        <p><i class="fa fa-phone"></i> 088-611-2333</p>
-                        <p><i class="fa fa-fax"></i> 088-611-2332</p>
-                    </div>
-
-                </div><!--/.col-->
-            </div><!--/.inner-->
-        </div><!--/.foot__info-->
-    </div><!--/.footer-->
-</div><!--/.wrapper-->
-
-
-
-
-
-
-<?php if( is_post_type_archive('work') || is_tax() || is_archive() ) :?>
-
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.autopager-1.0.0.js"></script>
-<script>
-    //  最大ページ数取得
-    var maxpage = <?php echo $wp_query->max_num_pages; ?>;
-
-    jQuery('#loading').css('display', 'none');
-
-    if(maxpage == 1) {
-        jQuery('#next').css('display','none');
-    } else {
-        jQuery('#next').css('display','block');
-    };
-
-    jQuery.autopager({
-        content: '.container',// 読み込むコンテンツ
-        link: '#next a', // 次ページへのリンク
-        autoLoad: false,// スクロールの自動読込み解除
-
-        start: function(current, next){
-            jQuery('#loading').css('display', 'block');
-            jQuery('#next a').css('display', 'none');
-        },
-
-        load: function(current, next){
-            jQuery('#loading').css('display', 'none');
-            jQuery('#next a').css('display', 'block');
-            if( current.page >= maxpage ){ //最後のページ
-                jQuery('#next a').hide(); //次ページのリンクを隠す
-            }
-        }
-    });
-
-    jQuery('#next a').click(function(){ // 次ページへのリンクボタン
-        jQuery.autopager('load'); // 次ページを読み込む
-        return false;
-    });
-</script>
-
-<?php elseif(is_page('company')): ?>
-
-<!--会社概要ページ　google-map用-->
-<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCrytOY8q8mDgKCf-Ht3FfJa8yu_SCJWBg&sensor=true"></script>
-
-<?php elseif( is_home() ) :?>
-
-<script type="text/javascript">
-
-    $(function () {
-
-        //トップページのフェードしてる画像
-        $('.bgs').bgswitcher({
-            images: [
-                "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs01.png",
-                "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs02.png",
-                "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs03.png",
-                "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs04.png"
-            ],
-            interval: "4000",
-        });
-    });
-
-</script>
-
-<?php endif ;?>
-
-<?php if(!is_mobile()):?>
-<script src="<?php echo get_template_directory_uri(); ?>/js/pc-only.js"></script>
-<?php endif ;?>
-
-
-<script type="text/javascript">// <![CDATA[
-    $script([
-        "//platform.twitter.com/widgets.js",
-        "//connect.facebook.net/ja_JP/all.js#xfbml=1",
-        "https://apis.google.com/js/plusone.js",
-        "//b.st-hatena.com/js/bookmark_button.js"], function() {
-    })
-    // ]]></script>
-
-        <?php wp_footer(); ?>
-
-    </body>
-
-</html>
+            <?php endif ; //トップページのみ ?>

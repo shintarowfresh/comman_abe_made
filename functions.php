@@ -6,10 +6,7 @@
  * 基本的にプラグインのように動作し、テーマに存在していれば自動的にWordPressの初期化時に読み込まれます
  *
  */
-
-
 if ( ! function_exists( 'comman_setup' ) ):
-
     /**
      * テーマのデフォルト設定や、WordPress 諸機能のサポートを登録・設定します。
      *
@@ -68,13 +65,18 @@ function comman_scripts() {
     wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array() ,null ,true );
     wp_enqueue_script( 'modernizr-js', get_template_directory_uri() . '/js/modernizr.js', array() ,null ,true );
     wp_enqueue_script( 'script-js', get_template_directory_uri() . '/js/script.min.js', array() ,null ); //必ずヘッダで読む
+    wp_enqueue_script( 'fade-js', get_template_directory_uri() . '/js/jquery.fademover.js', array() ,null );
+    
+    wp_enqueue_script( 'modernizr-js', get_template_directory_uri() . '/js/modernizr.js', array() ,null);
+    wp_enqueue_script( 'script-js', get_template_directory_uri() . '/js/script.min.js', array() ,null );
+    wp_enqueue_script( 'rollerblade-js', get_template_directory_uri() . '/js/rollerblade.js', array());
+    wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array() ,null,true);
 
     if (is_page('company'))
-        wp_enqueue_script( 'swipeshow-js', get_template_directory_uri() . '/js/jquery.swipeshow.min.js', array() ,null ,true );
-
-
+        wp_enqueue_script( 'swipeshow-js', get_template_directory_uri() . '/js/jquery.swipeshow.min.js', array() ,null );
+        
     if (is_home())
-    wp_enqueue_script( 'bgswitcher-js', get_template_directory_uri() . '/js/jquery.bgswitcher.js', array() ,null );
+    wp_enqueue_script( 'bgswitcher-js', get_template_directory_uri() . '/js/jquery.bgswitcher.js', array() ,null);
 
     // コンソールエラー回避のためのヘルパースクリプト
     if ( WP_DEBUG )
@@ -296,4 +298,16 @@ function pagename_class($classes = '') {
     return $classes;
 }
 
+
 add_filter('body_class','pagename_class');
+add_filter('body_class','pagename_class');
+
+
+// CSSとJavaScriptのバージョン表記を削除
+function remove_cssjs_ver( $src ) {
+    if( strpos( $src, '?ver=' ) )
+        $src = remove_query_arg( 'ver', $src );
+    return $src;
+}
+add_filter( 'script_loader_src', 'remove_cssjs_ver', 10, 2 );
+add_filter( 'style_loader_src', 'remove_cssjs_ver', 10, 2 );
