@@ -104,6 +104,11 @@
     z-index: -3;
 }
 
+.main-title {
+    font-weight: 600;
+}
+
+
 @import "icon/*.png";
 
 @include all-icon-sprites;

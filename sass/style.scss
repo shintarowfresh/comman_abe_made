@@ -2,7 +2,7 @@
 
 @import "compass";
 
-/*このCSSはSASS+Compassでコンパイルされてます。*/
+/*このCSSはSASS+gulp-Compassでコンパイルされてます。*/
 
 
 /*ブラウザのデフォルトをリセット*/
@@ -263,7 +263,7 @@
             }
 
             h2.title {
-                margin: .5em 0 .7em;
+                margin:.3em 0 0;
             }
 
             section {
@@ -499,6 +499,7 @@
 
     .panel_btn_pc {
         display: block;
+        top: 0;
     }
 
     //グリッド4分割カラム

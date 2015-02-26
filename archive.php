@@ -20,7 +20,7 @@ get_header(); ?>
 
             <?php else :?>
 
-                <h2><?php wp_title(''); ?></h2>
+                <h2 class="main-title"><?php wp_title(''); ?></h2>
 
             <?php endif ;?>
 

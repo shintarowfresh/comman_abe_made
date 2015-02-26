@@ -19,13 +19,7 @@ gulp.task('cssmin', function () {
 gulp.task('css', function () {
     return gulp.src('./css/*.css')
     .pipe(csscomb())
-    .pipe(pleeease({
-        autoprefixer: {
-            "browsers": ["last 2 versions"]
-        },
-        minifier: false
-    }))
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('./css/'));
 });
 
 gulp.task('sass', function() {
@@ -37,28 +31,32 @@ gulp.task('sass', function() {
 });
 
 gulp.task('ple', function() {
-    return gulp.src('./css/*.css')
+    return gulp.src('./dist/*.css')
+    .pipe(csscomb())
     .pipe(pleeease({
         autoprefixer: {
-            "browsers": ["last 4 versions", "ie 7"]
+            "browsers": ["last 2 versions"]
         },
+        minifier: false
     }))
     .pipe(gulp.dest('./css/'));
 });
 
 gulp.task('compass', function() {
-    gulp.src('./saaa/*.scss')
+    gulp.src('./sass/*.scss')
     .pipe(plumber())
     .pipe(compass({
-        config_file: 'config.rb',
-        css: '/css',
-        sass: '/sass/'
+        config_file: './config.rb',
+        css: 'css',
+        sass: 'sass'
     }))
+
+    .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('watch', function() {
     gulp.watch(['./sass/*.scss'], ['compass']);
-    return gulp.watch(['./css/*.css'], ['css']);
+    return gulp.watch(['./dist/*.css'], ['ple']);
 });
 
 gulp.task('default',['compass']);

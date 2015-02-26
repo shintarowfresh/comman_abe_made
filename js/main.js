@@ -20,15 +20,15 @@ jQuery(function ($) {
 
 
     //ふわっとなる挙動
-        $(' .content_full').fadeMover({
+        jQuery('.content_full').fadeMover({
             'effectType': 1,
             'nofadeOut': 'nonmover'
         });
-        $('.content').fadeMover({'outDelay': 300});
-        $('#panel').fadeMover({'outDelay': 600});
-        $('.content_full').fadeMover({'outDelay': 1000});
-        $('#footer').fadeMover({'outDelay': 2000});
-        $('#breadcrumb').fadeMover({'outDelay': 2000});
+        jQuery('.content').fadeMover({'outDelay': 300});
+        jQuery('#panel').fadeMover({'outDelay': 600});
+        jQuery('.content_full').fadeMover({'outDelay': 1000});
+        jQuery('#footer').fadeMover({'outDelay': 2000});
+        jQuery('#breadcrumb').fadeMover({'outDelay': 2000});
 
 
 

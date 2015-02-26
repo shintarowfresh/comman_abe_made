@@ -8,35 +8,46 @@
 
     <article <?php post_class(); ?>>
 
-        <div class="content-thum">
+
 
             <?php if(has_post_thumbnail()): ?>
 
                 <?php if( is_single() ) : ?>
 
-            <?php echo get_the_post_thumbnail($post->ID, 'single-eye',array('data-lazy' => 'false')); ?>
+        <div class="content-thum">
+
+                <?php echo get_the_post_thumbnail($post->ID, 'single-eye',array('data-lazy' => 'false')); ?>
+
+        </div><!--/.content-thum-->
 
                 <?php else :?>
 
-                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+        <div class="content-thum">
+                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+        </div><!--/.content-thum-->
 
                 <?php endif ;?>
 
             <?php else :?>
 
-            <a href="<?php the_permalink(); ?>"><img src="http://devimg.com/150x150" width="150" height="150"></a>
+                <?php if( is_single() ) : ?>
+                <?php else :?>
+        <div class="content-thum">
+            <a href="<?php the_permalink(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/no-thum.png" alt="サムネイルはありません"></a>
+        </div><!--/.content-thum-->
+                <?php endif ;?>
 
             <?php endif; ?>
 
-        </div>
+
 
         <div class="content-main">
 
             <header>
 
-                <span class="meta tag"><i class="fa fa-tags"></i> <?php the_tags( '', '' ); ?></span>
-
                 <time><?php the_time( 'Y.n.j' ); ?></time>
+
+                <span class="meta tag"><i class="fa fa-tags"></i> <?php the_tags( '', '' ); ?></span>
 
                 <?php if( is_single() ) :?>
                 <h2 class="title">
@@ -50,7 +61,9 @@
 
 
                 <div class="share-count">
-                    <span><i class="fa fa-twitter-square"></i><?php if(function_exists('get_scc_twitter')) echo get_scc_twitter(); ?></span> <span><i class="fa fa-facebook-official"></i><?php if(function_exists('get_scc_facebook')) echo get_scc_facebook(); ?></span> <span><i class="fa fa-hatena"></i><?php if(function_exists('get_scc_hatebu')) echo get_scc_facebook(); ?></span>
+
+                    <span><?php if(function_exists('scc_get_share_total')) echo scc_get_share_total(); ?><span>shares</span></span>
+
                 </div>
 
             </header>
@@ -97,16 +110,16 @@
 
                     <ul>
                         <li class="b-twitter">
-                            <a class="btn__sns" href="http://twitter.com/share?url=<?php echo $canonical_url_encode;?>&text=<?php echo $title_encode;?>" onclick="window.open(this.href, 'FBwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i>Twitter<span><?php if(function_exists('get_scc_twitter')) echo get_scc_twitter(); ?></span></a>
+                            <a class="btn__sns nonmover" href="http://twitter.com/share?url=<?php echo $canonical_url_encode;?>&text=<?php echo $title_encode;?>" onclick="window.open(this.href, 'FBwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i>Twitter<span><?php if(function_exists('get_scc_twitter')) echo get_scc_twitter(); ?></span></a>
                         </li>
                         <li class="b-fb">
-                            <a class="btn__sns" href="http://www.facebook.com/share.php?u=<?php echo $canonical_url_encode;?>" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-facebook-official"></i>いいね！<span><?php if(function_exists('get_scc_facebook')) echo get_scc_facebook(); ?></span></a>
+                            <a class="btn__sns nonmover" href="http://www.facebook.com/share.php?u=<?php echo $canonical_url_encode;?>" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-facebook-official"></i>シェア！<span><?php if(function_exists('get_scc_facebook')) echo get_scc_facebook(); ?></span></a>
                         </li>
                         <li class="b-hatena">
-                            <a class="btn__sns" href="http://b.hatena.ne.jp/add?mode=confirm&url=<?php echo $canonical_url_encode;?>&title=<?php echo $title_encode;?>" onclick="window.open(this.href, 'FBwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-hatena"></i>はてブ<span><?php if(function_exists('get_scc_hatebu')) echo get_scc_facebook(); ?></span></a>
+                            <a class="btn__sns nonmover" href="http://b.hatena.ne.jp/add?mode=confirm&url=<?php echo $canonical_url_encode;?>&title=<?php echo $title_encode;?>" onclick="window.open(this.href, 'FBwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-hatena"></i>はてブ<span><?php if(function_exists('get_scc_hatebu')) echo get_scc_facebook(); ?></span></a>
                         </li>
                         <li class="b-pocket">
-                            <a class="btn__sns" href="http://getpocket.com/edit?url=<?php echo $canonical_url_encode;?>&title=<?php echo $title_encode;?>" onclick="window.open(this.href, 'FBwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa icon-pocket"></i>pocket<span><?php if(function_exists('get_scc_pocket')) echo get_scc_facebook(); ?></span></a>
+                            <a class="btn__sns nonmover" href="http://getpocket.com/edit?url=<?php echo $canonical_url_encode;?>&title=<?php echo $title_encode;?>" onclick="window.open(this.href, 'FBwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa icon-pocket"></i>pocket<span><?php if(function_exists('get_scc_pocket')) echo get_scc_facebook(); ?></span></a>
                         </li>
                     </ul>
 
@@ -116,7 +129,7 @@
 
             <div class="author">
 
-                <h3>この記事を書いた人</h3>
+                <h3><i class="fa fa-pencil"></i> この記事を書いた人</h3>
 
                 <div class="sep">
                    <div class="thum">
@@ -132,7 +145,7 @@
             </div><!--/.author-->
 
             <div class="one-more-post">
-                <h3>もう１記事どうぞ！</h3>
+                <h3><i class="fa fa-newspaper-o"></i> もう１記事どうぞ！</h3>
 
                 <ul class="tab">
                     <li class="select"><i class="fa fa-link"></i> 関連記事</li>
@@ -165,11 +178,11 @@
                                         <div class="thum">
                                             <?php if(has_post_thumbnail()): ?>
 
-                                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a>
+                                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
 
                                             <?php else :?>
 
-                                            <a href="<?php the_permalink(); ?>"><img src="http://devimg.com/150x150" width="150" height="150"></a>
+                                            <a href="<?php the_permalink(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/no-thum.png" alt="サムネイルはありません"></a>
 
                                             <?php endif; ?>
 
@@ -185,7 +198,7 @@
                                             </h3>
 
                                             <div class="share-count">
-                                                <span><i class="fa fa-twitter-square"></i><?php if(function_exists('get_scc_twitter')) echo get_scc_twitter(); ?></span> <span><i class="fa fa-facebook-official"></i><?php if(function_exists('get_scc_facebook')) echo get_scc_facebook(); ?></span> <span><i class="fa fa-hatena"></i><?php if(function_exists('get_scc_hatebu')) echo get_scc_facebook(); ?></span>
+                                                <span><i class="fa fa-twitter-square"></i><?php if(function_exists('scc_get_share_twitter')) echo scc_get_share_twitter(); ?></span> <span><i class="fa fa-facebook-official"></i><?php if(function_exists('scc_get_share_facebook')) echo scc_get_share_facebook(); ?></span> <span><i class="fa fa-hatena"></i><?php if(function_exists('scc_get_share_hatebu')) echo scc_get_share_facebook(); ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -200,8 +213,6 @@
                                 wp_reset_postdata();
                                 ?>
                             </ul>
-
-
                         </div>
                     </li>
 
@@ -213,7 +224,7 @@
                                 $args = array(
                                     'post_type' => 'post',
                                     'post_status' => 'publish',
-                                    'meta_key' =>  'scc_share_count_facebook',
+                                    'meta_key' =>  'scc_share_count_total',
                                     'orderby'  =>  'meta_value_num',
                                     'posts_per_page' => 5
                                 );
@@ -229,11 +240,11 @@
                                         <div class="thum">
                                             <?php if(has_post_thumbnail()): ?>
 
-                                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('full'); ?></a>
+                                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
 
                                             <?php else :?>
 
-                                            <a href="<?php the_permalink(); ?>"><img src="http://devimg.com/150x150" width="150" height="150"></a>
+                                            <a href="<?php the_permalink(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/no-thum.png" alt="サムネイルはありません"></a>
 
                                             <?php endif; ?>
 
