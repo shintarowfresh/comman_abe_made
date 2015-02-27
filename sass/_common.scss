@@ -216,11 +216,12 @@ p{
 }
 
 .three-one {
-    ul.three {
+    .three {
         margin-right: 0;
         overflow: hidden;
 
-        >li{
+        >li,
+        >div {
             width: 100%;
             margin-right: 0;
             margin-bottom: 2em;
@@ -1510,6 +1511,36 @@ ul.foot_navi {
             padding-bottom: 100%;
             overflow: hidden;
             position: relative;
+
+            &:hover {
+                .gallery__title {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+
+
+                    a {
+
+                    }
+                }
+            }
+
+            .gallery__title {
+                background: #000;
+                padding: .3em;
+                font-size: 1em;
+                position: absolute;
+                bottom: -100%;
+                left: 0;
+                width: 80%;
+                @include transition(all .3s ease-in-out 0);
+                @include transition-duration(.3s);
+
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
         }
 
         img {

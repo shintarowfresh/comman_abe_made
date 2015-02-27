@@ -276,17 +276,19 @@ p {
   margin-bottom: .7em;
 }
 
-.three-one ul.three {
+.three-one .three {
   margin-right: 0;
   overflow: hidden;
 }
-.three-one ul.three > li {
+.three-one .three > li,
+.three-one .three > div {
   width: 100%;
   margin-right: 0;
   margin-bottom: 2em;
   float: none;
 }
-.three-one ul.three > li:last-child {
+.three-one .three > li:last-child,
+.three-one .three > div:last-child {
   margin-bottom: 0;
 }
 
@@ -1399,6 +1401,32 @@ ul.foot_navi li a {
   padding-bottom: 100%;
   overflow: hidden;
   position: relative;
+}
+.site-gallery li .gallery-thum:hover .gallery__title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.site-gallery li .gallery-thum .gallery__title {
+  background: #000;
+  padding: .3em;
+  font-size: 1em;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 80%;
+  -moz-transition: all 0.3s 0;
+  -o-transition: all 0.3s 0;
+  -webkit-transition: all 0.3s 0;
+  transition: all 0.3s 0;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.site-gallery li .gallery-thum .gallery__title a {
+  text-decoration: none;
+  color: #fff;
 }
 .site-gallery li img {
   display: block;
@@ -2655,6 +2683,29 @@ ul.foot_navi li a {
   font-weight: 600;
 }
 
+/*メンバー紹介*/
+.member .member__photo {
+  background: #d5d5d5;
+  position: relative;
+}
+.member .member__photo .cover {
+  position: absolute;
+  z-index: 100;
+}
+.member .member__photo img {
+  min-width: 100%;
+  max-width: 100%;
+}
+.member .member__name {
+  margin-top: .5em;
+}
+.member .member__name span {
+  display: block;
+}
+.member .member__name span.position {
+  font-size: .8em;
+}
+
 .icon-fb {
   background-position: 0 0;
 }
@@ -2694,11 +2745,12 @@ ul.foot_navi li a {
     z-index: 2;
   }
 
-  .three-one ul.three {
+  .three-one .three {
     margin-right: -2.93%;
     overflow: hidden;
   }
-  .three-one ul.three > li {
+  .three-one .three > li,
+  .three-one .three > div {
     text-align: left;
     width: 29.8%;
     margin-right: 2.93%;
@@ -2706,7 +2758,8 @@ ul.foot_navi li a {
     display: inline-block;
     vertical-align: top;
   }
-  .three-one ul.three > li:last-child {
+  .three-one .three > li:last-child,
+  .three-one .three > div:last-child {
     margin-bottom: 0;
   }
 

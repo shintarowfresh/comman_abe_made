@@ -27,7 +27,93 @@
 
                <h2>私たちがカンマンです</h2>
 
-               メンバー
+               <div class="member three-one">
+                   <ul class="three">
+                       <li>
+                           <div class="member__photo">
+                               <img src="" alt="">
+                           </div>
+                           <div class="member__name">
+                               <span class="name">貝出 康</span>
+                               <span class="position">General Manager</span>
+                           </div>
+                       </li>
+
+                       <li>
+                           <div class="member__photo">
+                               <img src="" alt="">
+                           </div>
+                           <div class="member__name">
+                               <span class="name">小川 裕司</span>
+                               <span class="position">Wed Director</span>
+                           </div>
+                       </li>
+
+                       <li>
+                           <div class="member__photo">
+                               <img src="" alt="">
+                           </div>
+                           <div class="member__name">
+                               <span class="name">板東 勝也</span>
+                               <span class="position">Chief technical officer</span>
+                           </div>
+                       </li>
+
+                       <li>
+                           <div class="member__photo">
+                               <img src="" alt="">
+                           </div>
+                           <div class="member__name">
+                               <span class="name">白い たつ也</span>
+                               <span class="position">Web Hengineer</span>
+                           </div>
+                       </li>
+
+                       <li>
+                           <div class="member__photo">
+                               <img src="" alt="">
+                           </div>
+                           <div class="member__name">
+                               <span class="name">佐野 春香</span>
+                               <span class="position">Designer</span>
+                           </div>
+                       </li>
+
+                       <li>
+                           <div class="member__photo">
+
+                               <img class="cover" src="<?php echo get_stylesheet_directory_uri(); ?>/img/member/abe/cover.png" alt="abe">
+
+
+                              <div id="abe">
+                                  <img class="rollerblade-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/member/abe/abe05.png" alt="abe">
+                              </div>
+
+
+                           </div>
+                           <div class="member__name">
+                               <span class="name">阿部 信太郎</span>
+                               <span class="position">Front-end Engineer</span>
+                           </div>
+                       </li>
+
+                       <li>
+                           <div class="member__photo">
+                               <img class="cover" src="<?php echo get_stylesheet_directory_uri(); ?>/img/member/abe/cover.png" alt="abe">
+
+                                  <div id="fujikawa">
+                                   <img class="rollerblade-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/member/abe/abe05.png" alt="abe">
+                               </div>
+
+                           </div>
+                           <div class="member__name">
+                               <span class="name">藤川 真菜</span>
+                               <span class="position">Intern</span>
+                           </div>
+                       </li>
+
+                   </ul>
+               </div>
 
             </div>
 

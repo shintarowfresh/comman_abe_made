@@ -109,6 +109,43 @@
 }
 
 
+/*メンバー紹介*/
+.member {
+
+    .member__photo{
+        background: #d5d5d5;
+        position: relative;
+
+        .cover {
+            position: absolute;
+            z-index: 100;
+        }
+
+        img {
+            min-width: 100%;
+            max-width: 100%;
+        }
+    }
+
+    .member__name{
+        margin-top: .5em;
+
+        span {
+            display: block;
+
+            &.name {
+
+            }
+
+            &.position {
+                font-size: .8em;
+            }
+        }
+    }
+}
+
+
+
 @import "icon/*.png";
 
 @include all-icon-sprites;

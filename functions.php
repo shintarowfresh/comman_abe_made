@@ -66,12 +66,16 @@ function comman_scripts() {
     // メインの js
     wp_enqueue_script( 'swipeshow-js', get_template_directory_uri() . '/js/jquery.swipeshow.min.js', array('jquery') ,null ,true );
     wp_enqueue_script( 'fade-js', get_template_directory_uri() . '/js/jquery.fademover.js', array('jquery') ,null ,true );
-    wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array('jquery') ,null ,true );
+    wp_enqueue_script( 'rollerblade-js', get_template_directory_uri() . '/js/rollerblade.js', array() ,null );
+    wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array('jquery') ,null );
     wp_enqueue_script( 'modernizr-js', get_template_directory_uri() . '/js/modernizr.js', array() ,null );
     wp_enqueue_script( 'script-js', get_template_directory_uri() . '/js/script.min.js', array() ,null );
 
+
     if (is_page('company'))
         wp_enqueue_script( 'swipeshow-js', get_template_directory_uri() . '/js/jquery.swipeshow.min.js', array() ,null ,true );
+
+    if (is_page('message'))
 
 
     if (is_home())

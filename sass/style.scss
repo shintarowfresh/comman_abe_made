@@ -50,11 +50,12 @@
     }
 
     .three-one {
-        ul.three{
+        .three{
             margin-right: -2.93%;
             overflow: hidden;
 
-            >li{
+            >li,
+            >div {
                 text-align: left;
                 width: 29.8%;
                 margin-right: 2.93%;

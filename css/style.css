@@ -457,13 +457,14 @@ p
     margin-bottom: .7em;
 }
 
-.three-one ul.three
+.three-one .three
 {
     overflow: hidden;
 
     margin-right: 0;
 }
-.three-one ul.three > li
+.three-one .three > li,
+.three-one .three > div
 {
     float: none;
 
@@ -471,7 +472,8 @@ p
     margin-right: 0;
     margin-bottom: 2em;
 }
-.three-one ul.three > li:last-child
+.three-one .three > li:last-child,
+.three-one .three > div:last-child
 {
     margin-bottom: 0;
 }
@@ -1923,6 +1925,33 @@ ul.foot_navi li a
     width: 100%;
     height: 0;
     padding-bottom: 100%;
+}
+.site-gallery li .gallery-thum:hover .gallery__title
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.site-gallery li .gallery-thum .gallery__title
+{
+    font-size: 1em;
+
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+
+    width: 80%;
+    padding: .3em;
+    transition: all .3s 0;
+    transition-duration: .3s;
+
+    background: #000;
+}
+.site-gallery li .gallery-thum .gallery__title a
+{
+    text-decoration: none;
+
+    color: #fff;
 }
 .site-gallery li img
 {
@@ -3521,6 +3550,36 @@ ul.foot_navi li a
     font-weight: 600;
 }
 
+/*メンバー紹介*/
+.member .member__photo
+{
+    position: relative;
+
+    background: #d5d5d5;
+}
+.member .member__photo .cover
+{
+    position: absolute;
+    z-index: 100;
+}
+.member .member__photo img
+{
+    min-width: 100%;
+    max-width: 100%;
+}
+.member .member__name
+{
+    margin-top: .5em;
+}
+.member .member__name span
+{
+    display: block;
+}
+.member .member__name span.position
+{
+    font-size: .8em;
+}
+
 .icon-fb
 {
     background-position: 0 0;
@@ -3572,13 +3631,14 @@ ul.foot_navi li a
         margin-bottom: -1px;
     }
 
-    .three-one ul.three
+    .three-one .three
     {
         overflow: hidden;
 
         margin-right: -2.93%;
     }
-    .three-one ul.three > li
+    .three-one .three > li,
+    .three-one .three > div
     {
         display: inline-block;
 
@@ -3589,7 +3649,8 @@ ul.foot_navi li a
         text-align: left;
         vertical-align: top;
     }
-    .three-one ul.three > li:last-child
+    .three-one .three > li:last-child,
+    .three-one .three > div:last-child
     {
         margin-bottom: 0;
     }
