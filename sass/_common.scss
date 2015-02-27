@@ -2433,6 +2433,10 @@ ul.foot_navi {
                     line-height: 1;
                     @include border-radius(2px);
 
+                    &:hover {
+                        opacity: .7;
+                    }
+
                     span {
                         background: #fff;
                         color: #333;

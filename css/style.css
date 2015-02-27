@@ -165,7 +165,7 @@ summary
 .icon-line,
 .icon-yt
 {
-    background-image: url('../img/icon-s48ba756a63.png');
+    background-image: url('../img/icon-s869404673a.png');
     background-repeat: no-repeat;
 }
 
@@ -2940,6 +2940,11 @@ ul.foot_navi li a
     color: #fff;
     border-radius: 2px;
     background: #d5d5d5;
+}
+.single .share ul li a:hover
+{
+    opacity: .7;
+    filter: alpha(opacity=70);
 }
 .single .share ul li a span
 {
