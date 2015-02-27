@@ -19,6 +19,13 @@ Template Name: no-sidebar
                 <h5 class="sub_title st1">お見積もり</h5>
             </div>
 
+        <?php elseif( is_page( 'recruit' ) ) :?>
+
+            <div class="variable">
+                <h3 class="sub_title">Recruit</h3>
+                <h5 class="sub_title st1">求人情報について</h5>
+            </div>
+
         <?php elseif( is_page( 'works' ) ) :?>
 
             <div class="variable">

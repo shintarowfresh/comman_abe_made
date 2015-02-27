@@ -133,8 +133,8 @@
 
             <!--お知らせバナー-->
             <div class="head_top_news content_full">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/bosyu.png" alt="募集する">
-                <img class="news_banner_mobile" src="<?php echo get_stylesheet_directory_uri(); ?>/img/bannar_news_mobile.png" alt="プログラマー募集" />
+                <a href="/recruit/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/bosyu.png" alt="募集する">
+                    <img class="news_banner_mobile" src="<?php echo get_stylesheet_directory_uri(); ?>/img/bannar_news_mobile.png" alt="プログラマー募集" /></a>
             </div>
 
             <!--画像イメージ領域-->
