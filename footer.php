@@ -153,6 +153,7 @@
                             <li><a href="/privacypolicy/">プライバシーポリシー</a></li>
                             <li><a href="/sitepolicy/">サイトポリシー</a></li>
                             <li><a href="/recruit/">採用情報</a></li>
+                            <li><a href="https://plus.google.com/114203544397179410651" rel="publisher">Google+</a></li>
                         </ul>
                     </div>
                     <div class="box_1">
