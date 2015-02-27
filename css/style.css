@@ -2021,8 +2021,8 @@ ul.foot_navi li a
 {
     font-weight: bold;
 
-    margin: 2em 0;
-    padding: 1.3em 0 1em;
+    margin: 4em 0 2em;
+    padding: 1em 0 1.2em;
 
     color: rgba(198, 40, 40, .75);
     border-top: 3px solid rgba(198, 40, 40, .6);
