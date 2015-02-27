@@ -2,7 +2,7 @@
 
     <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
         <a href="<?php echo home_url(); ?>" itemprop="url">
-            <span class="pan-home" itemprop="title">カンマン｜徳島のweb制作会社です</span>
+            <span class="pan-home" itemprop="title">カンマン｜徳島のホームページ制作会社です</span>
         </a>
     </div>
 
