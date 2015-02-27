@@ -366,14 +366,6 @@ p{
     }
 }
 
-.btn__sns {
-    @extend .btn;
-    padding: 0 8px;
-    line-height: 36px;
-    height: 36px;
-    margin: 0 4px 4px 0;
-}
-
 p {
     .btn__works{
         margin-top: 0;
@@ -2433,8 +2425,14 @@ ul.foot_navi {
 
             li{
                 float: left;
-                margin: 0 0 15px 0;
-                padding-right: 15px;
+                margin: 0 15px 15px 0;
+
+                &.b-twitter a,
+                &.b-fb a,
+                &.b-hatena a,
+                &.b-pocket a {
+                    padding: 7px 11px;
+                }
 
                 &.b-twitter a {
                     background: #008fde;
@@ -2458,6 +2456,10 @@ ul.foot_navi {
                     }
                 }
 
+                &.b-line a {
+                    display: block;
+                }
+
                 i {
                     margin-right: .25em;
                 }
@@ -2465,13 +2467,11 @@ ul.foot_navi {
                 a {
                     text-decoration: none;
                     color: #fff;
-                    background: #d5d5d5;
                     font-size: .8em;
-                    padding: 8px;
                     margin: 0;
                     height: auto;
-                    line-height: 1;
                     @include border-radius(2px);
+                    display: inline-block;
 
                     &:hover {
                         opacity: .7;
@@ -2480,7 +2480,7 @@ ul.foot_navi {
                     span {
                         background: #fff;
                         color: #333;
-                        padding: 0 5px;
+                        padding: 1px 3px;
                         margin-left: .5em;
                         @include border-radius(2px);
                         border: 1px solid rgba(0, 0, 0, 0.3);

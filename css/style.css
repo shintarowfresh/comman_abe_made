@@ -564,8 +564,7 @@ p
 .btn,
 .btn__sq,
 .btn__works,
-.btn__full,
-.btn__sns
+.btn__full
 {
     line-height: 100px;
 
@@ -645,15 +644,6 @@ p
 .btn__full.to_top
 {
     margin-top: 0;
-}
-
-.btn__sns
-{
-    line-height: 36px;
-
-    height: 36px;
-    margin: 0 4px 4px 0;
-    padding: 0 8px;
 }
 
 p .btn__works
@@ -2943,8 +2933,14 @@ ul.foot_navi li a
 {
     float: left;
 
-    margin: 0 0 15px 0;
-    padding-right: 15px;
+    margin: 0 15px 15px 0;
+}
+.single .share ul li.b-twitter a,
+.single .share ul li.b-fb a,
+.single .share ul li.b-hatena a,
+.single .share ul li.b-pocket a
+{
+    padding: 7px 11px;
 }
 .single .share ul li.b-twitter a
 {
@@ -2966,6 +2962,10 @@ ul.foot_navi li a
 {
     font-family: icomoon;
 }
+.single .share ul li.b-line a
+{
+    display: block;
+}
 .single .share ul li i
 {
     margin-right: .25em;
@@ -2973,17 +2973,16 @@ ul.foot_navi li a
 .single .share ul li a
 {
     font-size: .8em;
-    line-height: 1;
+
+    display: inline-block;
 
     height: auto;
     margin: 0;
-    padding: 8px;
 
     text-decoration: none;
 
     color: #fff;
     border-radius: 2px;
-    background: #d5d5d5;
 }
 .single .share ul li a:hover
 {
@@ -2995,7 +2994,7 @@ ul.foot_navi li a
     font-size: .8em;
 
     margin-left: .5em;
-    padding: 0 5px;
+    padding: 1px 3px;
 
     color: #333;
     border: 1px solid rgba(0, 0, 0, .3);
@@ -3710,8 +3709,7 @@ ul.foot_navi li a
     .btn,
     .btn__sq,
     .btn__works,
-    .btn__full,
-    .btn__sns
+    .btn__full
     {
         line-height: 3em;
 
@@ -3725,8 +3723,7 @@ ul.foot_navi li a
     .btn.to_top,
     .to_top.btn__sq,
     .to_top.btn__works,
-    .to_top.btn__full,
-    .to_top.btn__sns
+    .to_top.btn__full
     {
         cursor: pointer;
 
@@ -3736,8 +3733,7 @@ ul.foot_navi li a
     .btn:hover,
     .btn__sq:hover,
     .btn__works:hover,
-    .btn__full:hover,
-    .btn__sns:hover
+    .btn__full:hover
     {
         opacity: 1;
         filter: alpha(opacity=100);
@@ -3999,8 +3995,7 @@ ul.foot_navi li a
     .btn,
     .btn__sq,
     .btn__works,
-    .btn__full,
-    .btn__sns
+    .btn__full
     {
         line-height: 6em;
 
@@ -4010,16 +4005,14 @@ ul.foot_navi li a
     .btn br,
     .btn__sq br,
     .btn__works br,
-    .btn__full br,
-    .btn__sns br
+    .btn__full br
     {
         display: none;
     }
     .btn.to_top,
     .to_top.btn__sq,
     .to_top.btn__works,
-    .to_top.btn__full,
-    .to_top.btn__sns
+    .to_top.btn__full
     {
         cursor: pointer;
 
@@ -4029,8 +4022,7 @@ ul.foot_navi li a
     .btn:hover,
     .btn__sq:hover,
     .btn__works:hover,
-    .btn__full:hover,
-    .btn__sns:hover
+    .btn__full:hover
     {
         opacity: 1;
         filter: alpha(opacity=100);
@@ -4649,6 +4641,11 @@ ul.foot_navi li a
     .single .share ul li
     {
         margin-right: 15px;
+    }
+
+    .single .share ul li.b-line
+    {
+        display: none;
     }
 }
 /* ブレイクポイント調整用 */

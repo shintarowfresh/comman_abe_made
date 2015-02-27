@@ -300,7 +300,6 @@
     </script>
 
 <?php endif ;?>
-
 <script type="text/javascript">// <![CDATA[
     $script([
         "//platform.twitter.com/widgets.js",

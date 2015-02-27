@@ -361,7 +361,7 @@ p {
 }
 
 /*ボタンをまとめて設定*/
-.btn, .btn__sq, .btn__works, .btn__full, .btn__sns {
+.btn, .btn__sq, .btn__works, .btn__full {
   background: #c62828;
   color: #fff;
   display: block;
@@ -429,13 +429,6 @@ p {
 
 .btn__full.to_top {
   margin-top: 0;
-}
-
-.btn__sns {
-  padding: 0 8px;
-  line-height: 36px;
-  height: 36px;
-  margin: 0 4px 4px 0;
 }
 
 p .btn__works {
@@ -2185,8 +2178,10 @@ ul.foot_navi li a {
 }
 .single .share ul li {
   float: left;
-  margin: 0 0 15px 0;
-  padding-right: 15px;
+  margin: 0 15px 15px 0;
+}
+.single .share ul li.b-twitter a, .single .share ul li.b-fb a, .single .share ul li.b-hatena a, .single .share ul li.b-pocket a {
+  padding: 7px 11px;
 }
 .single .share ul li.b-twitter a {
   background: #008fde;
@@ -2203,21 +2198,22 @@ ul.foot_navi li a {
 .single .share ul li.b-pocket a i:before {
   font-family: icomoon;
 }
+.single .share ul li.b-line a {
+  display: block;
+}
 .single .share ul li i {
   margin-right: .25em;
 }
 .single .share ul li a {
   text-decoration: none;
   color: #fff;
-  background: #d5d5d5;
   font-size: .8em;
-  padding: 8px;
   margin: 0;
   height: auto;
-  line-height: 1;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
+  display: inline-block;
 }
 .single .share ul li a:hover {
   opacity: .7;
@@ -2225,7 +2221,7 @@ ul.foot_navi li a {
 .single .share ul li a span {
   background: #fff;
   color: #333;
-  padding: 0 5px;
+  padding: 1px 3px;
   margin-left: .5em;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -2800,7 +2796,7 @@ ul.foot_navi li a {
   }
 
   /*ボタンを設定 600*/
-  .btn, .btn__sq, .btn__works, .btn__full, .btn__sns {
+  .btn, .btn__sq, .btn__works, .btn__full {
     width: 100%;
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
@@ -2810,12 +2806,12 @@ ul.foot_navi li a {
     height: 3em;
     line-height: 3em;
   }
-  .btn.to_top, .to_top.btn__sq, .to_top.btn__works, .to_top.btn__full, .to_top.btn__sns {
+  .btn.to_top, .to_top.btn__sq, .to_top.btn__works, .to_top.btn__full {
     color: rgba(255, 255, 255, 0.7);
     background: #000;
     cursor: pointer;
   }
-  .btn:hover, .btn__sq:hover, .btn__works:hover, .btn__full:hover, .btn__sns:hover {
+  .btn:hover, .btn__sq:hover, .btn__works:hover, .btn__full:hover {
     background: #c62828;
     color: #fff;
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -3005,20 +3001,20 @@ ul.foot_navi li a {
 /*タブレット横・パソコン用*/
 @media screen and (min-width: 950px) {
   /*ボタンを設定 950*/
-  .btn, .btn__sq, .btn__works, .btn__full, .btn__sns {
+  .btn, .btn__sq, .btn__works, .btn__full {
     height: 6em;
     line-height: 6em;
     margin-right: 0;
   }
-  .btn br, .btn__sq br, .btn__works br, .btn__full br, .btn__sns br {
+  .btn br, .btn__sq br, .btn__works br, .btn__full br {
     display: none;
   }
-  .btn.to_top, .to_top.btn__sq, .to_top.btn__works, .to_top.btn__full, .to_top.btn__sns {
+  .btn.to_top, .to_top.btn__sq, .to_top.btn__works, .to_top.btn__full {
     color: rgba(255, 255, 255, 0.7);
     background: #000;
     cursor: pointer;
   }
-  .btn:hover, .btn__sq:hover, .btn__works:hover, .btn__full:hover, .btn__sns:hover {
+  .btn:hover, .btn__sq:hover, .btn__works:hover, .btn__full:hover {
     background: #c62828;
     color: #fff;
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -3503,6 +3499,10 @@ ul.foot_navi li a {
 
   .single .share ul li {
     margin-right: 15px;
+  }
+
+  .single .share ul li.b-line {
+    display: none;
   }
 }
 /* ブレイクポイント調整用 */

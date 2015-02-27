@@ -121,6 +121,12 @@
                         <li class="b-pocket">
                             <a class="btn__sns nonmover" href="http://getpocket.com/edit?url=<?php echo $canonical_url_encode;?>&title=<?php echo $title_encode;?>" onclick="window.open(this.href, 'FBwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa icon-pocket"></i>pocket<span><?php if(function_exists('get_scc_pocket')) echo get_scc_facebook(); ?></span></a>
                         </li>
+
+                        <li class="b-line">
+                                <a href="http://line.me/R/msg/text/?<?php the_title(); ?>%0D%0A<?php the_permalink(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/linebutton_30x30.png" width="30" height="30" alt="LINEで送る" /></a>
+
+                        </li>
+
                     </ul>
 
                 </div><!--/.share-->
