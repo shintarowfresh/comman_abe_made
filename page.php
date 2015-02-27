@@ -35,15 +35,10 @@ get_header(); ?>
                     </section>
 
                     <footer>
-                        <p class="last-p">［最終更新日］<?php the_modified_date('Y/m/d') ?></p>
+                        <span class="last-updated">最終更新日:<?php the_modified_date('Y/m/d') ?></span>
                     </footer>
 
                 </article>
-
-
-                <?php if( (is_child('works') ) ) :?>
-                親子関係が子供。
-                <?php endif ;?>
 
             </div><!--/.main-->
 
