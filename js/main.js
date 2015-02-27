@@ -30,9 +30,6 @@ jQuery(function ($) {
         jQuery('#footer').fadeMover({'outDelay': 2000});
         jQuery('#breadcrumb').fadeMover({'outDelay': 2000});
 
-
-
-
     var $panel = $('#panel');
 
     //ヘッダーにあるハンバーガーボタンの制御
