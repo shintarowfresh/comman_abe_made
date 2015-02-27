@@ -49,7 +49,7 @@
 <?php else :?>
 <body <?php body_class(); ?>>
 <?php endif ;?>
-<h1 class="semantic">株式会社カンマン</h1>
+<h1 class="semantic"><?php wp_title(); ?></h1>
 
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
