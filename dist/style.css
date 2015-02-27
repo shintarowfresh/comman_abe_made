@@ -2781,6 +2781,10 @@ ul.foot_navi li a {
   margin-top: 2em;
 }
 
+.semantic {
+  display: none;
+}
+
 .icon-fb {
   background-position: 0 0;
 }

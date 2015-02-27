@@ -3685,6 +3685,11 @@ ul.foot_navi li a
     background: #f2f2f2;
 }
 
+.semantic
+{
+    display: none;
+}
+
 .icon-fb
 {
     background-position: 0 0;

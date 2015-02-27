@@ -185,6 +185,10 @@
     margin-top: 2em;
 }
 
+.semantic {
+    display: none;
+}
+
 @import "icon/*.png";
 
 @include all-icon-sprites;
