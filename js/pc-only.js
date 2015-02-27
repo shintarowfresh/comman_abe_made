@@ -79,19 +79,24 @@ jQuery(document).ready(function() {
     jQuery('.member__photo').mouseout(function(){
         jQuery(this).find('.cover').css('display','block')});
 
-    jQuery('#abe').rollerblade({
-        imageArray: abeMotions,
-        sensitivity: 20,
-        drag: false,
-        auto: false,
-        edgeStop:false
+    jQuery('.member').each(function(){
+
+        jQuery('#abe').rollerblade({
+            imageArray: abeMotions,
+            sensitivity: 20,
+            drag: false,
+            auto: false,
+            edgeStop:false
+        });
+
+        jQuery('#fujikawa').rollerblade({
+            imageArray: abeMotions,
+            sensitivity: 20,
+            drag: false,
+            auto: false,
+            edgeStop:false
+        });
     });
 
-    jQuery('#fujikawa').rollerblade({
-        imageArray: abeMotions,
-        sensitivity: 20,
-        drag: false,
-        auto: false,
-        edgeStop:false
-    });
+
 });

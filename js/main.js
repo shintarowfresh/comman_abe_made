@@ -141,18 +141,19 @@ jQuery(function ($) {
 
 
 
-
-    //会社概要の外観部分のスライドショー制御
-    $(".my-gallery").swipeshow({
-        autostart: true,
-        /* Set to `false` to keep it steady */
-        interval: 4000,
-        /* Time between switching slides (ms) */
-        speed: 1000,
-        /* Animation speed (ms) */
-        friction: 0.6,
-        /* Bounce-back behavior; use `0` to disable */
-        mouse: true /* enable mouse dragging controls */
+    $('.my-gallery').each(function(){
+        //会社概要の外観部分のスライドショー制御
+        $(this).swipeshow({
+            autostart: true,
+            /* Set to `false` to keep it steady */
+            interval: 4000,
+            /* Time between switching slides (ms) */
+            speed: 1000,
+            /* Animation speed (ms) */
+            friction: 0.6,
+            /* Bounce-back behavior; use `0` to disable */
+            mouse: true /* enable mouse dragging controls */
+        });
     });
 
 
@@ -169,58 +170,3 @@ jQuery(function ($) {
 
 
 });
-
-
-
-
-
-//会社概要でgooglemapを描写
-function initialize() {
-    'use strict';
-    var latlng = new google.maps.LatLng(34.060224, 134.557671);
-    var myOptions = {
-        zoom: 15,
-        center: latlng,
-        mapTypeControlOptions: {
-            mapTypeIds: ['noText', google.maps.MapTypeId.ROADMAP]
-        }
-    };
-    var map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
-
-    var markerOpts = {
-        position: latlng,
-        map: map,
-        title: "株式会社カンマン",
-        animation: google.maps.Animation.DROP
-    };
-    // 直前で作成したMarkerOptionsを利用してMarkerを作成
-    var marker = new google.maps.Marker(markerOpts);
-
-    var styleOptions = [{
-        stylers: [
-            {
-                "visibility": "simplifed"
-            },
-            {
-                "hue": "#D32117"
-            },
-            {
-                "gamma": 1.37
-            },
-            {
-                "lightness": 27
-            },
-            {
-                "saturation": 35
-            }
-        ],
-        elementType: "geometry",
-        featureType: "all"
-    }];
-    var styledMapOptions = {
-            name: 'カンマンスタイル'
-        },
-        lopanType = new google.maps.StyledMapType(styleOptions, styledMapOptions);
-    map.mapTypes.set('noText', lopanType);
-    map.setMapTypeId('noText');
-}

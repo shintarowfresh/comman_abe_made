@@ -173,86 +173,135 @@
 
 
 
-
+<?php wp_footer(); ?>
 
 
 <?php if( is_post_type_archive('work') || is_tax() || is_archive() ) :?>
 
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.autopager-1.0.0.js"></script>
-<script>
-    //  最大ページ数取得
-    var maxpage = <?php echo $wp_query->max_num_pages; ?>;
+    <script>
+        //  最大ページ数取得
+        var maxpage = <?php echo $wp_query->max_num_pages; ?>;
 
-    jQuery('#loading').css('display', 'none');
+        jQuery('#loading').css('display', 'none');
 
-    if(maxpage == 1) {
-        jQuery('#next').css('display','none');
-    } else {
-        jQuery('#next').css('display','block');
-    };
+        if(maxpage == 1) {
+            jQuery('#next').css('display','none');
+        } else {
+            jQuery('#next').css('display','block');
+        };
 
-    jQuery.autopager({
-        content: '.container',// 読み込むコンテンツ
-        link: '#next a', // 次ページへのリンク
-        autoLoad: false,// スクロールの自動読込み解除
+        jQuery.autopager({
+            content: '.container',// 読み込むコンテンツ
+            link: '#next a', // 次ページへのリンク
+            autoLoad: false,// スクロールの自動読込み解除
 
-        start: function(current, next){
-            jQuery('#loading').css('display', 'block');
-            jQuery('#next a').css('display', 'none');
-        },
+            start: function(current, next){
+                jQuery('#loading').css('display', 'block');
+                jQuery('#next a').css('display', 'none');
+            },
 
-        load: function(current, next){
-            jQuery('#loading').css('display', 'none');
-            jQuery('#next a').css('display', 'block');
-            if( current.page >= maxpage ){ //最後のページ
-                jQuery('#next a').hide(); //次ページのリンクを隠す
+            load: function(current, next){
+                jQuery('#loading').css('display', 'none');
+                jQuery('#next a').css('display', 'block');
+                if( current.page >= maxpage ){ //最後のページ
+                    jQuery('#next a').hide(); //次ページのリンクを隠す
+                }
             }
-        }
-    });
+        });
 
-    jQuery('#next a').click(function(){ // 次ページへのリンクボタン
-        jQuery.autopager('load'); // 次ページを読み込む
-        return false;
-    });
-</script>
+        jQuery('#next a').click(function(){ // 次ページへのリンクボタン
+            jQuery.autopager('load'); // 次ページを読み込む
+            return false;
+        });
+    </script>
+
+<?php elseif(is_page('message')): ?>
+
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/rollerblade.js"></script>
 
 <?php elseif(is_page('company')): ?>
 
-<!--会社概要ページ　google-map用-->
+    <!--会社概要のスライダー-->
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.swipeshow.min.js"></script>
+
+    <!--会社概要ページ　google-map用-->
 <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCrytOY8q8mDgKCf-Ht3FfJa8yu_SCJWBg&sensor=true"></script>
+    <script type="text/javascript">
+        //会社概要でgooglemapを描写
+        function initialize() {
+            'use strict';
+            var latlng = new google.maps.LatLng(34.060224, 134.557671);
+            var myOptions = {
+                zoom: 15,
+                center: latlng,
+                mapTypeControlOptions: {
+                    mapTypeIds: ['noText', google.maps.MapTypeId.ROADMAP]
+                }
+            };
+            var map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
+
+            var markerOpts = {
+                position: latlng,
+                map: map,
+                title: "株式会社カンマン",
+                animation: google.maps.Animation.DROP
+            };
+            // 直前で作成したMarkerOptionsを利用してMarkerを作成
+            var marker = new google.maps.Marker(markerOpts);
+
+            var styleOptions = [{
+                stylers: [
+                    {
+                        "visibility": "simplifed"
+                    },
+                    {
+                        "hue": "#D32117"
+                    },
+                    {
+                        "gamma": 1.37
+                    },
+                    {
+                        "lightness": 27
+                    },
+                    {
+                        "saturation": 35
+                    }
+                ],
+                elementType: "geometry",
+                featureType: "all"
+            }];
+            var styledMapOptions = {
+                name: 'カンマンスタイル'
+            },
+                lopanType = new google.maps.StyledMapType(styleOptions, styledMapOptions);
+            map.mapTypes.set('noText', lopanType);
+            map.setMapTypeId('noText');
+        }
+    </script>
 
 <?php elseif( is_home() ) :?>
 
-<script type="text/javascript">
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.bgswitcher.js"></script>
+    <script type="text/javascript">
+        jQuery(function () {
 
-    jQuery(function () {
-
-        //トップページのフェードしてる画像
-        jQuery('.bgs').bgswitcher({
-            images: [
-                "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs01.png",
-                "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs02.png",
-                "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs03.png",
-                "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs04.png"
-            ],
-            interval: "4000",
+            //トップページのフェードしてる画像
+            jQuery('.bgs').bgswitcher({
+                images: [
+                    "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs01.png",
+                    "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs02.png",
+                    "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs03.png",
+                    "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs04.png"
+                ],
+                interval: "4000",
+            });
         });
-    });
-
-</script>
+    </script>
 
 <?php endif ;?>
 
-<?php if(!is_mobile()):?>
-<script src="<?php echo get_template_directory_uri(); ?>/js/pc-only.js"></script>
-<?php endif ;?>
-
-
-
-
-        <?php wp_footer(); ?>
-        
-        <script type="text/javascript">// <![CDATA[
+<script type="text/javascript">// <![CDATA[
     $script([
         "//platform.twitter.com/widgets.js",
         "//connect.facebook.net/ja_JP/all.js#xfbml=1",
@@ -261,9 +310,9 @@
     })
     // ]]></script>
 
-
-        <?php wp_footer(); ?>
+<?php if(!is_mobile()):?>
+<script src="<?php echo get_template_directory_uri(); ?>/js/pc-only.js"></script>
+<?php endif ;?>
 
     </body>
-
 </html>
