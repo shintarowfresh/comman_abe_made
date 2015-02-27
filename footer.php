@@ -225,10 +225,10 @@
 
 <script type="text/javascript">
 
-    jQuery(function ($) {
+    jQuery(function () {
 
         //トップページのフェードしてる画像
-        $('.bgs').bgswitcher({
+        jQuery('.bgs').bgswitcher({
             images: [
                 "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs01.png",
                 "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs02.png",
@@ -248,7 +248,11 @@
 <?php endif ;?>
 
 
-<script type="text/javascript">// <![CDATA[
+
+
+        <?php wp_footer(); ?>
+        
+        <script type="text/javascript">// <![CDATA[
     $script([
         "//platform.twitter.com/widgets.js",
         "//connect.facebook.net/ja_JP/all.js#xfbml=1",
@@ -257,7 +261,9 @@
     })
     // ]]></script>
 
+
         <?php wp_footer(); ?>
+
     </body>
 
 </html>

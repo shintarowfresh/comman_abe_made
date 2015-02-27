@@ -6,10 +6,7 @@
  * 基本的にプラグインのように動作し、テーマに存在していれば自動的にWordPressの初期化時に読み込まれます
  *
  */
-
-
 if ( ! function_exists( 'comman_setup' ) ):
-
     /**
      * テーマのデフォルト設定や、WordPress 諸機能のサポートを登録・設定します。
      *
@@ -53,33 +50,29 @@ function comman_scripts() {
     wp_enqueue_style( 'body-style', get_stylesheet_directory_uri() . '/style.css', array() ,null );
     wp_enqueue_style( 'swipeshow-style', get_stylesheet_directory_uri() . '/css/jquery.swipeshow.css', array() ,null );
     wp_enqueue_style( 'main-style', get_stylesheet_directory_uri() . '/css/style.css', array() ,null  );
+    wp_enqueue_style( 'main-style', get_stylesheet_directory_uri() . '/css/style.css', array() ,null  );
     wp_enqueue_style( 'fa-anime-style', get_stylesheet_directory_uri() . '/css/font-awesome-animation.min.css', array() ,null );
     wp_enqueue_style( 'icon-style', get_stylesheet_directory_uri() . '/css/icomoon/style.css', array() ,null );
     wp_enqueue_style( 'fa-style', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array() ,null );
-    wp_enqueue_style( 'gf-style', 'http://fonts.googleapis.com/css?family=Roboto:100,700,400', array() ,null );
-
+    wp_enqueue_style( 'gf-style', '//fonts.googleapis.com/css?family=Roboto:100,700,400', array() ,null );
 
     // コメント用スクリプト
     if ( is_singular() )
         wp_enqueue_script( 'comment-reply' );
+    
+    
+    wp_deregister_script('jquery');
+wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-1.11.2.min.js', array(), NULL, false );
 
     // メインの js
-    wp_enqueue_script( 'swipeshow-js', get_template_directory_uri() . '/js/jquery.swipeshow.min.js', array('jquery') ,null ,true );
-    wp_enqueue_script( 'fade-js', get_template_directory_uri() . '/js/jquery.fademover.js', array('jquery') ,null ,true );
-    wp_enqueue_script( 'rollerblade-js', get_template_directory_uri() . '/js/rollerblade.js', array() ,null );
-    wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array('jquery') ,null );
-    wp_enqueue_script( 'modernizr-js', get_template_directory_uri() . '/js/modernizr.js', array() ,null );
-    wp_enqueue_script( 'script-js', get_template_directory_uri() . '/js/script.min.js', array() ,null );
+    wp_enqueue_script( 'modernizr-js', get_template_directory_uri() . '/js/modernizr.js', array() ,null);//絶対先頭で。
+    wp_enqueue_script( 'fade-js', get_template_directory_uri() . '/js/jquery.fademover.js', array() ,null, true);
+    wp_enqueue_script( 'script-js', get_template_directory_uri() . '/js/script.min.js', array() ,null, true);
+    wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array() ,null ,true );
+        wp_enqueue_script( 'rollerblade-js', get_template_directory_uri() . '/js/rollerblade.js', array() ,null ,true);
+        wp_enqueue_script( 'swipeshow-js', get_template_directory_uri() . '/js/jquery.swipeshow.min.js', array() ,null ,true);
+        wp_enqueue_script( 'bgswitcher-js', get_template_directory_uri() . '/js/jquery.bgswitcher.js', array() ,null ,true);
 
-
-    if (is_page('company'))
-        wp_enqueue_script( 'swipeshow-js', get_template_directory_uri() . '/js/jquery.swipeshow.min.js', array() ,null ,true );
-
-    if (is_page('message'))
-
-
-    if (is_home())
-    wp_enqueue_script( 'bgswitcher-js', get_template_directory_uri() . '/js/jquery.bgswitcher.js', array() ,null );
 
     // コンソールエラー回避のためのヘルパースクリプト
     if ( WP_DEBUG )
@@ -88,6 +81,26 @@ function comman_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'comman_scripts' );
 
+function organizedthemes_load_default_scripts() {
+    if( !is_admin()){
+       wp_enqueue_script('modernizr-js');
+       wp_enqueue_script('fade-js');
+       wp_enqueue_script('script-js');
+       wp_enqueue_script('main-js');
+    }
+}
+add_action('wp_enqueue_scripts', 'organizedthemes_load_default_scripts');
+
+function organizedthemes_conditional_script_loading() {
+    if ( is_home()){
+        wp_enqueue_script('bgswitcher-js');
+    }elseif( is_page('message')){
+        wp_enqueue_script('rollerblade-js');
+    }elseif( is_page('company')){
+        wp_enqueue_script('swipeshow-js');
+    }
+}
+add_action('wp_enqueue_scripts', 'organizedthemes_conditional_script_loading');
 
 
 /**
@@ -114,7 +127,6 @@ register_sidebar( $args = array(
         'after_title'   => '</h3>' )
 );
 
-
 /**
 * コンテンツエリアの最大許容幅を設定
 *
@@ -129,6 +141,7 @@ add_image_size( 'single-eye', 763, 400, true );
 
 /**
 *グローバルメニューのサブタイトル化
+
 *
 */
 add_filter('walker_nav_menu_start_el', 'description_in_nav_menu', 10, 4);
@@ -301,6 +314,8 @@ function pagename_class($classes = '') {
     return $classes;
 }
 
+
+add_filter('body_class','pagename_class');
 add_filter('body_class','pagename_class');
 
 
