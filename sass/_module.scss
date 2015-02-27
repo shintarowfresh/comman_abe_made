@@ -144,7 +144,46 @@
     }
 }
 
+.phone-popup {
+    text-decoration: underline;
+    color: $main;
+    position: relative;
+    display: inline-block;
 
+    span {
+        opacity: 0;
+        position: absolute;
+        display: block;
+        background: rgba( $main , .9 );
+        padding: 1em;
+        font-size: 2em;
+        color: #fff;
+        text-shadow: 0 1px 1px #000;
+        border-radius: 3px;
+        width: 250px;
+        text-align: center;
+        bottom: 120%;
+        @include transition(all .3s ease-in-out 0);
+        @include transition-duration(.3s);
+    }
+
+    &:hover {
+
+        span {
+            opacity: 1;
+        }
+    }
+}
+
+
+.last-updated {
+    background: #f2f2f2;
+    color: #bababa;
+    padding: .3em;
+    font-size: .85em;
+    display: inline-block;
+    margin-top: 2em;
+}
 
 @import "icon/*.png";
 

@@ -2432,6 +2432,8 @@ ul.foot_navi {
                 &.b-hatena a,
                 &.b-pocket a {
                     padding: 7px 11px;
+                    border: 1px solid rgba(0, 0, 0, 0.15);
+                    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
                 }
 
                 &.b-twitter a {

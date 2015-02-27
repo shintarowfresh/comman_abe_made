@@ -2941,6 +2941,9 @@ ul.foot_navi li a
 .single .share ul li.b-pocket a
 {
     padding: 7px 11px;
+
+    border: 1px solid rgba(0, 0, 0, .15);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .35);
 }
 .single .share ul li.b-twitter a
 {
@@ -3628,6 +3631,58 @@ ul.foot_navi li a
 .member .member__name span.position
 {
     font-size: .8em;
+}
+
+.phone-popup
+{
+    position: relative;
+
+    display: inline-block;
+
+    text-decoration: underline;
+
+    color: #c62828;
+}
+.phone-popup span
+{
+    font-size: 2em;
+
+    position: absolute;
+    bottom: 120%;
+
+    display: block;
+
+    width: 250px;
+    padding: 1em;
+    transition: all .3s 0;
+    transition-duration: .3s;
+    text-align: center;
+
+    opacity: 0;
+
+    filter: alpha(opacity=0);
+    color: #fff;
+    border-radius: 3px;
+    background: rgba(198, 40, 40, .9);
+    text-shadow: 0 1px 1px #000;
+}
+.phone-popup:hover span
+{
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.last-updated
+{
+    font-size: .85em;
+
+    display: inline-block;
+
+    margin-top: 2em;
+    padding: .3em;
+
+    color: #bababa;
+    background: #f2f2f2;
 }
 
 .icon-fb
