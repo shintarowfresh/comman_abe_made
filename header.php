@@ -1,10 +1,10 @@
 <?php
 /**
- * ヘッダー
- *
- * <head> セクション
- *
- */
+* ヘッダー
+*
+* <head> セクション
+*
+*/
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>
 <html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
@@ -14,28 +14,44 @@
 <html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!-->
 <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
+<head>
+<meta charset="<?php bloginfo( 'charset' ); ?>" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title><?php wp_title(); ?></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<?php wp_head(); ?>
 
-    <head>
+<!--
+#                _  _                                  _      _
+#    /\  /\ ___ | || |  ___     __      __ ___   _ __ | |  __| |
+#   / /_/ // _ \| || | / _ \    \ \ /\ / // _ \ | '__|| | / _` |
+#  / __  /|  __/| || || (_) |    \ V  V /| (_) || |   | || (_| |
+#  \/ /_/  \___||_||_| \___/      \_/\_/  \___/ |_|   |_| \__,_|
+#
+#
+#  __      __ ___      __ _  _ __  ___
+#  \ \ /\ / // _ \    / _` || '__|/ _ \
+#   \ V  V /|  __/   | (_| || |  |  __/
+#    \_/\_/  \___|    \__,_||_|   \___|
+#
+#                                                     _
+#    ___  ___   _ __ ___   _ __ ___    __ _  _ __    (_) _ __    ___
+#   / __|/ _ \ | '_ ` _ \ | '_ ` _ \  / _` || '_ \   | || '_ \  / __|
+#  | (__| (_) || | | | | || | | | | || (_| || | | |  | || | | || (__  _
+#   \___|\___/ |_| |_| |_||_| |_| |_| \__,_||_| |_|  |_||_| |_| \___|(_)
+#
+-->
 
-        <meta charset="<?php bloginfo( 'charset' ); ?>" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+</head>
 
-        <title><?php wp_title(); ?></title>
+<?php if(is_page('company')): ?>
+<body <?php body_class(); ?> onload="initialize();">
+<?php else :?>
+<body <?php body_class(); ?>>
+<?php endif ;?>
+<h1 class="semantic">株式会社カンマン</h1>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <?php wp_head(); ?>
-
-    </head>
-
-
-    <?php if(is_page('company')): ?>
-    <body <?php body_class(); ?> onload="initialize();">
-   <?php else :?>
-        <body <?php body_class(); ?>>
-   <?php endif ;?>
-
-        <!--[if lt IE 7]>
+<!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
