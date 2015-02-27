@@ -264,6 +264,38 @@ p {
   opacity: 0;
 }
 
+.content .inner table {
+  margin: 0 auto 2em;
+}
+.content .inner table tbody {
+  border: 1px solid #d5d5d5;
+}
+.content .inner table tbody tr {
+  border-top: 2px solid #d5d5d5;
+  border-bottom: 2px solid #d5d5d5;
+}
+.content .inner table tbody tr td {
+  padding: 1em;
+  vertical-align: top;
+  border-right: 1px solid #d5d5d5;
+  border-bottom: 1px solid #d5d5d5;
+  min-width: 100px;
+}
+.content .inner table tbody tr td:first-child {
+  font-weight: bold;
+  background: #f2f2f2;
+}
+.content .inner table tbody tr td p {
+  margin-bottom: .5em;
+}
+.content .inner table tbody tr td h4 {
+  color: #c62828;
+  margin-top: 2em;
+}
+.content .inner table tbody tr td h4:first-child {
+  margin-top: 0;
+}
+
 /**
 * #.# 使い回すモジュール
 *
@@ -2465,6 +2497,7 @@ ul.foot_navi li a {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
+  margin-bottom: 2em;
 }
 .wpcf7-form div {
   display: table;

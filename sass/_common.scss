@@ -203,6 +203,46 @@ p{
     opacity: 0;
 }
 
+
+.content .inner table {
+    margin: 0 auto 2em;
+
+    tbody {
+        border: 1px solid #d5d5d5;
+
+        tr {
+            border-top: 2px solid #d5d5d5;
+            border-bottom: 2px solid #d5d5d5;
+
+            td {
+                padding: 1em;
+                vertical-align: top;
+                border-right: 1px solid #d5d5d5;
+                border-bottom: 1px solid #d5d5d5;
+                min-width: 100px;
+
+                &:first-child {
+                    font-weight: bold;
+                    background: #f2f2f2;
+                }
+
+                p {
+                    margin-bottom: .5em;
+                }
+                h4 {
+                    color: $main;
+                    margin-top: 2em;
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 /**
 * #.# 使い回すモジュール
 *
@@ -2753,6 +2793,7 @@ ul.foot_navi {
 .wpcf7-form {
     border: 1px solid rgba(0, 0, 0, 0.2);
     @include border-radius(2px);
+    margin-bottom: 2em;
 
     div {
         display: table;

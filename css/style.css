@@ -442,6 +442,50 @@ p
     filter: alpha(opacity=0);
 }
 
+.content .inner table
+{
+    margin: 0 auto 2em;
+}
+.content .inner table tbody
+{
+    border: 1px solid #d5d5d5;
+}
+.content .inner table tbody tr
+{
+    border-top: 2px solid #d5d5d5;
+    border-bottom: 2px solid #d5d5d5;
+}
+.content .inner table tbody tr td
+{
+    min-width: 100px;
+    padding: 1em;
+
+    vertical-align: top;
+
+    border-right: 1px solid #d5d5d5;
+    border-bottom: 1px solid #d5d5d5;
+}
+.content .inner table tbody tr td:first-child
+{
+    font-weight: bold;
+
+    background: #f2f2f2;
+}
+.content .inner table tbody tr td p
+{
+    margin-bottom: .5em;
+}
+.content .inner table tbody tr td h4
+{
+    margin-top: 2em;
+
+    color: #c62828;
+}
+.content .inner table tbody tr td h4:first-child
+{
+    margin-top: 0;
+}
+
 /**
 * #.# 使い回すモジュール
 *
@@ -3283,6 +3327,8 @@ ul.foot_navi li a
 /*お問い合わせページ*/
 .wpcf7-form
 {
+    margin-bottom: 2em;
+
     border: 1px solid rgba(0, 0, 0, .2);
     border-radius: 2px;
 }
