@@ -152,6 +152,7 @@
                         <ul>
                             <li><a href="/privacypolicy/">プライバシーポリシー</a></li>
                             <li><a href="/sitepolicy/">サイトポリシー</a></li>
+                            <li><a href="/recruit/">採用情報</a></li>
                         </ul>
                     </div>
                     <div class="box_1">
@@ -312,6 +313,15 @@
 <?php if(!is_mobile()):?>
 <script src="<?php echo get_template_directory_uri(); ?>/js/pc-only.js"></script>
 <?php endif ;?>
+
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        jQuery('a[href^=http]')
+        .not('[href*="'+location.hostname+'"]')
+        .attr({target:"_blank"})
+        .addClass("nonmover")
+        ;})
+</script>
 
     </body>
 </html>
