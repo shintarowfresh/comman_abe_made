@@ -1943,6 +1943,15 @@ ul.foot_navi li a
 {
     background-position: 0 -70px;
 }
+#footer .foot-black
+{
+    font-size: .85em;
+
+    padding: .8em 0;
+
+    color: #e4eaee;
+    background: #394a58;
+}
 #footer .hr .line
 {
     background: #546e7a;
@@ -3737,6 +3746,11 @@ ul.foot_navi li a
 .semantic
 {
     display: none;
+}
+
+.tar
+{
+    text-align: right;
 }
 
 .icon-fb

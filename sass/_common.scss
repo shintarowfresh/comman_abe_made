@@ -1532,6 +1532,13 @@ ul.foot_navi {
         }
     }
 
+    .foot-black {
+        background: darken($sub, 21%);
+        color: lighten($sub, 42%);
+        font-size: .85em;
+        padding: .8em 0;
+    }
+
     .hr {
         .line {
             background: #546E7A;

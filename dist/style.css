@@ -1415,6 +1415,12 @@ ul.foot_navi li a {
 #footer .foot__info .mail-sns ul li a.icon-line {
   background-position: 0 -70px;
 }
+#footer .foot-black {
+  background: #394a58;
+  color: #e4eaee;
+  font-size: .85em;
+  padding: .8em 0;
+}
 #footer .hr .line {
   background: #546E7A;
 }
@@ -2832,6 +2838,10 @@ ul.foot_navi li a {
 
 .semantic {
   display: none;
+}
+
+.tar {
+  text-align: right;
 }
 
 .icon-fb {
