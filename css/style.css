@@ -2077,6 +2077,8 @@ ul.foot_navi li a
     font-size: .85rem;
 
     padding: 5px;
+
+    background: #e4e0e0;
 }
 .breadcrumb .pan-home:before
 {
@@ -4347,10 +4349,12 @@ ul.foot_navi li a
     .panel .col .box_3
     {
         min-height: 17em;
+        margin-top: 3px;
+        margin-bottom: 3px;
         padding: 1em;
         border-radius: 2px;
         background: #fff;
-        box-shadow: 0 0 3px rgba(0, 0, 0, .1);
+        box-shadow: 0 0 6px rgba(0, 0, 0, .15);
     }
 
     .head_top_news img

@@ -1524,6 +1524,7 @@ ul.foot_navi li a {
 .breadcrumb {
   padding: 5px;
   font-size: .85rem;
+  background: #e4e0e0;
 }
 .breadcrumb .pan-home:before {
   font-family: FontAwesome;
@@ -3274,14 +3275,16 @@ ul.foot_navi li a {
   }
   .panel .col .box_1, .panel .col .box_2, .panel .col .box_3 {
     padding: 1em;
-    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     border-radius: 2px;
     min-height: 17em;
     background: #fff;
+    margin-top: 3px;
+    margin-bottom: 3px;
   }
 
   .head_top_news img {
