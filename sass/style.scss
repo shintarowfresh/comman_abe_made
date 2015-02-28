@@ -103,8 +103,9 @@
         height: 36px;
         width: auto;
         line-height: 36px;
-        color: $main;
+        color: #fff;
         margin-right: 10px;
+        background: $main;
 
         .fa {
             @include transition(all .3s ease-in-out 0);
@@ -357,26 +358,27 @@
     }
 
     .btn__works {
-        border: 1px solid $main;
-        background: #fff;
+        border: 2px solid $main;
         min-width: 64px;
-        padding: 0 8px;
+        padding: 3px 10px;
         @include border-radius(4px);
         display: inline-block;
         height: 36px;
         width: auto;
         line-height: 36px;
         color: $main;
+        background: #fff;
         margin-right: 10px;
 
         .fa {
             @include transition(all .3s ease-in-out 0);
-            @include transition-duration(.3s);
+            @include transition-duration(.6s);
             margin-left: 0;
             @include opacity(1);
         }
 
         &:hover {
+            border: 2px solid $main;
             background: $main;
             color: #fff;
             @include opacity(1);
@@ -555,6 +557,11 @@
 
     .top-copy {
         margin-left: 1em;
+
+        p {
+            margin-left: initial;
+        }
+
         .bigtext {
             padding-top: 10px;
         }
@@ -611,7 +618,7 @@
                 }
 
                 &:hover {
-                    background: $bg-color ;
+                    background: $l-brown;
                 }
             }
         }
