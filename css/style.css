@@ -202,8 +202,8 @@ body
 
     letter-spacing: .05em;
 
-    color: #6e5b5b;
-    background: #e0d7d4;
+    color: #8e7f7f;
+    background: #e4e0e0;
 }
 
 a
@@ -233,16 +233,12 @@ a:hover img
 }
 a img
 {
+    position: relative;
+    z-index: 100;
+
     display: block;
 
     transition: all .6s cubic-bezier(.165, .84, .44, 1) 0ms;
-}
-a img:hover
-{
-    opacity: .6;
-    filter: alpha(opacity=60);
-
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
 }
 
 img
@@ -303,7 +299,7 @@ h2
 
     margin-bottom: 1em;
 
-    color: #6e5b5b;
+    color: #716363;
 }
 
 h3
@@ -312,7 +308,7 @@ h3
 
     margin-bottom: 1em;
 
-    color: #6e5b5b;
+    color: #716363;
 }
 h3.sub_title
 {
@@ -402,7 +398,7 @@ h5.sub_title
 
     text-align: center;
 
-    color: rgba(153, 153, 153, .67);
+    color: rgba(228, 224, 224, .7);
 }
 h5.sub_title.st1
 {
@@ -675,7 +671,7 @@ p .btn__works
 {
     text-decoration: none;
 
-    color: #5d4a43;
+    color: #5e5353;
 }
 
 .sub_title img
@@ -1216,7 +1212,7 @@ nav.menu .blog a:before
     display: none;
     overflow: hidden;
 
-    background: #cdbeb9;
+    background: #cec8c8;
     box-shadow: 0 2px 8px 2px rgba(0, 0, 0, .07) inset;
 }
 #panel .variable
@@ -1295,7 +1291,7 @@ nav.menu .blog a:before
 {
     text-align: center;
 
-    background: #d3c6c2;
+    background: #d6d0d0;
 }
 .head_top_news img
 {
@@ -1867,7 +1863,7 @@ ul.foot_navi li a
 
 #footer
 {
-    background: #e0d7d4;
+    background: #e4e0e0;
 }
 #footer .foot,
 #footer .foot__info
@@ -1881,7 +1877,7 @@ ul.foot_navi li a
 #footer .foot__info
 {
     color: #cfd8dc;
-    background: #455a64;
+    background: #638199;
 }
 #footer .foot__info .inner > img
 {
@@ -1991,6 +1987,7 @@ ul.foot_navi li a
 .site-gallery li .gallery-thum:hover .gallery__title
 {
     position: absolute;
+    z-index: 200;
     bottom: 0;
     left: 0;
 }
@@ -2117,7 +2114,7 @@ ul.foot_navi li a
 {
     text-decoration: none;
 
-    color: #876b61;
+    color: #847474;
 }
 .breadcrumb div a:hover
 {
@@ -2141,7 +2138,7 @@ ul.foot_navi li a
 }
 .breadcrumb .this-post
 {
-    color: #faf8f8;
+    color: white;
 }
 
 /*会社概要*/
@@ -2248,7 +2245,7 @@ ul.foot_navi li a
 {
     text-decoration: none;
 
-    color: #6e5b5b;
+    color: #716363;
 }
 .post-type-archive-work .cat_tarm_link a
 {
@@ -2529,7 +2526,7 @@ ul.foot_navi li a
 {
     text-decoration: none;
 
-    color: #6e5b5b;
+    color: #716363;
 }
 .tax-work_category .cat_list ul li
 {
@@ -2626,7 +2623,7 @@ ul.foot_navi li a
 
     text-decoration: none;
 
-    border: 1px solid #c62828;
+    border: 2px solid #c62828;
     border-radius: 2px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .16);
 }
@@ -4246,7 +4243,7 @@ ul.foot_navi li a
     {
         padding: 1em 1.5em 2em;
 
-        background: #e0d7d4;
+        background: #e4e0e0;
     }
 
     .inner
@@ -4449,7 +4446,7 @@ ul.foot_navi li a
     .index_news.three-one ul.three > li:hover,
     .index_blog.three-one ul.three > li:hover
     {
-        background: #faf8f8;
+        background: white;
     }
 
     .four-one
@@ -4491,11 +4488,11 @@ ul.foot_navi li a
     {
         margin-bottom: 0;
 
-        border-right: 5px solid #e0d7d4;
+        border-right: 5px solid #e4e0e0;
     }
     .social .sns-section:nth-child(2)
     {
-        border-left: 5px solid #e0d7d4;
+        border-left: 5px solid #e4e0e0;
     }
 
     .section

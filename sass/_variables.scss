@@ -4,15 +4,24 @@
 
 //色味のセット
 $main: #c62828;
-$sub: #638199;
-$hover_color: rgba( $main, 0.2 );
-$bg-color: #e0d7d4;
-$t_b: rgba(0, 0, 0, 0.26);
-$t_w: rgba( 255,255,255,0.7 );
-$body_text_color: rgb(110, 91, 91);
+$choco: desaturate($main, 60%);
+$bg-color: lighten($choco, 42%);
 $brown: $bg-color;
 $d-brown: darken( $brown , 35% );
 $l-brown: lighten( $brown , 12% );
+$hover_color: rgba( $main, 0.2 );
+
+
+$sub: #638199;
+
+
+$t_b: rgba(0, 0, 0, 0.26);
+$t_w: rgba( 255,255,255,0.7 );
+
+$body_text_color: darken($d-brown, 12%);
+
+
+
 
 //一括で変更
 $mmb:2em; //モバイルビューでセクションのマージン
