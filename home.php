@@ -185,8 +185,9 @@ get_header(); ?>
 
                             <div class="index_news_metabox">
                                 <ul>
-                                    <li><h2 class="title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2></li>
+
                                     <li><span class="date metatext"><?php the_time('Y.n.j'); ?></span></li>
+                                    <li><h2 class="title"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2></li>
                                 </ul>
                             </div>
                         </li>

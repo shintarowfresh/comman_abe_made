@@ -189,6 +189,11 @@ summary
 *
 * モバイルCP共通で指定出来るCSSを設定。モバイルファーストで組んでいるのでモバイルに当たるCSS
 */
+html
+{
+    -webkit-font-smoothing: antialiased;
+}
+
 body
 {
     font-family: 'Roboto', 游ゴシック, YuGothic, Meiryo, sans-serif;
@@ -198,12 +203,13 @@ body
     letter-spacing: .05em;
 
     color: #6e5b5b;
-    background: #c8b6ae;
+    background: #e0d7d4;
 }
 
 a
 {
-    transition: all .3s 0;
+    transition: all .3s cubic-bezier(.165, .84, .44, 1) 0ms;
+    -webkit-transition-delay: 0ms;
     transition-duration: .3s;
 
     opacity: 1;
@@ -220,9 +226,16 @@ a:hover
 
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
 }
+a:hover img
+{
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+}
 a img
 {
     display: block;
+
+    transition: all .6s cubic-bezier(.165, .84, .44, 1) 0ms;
 }
 a img:hover
 {
@@ -546,7 +559,8 @@ h6
     width: 100%;
     height: 140px;
     margin-bottom: .6em;
-    transition: all .3s 0;
+    transition: all .3s cubic-bezier(.165, .84, .44, 1) 0ms;
+    -webkit-transition-delay: 0ms;
     transition-duration: .3s;
 
     border: 1px solid #d5d5d5;
@@ -613,7 +627,8 @@ h6
 .btn__works .fa
 {
     margin-left: 0;
-    transition: all .3s 0;
+    transition: all .3s cubic-bezier(.165, .84, .44, 1) 0ms;
+    -webkit-transition-delay: 0ms;
     transition-duration: .3s;
 
     opacity: 1;
@@ -660,7 +675,7 @@ p .btn__works
 {
     text-decoration: none;
 
-    color: #3b2e28;
+    color: #5d4a43;
 }
 
 .sub_title img
@@ -1201,7 +1216,7 @@ nav.menu .blog a:before
     display: none;
     overflow: hidden;
 
-    background: #b59d93;
+    background: #cdbeb9;
     box-shadow: 0 2px 8px 2px rgba(0, 0, 0, .07) inset;
 }
 #panel .variable
@@ -1280,7 +1295,7 @@ nav.menu .blog a:before
 {
     text-align: center;
 
-    background: #bca69c;
+    background: #d3c6c2;
 }
 .head_top_news img
 {
@@ -1852,7 +1867,7 @@ ul.foot_navi li a
 
 #footer
 {
-    background: #c8b6ae;
+    background: #e0d7d4;
 }
 #footer .foot,
 #footer .foot__info
@@ -2102,7 +2117,7 @@ ul.foot_navi li a
 {
     text-decoration: none;
 
-    color: #654f45;
+    color: #876b61;
 }
 .breadcrumb div a:hover
 {
@@ -2126,7 +2141,7 @@ ul.foot_navi li a
 }
 .breadcrumb .this-post
 {
-    color: #f3efee;
+    color: #faf8f8;
 }
 
 /*会社概要*/
@@ -4231,7 +4246,7 @@ ul.foot_navi li a
     {
         padding: 1em 1.5em 2em;
 
-        background: #c8b6ae;
+        background: #e0d7d4;
     }
 
     .inner
@@ -4434,7 +4449,7 @@ ul.foot_navi li a
     .index_news.three-one ul.three > li:hover,
     .index_blog.three-one ul.three > li:hover
     {
-        background: #f3efee;
+        background: #faf8f8;
     }
 
     .four-one
@@ -4476,11 +4491,11 @@ ul.foot_navi li a
     {
         margin-bottom: 0;
 
-        border-right: 5px solid #c8b6ae;
+        border-right: 5px solid #e0d7d4;
     }
     .social .sns-section:nth-child(2)
     {
-        border-left: 5px solid #c8b6ae;
+        border-left: 5px solid #e0d7d4;
     }
 
     .section

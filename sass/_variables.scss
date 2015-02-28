@@ -6,13 +6,13 @@
 $main: #c62828;
 $sub: #638199;
 $hover_color: rgba( $main, 0.2 );
-$bg-color: #C8B6AE;
+$bg-color: #e0d7d4;
 $t_b: rgba(0, 0, 0, 0.26);
 $t_w: rgba( 255,255,255,0.7 );
 $body_text_color: rgb(110, 91, 91);
 $brown: $bg-color;
 $d-brown: darken( $brown , 35% );
-$l-brown: lighten( $brown , 21% );
+$l-brown: lighten( $brown , 12% );
 
 //一括で変更
 $mmb:2em; //モバイルビューでセクションのマージン
