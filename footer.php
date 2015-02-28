@@ -111,9 +111,13 @@
         <div class="foot foot-copy">
             <div class="inner">
 
-                <div>
-                    人と技術と人を繋ぐ
-                </div>
+               <h2>人と技術と人を繋ぐ</h2>
+
+                <h3 class="sub_title">
+                    c<span>O</span>nnect
+                </h3>
+
+                <h4 class="sub_title">c<span>o</span>mman inc.</h4>
 
             </div><!--/.inner-->
 
@@ -144,15 +148,24 @@
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/foot-info.png" alt="カンマンについて">
 
                 <div class="col">
-                    <div class="box_1">
+                    <div class="box_1 site-policy">
                         <h6><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/foot-name.png" alt="株式会社カンマン"></h6>
-                        <p><i class="fa fa-copyright"></i> Comman.inc</p>
-                    </div>
-                    <div class="box_1">
                         <ul>
                             <li><a href="/privacypolicy/">プライバシーポリシー</a></li>
                             <li><a href="/sitepolicy/">サイトポリシー</a></li>
                             <li><a href="/recruit/">採用情報</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="box_1 site-map">
+                       <h6>サイトマップ</h6>
+                        <ul>
+                            <li><a href="">メッセージ</a></li>
+                            <li><a href="">サービス一覧</a></li>
+                            <li><a href="">制作実績</a></li>
+                            <li><a href="">お見積もり</a></li>
+                            <li><a href="">会社概要</a></li>
+                            <li><a href="">スタッフブログ</a></li>
                             <li><a href="https://plus.google.com/114203544397179410651" rel="publisher">Google+</a></li>
                         </ul>
                     </div>
@@ -170,6 +183,13 @@
                 </div><!--/.col-->
             </div><!--/.inner-->
         </div><!--/.foot__info-->
+        <div class="foot-black">
+            <div class="inner">
+
+                <div class="tar"><p><i class="fa fa-copyright"></i> Comman.inc</p></div>
+
+            </div>
+        </div>
     </div><!--/.footer-->
 </div><!--/.wrapper-->
 
