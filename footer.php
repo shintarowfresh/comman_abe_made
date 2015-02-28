@@ -108,7 +108,7 @@
 
 
 
-        <div class="foot content_width">
+        <div class="foot foot-copy">
             <div class="inner">
 
                 <div>
@@ -291,10 +291,10 @@
             //トップページのフェードしてる画像
             jQuery('.bgs').bgswitcher({
                 images: [
-                    "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs01.png",
-                    "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs02.png",
-                    "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs03.png",
-                    "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs04.png"
+                    "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs01.jpg",
+                    "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs02.jpg",
+                    "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs03.jpg",
+                    "<?php echo get_stylesheet_directory_uri(); ?>/img/bgs04.jpg"
                 ],
                 interval: "4000",
             });
