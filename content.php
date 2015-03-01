@@ -137,13 +137,24 @@
 
                 <h3><i class="fa fa-pencil"></i> この記事を書いた人</h3>
 
+                <?php
+
+                $author_id = get_the_author_meta( 'ID' );
+                $author_badge = get_field('author_badge', 'user_'. $author_id ); // image field, return type = "Image Object"
+
+                ?>
+                <!--<img src="<?php echo $author_badge['url']; ?>" alt="<?php echo $author_badge['alt']; ?>" />-->
+
                 <div class="sep">
                    <div class="thum">
                        <span class="auther-photo"><?php echo get_avatar( get_the_author_id(), 150 ); ?></span>
                    </div>
                    <div class="main-sec">
                        <span class="auther-name"><?php the_author_meta('nickname'); ?></span>
+
+                       <span class="author__responsible"><?php the_field('responsible', 'user_'. $author_id); ?></span>
                        <span class="auther-disc"><?php the_author_meta('description'); ?></span>
+
                        <span class="auther-link"><a href="<?php echo get_author_posts_url( get_the_author_id() ); ?>"><?php the_author_meta('nickname'); ?>が書いた他の記事をチェック！</a></span>
                    </div>
                </div>
