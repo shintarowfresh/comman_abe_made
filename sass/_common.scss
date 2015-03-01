@@ -946,6 +946,14 @@ nav.menu {
     text-align: center;
     background: darken($bg-color, 6%);
 
+    a {
+        &:hover {
+            img {
+                transform: scale(1.01);
+            }
+        }
+    }
+
     img {
         display: none;
         margin: 0 auto;
@@ -1615,7 +1623,7 @@ ul.foot_navi {
             height: auto;
             @include opacity(0.5);
             @include transition(all .3s ease-in-out 0);
-            @include transition-duration(.3s);
+            @include transition-duration(.6s);
 
             &:hover {
                 @include opacity(1);
@@ -2561,6 +2569,7 @@ ul.foot_navi {
         .auther-name ,
         .auther-disc ,
         .auther-sns ,
+        .author__responsible,
         .auther-link {
             display: block;
         }
@@ -2569,7 +2578,12 @@ ul.foot_navi {
             font-size: 1.3em;
             font-weight: bold;
             color: $sub;
+        }
+
+        .author__responsible {
             margin-bottom: 1em;
+            font-size: .75em;
+            font-weight: bold;
         }
 
         .auther-disc {
