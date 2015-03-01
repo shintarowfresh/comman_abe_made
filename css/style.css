@@ -2101,7 +2101,7 @@ ul.foot_navi li a
 }
 .breadcrumb div
 {
-    display: inline-block;
+    display: inline;
 
     padding: .4em 0 .4em .4em;
 }
@@ -2149,7 +2149,7 @@ ul.foot_navi li a
 }
 .breadcrumb .this-post
 {
-    color: white;
+    color: #f9f9f9;
 }
 
 /*会社概要*/
@@ -2557,13 +2557,17 @@ ul.foot_navi li a
 {
     overflow: hidden;
 
-    margin-bottom: 2em;
+    padding: .5em 0;
 
     *zoom: 1;
 }
 .archive article:last-child
 {
     margin-bottom: 0;
+}
+.archive article:hover
+{
+    background: #f9f9f9;
 }
 .archive article h2.title
 {
@@ -4464,7 +4468,7 @@ ul.foot_navi li a
     .index_news.three-one ul.three > li:hover,
     .index_blog.three-one ul.three > li:hover
     {
-        background: white;
+        background: #f9f9f9;
     }
 
     .four-one

@@ -4,11 +4,11 @@
 
 //色味のセット
 $main: #c62828;
-$choco: desaturate($main, 60%);
-$bg-color: lighten($choco, 42%);
-$brown: $bg-color;
-$d-brown: darken( $brown , 35% );
-$l-brown: lighten( $brown , 12% );
+$choco: desaturate($main, 60%);//#7f6f6f
+$bg-color: lighten($choco, 42%);//#e4e0e0
+$brown: $bg-color;//#e4e0e0
+$d-brown: darken( $brown , 35% );//#918181
+$l-brown: lighten( $brown , 9% );//#f9f9f9
 $hover_color: rgba( $main, 0.2 );
 
 

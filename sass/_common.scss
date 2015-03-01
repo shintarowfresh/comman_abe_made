@@ -1677,7 +1677,7 @@ ul.foot_navi {
     }
 
     div {
-        display: inline-block;
+        display: inline;
         padding: .4em 0 .4em .4em;
 
         &:after {
@@ -2097,10 +2097,14 @@ ul.foot_navi {
 .archive {
     article {
         @include clearfix;
-        margin-bottom: 2em;
+        padding: .5em 0;
 
         &:last-child {
             margin-bottom: 0;
+        }
+
+        &:hover {
+            background: $l-brown;
         }
 
         h2.title {
