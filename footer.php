@@ -111,45 +111,40 @@
         <div class="foot foot-copy">
             <div class="inner">
 
-               <h2>人と技術と人を繋ぐ</h2>
-
-                <h3 class="sub_title">
-                    c<span>O</span>nnect
-                </h3>
-
-                <h4 class="sub_title">c<span>o</span>mman inc.</h4>
+                <div class="col">
+                    <div class="box_2">
+                        <h2>人と技術と人を繋ぐ</h2>
+                        <h4 class="sub_title">c<span>o</span>nnect</h4>
+                    </div>
+                    <div class="box_2"></div>
+                </div>
 
             </div><!--/.inner-->
-
-        </div><!--/.content_width-->
+        </div><!--/.foot-copy-->
 
         <div class="foot__info">
             <div class="inner">
 
                 <div class="col mail-sns">
                     <div class="box_2">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/foot-mail.png" alt="メールアドレス">
+                        <img class="foot-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/foot-mail.png" alt="メールアドレス">
                     </div>
-
                     <div class="box_2">
 
-                       <ul>
-                           <li><a class="icon-fb" href="https://www.facebook.com/comman.inc" target="_blank"></a></li>
-                           <li><a class="icon-yt" href="https://www.youtube.com/channel/UCGj6L4LXylu7hZtHuObHECQ" target="_blank"></a></li>
-                           <li><a class="icon-line" href="http://www.comman.co.jp/%E3%82%AB%E3%83%B3%E3%83%9E%E3%83%B3line%E5%A7%8B%E3%82%81%E3%81%9F%E3%82%88%E3%83%BC%EF%BC%81%E7%A4%BE%E5%93%A1%E3%81%8C%E5%BC%B5%E3%82%8A%E4%BB%98%E3%81%84%E3%81%A6%E3%81%BF%E3%82%93%E3%81%AA/"></a></li>
-                       </ul>
+                        <ul>
+                            <li><a class="icon-fb" href="https://www.facebook.com/comman.inc" target="_blank"></a></li>
+                            <li><a class="icon-yt" href="https://www.youtube.com/channel/UCGj6L4LXylu7hZtHuObHECQ" target="_blank"></a></li>
+                            <li><a class="icon-line" href="http://www.comman.co.jp/%E3%82%AB%E3%83%B3%E3%83%9E%E3%83%B3line%E5%A7%8B%E3%82%81%E3%81%9F%E3%82%88%E3%83%BC%EF%BC%81%E7%A4%BE%E5%93%A1%E3%81%8C%E5%BC%B5%E3%82%8A%E4%BB%98%E3%81%84%E3%81%A6%E3%81%BF%E3%82%93%E3%81%AA/"></a></li>
+                        </ul>
 
 
 
                     </div>
-
                 </div><!--/.col-->
-
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/foot-info.png" alt="カンマンについて">
 
                 <div class="col">
                     <div class="box_1 site-policy">
-                        <h6><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/foot-name.png" alt="株式会社カンマン"></h6>
+                        <img class="foot-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/foot-name.png" alt="株式会社カンマン">
                         <ul>
                             <li><a href="/privacypolicy/">プライバシーポリシー</a></li>
                             <li><a href="/sitepolicy/">サイトポリシー</a></li>
@@ -158,7 +153,7 @@
 
                     </div>
                     <div class="box_1 site-map">
-                       <h6>サイトマップ</h6>
+                        <h6>サイトマップ</h6>
                         <ul>
                             <li><a href="">メッセージ</a></li>
                             <li><a href="">サービス一覧</a></li>
@@ -170,24 +165,22 @@
                         </ul>
                     </div>
                     <div class="box_1">
-                       <h6>adress</h6>
+                        <h6>adress</h6>
                         <p>〒770-0943<br>徳島県徳島市<br>中昭和町2丁目39番地5</p>
                         <p><a href="/company/"><i class="fa fa-map-marker"></i> GoogleMapで見る</a></p>
                     </div>
                     <div class="box_1">
-                       <h6>phone/fax</h6>
+                        <h6>phone/fax</h6>
                         <p><i class="fa fa-phone"></i> 088-611-2333</p>
                         <p><i class="fa fa-fax"></i> 088-611-2332</p>
                     </div>
-
                 </div><!--/.col-->
             </div><!--/.inner-->
         </div><!--/.foot__info-->
+
         <div class="foot-black">
             <div class="inner">
-
-                <div class="tar"><p><i class="fa fa-copyright"></i> Comman.inc</p></div>
-
+                <div class="tar"><span><i class="fa fa-copyright"></i> Comman.inc</span></div>
             </div>
         </div>
     </div><!--/.footer-->
@@ -330,6 +323,9 @@
         "//b.st-hatena.com/js/bookmark_button.js"], function() {
     })
     // ]]></script>
+
+
+<script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
 
 <?php if(!is_mobile()):?>
 <script src="<?php echo get_template_directory_uri(); ?>/js/pc-only.js"></script>
