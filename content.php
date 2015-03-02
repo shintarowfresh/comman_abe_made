@@ -72,7 +72,40 @@
 
                 <?php if ( is_singular() ) : ?>
 
-                    <?php the_content(); // 記事を表示 ?>
+                <?php if(strpos(get_the_content(),'id="more-')) :
+                global $more; $more = 0;
+                the_content(''); ?>
+
+
+                <?php
+                $mycontent = $post->post_content;
+                $word = mb_strlen(strip_tags($mycontent));
+                $m = floor($word / 600)+1;
+                $est = ($m == 0 ? '' : $m) ;
+                ?>
+
+                <div class="read-later">
+                    <span class="countdown">この記事を読了するためには約 <b><?php echo $est; ?></b> 分必要です。</span>
+
+                    <span>
+                        <a class="nonmover btn--twitter" href="http://twitter.com/share?text=メモ//<?php the_title(); ?>&url=<?php the_permalink(); ?>&hashtags=#カンマン" onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;" rel="nofollow"><i class="fa fa-twitter"></i> メモとつぶやく</a>
+                    </span>
+                    <span>
+
+                        <a href="http://b.hatena.ne.jp/entry/<?php the_permalink(); ?>" class="hatena-bookmark-button" data-hatena-bookmark-title="<?php the_title(); ?>" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+
+                    </span>
+                    <span>
+                        <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
+                    </span>
+
+                </div><!--/.read-later-->
+
+
+                <?php $more = 1;
+                the_content('', true );
+                else : the_content();
+                endif; ?>
 
                 <?php else: ?>
 
