@@ -87,7 +87,7 @@ html {
 body {
   font-family: "Roboto", 游ゴシック, YuGothic, Meiryo, sans-serif;
   font-size: 16px;
-  color: #8e7f7f;
+  color: #564c4c;
   letter-spacing: .05em;
   line-height: 1.3;
   background: #e4e0e0;
@@ -1367,6 +1367,15 @@ ul.foot_navi li a {
 }
 #footer .foot-copy {
   background: #fff;
+  padding: 6em 0;
+}
+#footer .foot-copy h2 {
+  font-weight: 200;
+  text-align: left;
+  border: none;
+  color: #666;
+  margin: 0;
+  padding: 0;
 }
 #footer .foot__info {
   background: #638199;
@@ -1378,27 +1387,30 @@ ul.foot_navi li a {
   margin: 0 auto;
 }
 #footer .foot__info h6 {
-  margin-bottom: .4em;
+  margin: .4em 0 1em;
   color: #fff;
 }
 #footer .foot__info h6 img {
   width: 200px;
 }
+#footer .foot__info .foot-logo {
+  margin-bottom: 2em;
+}
 #footer .foot__info a {
   color: #fff;
   text-decoration: none;
-}
-#footer .foot__info ul li {
-  margin-bottom: .5em;
 }
 #footer .foot__info ul li:rast-child {
   margin-bottom: none;
 }
 #footer .foot__info p {
   font-size: .8em;
+  font-weight: 600;
+  line-height: 1.6;
 }
 #footer .foot__info .box_1 {
   padding: 0 5px;
+  text-align: right;
 }
 #footer .foot__info .mail-sns {
   text-align: right;
@@ -1648,6 +1660,9 @@ ul.foot_navi li a {
 }
 
 /*制作実績archive*/
+.post-type-archive-work article {
+  background: none;
+}
 .post-type-archive-work article h2 {
   margin-bottom: 10px;
 }
@@ -1910,7 +1925,10 @@ ul.foot_navi li a {
 .archive article:hover {
   background: #f9f9f9;
 }
-.archive article h2.title {
+.archive article:hover .title a {
+  color: #c62828;
+}
+.archive article .title {
   margin-bottom: 0;
 }
 .archive article time {
@@ -2245,6 +2263,7 @@ ul.foot_navi li a {
   padding: 7px 11px;
   border: 1px solid rgba(0, 0, 0, 0.15);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+  font-weight: bold;
 }
 .single .share ul li.b-twitter a {
   background: #008fde;
@@ -2536,7 +2555,7 @@ ul.foot_navi li a {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4) inset;
 }
 .gform_wrapper .gform_body .ginput_container input[type=radio] {
-  margin-left: 5px;
+  margin-left: 4px !important;
   margin-top: 5px !important;
 }
 .gform_wrapper .gform_body .gform_page_footer .button {
@@ -2853,6 +2872,47 @@ ul.foot_navi li a {
 
 .tar {
   text-align: right;
+}
+
+.read-later {
+  text-align: center;
+  margin-top: 1em;
+  background: #f9f9f9;
+  padding: 1em 5px 0;
+  border: 1px solid #e4e0e0;
+}
+.read-later span {
+  display: inline-block;
+  margin: 0 .5em 1em;
+  vertical-align: top;
+}
+.read-later span.countdown {
+  display: table;
+  margin: 0 auto 1em;
+  margin-bottom: 1em;
+  padding: 3px 1em;
+  text-align: left;
+  background: #EDEDED;
+  font-size: .9em;
+  font-weight: bold;
+}
+
+.btn--twitter {
+  font-size: .8em;
+  padding: 3px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.71);
+  border-radius: 3px;
+  background: rgba(227, 229, 231, 0.35);
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  font-weight: bold;
+}
+.btn--twitter .fa.fa-twitter {
+  color: #008fde;
+}
+
+.post-type-archive-work article:hover {
+  background: none;
 }
 
 .icon-fb {

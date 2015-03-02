@@ -202,7 +202,7 @@ body
 
     letter-spacing: .05em;
 
-    color: #8e7f7f;
+    color: #564c4c;
     background: #e4e0e0;
 }
 
@@ -1877,7 +1877,21 @@ ul.foot_navi li a
 }
 #footer .foot-copy
 {
+    padding: 6em 0;
+
     background: #fff;
+}
+#footer .foot-copy h2
+{
+    font-weight: 200;
+
+    margin: 0;
+    padding: 0;
+
+    text-align: left;
+
+    color: #666;
+    border: none;
 }
 #footer .foot__info
 {
@@ -1893,7 +1907,7 @@ ul.foot_navi li a
 }
 #footer .foot__info h6
 {
-    margin-bottom: .4em;
+    margin: .4em 0 1em;
 
     color: #fff;
 }
@@ -1901,15 +1915,15 @@ ul.foot_navi li a
 {
     width: 200px;
 }
+#footer .foot__info .foot-logo
+{
+    margin-bottom: 2em;
+}
 #footer .foot__info a
 {
     text-decoration: none;
 
     color: #fff;
-}
-#footer .foot__info ul li
-{
-    margin-bottom: .5em;
 }
 #footer .foot__info ul li:rast-child
 {
@@ -1918,10 +1932,14 @@ ul.foot_navi li a
 #footer .foot__info p
 {
     font-size: .8em;
+    font-weight: 600;
+    line-height: 1.6;
 }
 #footer .foot__info .box_1
 {
     padding: 0 5px;
+
+    text-align: right;
 }
 #footer .foot__info .mail-sns
 {
@@ -2253,6 +2271,10 @@ ul.foot_navi li a
 }
 
 /*制作実績archive*/
+.post-type-archive-work article
+{
+    background: none;
+}
 .post-type-archive-work article h2
 {
     margin-bottom: 10px;
@@ -2574,7 +2596,11 @@ ul.foot_navi li a
 {
     background: #f9f9f9;
 }
-.archive article h2.title
+.archive article:hover .title a
+{
+    color: #c62828;
+}
+.archive article .title
 {
     margin-bottom: 0;
 }
@@ -3007,6 +3033,8 @@ ul.foot_navi li a
 .single .share ul li.b-hatena a,
 .single .share ul li.b-pocket a
 {
+    font-weight: bold;
+
     padding: 7px 11px;
 
     border: 1px solid rgba(0, 0, 0, .15);
@@ -3374,7 +3402,7 @@ ul.foot_navi li a
 .gform_wrapper .gform_body .ginput_container input[type=radio]
 {
     margin-top: 5px !important;
-    margin-left: 5px;
+    margin-left: 4px !important;
 }
 .gform_wrapper .gform_body .gform_page_footer .button
 {
@@ -3766,6 +3794,64 @@ ul.foot_navi li a
 .tar
 {
     text-align: right;
+}
+
+.read-later
+{
+    margin-top: 1em;
+    padding: 1em 5px 0;
+
+    text-align: center;
+
+    border: 1px solid #e4e0e0;
+    background: #f9f9f9;
+}
+.read-later span
+{
+    display: inline-block;
+
+    margin: 0 .5em 1em;
+
+    vertical-align: top;
+}
+.read-later span.countdown
+{
+    font-size: .9em;
+    font-weight: bold;
+
+    display: table;
+
+    margin: 0 auto 1em;
+    margin-bottom: 1em;
+    padding: 3px 1em;
+
+    text-align: left;
+
+    background: #ededed;
+}
+
+.btn--twitter
+{
+    font-size: .8em;
+    font-weight: bold;
+
+    padding: 3px;
+
+    text-decoration: none;
+
+    color: rgba(0, 0, 0, .71);
+    border: 1px solid rgba(0, 0, 0, .11);
+    border-radius: 3px;
+    background: rgba(227, 229, 231, .35);
+}
+.btn--twitter .fa.fa-twitter
+{
+    color: #008fde;
+}
+
+.post-type-archive-work article:hover
+{
+    background: none;
 }
 
 .icon-fb
