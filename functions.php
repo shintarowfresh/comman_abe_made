@@ -298,3 +298,10 @@ function remove_cssjs_ver( $src ) {
 }
 add_filter( 'script_loader_src', 'remove_cssjs_ver', 10, 2 );
 add_filter( 'style_loader_src', 'remove_cssjs_ver', 10, 2 );
+
+//バリデーションのメッセージ
+add_filter('gform_validation_message', 'change_validation_message', 10, 2);
+function change_validation_message($message, $form)
+{
+    return "<div class='validation_error'>ご確認ください。必須項目で未入力やミスがあります。</div>";
+}
