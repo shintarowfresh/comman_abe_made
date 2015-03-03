@@ -213,8 +213,6 @@ a
     transition-duration: .3s;
 
     opacity: 1;
-
-    filter: alpha(opacity=100);
     color: #c62828;
 
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -222,13 +220,13 @@ a
 a:hover
 {
     opacity: .6;
-    filter: alpha(opacity=60);
 
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
 }
 a:hover img
 {
     -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
             transform: scale(1.05);
 }
 a img
@@ -353,7 +351,7 @@ h3 .fa
 
 h4.sub_title
 {
-    font-family: 'Roboto', sans-serif;
+    font-family: helvetica, sans-serif;
     font-size: 2.6em;
     font-weight: 800;
 
@@ -370,11 +368,10 @@ h4.sub_title span
 
     position: relative;
 
-    visibility: hidden;
-
     margin-right: .15em;
 
     color: #c62828;
+    color: transparent;
 }
 h4.sub_title span:before
 {
@@ -388,6 +385,8 @@ h4.sub_title span:before
     visibility: visible;
 
     content: '\e601';
+
+    color: #c62828;
 }
 
 h5.sub_title
@@ -441,7 +440,6 @@ h6
 .no-js #footer
 {
     opacity: 1;
-    filter: alpha(opacity=100);
 }
 
 .content,
@@ -449,7 +447,6 @@ h6
 #footer
 {
     opacity: 0;
-    filter: alpha(opacity=0);
 }
 
 .content .inner table
@@ -561,11 +558,12 @@ h6
 
     border: 1px solid #d5d5d5;
     background-size: cover;
+
+    -ms-behavior: url(backgroundsize.min.htc);
 }
 .img_container:hover
 {
     opacity: .7;
-    filter: alpha(opacity=70);
     border: 1px solid #c62828;
 
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -629,14 +627,11 @@ h6
 
     opacity: 1;
 
-    filter: alpha(opacity=100);
-
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
 }
 .btn__works:hover
 {
     opacity: 1;
-    filter: alpha(opacity=100);
     color: #fff;
     background: #c62828;
 
@@ -647,8 +642,6 @@ h6
     margin-left: 1em;
 
     opacity: 1;
-
-    filter: alpha(opacity=100);
 
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
 }
@@ -870,8 +863,6 @@ p .btn__works
     text-align: center;
 
     opacity: .8;
-
-    filter: alpha(opacity=80);
 }
 .swipeshow .dot
 {
@@ -1066,6 +1057,8 @@ div.logo h1 a
     background-image: url(../img/top_comman_logo.png);
     background-repeat: no-repeat;
     background-size: 240px;
+
+    -ms-behavior: url(backgroundsize.min.htc);
 }
 
 nav.menu
@@ -1283,6 +1276,7 @@ nav.menu .blog a:before
     margin-top: 1em;
 
     -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
             transform: translateX(-50%);
 }
 
@@ -1296,6 +1290,7 @@ nav.menu .blog a:before
 .head_top_news a:hover img
 {
     -webkit-transform: scale(1.01);
+        -ms-transform: scale(1.01);
             transform: scale(1.01);
 }
 .head_top_news img
@@ -1328,6 +1323,8 @@ nav.menu .blog a:before
 
     background-position: 50%;
     background-size: cover;
+
+    -ms-behavior: url(backgroundsize.min.htc);
 }
 
 /*トップページの記事風リード文*/
@@ -1660,7 +1657,6 @@ nav.menu .blog a:before
 .panel_btn_pc:hover
 {
     opacity: 1;
-    filter: alpha(opacity=100);
 }
 .panel_btn:active,
 .panel_btn_pc:active
@@ -1731,12 +1727,14 @@ nav.menu .blog a:before
 .panel_btn_pc .panel_btn_icon.close:before
 {
     -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
 }
 .panel_btn .panel_btn_icon.close:after,
 .panel_btn_pc .panel_btn_icon.close:after
 {
     -webkit-transform: rotate(-135deg);
+        -ms-transform: rotate(-135deg);
             transform: rotate(-135deg);
 }
 
@@ -1957,6 +1955,8 @@ ul.foot_navi li a
     height: 75px;
 
     background-size: 100%;
+
+    -ms-behavior: url(backgroundsize.min.htc);
 }
 #footer .foot__info .mail-sns ul li a.icon-yt
 {
@@ -2057,14 +2057,11 @@ ul.foot_navi li a
 
     opacity: .5;
 
-    filter: alpha(opacity=50);
-
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
 }
 .site-gallery li img:hover
 {
     opacity: 1;
-    filter: alpha(opacity=100);
 
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
 }
@@ -2105,7 +2102,6 @@ ul.foot_navi li a
 /*パンくず*/
 .breadcrumb
 {
-    font-size: 13px;
     font-size: .85rem;
 
     padding: 5px;
@@ -2267,6 +2263,8 @@ ul.foot_navi li a
 
     border: 1px solid #c62828;
     background-size: cover;
+
+    -ms-behavior: url(backgroundsize.min.htc);
 }
 .type-work section img
 {
@@ -2341,8 +2339,6 @@ ul.foot_navi li a
 
     opacity: 1;
 
-    filter: alpha(opacity=100);
-
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
 }
 .cat_list #shutter a
@@ -2386,8 +2382,6 @@ ul.foot_navi li a
     transition-duration: .3s;
 
     opacity: 1;
-
-    filter: alpha(opacity=100);
     background: #fff;
 
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -2418,13 +2412,13 @@ ul.foot_navi li a
 .cat_list #shutter span.btn_cross.close:before
 {
     opacity: 0;
-    filter: alpha(opacity=0);
 
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
 }
 .cat_list #shutter span.btn_cross.close:after
 {
     -webkit-transform: rotate(-270deg);
+        -ms-transform: rotate(-270deg);
             transform: rotate(-270deg);
 }
 .cat_list .shutter
@@ -2523,8 +2517,6 @@ ul.foot_navi li a
     cursor: pointer;
 
     opacity: .7;
-
-    filter: alpha(opacity=70);
 }
 #searchform #searchsubmit .fa
 {
@@ -2679,7 +2671,6 @@ ul.foot_navi li a
 .hope-list li a:hover
 {
     opacity: 1;
-    filter: alpha(opacity=100);
     color: #fff;
     background: #c62828;
 
@@ -2697,6 +2688,8 @@ ul.foot_navi li a
     text-indent: -9999px;
 
     background-size: 100%;
+
+    -ms-behavior: url(backgroundsize.min.htc);
 }
 .can-i-icon li h3
 {
@@ -2769,6 +2762,8 @@ ul.foot_navi li a
 
     background-repeat: no-repeat;
     background-size: 100%;
+
+    -ms-behavior: url(backgroundsize.min.htc);
 }
 
 .i-purpose-new
@@ -2893,7 +2888,8 @@ ul.foot_navi li a
 
     content: '\f0e5';
     -webkit-transform: scaleX(-1);
-            transform: scaleX(-1);
+            -ms-transform: scaleX(-1);
+        transform: scaleX(-1);
 
     color: #c62828;
 
@@ -3088,7 +3084,6 @@ ul.foot_navi li a
 .single .share ul li a:hover
 {
     opacity: .7;
-    filter: alpha(opacity=70);
 }
 .single .share ul li a span
 {
@@ -3426,8 +3421,6 @@ ul.foot_navi li a
     cursor: pointer;
 
     opacity: .7;
-
-    filter: alpha(opacity=70);
 }
 
 /*お問い合わせページ*/
@@ -3673,12 +3666,10 @@ ul.foot_navi li a
     0%
     {
         opacity: 0;
-        filter: alpha(opacity=0);
     }
     100%
     {
         opacity: 1;
-        filter: alpha(opacity=100);
     }
 }
 @keyframes blink
@@ -3686,12 +3677,10 @@ ul.foot_navi li a
     0%
     {
         opacity: 0;
-        filter: alpha(opacity=0);
     }
     100%
     {
         opacity: 1;
-        filter: alpha(opacity=100);
     }
 }
 .load
@@ -3763,8 +3752,6 @@ ul.foot_navi li a
     text-align: center;
 
     opacity: 0;
-
-    filter: alpha(opacity=0);
     color: #fff;
     border-radius: 3px;
     background: rgba(198, 40, 40, .9);
@@ -3773,7 +3760,6 @@ ul.foot_navi li a
 .phone-popup:hover span
 {
     opacity: 1;
-    filter: alpha(opacity=100);
 }
 
 .last-updated
@@ -3963,7 +3949,6 @@ ul.foot_navi li a
     .btn__full:hover
     {
         opacity: 1;
-        filter: alpha(opacity=100);
         color: #fff;
         background: #c62828;
 
@@ -3996,14 +3981,11 @@ ul.foot_navi li a
 
         opacity: 1;
 
-        filter: alpha(opacity=100);
-
         filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     }
     .btn__works:hover
     {
         opacity: 1;
-        filter: alpha(opacity=100);
         color: #fff;
         background: #c62828;
 
@@ -4014,8 +3996,6 @@ ul.foot_navi li a
         margin-left: 1em;
 
         opacity: 1;
-
-        filter: alpha(opacity=100);
 
         filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     }
@@ -4031,8 +4011,6 @@ ul.foot_navi li a
         margin-left: 10px;
 
         opacity: .7;
-
-        filter: alpha(opacity=70);
         color: #000;
 
         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -4253,7 +4231,6 @@ ul.foot_navi li a
     .btn__full:hover
     {
         opacity: 1;
-        filter: alpha(opacity=100);
         color: #fff;
         background: #c62828;
 
@@ -4285,14 +4262,11 @@ ul.foot_navi li a
 
         opacity: 1;
 
-        filter: alpha(opacity=100);
-
         filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     }
     .btn__works:hover
     {
         opacity: 1;
-        filter: alpha(opacity=100);
         color: #fff;
         border: 2px solid #c62828;
         background: #c62828;
@@ -4304,8 +4278,6 @@ ul.foot_navi li a
         margin-left: 1em;
 
         opacity: 1;
-
-        filter: alpha(opacity=100);
 
         filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     }
@@ -4499,6 +4471,7 @@ ul.foot_navi li a
     }
     .top-copy p
     {
+        max-width: 1600px;
         margin-left: initial;
     }
     .top-copy .bigtext
@@ -4653,6 +4626,8 @@ ul.foot_navi li a
         background: url(../img/top-notice.png) no-repeat;
         background-position: 95% 0;
         background-size: 120px;
+
+        -ms-behavior: url(backgroundsize.min.htc);
     }
 
     /*searchフォーム調整*/
@@ -4670,6 +4645,8 @@ ul.foot_navi li a
         background-repeat: no-repeat;
         background-position: top right;
         background-size: 300px;
+
+        -ms-behavior: url(backgroundsize.min.htc);
     }
     .page.price .content
     {
@@ -4694,6 +4671,8 @@ ul.foot_navi li a
         background-repeat: no-repeat;
         background-position: top right;
         background-size: 300px;
+
+        -ms-behavior: url(backgroundsize.min.htc);
     }
 
     /*カンマンに出来ることページの調整*/
@@ -5011,13 +4990,10 @@ ul.foot_navi li a
         font-size: 1.4em;
     }
 }
-.fix.no-fixed
+.lt-ie9 .fa,
+.lt-ie9 .img_sec,
+.lt-ie9 nav.menu ul li a:before,
+.lt-ie9 .read-first h2:before
 {
-    position: static;
-}
-.fix.is-fixed
-{
-    position: absolute;
-    position: fixed;
-    bottom: 0;
+    display: none !important;
 }

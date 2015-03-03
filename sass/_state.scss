@@ -1,15 +1,9 @@
-.fix{
-
-    &.no-fixed {
-        position: static;
+.lt-ie9 {
+    .fa,
+    .img_sec,
+    nav.menu UL LI A:before,
+    .read-first H2:before
+    {
+        display: none !important;
     }
-
-    &.is-fixed {
-        position: absolute;
-        position: fixed;
-        bottom: 0;
-    }
-
-
-
 }

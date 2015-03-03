@@ -134,7 +134,7 @@ h3 {
 
 h4 {
     &.sub_title {
-        font-family: $eng-font;
+        font-family: helvetica,sans-serif ;
         font-size:2.6em;
         font-weight:800;
         margin-bottom:0;
@@ -147,8 +147,8 @@ h4 {
             font-weight:bold;
             font-size:.9em;
             position: relative;
-            visibility: hidden;
             margin-right: .15em;
+            color:transparent;
 
             &:before {
                 font-family: icomoon;
@@ -158,6 +158,7 @@ h4 {
                 visibility: visible;
                 bottom: -0.02em;
                 left: .07em;
+                color: $main;
             }
         }
     }
@@ -303,6 +304,7 @@ h4 , h5 , h6 {
     width: 100%;
     height: 140px;
     @include background-size(cover);
+    -ms-behavior: url(backgroundsize.min.htc);
     margin-bottom: .6em;
     border: 1px solid #d5d5d5;
     @include transition(all .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) 0ms);
@@ -743,6 +745,7 @@ div.logo {
             overflow: hidden;
             background-image: url(../img/top_comman_logo.png);
             background-size: 240px;
+            -ms-behavior: url(backgroundsize.min.htc);
             background-repeat: no-repeat;
             display: block;
             line-height: 9;
@@ -975,6 +978,7 @@ nav.menu {
         width: 100%;
         height: 100%;
         @include background-size(cover);
+        -ms-behavior: url(backgroundsize.min.htc);
         background-position: 50%;
     }
 }
@@ -1538,6 +1542,7 @@ ul.foot_navi {
                         height: 75px;
                         display: block;
                         background-size: 100%;
+                        -ms-behavior: url(backgroundsize.min.htc);
 
                         &.icon-yt {
                             background-position: 0 -150px;
@@ -1836,6 +1841,7 @@ ul.foot_navi {
         padding-bottom: 55%;
         margin-bottom: 2em;
         @include background-size(cover);
+        -ms-behavior: url(backgroundsize.min.htc);
         border: 1px solid $main;
     }
 
@@ -2223,6 +2229,7 @@ ul.foot_navi {
             height: 0;
             padding-bottom: 74%;
             background-size: 100%;
+            -ms-behavior: url(backgroundsize.min.htc);
         }
 
         h3 {
@@ -2283,6 +2290,7 @@ ul.foot_navi {
     overflow: hidden;
     text-align: left;
     background-size: 100%;
+    -ms-behavior: url(backgroundsize.min.htc);
     background-repeat: no-repeat;
 }
 

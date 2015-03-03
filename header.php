@@ -13,13 +13,26 @@
 <!--[if IE 8]>
 <html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!-->
+
 <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 <head>
+
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title><?php wp_title(); ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
 <?php wp_head(); ?>
+
+
+
+<!--[if lt IE 9]>
+<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/respond.min.js"></script>
+<![endif]-->
+
 
 <!--
 #                _  _                                  _      _
@@ -49,7 +62,7 @@
 <?php else :?>
 <body <?php body_class(); ?>>
 <?php endif ;?>
-<h1 class="semantic"><?php wp_title(); ?></h1>
+    <h1 class="semantic"><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></h1>
 
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
