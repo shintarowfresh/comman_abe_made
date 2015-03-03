@@ -35,7 +35,7 @@ gulp.task('ple', function() {
     .pipe(csscomb())
     .pipe(pleeease({
         autoprefixer: {
-            "browsers": ["last 2 versions"]
+            "browsers": ['last 2 version', 'ie 8', 'ie 9']
         },
         minifier: false
     }))
