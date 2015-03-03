@@ -31,7 +31,11 @@
                    <ul class="three">
                        <li>
                            <div class="member__photo">
-                               <img src="" alt="">
+                               <img class="cover" src="<?php echo get_stylesheet_directory_uri(); ?>/img/member/kaide/cover.jpg" alt="bando">
+
+                               <div id="kaide">
+                                   <img class="rollerblade-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/member/kaide/kaide01.jpg" alt="bando"></div>
+
                            </div>
                            <div class="member__name">
                                <span class="name">貝出 康</span>
@@ -41,7 +45,11 @@
 
                        <li>
                            <div class="member__photo">
-                               <img src="" alt="">
+                               <img class="cover" src="<?php echo get_stylesheet_directory_uri(); ?>/img/member/ogawa/cover.jpg" alt="bando">
+
+                               <div id="ogawa">
+                                   <img class="rollerblade-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/member/ogawa/ogawa01.jpg" alt="bando">
+                               </div>
                            </div>
                            <div class="member__name">
                                <span class="name">小川 裕司</span>
@@ -51,17 +59,26 @@
 
                        <li>
                            <div class="member__photo">
-                               <img src="" alt="">
+                               <img class="cover" src="<?php echo get_stylesheet_directory_uri(); ?>/img/member/bando/cover.jpg" alt="bando">
+
+                               <div id="bando">
+                                   <img class="rollerblade-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/member/bando/bando01.jpg" alt="bando">
+                               </div>
                            </div>
+
                            <div class="member__name">
                                <span class="name">板東 勝也</span>
-                               <span class="position">Chief technical officer</span>
+                               <span class="position">Chief Technical Officer</span>
                            </div>
                        </li>
 
                        <li>
                            <div class="member__photo">
-                               <img src="" alt="">
+                               <img class="cover" src="<?php echo get_stylesheet_directory_uri(); ?>/img/member/shirai/cover.jpg" alt="abe">
+
+                               <div id="shirai">
+                                   <img class="rollerblade-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/member/shirai/shirai01.jpg" alt="abe">
+                               </div>
                            </div>
                            <div class="member__name">
                                <span class="name">白い たつ也</span>
@@ -70,9 +87,18 @@
                        </li>
 
                        <li>
-                           <div class="member__photo">
-                               <img src="" alt="">
+                           <div class="member__photo member__photo-sano">
+
+                               <img class="cover" src="<?php echo get_stylesheet_directory_uri(); ?>/img/member/sano/cover.jpg" alt="abe">
+
+                               <div id="sano">
+
+                                   <img class="rollerblade-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/member/sano/sano01.jpg" alt="abe">
+
+                               </div>
+
                            </div>
+
                            <div class="member__name">
                                <span class="name">佐野 春香</span>
                                <span class="position">Designer</span>
@@ -82,11 +108,11 @@
                        <li>
                            <div class="member__photo">
 
-                               <img class="cover" src="<?php echo get_stylesheet_directory_uri(); ?>/img/member/abe/cover.png" alt="abe">
+                               <img class="cover" src="<?php echo get_stylesheet_directory_uri(); ?>/img/member/abe/cover.jpg" alt="abe">
 
 
                               <div id="abe">
-                                  <img class="rollerblade-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/member/abe/abe05.png" alt="abe">
+                                  <img class="rollerblade-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/member/abe/abe01.jpg" alt="abe">
                               </div>
 
 
@@ -99,10 +125,11 @@
 
                        <li>
                            <div class="member__photo">
-                               <img class="cover" src="<?php echo get_stylesheet_directory_uri(); ?>/img/member/abe/cover.png" alt="abe">
+
+                               <img class="cover" src="<?php echo get_stylesheet_directory_uri(); ?>/img/member/fujikawa/cover.jpg" alt="fujikawa">
 
                                   <div id="fujikawa">
-                                   <img class="rollerblade-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/member/abe/abe05.png" alt="abe">
+                                   <img class="rollerblade-img" src="<?php echo get_stylesheet_directory_uri(); ?>/img/member/fujikawa/fujikawa01.jpg" alt="abe">
                                </div>
 
                            </div>

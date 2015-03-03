@@ -64,17 +64,88 @@ jQuery(document).ready(function() {
     var rootPath = 'http://comman.devel2.comman.co.jp/wp-content/themes/comman_abe_made/img/';
 
     var abeMotions = [
-        rootPath + 'member/abe/abe01.png',
-        rootPath + 'member/abe/abe02.png',
-        rootPath + 'member/abe/abe03.png',
-        rootPath + 'member/abe/abe04.png',
-        rootPath + 'member/abe/abe05.png',
-        rootPath + 'member/abe/abe06.png',
-        rootPath + 'member/abe/abe07.png',
-        rootPath + 'member/abe/abe08.png'
+        rootPath + 'member/abe/abe01.jpg',
+        rootPath + 'member/abe/abe02.jpg',
+        rootPath + 'member/abe/abe03.jpg',
+        rootPath + 'member/abe/abe04.jpg',
+        rootPath + 'member/abe/abe05.jpg',
+        rootPath + 'member/abe/abe06.jpg',
+        rootPath + 'member/abe/abe07.jpg',
+        rootPath + 'member/abe/abe08.jpg'
+    ];
+
+    var sanoMotions = [
+        rootPath + 'member/sano/sano01.jpg',
+        rootPath + 'member/sano/sano02.jpg',
+        rootPath + 'member/sano/sano03.jpg',
+        rootPath + 'member/sano/sano04.jpg',
+        rootPath + 'member/sano/sano05.jpg',
+        rootPath + 'member/sano/sano06.jpg',
+        rootPath + 'member/sano/sano07.jpg',
+        rootPath + 'member/sano/sano08.jpg'
+    ];
+
+    var shiraiMotions = [
+        rootPath + 'member/shirai/shirai01.jpg',
+        rootPath + 'member/shirai/shirai02.jpg',
+        rootPath + 'member/shirai/shirai03.jpg',
+        rootPath + 'member/shirai/shirai04.jpg',
+        rootPath + 'member/shirai/shirai05.jpg',
+        rootPath + 'member/shirai/shirai06.jpg',
+        rootPath + 'member/shirai/shirai07.jpg',
+        rootPath + 'member/shirai/shirai08.jpg'
+    ];
+
+    var bandoMotions = [
+        rootPath + 'member/bando/bando01.jpg',
+        rootPath + 'member/bando/bando02.jpg',
+        rootPath + 'member/bando/bando03.jpg',
+        rootPath + 'member/bando/bando04.jpg',
+        rootPath + 'member/bando/bando05.jpg',
+        rootPath + 'member/bando/bando06.jpg',
+        rootPath + 'member/bando/bando07.jpg',
+        rootPath + 'member/bando/bando08.jpg'
+    ];
+
+    var kaideMotions = [
+        rootPath + 'member/kaide/kaide01.jpg',
+        rootPath + 'member/kaide/kaide02.jpg',
+        rootPath + 'member/kaide/kaide03.jpg',
+        rootPath + 'member/kaide/kaide04.jpg',
+        rootPath + 'member/kaide/kaide05.jpg',
+        rootPath + 'member/kaide/kaide06.jpg',
+        rootPath + 'member/kaide/kaide07.jpg',
+        rootPath + 'member/kaide/kaide08.jpg'
+    ];
+
+    var fujikawaMotions = [
+        rootPath + 'member/fujikawa/fujikawa01.jpg',
+        rootPath + 'member/fujikawa/fujikawa02.jpg',
+        rootPath + 'member/fujikawa/fujikawa03.jpg',
+        rootPath + 'member/fujikawa/fujikawa04.jpg',
+        rootPath + 'member/fujikawa/fujikawa05.jpg',
+        rootPath + 'member/fujikawa/fujikawa06.jpg',
+        rootPath + 'member/fujikawa/fujikawa07.jpg',
+        rootPath + 'member/fujikawa/fujikawa08.jpg'
+    ];
+
+    var ogawaMotions = [
+        rootPath + 'member/ogawa/ogawa01.jpg',
+        rootPath + 'member/ogawa/ogawa02.jpg',
+        rootPath + 'member/ogawa/ogawa03.jpg',
+        rootPath + 'member/ogawa/ogawa04.jpg',
+        rootPath + 'member/ogawa/ogawa05.jpg',
+        rootPath + 'member/ogawa/ogawa06.jpg',
+        rootPath + 'member/ogawa/ogawa07.jpg',
+        rootPath + 'member/ogawa/ogawa08.jpg'
     ];
 
     jQuery('.member__photo').mouseover(function(){
+        jQuery(this).find('.cover').css('display','none')});
+    jQuery('.member__photo').mouseout(function(){
+        jQuery(this).find('.cover').css('display','block')});
+
+    jQuery('.member__photo-sano').mouseover(function(){
         jQuery(this).find('.cover').css('display','none')});
     jQuery('.member__photo').mouseout(function(){
         jQuery(this).find('.cover').css('display','block')});
@@ -83,14 +154,54 @@ jQuery(document).ready(function() {
 
         jQuery('#abe').rollerblade({
             imageArray: abeMotions,
+            sensitivity: 5,
+            drag: false,
+            auto: false,
+            edgeStop:true
+        });
+
+        jQuery('#fujikawa').rollerblade({
+            imageArray: fujikawaMotions,
+            sensitivity: 100,
+            drag: false,
+            auto: false,
+            edgeStop:false
+        });
+
+        jQuery('#sano').rollerblade({
+            imageArray: sanoMotions,
             sensitivity: 20,
             drag: false,
             auto: false,
             edgeStop:false
         });
 
-        jQuery('#fujikawa').rollerblade({
-            imageArray: abeMotions,
+        jQuery('#kaide').rollerblade({
+            imageArray: kaideMotions,
+            sensitivity: 20,
+            drag: false,
+            auto: false,
+            edgeStop:false
+        });
+
+        jQuery('#shirai').rollerblade({
+            imageArray: shiraiMotions,
+            sensitivity: 20,
+            drag: false,
+            auto: false,
+            edgeStop:false
+        });
+
+        jQuery('#bando').rollerblade({
+            imageArray: bandoMotions,
+            sensitivity: 20,
+            drag: false,
+            auto: false,
+            edgeStop:false
+        });
+
+        jQuery('#ogawa').rollerblade({
+            imageArray: ogawaMotions,
             sensitivity: 20,
             drag: false,
             auto: false,
