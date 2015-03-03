@@ -18,6 +18,14 @@ get_header(); ?>
                 <h3 class="sub_title">staff Bl<span>o</span>g</h3>
                 <h5 class="sub_title st1"><?php wp_title(''); ?></h5>
 
+            <?php elseif( is_tag() || is_category() ) :?>
+
+                <h2><i class="fa fa-database"></i> <?php wp_title(''); ?>：記事一覧</h2>
+
+            <?php elseif( is_auter() ) :?>
+
+                <h2><i class="fa fa-database"></i> <?php wp_title(''); ?>の書いた記事一覧</h2>
+
             <?php else :?>
 
                 <h2 class="main-title"><?php wp_title(''); ?></h2>
