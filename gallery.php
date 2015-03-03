@@ -14,18 +14,18 @@ foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 
             <div class="gallery-thum">
 
+
+
+                <?php if( get_field('thumbnail') ): ?>
                 <a href="<?php the_permalink() ?>">
-
-                    <?php if( get_field('thumbnail') ): ?>
                     <img src="<?php the_field('thumbnail'); ?>" alt="<?php the_title() ?>">
-
-                    <h2 class="gallery__title">
-                        <a href="<?php the_permalink() ?>"><?php the_title() ?></a>
-                    </h2>
-
-                    <?php endif; ?>
-
                 </a>
+
+                <h2 class="gallery__title">
+                    <a href="<?php the_permalink() ?>"><?php the_title() ?></a>
+                </h2>
+
+                <?php endif; ?>
 
             </div><!--/.gallery-thum-->
 
