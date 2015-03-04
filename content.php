@@ -180,15 +180,16 @@
 
                 <div class="sep">
                    <div class="thum">
-                       <span class="auther-photo"><?php echo get_avatar( get_the_author_id(), 150 ); ?></span>
+                       <span class="auther-photo"><img src="<?php the_field('author-photo', 'user_'. $author_id); ?>" alt="<?php the_author_meta('nickname'); ?>"></span>
                    </div>
                    <div class="main-sec">
                        <span class="auther-name"><?php the_author_meta('nickname'); ?></span>
 
                        <span class="author__responsible"><?php the_field('responsible', 'user_'. $author_id); ?></span>
+
                        <span class="auther-disc"><?php the_author_meta('description'); ?></span>
 
-                       <span class="auther-link"><a href="<?php echo get_author_posts_url( get_the_author_id() ); ?>"><?php the_author_meta('nickname'); ?>が書いた他の記事をチェック！</a></span>
+                       <span class="auther-link"><a href="<?php echo get_author_posts_url( $author_id ); ?>"><?php the_author_meta('nickname'); ?>が書いた他の記事をチェック！</a></span>
                    </div>
                </div>
 
