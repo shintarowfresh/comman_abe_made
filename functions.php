@@ -49,7 +49,7 @@ function comman_scripts() {
     // メインのスタイルシート
     wp_enqueue_style( 'body-style', get_stylesheet_directory_uri() . '/style.css', array() ,null );
     wp_enqueue_style( 'swipeshow-style', get_stylesheet_directory_uri() . '/css/jquery.swipeshow.min.css', array() ,null );
-    wp_enqueue_style( 'main-style', get_stylesheet_directory_uri() . '/css/style.css', array() ,null  );
+    wp_enqueue_style( 'main-style', get_stylesheet_directory_uri() . '/css/build.css', array() ,null  );
     wp_enqueue_style( 'fa-anime-style', get_stylesheet_directory_uri() . '/css/font-awesome-animation.min.css', array() ,null );
     wp_enqueue_style( 'icon-style', get_stylesheet_directory_uri() . '/css/icomoon/style.css', array() ,null );
     wp_enqueue_style( 'fa-style', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array() ,null );
