@@ -32,6 +32,10 @@ gulp.task('sass', function() {
 
 gulp.task('ple', function() {
     return gulp.src('./dist/*.css')
+    .pipe(rename({
+        basename: "build",
+        extname: ".css"
+    }))
     .pipe(csscomb())
     .pipe(pleeease({
         autoprefixer: {
@@ -50,7 +54,6 @@ gulp.task('compass', function() {
         css: 'css',
         sass: 'sass'
     }))
-
     .pipe(gulp.dest('./dist'));
 });
 
