@@ -1,6 +1,16 @@
 jQuery(function ($) {
     'use strict';
 
+
+
+    $('.member__sns__btn').click(function(){
+        $(this).toggleClass('btn-on');
+        $(this).next().slideToggle();
+        return false;
+    });
+
+
+
     $("a[href^='http://']").not('[href*="'+location.hostname+'"]').attr('target','_blank').addClass('nonmover');
 
     //タップの反応を改善

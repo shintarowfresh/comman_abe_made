@@ -41,6 +41,35 @@
                                <span class="name">貝出 康</span>
                                <span class="position">General Manager</span>
                            </div>
+
+                           <div class="member__sns">
+
+                               <?php if( get_field('blog' ,'user_') ||get_field('twitter' ,'user_') ||get_field('facebook' ,'user_') ) :?>
+                               <a href="javascript:void(0);" class="member__sns__btn nonmover"><i class="fa fa-bars"></i></a>
+                               <?php endif ;?>
+
+                               <ul id="m-s">
+                                   <?php if( get_field('blog' ,'user_') ) :?>
+                                   <li>
+                                       <a href="<?php the_field('blog', 'user_'); ?>"><i class="fa fa-pencil"></i></a>
+                                   </li>
+                                   <?php endif ;?>
+
+                                   <?php if( get_field('twitter' ,'user_') ) :?>
+                                   <li>
+                                       <a href="https://twitter.com/<?php the_field('twitter', 'user_'); ?>"><i class="fa fa-twitter"></i></a>
+                                   </li>
+                                   <?php endif ;?>
+
+                                   <?php if( get_field('facebook' ,'user_') ) :?>
+                                   <li>
+                                       <a href="<?php the_field('facebook', 'user_'); ?>"><i class="fa fa-facebook-official"></i></a>
+                                   </li>
+                                   <?php endif ;?>
+                               </ul>
+
+                           </div>
+
                        </li>
 
                        <li>
@@ -55,6 +84,35 @@
                                <span class="name">小川 裕司</span>
                                <span class="position">Wed Director</span>
                            </div>
+
+                           <div class="member__sns">
+
+                               <?php if( get_field('blog' ,'user_3') ||get_field('twitter' ,'user_3') ||get_field('facebook' ,'user_3') ) :?>
+                               <a href="javascript:void(0);" class="member__sns__btn nonmover"><i class="fa fa-bars"></i></a>
+                               <?php endif ;?>
+
+                               <ul id="m-s">
+                                   <?php if( get_field('blog' ,'user_') ) :?>
+                                   <li>
+                                       <a href="<?php the_field('blog', 'user_'); ?>"><i class="fa fa-pencil"></i></a>
+                                   </li>
+                                   <?php endif ;?>
+
+                                   <?php if( get_field('twitter' ,'user_') ) :?>
+                                   <li>
+                                       <a href="https://twitter.com/<?php the_field('twitter', 'user_'); ?>"><i class="fa fa-twitter"></i></a>
+                                   </li>
+                                   <?php endif ;?>
+
+                                   <?php if( get_field('facebook' ,'user_') ) :?>
+                                   <li>
+                                       <a href="<?php the_field('facebook', 'user_'); ?>"><i class="fa fa-facebook-official"></i></a>
+                                   </li>
+                                   <?php endif ;?>
+                               </ul>
+
+                           </div>
+
                        </li>
 
                        <li>
@@ -70,6 +128,35 @@
                                <span class="name">板東 勝也</span>
                                <span class="position">Chief Technical Officer</span>
                            </div>
+
+                           <div class="member__sns">
+
+                               <?php if( get_field('blog' ,'user_3') ||get_field('twitter' ,'user_3') ||get_field('facebook' ,'user_3') ) :?>
+                               <a href="javascript:void(0);" class="member__sns__btn nonmover"><i class="fa fa-bars"></i></a>
+                               <?php endif ;?>
+
+                               <ul id="m-s">
+                                   <?php if( get_field('blog' ,'user_') ) :?>
+                                   <li>
+                                       <a href="<?php the_field('blog', 'user_'); ?>"><i class="fa fa-pencil"></i></a>
+                                   </li>
+                                   <?php endif ;?>
+
+                                   <?php if( get_field('twitter' ,'user_') ) :?>
+                                   <li>
+                                       <a href="https://twitter.com/<?php the_field('twitter', 'user_'); ?>"><i class="fa fa-twitter"></i></a>
+                                   </li>
+                                   <?php endif ;?>
+
+                                   <?php if( get_field('facebook' ,'user_') ) :?>
+                                   <li>
+                                       <a href="<?php the_field('facebook', 'user_'); ?>"><i class="fa fa-facebook-official"></i></a>
+                                   </li>
+                                   <?php endif ;?>
+                               </ul>
+
+                           </div>
+
                        </li>
 
                        <li>
@@ -84,6 +171,35 @@
                                <span class="name">白い たつ也</span>
                                <span class="position">Web Hengineer</span>
                            </div>
+
+                           <div class="member__sns">
+
+                               <?php if( get_field('blog' ,'user_3') ||get_field('twitter' ,'user_3') ||get_field('facebook' ,'user_3') ) :?>
+                               <a href="javascript:void(0);" class="member__sns__btn nonmover"><i class="fa fa-bars"></i></a>
+                               <?php endif ;?>
+
+                               <ul id="m-s">
+                                   <?php if( get_field('blog' ,'user_') ) :?>
+                                   <li>
+                                       <a href="<?php the_field('blog', 'user_'); ?>"><i class="fa fa-pencil"></i></a>
+                                   </li>
+                                   <?php endif ;?>
+
+                                   <?php if( get_field('twitter' ,'user_') ) :?>
+                                   <li>
+                                       <a href="https://twitter.com/<?php the_field('twitter', 'user_'); ?>"><i class="fa fa-twitter"></i></a>
+                                   </li>
+                                   <?php endif ;?>
+
+                                   <?php if( get_field('facebook' ,'user_') ) :?>
+                                   <li>
+                                       <a href="<?php the_field('facebook', 'user_'); ?>"><i class="fa fa-facebook-official"></i></a>
+                                   </li>
+                                   <?php endif ;?>
+                               </ul>
+
+                           </div>
+
                        </li>
 
                        <li>
@@ -103,6 +219,35 @@
                                <span class="name">佐野 春香</span>
                                <span class="position">Designer</span>
                            </div>
+
+                           <div class="member__sns">
+
+                               <?php if( get_field('blog' ,'user_3') ||get_field('twitter' ,'user_3') ||get_field('facebook' ,'user_3') ) :?>
+                               <a href="javascript:void(0);" class="member__sns__btn nonmover"><i class="fa fa-bars"></i></a>
+                               <?php endif ;?>
+
+                               <ul id="m-s">
+                                   <?php if( get_field('blog' ,'user_') ) :?>
+                                   <li>
+                                       <a href="<?php the_field('blog', 'user_'); ?>"><i class="fa fa-pencil"></i></a>
+                                   </li>
+                                   <?php endif ;?>
+
+                                   <?php if( get_field('twitter' ,'user_') ) :?>
+                                   <li>
+                                       <a href="https://twitter.com/<?php the_field('twitter', 'user_'); ?>"><i class="fa fa-twitter"></i></a>
+                                   </li>
+                                   <?php endif ;?>
+
+                                   <?php if( get_field('facebook' ,'user_') ) :?>
+                                   <li>
+                                       <a href="<?php the_field('facebook', 'user_'); ?>"><i class="fa fa-facebook-official"></i></a>
+                                   </li>
+                                   <?php endif ;?>
+                               </ul>
+
+                           </div>
+
                        </li>
 
                        <li>
@@ -120,6 +265,34 @@
                            <div class="member__name">
                                <span class="name">阿部 信太郎</span>
                                <span class="position">Front-end Engineer</span>
+                           </div>
+
+                           <div class="member__sns">
+
+                               <?php if( get_field('blog' ,'user_2') ||get_field('twitter' ,'user_2') ||get_field('facebook' ,'user_2') ) :?>
+                               <a href="javascript:void(0);" class="member__sns__btn nonmover"><i class="fa fa-bars"></i></a>
+                               <?php endif ;?>
+
+                               <ul id="m-s">
+                                   <?php if( get_field('blog' ,'user_') ) :?>
+                                   <li>
+                                       <a href="<?php the_field('blog', 'user_'); ?>"><i class="fa fa-pencil"></i></a>
+                                   </li>
+                                   <?php endif ;?>
+
+                                   <?php if( get_field('twitter' ,'user_') ) :?>
+                                   <li>
+                                       <a href="https://twitter.com/<?php the_field('twitter', 'user_'); ?>"><i class="fa fa-twitter"></i></a>
+                                   </li>
+                                   <?php endif ;?>
+
+                                   <?php if( get_field('facebook' ,'user_2') ) :?>
+                                   <li>
+                                       <a href="<?php the_field('facebook', 'user_2'); ?>"><i class="fa fa-facebook-official"></i></a>
+                                   </li>
+                                   <?php endif ;?>
+                               </ul>
+
                            </div>
                        </li>
 
