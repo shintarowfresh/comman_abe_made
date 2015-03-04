@@ -2820,6 +2820,7 @@ ul.foot_navi li a {
 .member .member__photo {
   background: #d5d5d5;
   position: relative;
+  margin-bottom: .5em;
 }
 .member .member__photo .cover {
   position: absolute;
@@ -2830,13 +2831,43 @@ ul.foot_navi li a {
   max-width: 100%;
 }
 .member .member__name {
-  margin-top: .5em;
+  float: left;
 }
 .member .member__name span {
   display: block;
 }
 .member .member__name span.position {
   font-size: .8em;
+}
+.member .member__sns {
+  float: right;
+  text-align: right;
+  position: relative;
+}
+.member .member__sns .member__sns__btn {
+  background: #c62828;
+  display: inline-block;
+  color: #fff;
+  width: 36px;
+  text-align: center;
+  line-height: 36px;
+  height: 36px;
+  opacity: .5;
+}
+.member .member__sns .member__sns__btn:hover {
+  opacity: 1;
+}
+.member .member__sns ul {
+  display: none;
+  margin-top: .5em;
+  position: absolute;
+  top: 33px;
+  width: 100px;
+  right: 10px;
+}
+.member .member__sns ul li {
+  display: inline-block;
+  margin-left: 10px;
 }
 
 .phone-popup {
@@ -3809,4 +3840,8 @@ ul.foot_navi li a {
 .lt-ie9 nav.menu UL LI A:before,
 .lt-ie9 .read-first H2:before {
   display: none !important;
+}
+
+.btn-on {
+  opacity: 1 !important;
 }

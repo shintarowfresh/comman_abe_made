@@ -3708,6 +3708,8 @@ ul.foot_navi li a
 {
     position: relative;
 
+    margin-bottom: .5em;
+
     background: #d5d5d5;
 }
 .member .member__photo .cover
@@ -3722,7 +3724,7 @@ ul.foot_navi li a
 }
 .member .member__name
 {
-    margin-top: .5em;
+    float: left;
 }
 .member .member__name span
 {
@@ -3731,6 +3733,50 @@ ul.foot_navi li a
 .member .member__name span.position
 {
     font-size: .8em;
+}
+.member .member__sns
+{
+    position: relative;
+
+    float: right;
+
+    text-align: right;
+}
+.member .member__sns .member__sns__btn
+{
+    line-height: 36px;
+
+    display: inline-block;
+
+    width: 36px;
+    height: 36px;
+
+    text-align: center;
+
+    opacity: .5;
+    color: #fff;
+    background: #c62828;
+}
+.member .member__sns .member__sns__btn:hover
+{
+    opacity: 1;
+}
+.member .member__sns ul
+{
+    position: absolute;
+    top: 33px;
+    right: 10px;
+
+    display: none;
+
+    width: 100px;
+    margin-top: .5em;
+}
+.member .member__sns ul li
+{
+    display: inline-block;
+
+    margin-left: 10px;
 }
 
 .phone-popup
@@ -5003,4 +5049,9 @@ ul.foot_navi li a
 .lt-ie9 .read-first h2:before
 {
     display: none !important;
+}
+
+.btn-on
+{
+    opacity: 1 !important;
 }
