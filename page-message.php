@@ -139,6 +139,10 @@
                            </div>
                        </li>
 
+                       <li>
+                           <a class="party-people nonmover" href="javascript:void(0)"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/party.jpg" alt="パーティーしようぜ"></a>
+                       </li>
+
                    </ul>
                </div>
 
