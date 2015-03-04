@@ -5,7 +5,7 @@
         <?php
 $args = array(
     'posts_per_page' => 15 ,
-    'post_type' =>work,
+    'post_type' => 'work',
     'orderby'   => 'rand'
 );
 $myposts = get_posts( $args );

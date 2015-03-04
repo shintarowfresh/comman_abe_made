@@ -21,7 +21,7 @@ get_header(); ?>
 
                 <?php
                 $allsearch =& new WP_Query("s=$s&showposts=-1");
-                $key = wp_specialchars($s, 1);
+                $key = esc_html($s, 1);
                 $count = $allsearch->post_count;
                 echo '<h1>&#8216;'.$key.'&#8217; で検索した結果：'.$count.' 件</h1>';
                 ?>

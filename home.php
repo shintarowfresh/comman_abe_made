@@ -97,7 +97,7 @@ get_header(); ?>
                 <?php
                 $args = array(
                     'posts_per_page' => 6 ,
-                    'post_type' =>work
+                    'post_type' =>'work'
                 );
                 $myposts = get_posts( $args );
                 foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
