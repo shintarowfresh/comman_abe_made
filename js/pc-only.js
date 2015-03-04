@@ -1,4 +1,4 @@
-jQuery(window).on('load',function (){
+jQuery(window).on('load', function () {
     var contentHeight = jQuery("html, body").height(),
         windowHeight = jQuery(window).height(),
         target = jQuery('#sidebar').find('.fix'),
@@ -13,13 +13,13 @@ jQuery(window).on('load',function (){
         mainHeight = jQuery('.main').outerHeight(),
         subHeight = jQuery('.sub').outerHeight();
 
-    jQuery(window).on('resize',function () {
+    jQuery(window).on('resize', function () {
         windowHeight = jQuery(this).height();
     });
 
-    jQuery('#fix').each( function (){
+    jQuery('#fix').each(function () {
 
-        jQuery(window).on('scroll',function () {
+        jQuery(window).on('scroll', function () {
 
             var scrollTop = jQuery(this).scrollTop(),
                 visibleBottom = scrollTop + windowHeight,
@@ -51,14 +51,21 @@ jQuery(window).on('load',function (){
             } else {
 
                 target.css({
-                    'position':'static',
+                    'position': 'static'
                 });
             }
         });
     });
 });
 
-jQuery(document).ready(function() {
+jQuery(document).ready(function () {
+
+    jQuery('.party-people').click(function () {
+        jQuery('.cover').animate({
+            opacity: "toggle"
+        }
+        );
+    });
 
     //パラパラ漫画
     var rootPath = 'http://comman.devel2.comman.co.jp/wp-content/themes/comman_abe_made/img/';
@@ -162,7 +169,7 @@ jQuery(document).ready(function() {
 
         jQuery('#fujikawa').rollerblade({
             imageArray: fujikawaMotions,
-            sensitivity: 100,
+            sensitivity: 20,
             drag: false,
             auto: false,
             edgeStop:false
@@ -170,7 +177,7 @@ jQuery(document).ready(function() {
 
         jQuery('#sano').rollerblade({
             imageArray: sanoMotions,
-            sensitivity: 20,
+            sensitivity: 5,
             drag: false,
             auto: false,
             edgeStop:false
@@ -202,12 +209,10 @@ jQuery(document).ready(function() {
 
         jQuery('#ogawa').rollerblade({
             imageArray: ogawaMotions,
-            sensitivity: 20,
+            sensitivity: 5,
             drag: false,
             auto: false,
             edgeStop:false
         });
     });
-
-
 });
