@@ -151,7 +151,7 @@
                             <h3><i class="fa fa-youtube-play faa-pulse animated"></i>カンマンチャンネルの最新動画</h3>
 
                             <div class="video">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/V4xvr2fkF5Q?list=PLuFK1lOCb7Od20M1WaIh7doNg6GmJ5eGJ" frameborder="0" allowfullscreen></iframe>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/BIB67qrmE74?list=PLuFK1lOCb7Od20M1WaIh7doNg6GmJ5eGJ&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
                             </div>
                         </div>
                     </div><!--/.col-->
