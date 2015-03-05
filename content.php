@@ -88,7 +88,7 @@
                     <span class="countdown">この記事を読了するためには約 <b><?php echo $est; ?></b> 分必要です。</span>
 
                     <span>
-                        <a class="nonmover btn--twitter" href="http://twitter.com/share?text=メモ//<?php the_title(); ?>&url=<?php the_permalink(); ?>&hashtags=#カンマン" onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;" rel="nofollow"><i class="fa fa-twitter"></i> メモとつぶやく</a>
+                        <a class="nonmover btn--twitter" href="http://twitter.com/share?text=後で読む。//<?php the_title(); ?>&url=<?php the_permalink(); ?>&hashtags=#カンマン" onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;" rel="nofollow"><i class="fa fa-twitter"></i> 後で読む</a>
                     </span>
                     <span>
 
