@@ -8,49 +8,31 @@
 
     <article <?php post_class(); ?>>
 
+        <?php if( !is_single()) : ?>
 
-
-            <?php if(has_post_thumbnail()): ?>
-
-                <?php if( is_single() ) : ?>
-
+        <?php if(has_post_thumbnail()): ?>
         <div class="content-thum">
-
-                <?php echo get_the_post_thumbnail($post->ID, 'single-eye',array('data-lazy' => 'false')); ?>
-
+            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
         </div><!--/.content-thum-->
-
-                <?php else :?>
-
-        <div class="content-thum">
-                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-        </div><!--/.content-thum-->
-
-                <?php endif ;?>
-
-            <?php else :?>
-
-                <?php if( is_single() ) : ?>
-                <?php else :?>
+        <?php else :?>
         <div class="content-thum">
             <a href="<?php the_permalink(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/no-thum.png" alt="サムネイルはありません"></a>
         </div><!--/.content-thum-->
-                <?php endif ;?>
+        <?php endif ;?>
 
-            <?php endif; ?>
+        <?php endif ; ?>
 
 
-
-        <div class="content-main">
+        <div itemscope itemtype="http://schema.org/Article" class="content-main">
 
             <header>
 
-                <time><?php the_time( 'Y.n.j' ); ?></time>
+                <time itemprop="datePublished" content="<?php the_time( 'Y-n-j' ); ?>"><?php the_time( 'Y.n.j' ); ?></time>
 
                 <span class="meta tag"><i class="fa fa-tags"></i> <?php the_tags( '', '' ); ?></span>
 
                 <?php if( is_single() ) :?>
-                <h2 class="title">
+                <h2 itemprop="name" class="title">
                     <?php the_title(); ?>
                 </h2>
                 <?php else :?>
@@ -60,17 +42,37 @@
                 <?php endif ;?>
 
 
-                <div class="share-count">
+                <div class="single__meta-data">
 
-                    <span><?php if(function_exists('scc_get_share_total')) echo scc_get_share_total(); ?><span>shares</span></span>
+                   <?php if( is_single() ) :?>
+                    <div class="who-wrote">
+                        <span class="auther-name"><i class="fa fa-pencil"></i>書いた人：<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><?php the_author_meta('nickname'); ?></span></span></span>
+                    </div>
+                    <?php endif ;?>
 
+                    <div class="share-count">
+
+                        <?php if( is_single() ) : ?>
+                        <span><?php if(function_exists('scc_get_share_total')) echo scc_get_share_total(); ?><span>shares</span></span>
+                        <?php else : ?>
+                        <span><i class="fa fa-twitter-square"></i><?php if(function_exists('scc_get_share_twitter')) echo scc_get_share_twitter(); ?></span> <span><i class="fa fa-facebook-official"></i><?php if(function_exists('scc_get_share_facebook')) echo scc_get_share_facebook(); ?></span> <span><i class="fa fa-hatena"></i><?php if(function_exists('scc_get_share_hatebu')) echo scc_get_share_facebook(); ?></span>
+                        <?php endif ; ?>
+
+                    </div>
                 </div>
+
+
 
             </header>
 
-            <section>
+            <section itemprop="articleBody">
 
                 <?php if ( is_singular() ) : ?>
+
+                <div class="content-thum">
+                    <?php echo get_the_post_thumbnail($post->ID, 'single-eye',array('data-lazy' => 'false')); ?>
+                </div><!--/.content-thum-->
+
 
                 <?php if(strpos(get_the_content(),'id="more-')) :
                 global $more; $more = 0;
@@ -120,7 +122,7 @@
                 <?php if ( is_singular() ) : ?>
                 <p>この記事は「<?php the_category(' '); ?>」カテゴリーです。</p>
 
-                <div class="fb-like" data-href="https://www.facebook.com/comman.inc" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+                <div class="fb-like" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div>
 
                 <?php else: ?>
                 <?php endif; ?>
@@ -166,34 +168,44 @@
 
             </div><!--/.cta-->
 
-            <div class="author">
+            <div class="col">
+                <div class="box_2">
+                    <h3><i class="fa fa-facebook-official"></i> FBページをいいね！で応援よろしくお願いします！</h3>
 
-                <h3><i class="fa fa-pencil"></i> この記事を書いた人</h3>
+                    <div class="fb-like" data-href="https://www.facebook.com/comman.inc?ref=notif&amp;notif_t=page_new_likes" data-width="300" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
 
-                <?php
+                </div>
+                <div class="box_2">
+                    <div class="author">
 
-                $author_id = get_the_author_meta( 'ID' );
-                $author_badge = get_field('author_badge', 'user_'. $author_id ); // image field, return type = "Image Object"
+                        <h3><i class="fa fa-pencil"></i> この記事を書いた人</h3>
 
-                ?>
-                <!--<img src="<?php echo $author_badge['url']; ?>" alt="<?php echo $author_badge['alt']; ?>" />-->
+                        <?php
 
-                <div class="sep">
-                   <div class="thum">
-                       <span class="auther-photo"><img src="<?php the_field('author-photo', 'user_'. $author_id); ?>" alt="<?php the_author_meta('nickname'); ?>"></span>
-                   </div>
-                   <div class="main-sec">
-                       <span class="auther-name"><?php the_author_meta('nickname'); ?></span>
+$author_id = get_the_author_meta( 'ID' );
+$author_badge = get_field('author_badge', 'user_'. $author_id ); // image field, return type = "Image Object"
 
-                       <span class="author__responsible"><?php the_field('responsible', 'user_'. $author_id); ?></span>
+                        ?>
+                        <!--<img src="<?php echo $author_badge['url']; ?>" alt="<?php echo $author_badge['alt']; ?>" />-->
 
-                       <span class="auther-disc"><?php the_author_meta('description'); ?></span>
+                        <div class="sep">
+                            <div class="thum">
+                                <span class="auther-photo"><img src="<?php the_field('author-photo', 'user_'. $author_id); ?>" alt="<?php the_author_meta('nickname'); ?>"></span>
+                            </div>
+                            <div class="main-sec">
+                                <span class="auther-name"><?php the_author_meta('nickname'); ?></span>
 
-                       <span class="auther-link"><a href="<?php echo get_author_posts_url( $author_id ); ?>"><?php the_author_meta('nickname'); ?>が書いた他の記事をチェック！</a></span>
-                   </div>
-               </div>
+                                <span class="author__responsible"><?php the_field('responsible', 'user_'. $author_id); ?></span>
 
-            </div><!--/.author-->
+                                <span class="auther-disc"><?php the_author_meta('description'); ?></span>
+
+                                <span class="auther-link"><a href="<?php echo get_author_posts_url( $author_id ); ?>"><?php the_author_meta('nickname'); ?>が書いた他の記事をチェック！</a></span>
+                            </div>
+                        </div>
+
+                    </div><!--/.author-->
+                </div>
+            </div>
 
             <div class="one-more-post">
                 <h3><i class="fa fa-newspaper-o"></i> もう１記事どうぞ！</h3>

@@ -33,10 +33,10 @@ get_header(); ?>
             <?php endif ;?>
 
                 <div class="container">
-                      <?php
-                        // content.php を読み込む
-                        get_template_part( 'content' ); ?>
-                  </div>
+                    <?php
+                    // content.php を読み込む
+                    get_template_part( 'content' ); ?>
+                </div><!--/.container-->
 
                 <div id="next">
                     <a class="btn nonmover" href="<?php echo next_posts(0, false); ?>">次を読み込む</a>
