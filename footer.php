@@ -180,7 +180,7 @@
 
         <div class="foot-black">
             <div class="inner">
-                <div class="tar"><span><i class="fa fa-copyright"></i> Comman.inc</span></div>
+                <div class="tar"><span>2000-<?php echo date('Y'); ?> <i class="fa fa-copyright"></i> Comman.inc</span></div>
             </div>
         </div>
     </div><!--/.footer-->
