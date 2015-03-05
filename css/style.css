@@ -539,6 +539,9 @@ p .btn__works {
   width: 66%;
   margin-left: 3.334%;
 }
+.sep .main-sec .share-count > span {
+  color: #716363;
+}
 
 /**
 * #.# デザイン用パーツの調整CSS
@@ -674,30 +677,44 @@ p .btn__works {
 
 /*タグリンクの見た目を整える*/
 .meta.tag a {
-  background: #d5d5d5;
+  background: #e4e0e0;
   margin: 0 10px 5px 0;
   padding: 3px 1em;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  color: #6C6C6C;
+  color: #716363;
   text-decoration: none;
   font-size: .75em;
   font-weight: bold;
   display: inline-block;
 }
 
+.single__meta-data {
+  margin-top: .5em;
+}
+.single__meta-data:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.who-wrote {
+  float: left;
+}
+
 .share-count {
-  margin-top: 10px;
   color: #999;
-  color: #999;
+  float: right;
 }
 .share-count > span {
   font-weight: bold;
+  color: #c62828;
 }
 .share-count > span > span {
   margin-left: .3em;
   font-weight: normal;
+  color: #e27272;
 }
 .share-count > span .fa {
   margin-right: 5px;
@@ -714,6 +731,9 @@ p .btn__works {
 
 .archive .share-count {
   margin: 0;
+}
+.archive .share-count > span {
+  color: #716363;
 }
 
 /*個別記事の最後のpを調整*/
@@ -2249,11 +2269,8 @@ ul.foot_navi li a {
   margin-left: .2em;
   color: rgba(198, 40, 40, 0.6);
 }
-.single .cta,
-.single .author {
-  margin: 4em 0;
-}
 .single .cta {
+  margin: 4em 0;
   padding: 1em;
   background: #f2f2f2;
   border: 1px solid #d5d5d5;

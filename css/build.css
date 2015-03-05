@@ -777,6 +777,10 @@ p .btn__works
     width: 66%;
     margin-left: 3.334%;
 }
+.sep .main-sec .share-count > span
+{
+    color: #716363;
+}
 
 /**
 * #.# デザイン用パーツの調整CSS
@@ -971,27 +975,47 @@ p .btn__works
 
     text-decoration: none;
 
-    color: #6c6c6c;
+    color: #716363;
     border-radius: 10px;
-    background: #d5d5d5;
+    background: #e4e0e0;
+}
+
+.single__meta-data
+{
+    margin-top: .5em;
+}
+.single__meta-data:after
+{
+    display: block;
+    clear: both;
+
+    content: '';
+}
+
+.who-wrote
+{
+    float: left;
 }
 
 .share-count
 {
-    margin-top: 10px;
+    float: right;
 
-    color: #999;
     color: #999;
 }
 .share-count > span
 {
     font-weight: bold;
+
+    color: #c62828;
 }
 .share-count > span > span
 {
     font-weight: normal;
 
     margin-left: .3em;
+
+    color: #e27272;
 }
 .share-count > span .fa
 {
@@ -1013,6 +1037,10 @@ p .btn__works
 .archive .share-count
 {
     margin: 0;
+}
+.archive .share-count > span
+{
+    color: #716363;
 }
 
 /*個別記事の最後のpを調整*/
@@ -3006,13 +3034,9 @@ ul.foot_navi li a
 
     color: rgba(198, 40, 40, .6);
 }
-.single .cta,
-.single .author
-{
-    margin: 4em 0;
-}
 .single .cta
 {
+    margin: 4em 0;
     padding: 1em;
 
     border: 1px solid #d5d5d5;

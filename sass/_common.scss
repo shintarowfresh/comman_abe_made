@@ -509,6 +509,13 @@ p {
         float: left;
         width: 66%;
         margin-left: 3.334%;
+
+        .share-count {
+
+            >span {
+                color: $body_text_color;
+            }
+        }
     }
 }
 
@@ -655,28 +662,44 @@ p {
 
 /*タグリンクの見た目を整える*/
 .meta.tag a {
-    background: #d5d5d5;
+    background: $bg-color;
     margin: 0 10px 5px 0;
     padding: 3px 1em;
     @include border-radius(10px);
-    color: #6C6C6C;
+    color: $body_text_color;
     text-decoration: none;
     font-size: .75em;
     font-weight: bold;
     display: inline-block;
 }
 
+.single__meta-data {
+    margin-top: .5em;
+
+    &:after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+}
+
+.who-wrote {
+    float: left;
+}
+
 .share-count {
-    margin-top: 10px;
     color: #999;
-    color: #999;
+    float: right;
+
 
     >span {
         font-weight: bold;
+        color: $main;
 
         >span {
             margin-left: .3em;
             font-weight: normal;
+            color: lighten($main,20%);
         }
 
         .fa {
@@ -696,9 +719,14 @@ p {
         }
     }
 }
+
 .archive {
     .share-count {
         margin: 0;
+
+        >span {
+            color: $body_text_color;
+        }
     }
 }
 
@@ -2511,12 +2539,8 @@ ul.foot_navi {
 
     }
 
-    .cta ,
-    .author {
-        margin: 4em 0;
-    }
-
     .cta {
+        margin: 4em 0;
         padding: 1em;
         background: #f2f2f2;
         border: 1px solid #d5d5d5;
