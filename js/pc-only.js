@@ -64,7 +64,7 @@ jQuery(document).ready(function () {
         jQuery('.cover').animate({
             opacity: "toggle"
         }
-        );
+                                );
     });
 
     //パラパラ漫画
@@ -147,72 +147,76 @@ jQuery(document).ready(function () {
         rootPath + 'member/ogawa/ogawa08.jpg'
     ];
 
-    jQuery('.member__photo').mouseover(function(){
-        jQuery(this).find('.cover').css('display','none')});
-    jQuery('.member__photo').mouseout(function(){
-        jQuery(this).find('.cover').css('display','block')});
+    jQuery('.member__photo').mouseover(function () {
+        jQuery(this).find('.cover').css('display', 'none');
+    });
+    jQuery('.member__photo').mouseout(function () {
+        jQuery(this).find('.cover').css('display', 'block');
+    });
 
-    jQuery('.member__photo-sano').mouseover(function(){
-        jQuery(this).find('.cover').css('display','none')});
-    jQuery('.member__photo').mouseout(function(){
-        jQuery(this).find('.cover').css('display','block')});
+    jQuery('.member__photo-sano').mouseover(function () {
+        jQuery(this).find('.cover').css('display', 'none');
+    });
+    jQuery('.member__photo').mouseout(function () {
+        jQuery(this).find('.cover').css('display', 'block');
+    });
 
-    jQuery('.member').each(function(){
+    jQuery('.member').each(function () {
 
         jQuery('#abe').rollerblade({
             imageArray: abeMotions,
-            sensitivity: 5,
+            sensitivity: 15,
             drag: false,
             auto: false,
-            edgeStop:true
+            edgeStop: true
         });
 
         jQuery('#fujikawa').rollerblade({
             imageArray: fujikawaMotions,
-            sensitivity: 20,
+            sensitivity: 15,
             drag: false,
             auto: false,
-            edgeStop:false
+            edgeStop: false
         });
 
         jQuery('#sano').rollerblade({
             imageArray: sanoMotions,
-            sensitivity: 5,
+            sensitivity: 15,
             drag: false,
             auto: false,
-            edgeStop:false
+            edgeStop: false
         });
 
         jQuery('#kaide').rollerblade({
             imageArray: kaideMotions,
-            sensitivity: 20,
+            sensitivity: 15,
             drag: false,
             auto: false,
-            edgeStop:false
+            edgeStop: false
         });
 
         jQuery('#shirai').rollerblade({
             imageArray: shiraiMotions,
-            sensitivity: 20,
+            sensitivity: 15,
             drag: false,
             auto: false,
-            edgeStop:false
+            edgeStop: false
         });
 
         jQuery('#bando').rollerblade({
             imageArray: bandoMotions,
-            sensitivity: 20,
+            sensitivity: 15,
             drag: false,
             auto: false,
-            edgeStop:false
+            edgeStop: false
         });
 
         jQuery('#ogawa').rollerblade({
             imageArray: ogawaMotions,
-            sensitivity: 5,
+            sensitivity: 15,
             drag: false,
             auto: false,
-            edgeStop:false
+            edgeStop: false
         });
     });
 });
