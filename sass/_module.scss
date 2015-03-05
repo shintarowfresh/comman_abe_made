@@ -112,6 +112,23 @@
 /*メンバー紹介*/
 .member {
 
+    >ul {
+
+        >li {
+
+            &:after {
+                content: "";
+                clear: both;
+                display: block;
+            }
+
+            &:last-child {
+                display: none;
+            }
+
+        }
+    }
+
     .member__photo{
         background: #d5d5d5;
         position: relative;

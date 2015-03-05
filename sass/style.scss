@@ -323,6 +323,11 @@
         }
     }
 
+    #next a {
+        left: 0;
+        margin-left: 0;
+    }
+
 }//600
 
 
@@ -920,6 +925,10 @@
 
     .single .share ul li.b-line {
         display: none;
+    }
+
+    .member > ul > li:last-child {
+        display: inline-block;
     }
 
 }//950
