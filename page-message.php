@@ -44,26 +44,26 @@
 
                            <div class="member__sns">
 
-                               <?php if( get_field('blog' ,'user_') ||get_field('twitter' ,'user_') ||get_field('facebook' ,'user_') ) :?>
+                               <?php if( get_field('blog' ,'user_5') ||get_field('twitter' ,'user_5') ||get_field('facebook' ,'user_5') ) :?>
                                <a href="javascript:void(0);" class="member__sns__btn nonmover"><i class="fa fa-bars"></i></a>
                                <?php endif ;?>
 
                                <ul id="m-s">
-                                   <?php if( get_field('blog' ,'user_') ) :?>
+                                   <?php if( get_field('blog' ,'user_5') ) :?>
                                    <li>
-                                       <a href="<?php the_field('blog', 'user_'); ?>"><i class="fa fa-pencil"></i></a>
+                                       <a href="<?php the_field('blog', 'user_5'); ?>"><i class="fa fa-pencil"></i></a>
                                    </li>
                                    <?php endif ;?>
 
-                                   <?php if( get_field('twitter' ,'user_') ) :?>
+                                   <?php if( get_field('twitter' ,'user_5') ) :?>
                                    <li>
-                                       <a href="https://twitter.com/<?php the_field('twitter', 'user_'); ?>"><i class="fa fa-twitter"></i></a>
+                                       <a href="https://twitter.com/<?php the_field('twitter', 'user_5'); ?>"><i class="fa fa-twitter"></i></a>
                                    </li>
                                    <?php endif ;?>
 
-                                   <?php if( get_field('facebook' ,'user_') ) :?>
+                                   <?php if( get_field('facebook' ,'user_5') ) :?>
                                    <li>
-                                       <a href="<?php the_field('facebook', 'user_'); ?>"><i class="fa fa-facebook-official"></i></a>
+                                       <a href="<?php the_field('facebook', 'user_5'); ?>"><i class="fa fa-facebook-official"></i></a>
                                    </li>
                                    <?php endif ;?>
                                </ul>
@@ -274,15 +274,15 @@
                                <?php endif ;?>
 
                                <ul id="m-s">
-                                   <?php if( get_field('blog' ,'user_') ) :?>
+                                   <?php if( get_field('blog' ,'user_2') ) :?>
                                    <li>
-                                       <a href="<?php the_field('blog', 'user_'); ?>"><i class="fa fa-pencil"></i></a>
+                                       <a href="<?php the_field('blog', 'user_2'); ?>"><i class="fa fa-pencil"></i></a>
                                    </li>
                                    <?php endif ;?>
 
-                                   <?php if( get_field('twitter' ,'user_') ) :?>
+                                   <?php if( get_field('twitter' ,'user_2') ) :?>
                                    <li>
-                                       <a href="https://twitter.com/<?php the_field('twitter', 'user_'); ?>"><i class="fa fa-twitter"></i></a>
+                                       <a href="https://twitter.com/<?php the_field('twitter', 'user_2'); ?>"><i class="fa fa-twitter"></i></a>
                                    </li>
                                    <?php endif ;?>
 

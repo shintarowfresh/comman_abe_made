@@ -5,7 +5,7 @@ jQuery(function ($) {
 
     $('.member__sns__btn').click(function(){
         $(this).toggleClass('btn-on');
-        $(this).next().slideToggle();
+        $(this).next().slideToggle('fast');
         return false;
     });
 
