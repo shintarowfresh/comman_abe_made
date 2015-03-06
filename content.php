@@ -122,7 +122,7 @@
                 <?php if ( is_singular() ) : ?>
                 <p>この記事は「<?php the_category(' '); ?>」カテゴリーです。</p>
 
-                <div class="fb-like" data-layout="box_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                <div class="fb-like scale" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
 
                 <?php else: ?>
                 <?php endif; ?>
@@ -181,10 +181,8 @@
                         <h3><i class="fa fa-pencil"></i> この記事を書いた人</h3>
 
                         <?php
-
-$author_id = get_the_author_meta( 'ID' );
-$author_badge = get_field('author_badge', 'user_'. $author_id ); // image field, return type = "Image Object"
-
+                        $author_id = get_the_author_meta( 'ID' );
+                        $author_badge = get_field('author_badge', 'user_'. $author_id ); // image field, return type = "Image Object"
                         ?>
                         <!--<img src="<?php echo $author_badge['url']; ?>" alt="<?php echo $author_badge['alt']; ?>" />-->
 

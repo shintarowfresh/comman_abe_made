@@ -3935,6 +3935,18 @@ ul.foot_navi li a
     background: none;
 }
 
+.scale
+{
+    position: relative;
+    left: 20px;
+
+    -webkit-transform: scale(1.4);
+
+        -ms-transform: scale(1.4);
+
+            transform: scale(1.4);
+}
+
 .icon-fb
 {
     background-position: 0 0;

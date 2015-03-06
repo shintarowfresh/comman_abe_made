@@ -2989,6 +2989,12 @@ ul.foot_navi li a {
   background: none;
 }
 
+.scale {
+  transform: scale(1.4);
+  position: relative;
+  left: 20px;
+}
+
 .icon-fb {
   background-position: 0 0;
 }
