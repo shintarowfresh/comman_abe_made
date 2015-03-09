@@ -297,9 +297,93 @@
     transform: scale(1.4);
     position: relative;
     left: 20px;
+    display: inline-block !important;
 }
 
 
+.flow {
+
+    .content {
+        .under-line {
+            font-weight: bold;
+            border-bottom: 1px solid $l-brown;
+        }
+    }
+
+}
+
+.side-fav-posts {
+    border: 1px solid $l-brown;
+
+    h3 {
+        padding: 10px;
+        border-bottom: 1px solid $bg-color;
+        margin-bottom: 0;
+        font-weight: bold;
+    }
+
+    ol {
+        counter-reset:number;
+
+        li {
+            border-top: 1px solid $l-brown;
+            padding: 12px;
+
+
+            &:hover {
+                background: $l-brown;
+            }
+
+            &:before {
+                counter-increment: number;
+                content: counter(number);
+                position: absolute;
+                z-index: 300;
+                background: #d5d5d5;
+                padding: .5em .8em;
+                color: #fff;
+            }
+
+            &:nth-child(1) {
+                &:before {
+                    background: $main;
+                }
+            }
+
+            &:nth-child(2),&:nth-child(3) {
+                &:before {
+                    background: $sub;
+                }
+            }
+
+            &:after {
+                content: "";
+                clear: both;
+                display: block;
+            }
+
+            .content-thum{
+                width: 100px;
+                height: 100px;
+                float: left;
+                margin: 0 10px 0 0;
+                padding: 0;
+                min-width: 100px;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            .content-main {
+                a {
+                    text-decoration: none;
+                    color: $d-brown;
+                }
+            }
+        }
+    }
+}
 
 
 @import "icon/*.png";

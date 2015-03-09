@@ -121,7 +121,7 @@ h3 {
                 position: absolute;
                 visibility: visible;
                 bottom: -0.02em;
-                left: 0;
+                left: .1em;
                 color: $main;
             }
         }
@@ -441,6 +441,10 @@ p {
         margin-right: 0;
         width: 100%;
     }
+
+    .col__under {
+        margin-top: 2em;
+    }
 }
 
 .cat_icon {
@@ -746,7 +750,11 @@ p {
     }
 }
 
-
+.error404 {
+    #searchform input#s {
+        background: $l-brown;
+    }
+}
 
 
 
@@ -2208,13 +2216,25 @@ ul.foot_navi {
     float: left;
     width: 30%;
     max-width: 150px;
-
     padding: 5px;
+    position: relative;
 
     img {
         @include box-shadow(0 0 5px rgba( $main , .1 ));
         @include border-radius(2px);
     }
+}
+
+
+.new {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    background: $main;
+    color: #fff;
+    font-weight: bold;
+    padding: 3px;
+    font-size: .8em;
 }
 
 .content-main {

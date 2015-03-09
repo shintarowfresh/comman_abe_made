@@ -194,7 +194,7 @@ h3.sub_title span:before {
   position: absolute;
   visibility: visible;
   bottom: -0.02em;
-  left: 0;
+  left: .1em;
   color: #c62828;
 }
 h3 .fa {
@@ -493,6 +493,9 @@ p .btn__works {
   margin-right: 0;
   width: 100%;
 }
+.col .col__under {
+  margin-top: 2em;
+}
 
 .cat_icon {
   background: #d5d5d5;
@@ -745,6 +748,10 @@ p .btn__works {
 #searchform .screen-reader-text {
   display: block;
   margin-bottom: .5em;
+}
+
+.error404 #searchform input#s {
+  background: #f9f9f9;
 }
 
 /**
@@ -1985,6 +1992,7 @@ ul.foot_navi li a {
   width: 30%;
   max-width: 150px;
   padding: 5px;
+  position: relative;
 }
 .content-thum img {
   -moz-box-shadow: 0 0 5px rgba(198, 40, 40, 0.1);
@@ -1993,6 +2001,17 @@ ul.foot_navi li a {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
+}
+
+.new {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  background: #c62828;
+  color: #fff;
+  font-weight: bold;
+  padding: 3px;
+  font-size: .8em;
 }
 
 .content-main {
@@ -2993,6 +3012,67 @@ ul.foot_navi li a {
   transform: scale(1.4);
   position: relative;
   left: 20px;
+  display: inline-block !important;
+}
+
+.flow .content .under-line {
+  font-weight: bold;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+.side-fav-posts {
+  border: 1px solid #f9f9f9;
+}
+.side-fav-posts h3 {
+  padding: 10px;
+  border-bottom: 1px solid #e4e0e0;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.side-fav-posts ol {
+  counter-reset: number;
+}
+.side-fav-posts ol li {
+  border-top: 1px solid #f9f9f9;
+  padding: 12px;
+}
+.side-fav-posts ol li:hover {
+  background: #f9f9f9;
+}
+.side-fav-posts ol li:before {
+  counter-increment: number;
+  content: counter(number);
+  position: absolute;
+  z-index: 300;
+  background: #d5d5d5;
+  padding: .5em .8em;
+  color: #fff;
+}
+.side-fav-posts ol li:nth-child(1):before {
+  background: #c62828;
+}
+.side-fav-posts ol li:nth-child(2):before, .side-fav-posts ol li:nth-child(3):before {
+  background: #638199;
+}
+.side-fav-posts ol li:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.side-fav-posts ol li .content-thum {
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin: 0 10px 0 0;
+  padding: 0;
+  min-width: 100px;
+}
+.side-fav-posts ol li .content-thum img {
+  max-width: 100%;
+}
+.side-fav-posts ol li .content-main a {
+  text-decoration: none;
+  color: #908181;
 }
 
 .icon-fb {
