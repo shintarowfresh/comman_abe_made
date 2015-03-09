@@ -1,9 +1,6 @@
 <?php
 /**
  * サイトバー
- *
- *
- *
  */
 ?>
 
@@ -15,57 +12,67 @@
 
     <?php else :?>
 
-    <div id="fix" class="fix">
+    <aside>
 
-        <aside>
+        <?php if ( is_active_sidebar( 'sidebar-main' ) ) : ?>
 
-            <?php if ( is_active_sidebar( 'sidebar-main' ) ) : ?>
-
-        </aside>
-
-
-        <?php dynamic_sidebar( 'sidebar-main' ); ?>
-
+    </aside>
 
         <?php else : ?>
 
-        <p>カンマンって制作会社でしょ？
-            イエス！ 制作会社のやっている自社メディア「カンマンブログ」</p>
+    <div id="fix" class="fix">
 
+        <aside class="banner--square">
+            <!--ブログのバナー-->
+            <a href="/category/staff-blog/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/banner/blog.jpg" alt="スタッフブログ"></a>
         </aside>
 
-           <aside>
+        <?php if( is_single() ) :?>
+        <aside>
+        <div class="side-fav-posts">
+            <h3><i class="fa fa-trophy"></i> 人気記事ランキング</h3>
 
-               <p>カンマンはLINE@始めました！</p>
+            <?php $posts = get_posts(array(
+                 'posts_per_page' => 5,
+                 'meta_key' => 'views',
+                 'post_type' => 'post',
+                 'orderby' => 'meta_value_num'
+             )); ?>
+            <ol>
+            <?php foreach($posts as $post) : ?>
+            <li>
+                <div class="content-thum">
+                    <?php if(has_post_thumbnail()): ?>
+                    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+                    <?php else :?>
+                    <a href="<?php the_permalink(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/no-thum.png" alt="サムネイルはありません"></a>
+                    <?php endif ;?>
+                </div><!--/.content-thum-->
+                <div class="content-main">
 
-           </aside>
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 
-    <aside class="banner--square">
-        <a href="http://www.s-henkan.com/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/banner/c2.jpg" alt="C2"></a>
-    </aside>
-
-    <aside>
-        <img src="http://placehold.it/300x300" />
-    </aside>
-
-    <aside>
-        <img src="http://placehold.it/300x300" />
-    </aside>
-
-            <aside>
-                広告枠
-            </aside>
-
-            <aside>
-                結構実績があります。
-                徳島婚活SNS
-            </aside>
+                </div>
+            </li>
+            <?php endforeach; ?>
+            </ol>
+        </div>
+        </aside>
+        <?php endif ;?>
 
 
+        <aside>
+            <a href="http://konkatsu-sns.com/?m=portal&a=page_user_top"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/banner/konkatu.jpg" alt="婚活SNS"></a>
+        </aside>
 
-    <?php endif; ?>
+        <aside class="banner--square">
+            <!--C2のバナー-->
+            <a href="http://www.s-henkan.com/" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/banner/c2.jpg" alt="C2"></a>
+        </aside>
 
-</div><!--/.fix-->
+    <?php endif ;?>
+
+    </div><!--/.fix-->
 
     <?php endif ;?>
 
