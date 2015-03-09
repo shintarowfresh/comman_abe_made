@@ -41,6 +41,11 @@ Template Name: no-sidebar
                 <h5 class="sub_title st1">お問い合わせについて</h5>
             </div>
 
+        <?php elseif( is_page( 'flow' ) ) :?>
+            <div class="variable">
+                <h3 class="sub_title">fr<span>o</span>w</h3>
+                <h5 class="sub_title st1">制作の流れ</h5>
+            </div>
         <?php else :?>
 
             <h2><?php the_title(); ?></h2>
