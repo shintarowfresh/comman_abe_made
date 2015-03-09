@@ -13,15 +13,34 @@
         <?php if(has_post_thumbnail()): ?>
         <div class="content-thum">
             <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+
+            <?php
+            $days = 1;
+            $today = date_i18n('U');
+            $entry = get_the_time('U');
+            $elapsed = date('U',($today - $entry)) / 86400;
+            if( $days > $elapsed ){
+                echo '<span class="new">本日更新！</span>';
+            }
+            ?>
+
         </div><!--/.content-thum-->
         <?php else :?>
         <div class="content-thum">
             <a href="<?php the_permalink(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/no-thum.png" alt="サムネイルはありません"></a>
+
+            <?php
+            $days = 1;
+            $today = date_i18n('U');
+            $entry = get_the_time('U');
+            $elapsed = date('U',($today - $entry)) / 86400;
+            if( $days > $elapsed ){
+                echo '<span class="new">本日更新！</span>';
+            }
+            ?>
         </div><!--/.content-thum-->
         <?php endif ;?>
-
         <?php endif ; ?>
-
 
         <div itemscope itemtype="http://schema.org/Article" class="content-main">
 
@@ -29,13 +48,17 @@
 
                 <time itemprop="datePublished" content="<?php the_time( 'Y-n-j' ); ?>"><?php the_time( 'Y.n.j' ); ?></time>
 
+                <?php if( is_single() ) :?>
+
                 <span class="meta tag"><i class="fa fa-tags"></i> <?php the_tags( '', '' ); ?></span>
 
-                <?php if( is_single() ) :?>
                 <h2 itemprop="name" class="title">
                     <?php the_title(); ?>
                 </h2>
                 <?php else :?>
+
+                <span class="auther-name"><i class="fa fa-pencil"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><?php the_author_meta('nickname'); ?></span></span></span>
+
                 <h2 class="title">
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </h2>
@@ -46,7 +69,7 @@
 
                    <?php if( is_single() ) :?>
                     <div class="who-wrote">
-                        <span class="auther-name"><i class="fa fa-pencil"></i>書いた人：<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><?php the_author_meta('nickname'); ?></span></span></span>
+                        <span class="auther-name"><i class="fa fa-pencil"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><?php the_author_meta('nickname'); ?></span></span></span>
                     </div>
                     <?php endif ;?>
 
@@ -169,13 +192,13 @@
             </div><!--/.cta-->
 
             <div class="col">
-                <div class="box_2">
-                    <h3><i class="fa fa-facebook-official"></i> FBページをいいね！で応援よろしくお願いします！</h3>
+                <div class="box_2 col__under">
+                    <h3 class="col__under-posts"><i class="fa fa-facebook-official"></i> FBページをいいね！で応援よろしくお願いします！</h3>
 
                     <div class="fb-like" data-href="https://www.facebook.com/comman.inc?ref=notif&amp;notif_t=page_new_likes" data-width="300" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
 
                 </div>
-                <div class="box_2">
+                <div class="box_2 col__under">
                     <div class="author">
 
                         <h3><i class="fa fa-pencil"></i> この記事を書いた人</h3>
@@ -190,6 +213,7 @@
                             <div class="thum">
                                 <span class="auther-photo"><img src="<?php the_field('author-photo', 'user_'. $author_id); ?>" alt="<?php the_author_meta('nickname'); ?>"></span>
                             </div>
+
                             <div class="main-sec">
                                 <span class="auther-name"><?php the_author_meta('nickname'); ?></span>
 
