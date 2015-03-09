@@ -6,7 +6,6 @@
  */
 get_header(); ?>
 
-
 <div class="content content_width" role="main">
 
     <div class="three-two">
@@ -15,7 +14,7 @@ get_header(); ?>
 
             <?php if( is_category( 'staff-blog' )  ) :?>
 
-                <h3 class="sub_title">staff Bl<span>o</span>g</h3>
+                <h3 class="sub_title">b-c<span>o</span>mman</h3>
                 <h5 class="sub_title st1"><?php wp_title(''); ?></h5>
 
             <?php elseif( is_tag() || is_category() ) :?>
