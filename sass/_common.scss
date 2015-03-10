@@ -195,6 +195,11 @@ h4 , h5 , h6 {
     }
 }
 
+blockquote {
+    background: $l-brown;
+    padding: .3em;
+}
+
 /* はみ出しを回避 */
 #wrapper {
     overflow: hidden;

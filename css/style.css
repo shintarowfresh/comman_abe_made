@@ -254,6 +254,11 @@ h4 .fa, h5 .fa, h6 .fa {
   color: #c62828;
 }
 
+blockquote {
+  background: #f9f9f9;
+  padding: .3em;
+}
+
 /* はみ出しを回避 */
 #wrapper {
   overflow: hidden;
@@ -3073,6 +3078,16 @@ ul.foot_navi li a {
 .side-fav-posts ol li .content-main a {
   text-decoration: none;
   color: #908181;
+}
+
+.omission {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 22em;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
 }
 
 .icon-fb {

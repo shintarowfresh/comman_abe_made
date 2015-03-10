@@ -213,6 +213,8 @@ a
     transition-duration: .3s;
 
     opacity: 1;
+
+    filter: alpha(opacity=100);
     color: #c62828;
 
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -220,6 +222,7 @@ a
 a:hover
 {
     opacity: .6;
+    filter: alpha(opacity=60);
 
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
 }
@@ -427,6 +430,13 @@ h6 .fa
     color: #c62828;
 }
 
+blockquote
+{
+    padding: .3em;
+
+    background: #f9f9f9;
+}
+
 /* はみ出しを回避 */
 #wrapper
 {
@@ -447,6 +457,7 @@ h6 .fa
 .no-js #footer
 {
     opacity: 1;
+    filter: alpha(opacity=100);
 }
 
 .content,
@@ -454,6 +465,7 @@ h6 .fa
 #footer
 {
     opacity: 0;
+    filter: alpha(opacity=0);
 }
 
 .content .inner table
@@ -571,6 +583,7 @@ h6 .fa
 .img_container:hover
 {
     opacity: .7;
+    filter: alpha(opacity=70);
     border: 1px solid #c62828;
 
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -634,11 +647,14 @@ h6 .fa
 
     opacity: 1;
 
+    filter: alpha(opacity=100);
+
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
 }
 .btn__works:hover
 {
     opacity: 1;
+    filter: alpha(opacity=100);
     color: #fff;
     background: #c62828;
 
@@ -649,6 +665,8 @@ h6 .fa
     margin-left: 1em;
 
     opacity: 1;
+
+    filter: alpha(opacity=100);
 
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
 }
@@ -878,6 +896,8 @@ p .btn__works
     text-align: center;
 
     opacity: .8;
+
+    filter: alpha(opacity=80);
 }
 .swipeshow .dot
 {
@@ -1702,6 +1722,7 @@ nav.menu .blog a:before
 .panel_btn_pc:hover
 {
     opacity: 1;
+    filter: alpha(opacity=100);
 }
 .panel_btn:active,
 .panel_btn_pc:active
@@ -2102,11 +2123,14 @@ ul.foot_navi li a
 
     opacity: .5;
 
+    filter: alpha(opacity=50);
+
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
 }
 .site-gallery li img:hover
 {
     opacity: 1;
+    filter: alpha(opacity=100);
 
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
 }
@@ -2147,6 +2171,7 @@ ul.foot_navi li a
 /*パンくず*/
 .breadcrumb
 {
+    font-size: 13px;
     font-size: .85rem;
 
     padding: 5px;
@@ -2384,6 +2409,8 @@ ul.foot_navi li a
 
     opacity: 1;
 
+    filter: alpha(opacity=100);
+
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
 }
 .cat_list #shutter a
@@ -2427,6 +2454,8 @@ ul.foot_navi li a
     transition-duration: .3s;
 
     opacity: 1;
+
+    filter: alpha(opacity=100);
     background: #fff;
 
     filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
@@ -2457,6 +2486,7 @@ ul.foot_navi li a
 .cat_list #shutter span.btn_cross.close:before
 {
     opacity: 0;
+    filter: alpha(opacity=0);
 
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
 }
@@ -2562,6 +2592,8 @@ ul.foot_navi li a
     cursor: pointer;
 
     opacity: .7;
+
+    filter: alpha(opacity=70);
 }
 #searchform #searchsubmit .fa
 {
@@ -2736,6 +2768,7 @@ ul.foot_navi li a
 .hope-list li a:hover
 {
     opacity: 1;
+    filter: alpha(opacity=100);
     color: #fff;
     background: #c62828;
 
@@ -3145,6 +3178,7 @@ ul.foot_navi li a
 .single .share ul li a:hover
 {
     opacity: .7;
+    filter: alpha(opacity=70);
 }
 .single .share ul li a span
 {
@@ -3482,6 +3516,8 @@ ul.foot_navi li a
     cursor: pointer;
 
     opacity: .7;
+
+    filter: alpha(opacity=70);
 }
 
 /*お問い合わせページ*/
@@ -3727,10 +3763,12 @@ ul.foot_navi li a
     0%
     {
         opacity: 0;
+        filter: alpha(opacity=0);
     }
     100%
     {
         opacity: 1;
+        filter: alpha(opacity=100);
     }
 }
 @keyframes blink
@@ -3738,10 +3776,12 @@ ul.foot_navi li a
     0%
     {
         opacity: 0;
+        filter: alpha(opacity=0);
     }
     100%
     {
         opacity: 1;
+        filter: alpha(opacity=100);
     }
 }
 .load
@@ -3819,12 +3859,15 @@ ul.foot_navi li a
     text-align: center;
 
     opacity: .5;
+
+    filter: alpha(opacity=50);
     color: #fff;
     background: #c62828;
 }
 .member .member__sns .member__sns__btn:hover
 {
     opacity: 1;
+    filter: alpha(opacity=100);
 }
 .member .member__sns ul
 {
@@ -3870,6 +3913,8 @@ ul.foot_navi li a
     text-align: center;
 
     opacity: 0;
+
+    filter: alpha(opacity=0);
     color: #fff;
     border-radius: 3px;
     background: rgba(198, 40, 40, .9);
@@ -3878,6 +3923,7 @@ ul.foot_navi li a
 .phone-popup:hover span
 {
     opacity: 1;
+    filter: alpha(opacity=100);
 }
 
 .last-updated
@@ -4059,6 +4105,19 @@ ul.foot_navi li a
     color: #908181;
 }
 
+.omission
+{
+    display: inline-block;
+    overflow: hidden;
+
+    width: 22em;
+
+    vertical-align: middle;
+    white-space: nowrap;
+    text-decoration: none;
+    text-overflow: ellipsis;
+}
+
 .icon-fb
 {
     background-position: 0 0;
@@ -4165,6 +4224,7 @@ ul.foot_navi li a
     .btn__full:hover
     {
         opacity: 1;
+        filter: alpha(opacity=100);
         color: #fff;
         background: #c62828;
 
@@ -4197,11 +4257,14 @@ ul.foot_navi li a
 
         opacity: 1;
 
+        filter: alpha(opacity=100);
+
         filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     }
     .btn__works:hover
     {
         opacity: 1;
+        filter: alpha(opacity=100);
         color: #fff;
         background: #c62828;
 
@@ -4212,6 +4275,8 @@ ul.foot_navi li a
         margin-left: 1em;
 
         opacity: 1;
+
+        filter: alpha(opacity=100);
 
         filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     }
@@ -4227,6 +4292,8 @@ ul.foot_navi li a
         margin-left: 10px;
 
         opacity: .7;
+
+        filter: alpha(opacity=70);
         color: #000;
 
         filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -4454,6 +4521,7 @@ ul.foot_navi li a
     .btn__full:hover
     {
         opacity: 1;
+        filter: alpha(opacity=100);
         color: #fff;
         background: #c62828;
 
@@ -4485,11 +4553,14 @@ ul.foot_navi li a
 
         opacity: 1;
 
+        filter: alpha(opacity=100);
+
         filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     }
     .btn__works:hover
     {
         opacity: 1;
+        filter: alpha(opacity=100);
         color: #fff;
         border: 2px solid #c62828;
         background: #c62828;
@@ -4501,6 +4572,8 @@ ul.foot_navi li a
         margin-left: 1em;
 
         opacity: 1;
+
+        filter: alpha(opacity=100);
 
         filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
     }
@@ -5229,4 +5302,5 @@ ul.foot_navi li a
 .btn-on
 {
     opacity: 1 !important;
+    filter: alpha(opacity=100);
 }

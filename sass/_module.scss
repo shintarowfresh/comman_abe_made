@@ -385,6 +385,16 @@
     }
 }
 
+.omission {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 22em;
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
 
 @import "icon/*.png";
 
