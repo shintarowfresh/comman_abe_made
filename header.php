@@ -136,7 +136,7 @@
 
                                 <li>
                                     <span class="<?php echo $catslug; ?> meta_cat_icon"><?php echo $catname; ?></span>
-                                    <a href="<?php the_permalink();?>"><?php the_title(); ?></a>
+                                    <a class="omission" href="<?php the_permalink();?>"><?php the_title(); ?></a>
                                     <span>(<?php the_time('Y.n.j'); ?>)</span>
                                 </li>
 
