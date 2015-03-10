@@ -42,9 +42,9 @@ get_header(); ?>
 
            <h3><i class="fa fa-comment-o"></i> あなたのページはネットの中で主張できていますか？　確認できていますか？</h3>
 
-           <p>インターネットの歴史は<strong>とにかく浅い</strong>んです。</p>
+           <p>インターネットの歴史は<strong>まだまだ浅い</strong>んです。</p>
 
-           <p>webの進化はすさまじいですが、それでもwebを使っての実践的な発信は<strong class="good">まだまだ始まったばかり。</strong></p>
+           <p>webの進化はすさまじいですが、それでもwebを使っての実践的な発信は<strong class="good">始まったばかり。</strong></p>
 
            <p>もしあなたが<strong class="bad">乗り遅れてしまった</strong>と感じているのであれば、<strong class="good">問題ありません。</strong></p>
 
