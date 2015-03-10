@@ -345,7 +345,7 @@
                                            </h3>
 
                                             <div class="share-count">
-                                                <span><i class="fa fa-twitter-square"></i><?php if(function_exists('get_scc_twitter')) echo get_scc_twitter(); ?></span> <span><i class="fa fa-facebook-official"></i><?php if(function_exists('get_scc_facebook')) echo get_scc_facebook(); ?></span> <span><i class="fa fa-hatena"></i><?php if(function_exists('get_scc_hatebu')) echo get_scc_facebook(); ?></span>
+                                                <span><i class="fa fa-twitter-square"></i><?php if(function_exists('get_scc_twitter')) echo get_scc_twitter(); ?></span> <span><i class="fa fa-facebook-official"></i><?php if(function_exists('get_scc_facebook')) echo get_scc_facebook(); ?></span> <span><i class="fa fa-hatena"></i><?php if(function_exists('get_scc_hatebu')) echo get_scc_hatebu(); ?></span>
                                             </div>
 
                                         </div>
