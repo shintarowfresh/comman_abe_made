@@ -78,7 +78,7 @@
                         <?php if( is_single() ) : ?>
                         <span><?php if(function_exists('scc_get_share_total')) echo scc_get_share_total(); ?><span>shares</span></span>
                         <?php else : ?>
-                        <span><i class="fa fa-twitter-square"></i><?php if(function_exists('scc_get_share_twitter')) echo scc_get_share_twitter(); ?></span> <span><i class="fa fa-facebook-official"></i><?php if(function_exists('scc_get_share_facebook')) echo scc_get_share_facebook(); ?></span> <span><i class="fa fa-hatena"></i><?php if(function_exists('scc_get_share_hatebu')) echo scc_get_share_facebook(); ?></span>
+                        <span><i class="fa fa-twitter-square"></i><?php if(function_exists('scc_get_share_twitter')) echo scc_get_share_twitter(); ?></span> <span><i class="fa fa-facebook-official"></i><?php if(function_exists('scc_get_share_facebook')) echo scc_get_share_facebook(); ?></span> <span><i class="fa fa-hatena"></i><?php if(function_exists('scc_get_share_hatebu')) echo scc_get_share_hatebu(); ?></span>
                         <?php endif ; ?>
 
                     </div>
@@ -174,10 +174,10 @@
                             <a class="btn__sns nonmover" href="http://www.facebook.com/share.php?u=<?php echo $canonical_url_encode;?>" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-facebook-official"></i>シェア！<span><?php if(function_exists('get_scc_facebook')) echo get_scc_facebook(); ?></span></a>
                         </li>
                         <li class="b-hatena">
-                            <a class="btn__sns nonmover" href="http://b.hatena.ne.jp/add?mode=confirm&url=<?php echo $canonical_url_encode;?>&title=<?php echo $title_encode;?>" onclick="window.open(this.href, 'FBwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-hatena"></i>はてブ<span><?php if(function_exists('get_scc_hatebu')) echo get_scc_facebook(); ?></span></a>
+                            <a class="btn__sns nonmover" href="http://b.hatena.ne.jp/add?mode=confirm&url=<?php echo $canonical_url_encode;?>&title=<?php echo $title_encode;?>" onclick="window.open(this.href, 'FBwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-hatena"></i>はてブ<span><?php if(function_exists('get_scc_hatebu')) echo get_scc_hatebu(); ?></span></a>
                         </li>
                         <li class="b-pocket">
-                            <a class="btn__sns nonmover" href="http://getpocket.com/edit?url=<?php echo $canonical_url_encode;?>&title=<?php echo $title_encode;?>" onclick="window.open(this.href, 'FBwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa icon-pocket"></i>pocket<span><?php if(function_exists('get_scc_pocket')) echo get_scc_facebook(); ?></span></a>
+                            <a class="btn__sns nonmover" href="http://getpocket.com/edit?url=<?php echo $canonical_url_encode;?>&title=<?php echo $title_encode;?>" onclick="window.open(this.href, 'FBwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa icon-pocket"></i>pocket<span><?php if(function_exists('get_scc_pocket')) echo get_scc_pocket(); ?></span></a>
                         </li>
 
                         <li class="b-line">
@@ -283,7 +283,7 @@
                                             </h3>
 
                                             <div class="share-count">
-                                                <span><i class="fa fa-twitter-square"></i><?php if(function_exists('scc_get_share_twitter')) echo scc_get_share_twitter(); ?></span> <span><i class="fa fa-facebook-official"></i><?php if(function_exists('scc_get_share_facebook')) echo scc_get_share_facebook(); ?></span> <span><i class="fa fa-hatena"></i><?php if(function_exists('scc_get_share_hatebu')) echo scc_get_share_facebook(); ?></span>
+                                                <span><i class="fa fa-twitter-square"></i><?php if(function_exists('scc_get_share_twitter')) echo scc_get_share_twitter(); ?></span> <span><i class="fa fa-facebook-official"></i><?php if(function_exists('scc_get_share_facebook')) echo scc_get_share_facebook(); ?></span> <span><i class="fa fa-hatena"></i><?php if(function_exists('scc_get_share_hatebu')) echo scc_get_share_hatebu(); ?></span>
                                             </div>
                                         </div>
                                     </div>
