@@ -12,13 +12,13 @@
 
         <?php if(has_post_thumbnail()): ?>
         <div class="content-thum">
-            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+            <a href="<?php the_permalink(); ?>" style=" display: block; background-image:url(<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>); background-repeat: no-repeat;"><?php the_post_thumbnail(); ?></a>
 
             <?php
             $days = 1;
             $today = date_i18n('U');
             $entry = get_the_time('U');
-            $elapsed = date('U',($today - $entry)) / 86400;
+            $elapsed = date('U',($today - $entry)) / 43200;
             if( $days > $elapsed ){
                 echo '<span class="new">本日更新！</span>';
             }
