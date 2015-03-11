@@ -252,7 +252,6 @@
                                     'post__not_in' => array($post -> ID),
                                     'posts_per_page'=> 5,
                                     'tag__in' => $tag_ids,
-                                    'orderby' => 'rand',
                                 );
                                 $query = new WP_Query($args); ?>
                                 <?php if( $query -> have_posts() && !empty($tag_ids) ): ?>
