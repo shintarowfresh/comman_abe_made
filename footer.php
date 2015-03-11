@@ -347,9 +347,5 @@
         ;})
 </script>
 
-<?php
-// content.php を読み込む
-get_template_part( 'analyticstracking' ); ?>
-
     </body>
 </html>
