@@ -189,7 +189,7 @@ function pagination($pages = '', $range = 2)
 
 //抜粋の文字数制御
 function new_excerpt_mblength($length) {
-    return 66;
+    return 50;
 }
 add_filter('excerpt_mblength', 'new_excerpt_mblength');
 
