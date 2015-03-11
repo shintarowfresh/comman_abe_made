@@ -25,26 +25,6 @@
     }
 }
 
-/*ポチレバ*/
-.pochireba {
-    .pochi_img {
-    }
-    .pochi_info {
-        .pochi_name {
-        }
-        .pochi_price {
-        }
-        .pochi_time {
-        }
-        .pochi_seller {
-        }
-        .pochi_post {
-        }
-    }
-    .pochireba-footer {
-    }
-}
-
 /*横線のあるスタイル*/
 .hr {
     position: relative;
@@ -395,6 +375,128 @@
     text-decoration: none;
 }
 
+/*apphtml*/
+.apphtml {
+    margin-bottom: 2em;
+
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    h3 {
+        .apptitle {
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+
+        .appicon {
+            display: block;
+            width: 150px;
+            height: 150px;
+            float: left;
+            margin: 0 1em 2em 0;
+
+            a {
+                img {
+                    border: 1px solid $l-brown;
+                    border-radius: 16px;
+                }
+            }
+        }
+        .appinfo {
+            display: inline-block;
+
+            span {
+                display: block;
+            }
+        }
+
+    .app-ss {
+        clear: both;
+        background: $l-brown;
+        padding: 1em 0;
+
+        li {
+            display: inline-block;
+            width: 45%;
+            margin: 0 2.3%;
+
+            &:before {
+                content: none;
+            }
+
+            img {
+            }
+        }
+    }
+    .app_dw_bt {
+        text-decoration: none;
+        background: $main;
+        padding: .5em 1em;
+        color: #fff;
+        display: inline-block;
+        float: right;
+        border-radius: 3px;
+
+        &:before {
+            content: "\f179";
+            font-family: FontAwesome;
+            margin-right: .3em;
+        }
+    }
+}
+
+/*ポチレバ*/
+.pochireba {
+    margin-bottom: 2em;
+
+    a {
+        .pochi_img {
+            display: inline-block;
+            border-radius: 10px;
+            float: left;
+        }
+    }
+
+    .pochi_info {
+        margin-left: 73px;
+
+        .pochi_name {
+            a {
+            }
+        }
+        .pochi_price {
+        }
+        .pochi_seller {
+            a {
+            }
+        }
+        .pochi_time {
+        }
+        .pochi_post {
+            a {
+            }
+        }
+    }
+    .pochireba-footer {
+    }
+}
+
+.crayon-table {
+    tbody {
+        border: none !important;
+
+        tr {
+            td {
+                min-width: 0 !important;
+            }
+        }
+    }
+}
 
 @import "icon/*.png";
 

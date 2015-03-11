@@ -174,7 +174,7 @@ h3 {
 }
 h3.sub_title {
   font-family: helvetica, sans-serif;
-  font-size: 3.6em;
+  font-size: 3.4em;
   font-weight: 800;
   margin-bottom: 0;
   margin-top: 10px;
@@ -1978,6 +1978,8 @@ ul.foot_navi li a {
 }
 .archive article .title {
   margin-bottom: 0;
+  font-size: 1.2em;
+  font-weight: bold;
 }
 .archive article time {
   margin: 1em 0;
@@ -1985,11 +1987,15 @@ ul.foot_navi li a {
   font-weight: bold;
   color: #638199;
 }
+.archive article .auther-name {
+  font-size: .8em;
+}
 .archive article section {
   margin: 1em 0;
 }
 .archive article section p {
   margin-bottom: 0;
+  font-size: .8em;
 }
 
 .content-thum {
@@ -1998,6 +2004,10 @@ ul.foot_navi li a {
   max-width: 150px;
   padding: 5px;
   position: relative;
+}
+.content-thum a {
+  background-size: cover;
+  background-position: 50%;
 }
 .content-thum img {
   -moz-box-shadow: 0 0 5px rgba(198, 40, 40, 0.1);
@@ -2788,7 +2798,6 @@ ul.foot_navi li a {
   line-height: 1.3;
 }
 
-/*ポチレバ*/
 /*横線のあるスタイル*/
 .hr {
   position: relative;
@@ -3088,6 +3097,83 @@ ul.foot_navi li a {
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
+}
+
+/*apphtml*/
+.apphtml {
+  margin-bottom: 2em;
+}
+.apphtml:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.apphtml h3 .apptitle a {
+  text-decoration: none;
+}
+.apphtml .appicon {
+  display: block;
+  width: 150px;
+  height: 150px;
+  float: left;
+  margin: 0 1em 2em 0;
+}
+.apphtml .appicon a img {
+  border: 1px solid #f9f9f9;
+  border-radius: 16px;
+}
+.apphtml .appinfo {
+  display: inline-block;
+}
+.apphtml .appinfo span {
+  display: block;
+}
+.apphtml .app-ss {
+  clear: both;
+  background: #f9f9f9;
+  padding: 1em 0;
+}
+.apphtml .app-ss li {
+  display: inline-block;
+  width: 45%;
+  margin: 0 2.3%;
+}
+.apphtml .app-ss li:before {
+  content: none;
+}
+.apphtml .app_dw_bt {
+  text-decoration: none;
+  background: #c62828;
+  padding: .5em 1em;
+  color: #fff;
+  display: inline-block;
+  float: right;
+  border-radius: 3px;
+}
+.apphtml .app_dw_bt:before {
+  content: "\f179";
+  font-family: FontAwesome;
+  margin-right: .3em;
+}
+
+/*ポチレバ*/
+.pochireba {
+  margin-bottom: 2em;
+}
+.pochireba a .pochi_img {
+  display: inline-block;
+  border-radius: 10px;
+  float: left;
+}
+.pochireba .pochi_info {
+  margin-left: 73px;
+}
+
+.crayon-table tbody {
+  border: none !important;
+}
+.crayon-table tbody tr td {
+  min-width: 0 !important;
 }
 
 .icon-fb {
