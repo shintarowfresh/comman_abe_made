@@ -182,6 +182,9 @@
                 <div class="acf-map">
                     <div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
                 </div>
+
+                <a class="btn--map" href="http://maps.google.com/maps?q=<?php echo $location['address']; ?>+<?php the_field('shop-name'); ?>" target="_blank">Googleマップで開く</a>
+
                 <?php endif; ?>
 
                 <?php endif; ?>
