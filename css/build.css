@@ -278,6 +278,11 @@ strong span
     color: #c62828;
 }
 
+b
+{
+    font-weight: bold;
+}
+
 h1,
 h2,
 h3,
@@ -576,6 +581,7 @@ blockquote
     transition-duration: .3s;
 
     border: 1px solid #d5d5d5;
+    background-position-x: center;
     background-size: cover;
 
     -ms-behavior: url(backgroundsize.min.htc);
@@ -4175,13 +4181,15 @@ ul.foot_navi li a
 
     padding: 1em 0;
 
+    text-align: center;
+
     background: #f9f9f9;
 }
 .apphtml .app-ss li
 {
     display: inline-block;
 
-    width: 45%;
+    width: 44%;
     margin: 0 2.3%;
 }
 .apphtml .app-ss li:before
@@ -4234,6 +4242,11 @@ ul.foot_navi li a
 .crayon-table tbody tr td
 {
     min-width: 0 !important;
+}
+
+.post_content
+{
+    overflow: hidden;
 }
 
 .icon-fb

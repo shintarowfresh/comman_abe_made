@@ -152,6 +152,10 @@ strong span {
   color: #c62828;
 }
 
+b {
+  font-weight: bold;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Noto Sans Japanese", "Roboto", 游ゴシック, YuGothic, Meiryo, sans-serif;
 }
@@ -374,6 +378,7 @@ blockquote {
   -o-transition-duration: 0.3s;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  background-position-x: center;
 }
 .img_container:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -3132,10 +3137,11 @@ ul.foot_navi li a {
   clear: both;
   background: #f9f9f9;
   padding: 1em 0;
+  text-align: center;
 }
 .apphtml .app-ss li {
   display: inline-block;
-  width: 45%;
+  width: 44%;
   margin: 0 2.3%;
 }
 .apphtml .app-ss li:before {
@@ -3174,6 +3180,10 @@ ul.foot_navi li a {
 }
 .crayon-table tbody tr td {
   min-width: 0 !important;
+}
+
+.post_content {
+  overflow: hidden;
 }
 
 .icon-fb {
