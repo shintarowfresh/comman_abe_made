@@ -419,10 +419,11 @@
         clear: both;
         background: $l-brown;
         padding: 1em 0;
+        text-align: center;
 
         li {
             display: inline-block;
-            width: 45%;
+            width: 44%;
             margin: 0 2.3%;
 
             &:before {
@@ -496,6 +497,10 @@
             }
         }
     }
+}
+
+.post_content {
+    overflow: hidden;
 }
 
 @import "icon/*.png";
