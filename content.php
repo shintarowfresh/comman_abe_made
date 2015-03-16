@@ -131,35 +131,61 @@
                 the_content('', true );
                 else : the_content();
                 endif; ?>
-                
-                
+
+
                 <?php if(get_post_meta($post->ID, 'shop-name', true)): ?>
-                
-                <?php 
+
+                <?php
                 $location = get_field('shop-location');
                 if( !empty($location) ):
                 ?>
-                
+
                 <h2>お店の情報「<?php the_field('shop-name'); ?>」さん</h2>
-                
+
                 <div class="shareHtmlFrame clearfix">
-                
-                <span class="shareThumb"><a href="<?php the_field('shop-link'); ?>" target="_blank"><img src="http://s.wordpress.com/mshots/v1/<?php urlencode( the_field('shop-link') ); ?>?w=300" class="shareThumbImg" border="0" alt="" /></a></span>
-                
-                <h6 class="shareTitle"><a href="<?php the_field('shop-link'); ?>" target="_blank"><?php the_field('shop-name'); ?></a></h6>
-                <h6>住所：<?php echo $location['address']; ?></h6>
-                
-                <span><?php the_field('shop-comment'); ?></span>
-                
+
+                    <span class="shareThumb"><a href="<?php the_field('shop-link'); ?>" target="_blank"><img src="http://s.wordpress.com/mshots/v1/<?php urlencode( the_field('shop-link') ); ?>?w=300" class="shareThumbImg" border="0" alt="" /></a></span>
+
+                    <div class="sharemain">
+
+                        <h6 class="shareTitle"><a href="<?php the_field('shop-link'); ?>" target="_blank"><?php the_field('shop-name'); ?></a></h6>
+                        <h6>住所：<?php echo $location['address']; ?></h6>
+
+                        <span><?php the_field('shop-comment'); ?></span>
+
+                        <ul class="shop-more-info">
+
+                            <?php if( get_field('shop-phone') ): ?>
+
+                            <li>電話：<?php the_field('shop-phone'); ?></li>
+
+                            <?php endif; ?>
+
+                            <?php if( get_field('shop-hours') ): ?>
+
+                            <li>営業時間：<?php the_field('shop-hours'); ?></li>
+
+                            <?php endif; ?>
+
+                            <?php if( get_field('shop-holiday') ): ?>
+
+                            <li>定休日：<?php the_field('shop-holiday'); ?></li>
+
+                            <?php endif; ?>
+
+                        </ul>
+
+                    </div>
+
                 </div>
-                
+
                 <div class="acf-map">
                     <div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
                 </div>
                 <?php endif; ?>
-                
+
                 <?php endif; ?>
-                
+
 
                 <?php else: ?>
 
@@ -172,7 +198,7 @@
             <footer>
 
                 <?php if ( is_singular() ) : ?>
-                
+
                 <p>この記事は「<?php the_category(' '); ?>」カテゴリーです。</p>
 
                 <div class="fb-like scale" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
@@ -393,11 +419,11 @@
                         </div>
                     </li>
 
-                    
+
                     <li class="hide">
-                    
+
                     <div class="latest--post">
-                    
+
                         <ul>
                         <?php
                     $args = array(
@@ -408,7 +434,7 @@
                     foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 
                         <li>
-                        
+
                         <div class="sep">
                                         <div class="thum">
                                             <?php if(has_post_thumbnail()): ?>
@@ -438,7 +464,7 @@
 
                                         </div>
                                     </div>
-                            
+
                         </li>
 
                         <?php endforeach; /* ループの終了 */ ?>
