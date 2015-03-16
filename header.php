@@ -13,14 +13,22 @@
 <!--[if IE 8]>
 <html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!-->
+<?php if(is_mobile()):?>
+<html <?php language_attributes(); ?>>
+<?php else :?>
+<html <?php language_attributes(); ?> class="no-js">
+<?php endif ;?>
 
-<html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
+<!--<![endif]-->
 <head>
 
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title><?php wp_title(); ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico" type="image/vnd.microsoft.icon">
 
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
@@ -29,6 +37,16 @@
 <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
 <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+
+
+
+<?php if(!is_mobile()):?>
+<!--[if (gte IE 9)|!(IE)]><!-->
+<?php wp_enqueue_script( 'pc-only',get_template_directory_uri() . '/js/pc-only.js', array('jquery'), null, true ); ?>
+<?php wp_enqueue_script( 'fade',get_template_directory_uri() . '/js/jquery.fademover.js', array('jquery'), null, true ); ?>
+<!--<![endif]-->
+<?php wp_enqueue_script( 'modernizr',get_template_directory_uri() . '/js/modernizr.js', array('jquery'), null ); ?>
+<?php endif ;?>
 
 
 <?php wp_head(); ?>
@@ -75,7 +93,7 @@
 <?php else :?>
 <body <?php body_class(); ?>>
 <?php endif ;?>
-    <h1 class="semantic"><?php wp_title('|', true, 'right'); ?><?php bloginfo('name'); ?></h1>
+    <h1 class="semantic"><?php wp_title(); ?></h1>
 
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
