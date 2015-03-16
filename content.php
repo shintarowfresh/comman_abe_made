@@ -12,7 +12,7 @@
 
         <?php if(has_post_thumbnail()): ?>
         <div class="content-thum">
-            <a href="<?php the_permalink(); ?>" style=" display: block; background-image:url(<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>); background-repeat: no-repeat;"><?php the_post_thumbnail(); ?></a>
+            <a href="<?php the_permalink(); ?>" style=" display: block; background-image:url(<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>); background-repeat: no-repeat;"><?php echo get_the_post_thumbnail($post->ID, 'thumbnail',array('data-lazy' => 'false')); ?></a>
 
             <?php
             $days = 1;
@@ -46,20 +46,20 @@
 
             <header>
 
-                <time itemprop="datePublished" content="<?php the_time( 'Y-n-j' ); ?>"><?php the_time( 'Y.n.j' ); ?></time>
+                <time itemprop="datePublished" content="<?php the_time( 'Y-n-j' ); ?>"><span class="entry-date date updated"><?php the_time( 'Y.n.j' ); ?></span></time>
 
                 <?php if( is_single() ) :?>
 
                 <span class="meta tag"><i class="fa fa-tags"></i> <?php the_tags( '', '' ); ?></span>
 
-                <h2 itemprop="name" class="title">
+                <h2 itemprop="name" class="title entry-title">
                     <?php the_title(); ?>
                 </h2>
                 <?php else :?>
 
                 <span class="auther-name"><i class="fa fa-pencil"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><?php the_author_meta('nickname'); ?></span></span></span>
 
-                <h2 class="title">
+                <h2 class="title entry-title">
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </h2>
                 <?php endif ;?>
@@ -69,7 +69,7 @@
 
                    <?php if( is_single() ) :?>
                     <div class="who-wrote">
-                        <span class="auther-name"><i class="fa fa-pencil"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><?php the_author_meta('nickname'); ?></span></span></span>
+                        <span class="auther-name"><i class="fa fa-pencil"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><span class=”vcard author”><span class=”fn”><?php the_author_meta('nickname'); ?></span></span></span></span></span>
                     </div>
                     <?php endif ;?>
 
@@ -131,6 +131,35 @@
                 the_content('', true );
                 else : the_content();
                 endif; ?>
+                
+                
+                <?php if(get_post_meta($post->ID, 'shop-name', true)): ?>
+                
+                <?php 
+                $location = get_field('shop-location');
+                if( !empty($location) ):
+                ?>
+                
+                <h2>お店の情報「<?php the_field('shop-name'); ?>」さん</h2>
+                
+                <div class="shareHtmlFrame clearfix">
+                
+                <span class="shareThumb"><a href="<?php the_field('shop-link'); ?>" target="_blank"><img src="http://s.wordpress.com/mshots/v1/<?php urlencode( the_field('shop-link') ); ?>?w=300" class="shareThumbImg" border="0" alt="" /></a></span>
+                
+                <h6 class="shareTitle"><a href="<?php the_field('shop-link'); ?>" target="_blank"><?php the_field('shop-name'); ?></a></h6>
+                <h6>住所：<?php echo $location['address']; ?></h6>
+                
+                <span><?php the_field('shop-comment'); ?></span>
+                
+                </div>
+                
+                <div class="acf-map">
+                    <div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
+                </div>
+                <?php endif; ?>
+                
+                <?php endif; ?>
+                
 
                 <?php else: ?>
 
@@ -143,6 +172,7 @@
             <footer>
 
                 <?php if ( is_singular() ) : ?>
+                
                 <p>この記事は「<?php the_category(' '); ?>」カテゴリーです。</p>
 
                 <div class="fb-like scale" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
@@ -168,7 +198,7 @@
 
                     <ul>
                         <li class="b-twitter">
-                            <a class="btn__sns nonmover" href="http://twitter.com/share?url=<?php echo $canonical_url_encode;?>&text=<?php echo $title_encode;?>" onclick="window.open(this.href, 'FBwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i>Twitter<span><?php if(function_exists('get_scc_twitter')) echo get_scc_twitter(); ?></span></a>
+                            <a class="btn__sns nonmover" href="http://twitter.com/share?url=<?php echo $canonical_url_encode;?>&text=<?php the_title() ?>" onclick="window.open(this.href, 'FBwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i>Twitter<span><?php if(function_exists('get_scc_twitter')) echo get_scc_twitter(); ?></span></a>
                         </li>
                         <li class="b-fb">
                             <a class="btn__sns nonmover" href="http://www.facebook.com/share.php?u=<?php echo $canonical_url_encode;?>" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-facebook-official"></i>シェア！<span><?php if(function_exists('get_scc_facebook')) echo get_scc_facebook(); ?></span></a>
@@ -233,8 +263,9 @@
                 <h3><i class="fa fa-newspaper-o"></i> もう１記事どうぞ！</h3>
 
                 <ul class="tab">
-                    <li class="select"><i class="fa fa-link"></i> 関連記事</li>
-                    <li><i class="fa fa-heart-o"></i> 人気の記事</li>
+                    <li class="select"><i class="fa fa-link"></i> 関連</li>
+                    <li><i class="fa fa-heart-o"></i> 人気</li>
+                    <li><i class="fa fa-clock-o"></i> 最新</li>
                 </ul>
 
                 <ul class="tab-content">
@@ -360,6 +391,60 @@
                             </ul>
 
                         </div>
+                    </li>
+
+                    
+                    <li class="hide">
+                    
+                    <div class="latest--post">
+                    
+                        <ul>
+                        <?php
+                    $args = array(
+                    'posts_per_page' => 5 ,
+                    'category' => 8
+                    );
+                    $myposts = get_posts( $args );
+                    foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+
+                        <li>
+                        
+                        <div class="sep">
+                                        <div class="thum">
+                                            <?php if(has_post_thumbnail()): ?>
+
+                                            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+
+                                            <?php else :?>
+
+                                            <a href="<?php the_permalink(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/no-thum.png" alt="サムネイルはありません"></a>
+
+                                            <?php endif; ?>
+
+                                        </div>
+                                        <div class="main-sec">
+
+                                            <time><i class="fa fa-calendar"></i> <?php the_time( 'Y.n.j' ); ?></time>
+
+                                           <h3 class="title">
+                                               <a href="<?php echo esc_url(get_permalink($myposts->ID)); ?>">
+                                                   <?php echo esc_html(get_the_title($myposts->ID)); ?>
+                                               </a>
+                                           </h3>
+
+                                            <div class="share-count">
+                                                <span><i class="fa fa-twitter-square"></i><?php if(function_exists('get_scc_twitter')) echo get_scc_twitter(); ?></span> <span><i class="fa fa-facebook-official"></i><?php if(function_exists('get_scc_facebook')) echo get_scc_facebook(); ?></span> <span><i class="fa fa-hatena"></i><?php if(function_exists('get_scc_hatebu')) echo get_scc_hatebu(); ?></span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                            
+                        </li>
+
+                        <?php endforeach; /* ループの終了 */ ?>
+                        <?php wp_reset_postdata(); /* 取得したデータのリセット */ ?>
+                        </ul>
+                    </div>
                     </li>
                 </ul>
 
