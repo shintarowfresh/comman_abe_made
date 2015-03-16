@@ -1,4 +1,4 @@
-jQuery(window).on('load', function () {
+    $(window).on('load', function () {
     var contentHeight = jQuery("html, body").height(),
         windowHeight = jQuery(window).height(),
         target = jQuery('#sidebar').find('.fix'),
@@ -59,6 +59,15 @@ jQuery(window).on('load', function () {
 });
 
 jQuery(document).ready(function () {
+    
+    //ふわっとなる挙動
+        jQuery('.content_full , .content ,#panel , #footer ,#breadcrumb').fadeMover({
+            'effectType': 3,
+            'outDelay' : '30',
+            'nofadeOut': 'nonmover'
+        });
+        
+        
 
     jQuery('.party-people').click(function () {
         jQuery('.cover').animate({

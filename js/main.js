@@ -1,24 +1,13 @@
 jQuery(function ($) {
     'use strict';
 
-
-
-    $('.member__sns__btn').click(function(){
+    $('.member__sns__btn').click(function () {
         $(this).toggleClass('btn-on');
         $(this).next().slideToggle('fast');
         return false;
     });
 
-
-
-    $("a[href^='http://']").not('[href*="'+location.hostname+'"]').attr('target','_blank').addClass('nonmover');
-
-    //タップの反応を改善
-    $('.logo a , #globalnavi a').on('click touchend', function(e) {
-        var el = $(this);
-        var link = el.attr('href');
-        window.location = link;
-    });
+    $("a[href^='http://']").not('[href*="' + location.hostname + '"]').attr('target', '_blank').addClass('nonmover');
 
     //制作実績ページの制作カテゴリー用シャッター
     $('#shutter').click(function () {
@@ -28,17 +17,6 @@ jQuery(function ($) {
         return false;
     });
 
-
-    //ふわっとなる挙動
-        jQuery('.content_full').fadeMover({
-            'effectType': 1,
-            'nofadeOut': 'nonmover'
-        });
-        jQuery('.content').fadeMover({'outDelay': 300});
-        jQuery('#panel').fadeMover({'outDelay': 600});
-        jQuery('.content_full').fadeMover({'outDelay': 1000});
-        jQuery('#footer').fadeMover({'outDelay': 2000});
-        jQuery('#breadcrumb').fadeMover({'outDelay': 2000});
 
     var $panel = $('#panel');
 
