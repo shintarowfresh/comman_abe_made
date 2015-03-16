@@ -62,6 +62,10 @@
 
 
         <aside>
+            <a href="http://www.comman.co.jp/tag/%E3%81%86%E3%81%95%E3%81%8E/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/banner/sano.jpg" alt="さのさんはウサギ愛がすごい"></a>
+        </aside>
+
+        <aside>
             <a href="http://konkatsu-sns.com/?m=portal&a=page_user_top"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/banner/konkatu.jpg" alt="婚活SNS"></a>
         </aside>
 
