@@ -457,22 +457,6 @@ blockquote
     padding: 0 1.565%;
 }
 
-.no-js .content,
-.no-js .content_full,
-.no-js #footer
-{
-    opacity: 1;
-    filter: alpha(opacity=100);
-}
-
-.content,
-.content_full,
-#footer
-{
-    opacity: 0;
-    filter: alpha(opacity=0);
-}
-
 .content .inner table
 {
     margin: 0 auto 2em;
@@ -946,7 +930,7 @@ p .btn__works
     display: table;
     overflow: hidden;
 
-    width: 99.9%;
+    width: 100%;
     margin-bottom: 0 !important;
 }
 .tab > li
@@ -955,7 +939,6 @@ p .btn__works
 
     display: table-cell;
 
-    width: 50%;
     padding: 1em 0;
 
     text-align: center;
@@ -977,7 +960,7 @@ p .btn__works
 
 .tab-content
 {
-    width: 99.9%;
+    width: 100%;
 }
 .tab-content > li
 {
@@ -2912,6 +2895,14 @@ ul.foot_navi li a
 
     color: #000;
 }
+.single .content-main time .date
+{
+    color: #000;
+}
+.single .content-main time .date:before
+{
+    content: none;
+}
 .single .content-main .meta.tag
 {
     float: right;
@@ -3254,29 +3245,34 @@ ul.foot_navi li a
     margin-top: 1em;
 }
 .single .favorit-posts li,
-.single .related li
+.single .related li,
+.single .latest--post li
 {
     margin-bottom: 1em;
 }
 .single .favorit-posts li:last-child,
-.single .related li:last-child
+.single .related li:last-child,
+.single .latest--post li:last-child
 {
     margin-bottom: 0;
 }
 .single .favorit-posts li .thum img,
-.single .related li .thum img
+.single .related li .thum img,
+.single .latest--post li .thum img
 {
     margin: 3px;
 
     box-shadow: 0 0 2px rgba(0, 0, 0, .35);
 }
 .single .favorit-posts time,
-.single .related time
+.single .related time,
+.single .latest--post time
 {
     font-size: 1em;
 }
 .single .favorit-posts .title,
-.single .related .title
+.single .related .title,
+.single .latest--post .title
 {
     font-size: 1.25em;
     font-weight: 600;
@@ -3707,16 +3703,32 @@ ul.foot_navi li a
 {
     float: left;
 
+    width: 150px;
     margin: 0 1em 0 0;
 }
 .shareHtmlFrame .shareThumb .shareThumbImg
 {
-    width: 150px;
+    box-sizing: border-box;
+    max-width: 100%;
     height: auto;
     padding: 5px;
 
     border: 1px solid #d5d5d5;
     background: #f2f2f2;
+}
+.shareHtmlFrame .sharemain
+{
+    margin-left: 170px;
+}
+.shareHtmlFrame .sharemain .shop-more-info
+{
+    font-size: .85em;
+
+    margin-top: 1em;
+}
+.shareHtmlFrame .sharemain .shop-more-info li
+{
+    margin: 0;
 }
 .shareHtmlFrame .shareTitle
 {
@@ -4247,6 +4259,51 @@ ul.foot_navi li a
 .post_content
 {
     overflow: hidden;
+}
+
+.acf-map
+{
+    width: 99.5%;
+    height: 300px;
+    margin: 0 0 2em;
+
+    border: #ccc solid 1px;
+}
+
+.acf-map img
+{
+    max-width: none;
+}
+
+.mypost
+{
+    position: relative;
+
+    overflow: hidden;
+
+    width: 300px;
+
+    border: 1px solid #638199;
+}
+.mypost:before
+{
+    font-weight: bold;
+
+    position: absolute;
+    z-index: 500;
+
+    padding: 3px;
+
+    content: '関連';
+
+    color: #fff;
+    background: #638199;
+}
+.mypost .mypost__title
+{
+    padding: 1em;
+
+    border-top: 1px solid #638199;
 }
 
 .icon-fb

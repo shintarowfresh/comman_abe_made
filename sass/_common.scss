@@ -216,20 +216,6 @@ blockquote {
     margin: 0 1.565%;
 }
 
-.no-js {
-    .content,
-    .content_full,
-    #footer {
-        opacity: 1;
-    }
-}
-
-.content,
-.content_full,
-#footer {
-    opacity: 0;
-}
-
 
 .content .inner table {
     margin: 0 auto 2em;
@@ -638,13 +624,12 @@ p {
     overflow:hidden;
     margin-bottom: 0 !important;
     display: table;
-    width: 99.9%;
+    width: 100%;
 
     >li {
         padding:1em 0 ;
         display: table-cell;
         text-align: center;
-        width: 50%;
         font-weight: bold;
         color: darken( $main , 20% );
         border-bottom: 2px solid $main;
@@ -662,7 +647,7 @@ p {
 }
 
 .tab-content {
-    width: 99.9%;
+    width: 100%;
     >li{
         border: 2px solid $main;
         border-top: transparent;
@@ -2405,6 +2390,14 @@ ul.foot_navi {
             font-size: 1.5em;
             color: #000;
             font-weight: bold;
+
+            .date {
+                color: #000;
+
+                &:before {
+                    content: none;
+                }
+            }
         }
 
         .meta.tag {
@@ -2712,7 +2705,8 @@ ul.foot_navi {
 
 
     .favorit-posts ,
-    .related {
+    .related,
+    .latest--post {
         li {
             margin-bottom: 1em;
 
