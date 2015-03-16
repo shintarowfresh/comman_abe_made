@@ -19,7 +19,7 @@ get_header(); ?>
 
             <?php elseif( is_tag() || is_category() ) :?>
 
-                <h2><i class="fa fa-database"></i> <?php wp_title(''); ?>：記事一覧</h2>
+                <h2><i class="fa fa-database"></i> <?php wp_title(''); ?></h2>
 
             <?php elseif( is_auter() ) :?>
 
