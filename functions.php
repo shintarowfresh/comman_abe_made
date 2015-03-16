@@ -52,8 +52,8 @@ function comman_scripts() {
     wp_enqueue_style( 'main-style', get_stylesheet_directory_uri() . '/css/build.css', array() ,null  );
     wp_enqueue_style( 'fa-anime-style', get_stylesheet_directory_uri() . '/css/font-awesome-animation.min.css', array() ,null );
     wp_enqueue_style( 'icon-style', get_stylesheet_directory_uri() . '/css/icomoon/style.css', array() ,null );
-    wp_enqueue_style( 'fa-style', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array() ,null );
-    wp_enqueue_style( 'gf-style', '//fonts.googleapis.com/css?family=Roboto:100,700,400', array() ,null );
+    wp_enqueue_style( 'fa-style', 'http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array() ,null );
+    wp_enqueue_style( 'gf-style', 'http://fonts.googleapis.com/css?family=Roboto:100,700,400', array() ,null );
 
     // コメント用スクリプト
     if ( is_singular() )
@@ -64,8 +64,6 @@ function comman_scripts() {
     wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-1.11.2.min.js', array(), null, true);
 
     // メインの js
-    wp_enqueue_script( 'modernizr-js', get_template_directory_uri() . '/js/modernizr.js', array() ,null);
-    wp_enqueue_script( 'fade-js', get_template_directory_uri() . '/js/jquery.fademover.js', array() ,null, true);
     wp_enqueue_script( 'script-js', get_template_directory_uri() . '/js/script.min.js', array() ,null, true);
     wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array() ,null ,true );
 
@@ -106,7 +104,7 @@ register_sidebar( $args = array(
 *
 */
 if ( ! isset( $content_width ) )
-    $content_width = 585;
+    $content_width = 800;
 
 //サムネ画像のサイズ制御
 set_post_thumbnail_size( 150, 150, true );
@@ -305,3 +303,29 @@ function change_validation_message($message, $form)
 {
     return "<div class='validation_error'>ご確認ください。必須項目で未入力やミスがあります。</div>";
 }
+
+
+//関連記事用ショートコード
+function articleFunc($atts) {
+	extract(shortcode_atts(array(
+		'mode' => null,'type' => null,'id' => null,
+		'y' => null,'m' => null,'d' => null,
+		'numberposts' => 5,'offset' => null,'order' => 'DESC','orderby' => 'post_date','meta_key' => null,
+		'include' => null,'exclude' => null,
+		'head' => null,'tail' => null,
+	),$atts));
+ 
+	if($mode != null) $mode = '&'.$mode.'='.$id;
+	$post = get_posts('post_status=publish&numberposts='.$numberposts.'&offset='.$offset.'&order='.$order.'&orderby='.$orderby.'&include='.$include.'&year='.$y.'&monthnum='.$m.'&day='.$d.'&exclude='.get_the_ID().','.$exclude.'&meta_key='.$meta_key.$mode);
+ 
+	foreach ($post as $item){
+		$im = wp_get_attachment_image_src(get_post_thumbnail_id($item->ID),'cat-img',true);
+		$date = date('Y.m.d',strtotime(get_post($item->ID)->post_date));
+		$update = date('Y.m.d',strtotime(get_post($item->ID)->post_modified));
+		$echo .= $type=='custom' ? '<div class="mypost"><a href="'.get_permalink($item->ID).'"><img src="'.$im[0].'"><div class="mypost__title"></a>【関連】&nbsp;<a href="'.get_permalink($item->ID).'">'.$item->post_title.'</a></div></div>'
+		: $head.'<a href="'.get_permalink($item->ID).'">'.$item->post_title.'</a>'.$tail;
+	}
+ 
+	return $echo;
+}
+add_shortcode('article','articleFunc');
