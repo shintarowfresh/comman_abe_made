@@ -91,7 +91,6 @@
 
         <?php endif; ?>
 
-
        <!--トップへのボタン-->
         <a id="to_top" class="btn__full to_top nonmover" href="#"><i class="fa fa-angle-double-up"></i> Top</a>
 
@@ -109,6 +108,7 @@
 
             </div><!--/.inner-->
         </div><!--/.foot-copy-->
+
 
         <div class="foot__info">
             <div class="inner">
