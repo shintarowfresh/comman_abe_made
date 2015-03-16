@@ -2181,12 +2181,17 @@ ul.foot_navi li a {
 .single section {
   margin: 2em 0;
 }
+.single section:after {
+  content: "";
+  display: block;
+  clear: both;
+}
 .single section h2 {
   border-top: 6px solid rgba(198, 40, 40, 0.6);
   border-bottom: 2px solid rgba(198, 40, 40, 0.3);
   margin-top: 3em;
   padding: .8em .3em 1em;
-  font-weight: 500;
+  font-weight: 900;
   background: rgba(198, 40, 40, 0.02);
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -2304,14 +2309,16 @@ ul.foot_navi li a {
 .single .cta {
   margin: 4em 0;
   padding: 1em;
-  background: #f2f2f2;
-  border: 1px solid #d5d5d5;
+  border: 2px solid #c62828;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
-  -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) inset;
-  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) inset;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) inset;
+  -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.single .cta h3 {
+  font-weight: 900;
 }
 .single .cta > *:last-child {
   margin-bottom: 0;
@@ -3033,6 +3040,20 @@ ul.foot_navi li a {
   color: #008fde;
 }
 
+.btn--map {
+  padding: 1em;
+  background: #c62828;
+  color: #fff;
+  border-radius: 3px;
+  float: right;
+  text-decoration: none;
+}
+.btn--map:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
 .post-type-archive-work article:hover {
   background: none;
 }
@@ -3212,6 +3233,7 @@ ul.foot_navi li a {
   border: 1px solid #638199;
   overflow: hidden;
   position: relative;
+  margin: 2em 0;
 }
 .mypost:before {
   content: "関連";

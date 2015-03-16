@@ -283,6 +283,22 @@
     }
 }
 
+.btn--map {
+    padding: 1em;
+    background: $main;
+    color: #fff;
+    border-radius: 3px;
+    float: right;
+    text-decoration: none;
+
+    &:after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+}
+
 .post-type-archive-work article:hover {
     background: none;
 }
@@ -534,6 +550,7 @@
     border: 1px solid $sub;
     overflow: hidden;
     position: relative;
+    margin: 2em 0;
 
     &:before {
         content: "関連";
