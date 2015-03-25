@@ -143,12 +143,13 @@
                     <div class="box_1 site-map">
                         <h6>サイトマップ</h6>
                         <ul>
-                            <li><a href="">メッセージ</a></li>
-                            <li><a href="">サービス一覧</a></li>
-                            <li><a href="">制作実績</a></li>
-                            <li><a href="">お見積もり</a></li>
-                            <li><a href="">会社概要</a></li>
-                            <li><a href="">スタッフブログ</a></li>
+                            <li><a href="/message/">メッセージ</a></li>
+                            <li><a href="/works/">サービス一覧</a></li>
+                            <li><a href="/work/">制作実績</a></li>
+                            <li><a href="/price/">お見積もり</a></li>
+                            <li><a href="/company/">会社概要</a></li>
+                            <li><a href="/contact/">お問い合わせ</a></li>
+                            <li><a href="/staff-blog/">スタッフブログ</a></li>
                             <li><a href="https://plus.google.com/114203544397179410651" rel="publisher">Google+</a></li>
                         </ul>
                     </div>
