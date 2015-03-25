@@ -225,10 +225,10 @@ $author_badge = get_field('author_badge', 'user_'. $author_id ); // image field,
 
             <?php if( is_single() ) :?>
 
-            <div class="cta">
+            <div class="cta" style="background-image:url(<?php echo wp_get_attachment_url( get_post_thumbnail_id() ); ?>); background-repeat: no-repeat;">
                 <div class="share">
 
-                    <h3>シェアお願いします！</h3>
+                    <h3>ボタン、あります！</h3>
 
                     <?php
                     $canonical_url=get_permalink();//記事のURL取得
