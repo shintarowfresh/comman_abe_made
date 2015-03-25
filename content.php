@@ -265,7 +265,7 @@ $author_badge = get_field('author_badge', 'user_'. $author_id ); // image field,
             <div class="col">
 
                 <div class="box_2 col__under">
-                    <h3 class="col__under-posts"><i class="fa fa-check-circle"></i> いち早く最新情報をゲット！</h3>
+                    <h3 class="col__under-posts"><i class="fa fa-check-circle"></i> カンマン最新情報をゲット！</h3>
 
                     <h4><i class="fa fa-arrow-down"></i> Facebookのウォールで</h4>
 
