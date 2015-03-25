@@ -263,12 +263,21 @@ $author_badge = get_field('author_badge', 'user_'. $author_id ); // image field,
             </div><!--/.cta-->
 
             <div class="col">
+
                 <div class="box_2 col__under">
-                    <h3 class="col__under-posts"><i class="fa fa-facebook-official"></i> FBページをいいね！で応援よろしくお願いします！</h3>
+                    <h3 class="col__under-posts"><i class="fa fa-check-circle"></i> いち早く最新情報をゲット！</h3>
+
+                    <h4><i class="fa fa-arrow-down"></i> Facebookのウォールで</h4>
 
                     <div class="fb-like" data-href="https://www.facebook.com/comman.inc?ref=notif&amp;notif_t=page_new_likes" data-width="300" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
 
+                    <h4><i class="fa fa-arrow-down"></i> Twitterのタイムラインで</h4>
+
+                    <a href="https://twitter.com/comman_inc" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @comman_inc</a>
+
                 </div>
+
+
                 <div class="box_2 col__under">
                     <div class="author">
 
