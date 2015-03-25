@@ -15,6 +15,7 @@ get_header(); ?>
     <div class="three-two">
         <div class="inner">
             <div class="main">
+            
 
                 <?php
                 // content.php を読み込む
