@@ -46,6 +46,11 @@
 
             <header>
 
+                <?php
+$author_id = get_the_author_meta( 'ID' );
+$author_badge = get_field('author_badge', 'user_'. $author_id ); // image field, return type = "Image Object"
+                ?>
+
                 <time itemprop="datePublished" content="<?php the_time( 'Y-n-j' ); ?>"><span class="entry-date date updated"><?php the_time( 'Y.n.j' ); ?></span></time>
 
                 <?php if( is_single() ) :?>
@@ -55,9 +60,10 @@
                 <h2 itemprop="name" class="title entry-title">
                     <?php the_title(); ?>
                 </h2>
+
                 <?php else :?>
 
-                <span class="auther-name"><i class="fa fa-pencil"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><?php the_author_meta('nickname'); ?></span></span></span>
+                <span class="auther-name"><i class="fa fa-pencil"></i> <span class="vcard author" itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="fn" itemprop="name"><?php the_author_meta('nickname'); ?></span></span></span>
 
                 <h2 class="title entry-title">
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
@@ -68,9 +74,14 @@
                 <div class="single__meta-data">
 
                    <?php if( is_single() ) :?>
+
                     <div class="who-wrote">
-                        <span class="auther-name"><i class="fa fa-pencil"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name"><span class=”vcard author”><span class=”fn”><?php the_author_meta('nickname'); ?></span></span></span></span></span>
+
+                        <span class="auther-photo"><img src="<?php the_field('author-photo', 'user_'. $author_id); ?>" alt="<?php the_author_meta('nickname'); ?>"></span>
+
+                        <span class="auther-name"><i class="fa fa-pencil"></i> <span class="vcard author" itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="fn" itemprop="name"><?php the_author_meta('nickname'); ?></span></span></span><span class="author__responsible"><?php the_field('responsible', 'user_'. $author_id); ?></span>
                     </div>
+
                     <?php endif ;?>
 
                     <div class="share-count">
@@ -82,6 +93,7 @@
                         <?php endif ; ?>
 
                     </div>
+
                 </div>
 
 
@@ -262,18 +274,13 @@
 
                         <h3><i class="fa fa-pencil"></i> この記事を書いた人</h3>
 
-                        <?php
-                        $author_id = get_the_author_meta( 'ID' );
-                        $author_badge = get_field('author_badge', 'user_'. $author_id ); // image field, return type = "Image Object"
-                        ?>
-                        <!--<img src="<?php echo $author_badge['url']; ?>" alt="<?php echo $author_badge['alt']; ?>" />-->
-
                         <div class="sep">
                             <div class="thum">
                                 <span class="auther-photo"><img src="<?php the_field('author-photo', 'user_'. $author_id); ?>" alt="<?php the_author_meta('nickname'); ?>"></span>
                             </div>
 
                             <div class="main-sec">
+
                                 <span class="auther-name"><?php the_author_meta('nickname'); ?></span>
 
                                 <span class="author__responsible"><?php the_field('responsible', 'user_'. $author_id); ?></span>
