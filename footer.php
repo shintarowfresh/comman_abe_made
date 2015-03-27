@@ -18,7 +18,7 @@
 
                 <div class="sns-section">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/sns-fb-head.jpg" alt="カンマンのfacebookページ">
-                    <div class="fb-like-box" data-href="https://www.facebook.com/comman.inc" data-height="450" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="false"></div>
+                    <div class="fb-page" data-href="https://www.facebook.com/comman.inc?ref=bookmarks" data-width="500" data-height="400" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"></div>
                 </div>
             </div>
 
