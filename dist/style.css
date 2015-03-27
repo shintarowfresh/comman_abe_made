@@ -152,10 +152,6 @@ strong span {
   color: #c62828;
 }
 
-b {
-  font-weight: bold;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: "Noto Sans Japanese", "Roboto", 游ゴシック, YuGothic, Meiryo, sans-serif;
 }
@@ -178,7 +174,7 @@ h3 {
 }
 h3.sub_title {
   font-family: helvetica, sans-serif;
-  font-size: 3.4em;
+  font-size: 3.6em;
   font-weight: 800;
   margin-bottom: 0;
   margin-top: 10px;
@@ -258,11 +254,6 @@ h4 .fa, h5 .fa, h6 .fa {
   color: #c62828;
 }
 
-blockquote {
-  background: #f9f9f9;
-  padding: .3em;
-}
-
 /* はみ出しを回避 */
 #wrapper {
   overflow: hidden;
@@ -273,6 +264,18 @@ blockquote {
   overflow: hidden;
   padding: 0 1.565%;
   margin: 0 1.565%;
+}
+
+.no-js .content,
+.no-js .content_full,
+.no-js #footer {
+  opacity: 1;
+}
+
+.content,
+.content_full,
+#footer {
+  opacity: 0;
 }
 
 .content .inner table {
@@ -366,7 +369,6 @@ blockquote {
   -o-transition-duration: 0.3s;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  background-position-x: center;
 }
 .img_container:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -643,12 +645,13 @@ p .btn__works {
   overflow: hidden;
   margin-bottom: 0 !important;
   display: table;
-  width: 100%;
+  width: 99.9%;
 }
 .tab > li {
   padding: 1em 0;
   display: table-cell;
   text-align: center;
+  width: 50%;
   font-weight: bold;
   color: #711717;
   border-bottom: 2px solid #c62828;
@@ -663,7 +666,7 @@ p .btn__works {
 }
 
 .tab-content {
-  width: 100%;
+  width: 99.9%;
 }
 .tab-content > li {
   border: 2px solid #c62828;
@@ -1358,10 +1361,12 @@ nav.menu .blog a:before {
   height: 500px;
   margin-bottom: 2em;
   overflow: hidden;
-  text-align: center;
 }
 .social .sns-section:last-child {
   margin-bottom: 0;
+}
+.social .sns-section .fb_iframe_widget, .social .sns-section .fb_iframe_widget[style], .social .sns-section .fb_iframe_widget iframe[style], .social .sns-section .fb_iframe_widget span {
+  width: 100% !important;
 }
 .social .sns-section > img {
   margin: 0 auto;
@@ -1968,8 +1973,6 @@ ul.foot_navi li a {
 }
 .archive article .title {
   margin-bottom: 0;
-  font-size: 1.2em;
-  font-weight: bold;
 }
 .archive article time {
   margin: 1em 0;
@@ -1977,15 +1980,11 @@ ul.foot_navi li a {
   font-weight: bold;
   color: #638199;
 }
-.archive article .auther-name {
-  font-size: .8em;
-}
 .archive article section {
   margin: 1em 0;
 }
 .archive article section p {
   margin-bottom: 0;
-  font-size: .8em;
 }
 
 .content-thum {
@@ -1994,10 +1993,6 @@ ul.foot_navi li a {
   max-width: 150px;
   padding: 5px;
   position: relative;
-}
-.content-thum a {
-  background-size: cover;
-  background-position: 50%;
 }
 .content-thum img {
   -moz-box-shadow: 0 0 5px rgba(198, 40, 40, 0.1);
@@ -2145,12 +2140,6 @@ ul.foot_navi li a {
   color: #000;
   font-weight: bold;
 }
-.single .content-main time .date {
-  color: #000;
-}
-.single .content-main time .date:before {
-  content: none;
-}
 .single .content-main .meta.tag {
   float: right;
 }
@@ -2179,17 +2168,12 @@ ul.foot_navi li a {
 .single section {
   margin: 2em 0;
 }
-.single section:after {
-  content: "";
-  display: block;
-  clear: both;
-}
 .single section h2 {
   border-top: 6px solid rgba(198, 40, 40, 0.6);
   border-bottom: 2px solid rgba(198, 40, 40, 0.3);
   margin-top: 3em;
   padding: .8em .3em 1em;
-  font-weight: 900;
+  font-weight: 500;
   background: rgba(198, 40, 40, 0.02);
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -2307,16 +2291,14 @@ ul.foot_navi li a {
 .single .cta {
   margin: 4em 0;
   padding: 1em;
-  border: 2px solid #c62828;
+  background: #f2f2f2;
+  border: 1px solid #d5d5d5;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
-  -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-.single .cta h3 {
-  font-weight: 900;
+  -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) inset;
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) inset;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) inset;
 }
 .single .cta > *:last-child {
   margin-bottom: 0;
@@ -2419,29 +2401,24 @@ ul.foot_navi li a {
   margin-top: 1em;
 }
 .single .favorit-posts li,
-.single .related li,
-.single .latest--post li {
+.single .related li {
   margin-bottom: 1em;
 }
 .single .favorit-posts li:last-child,
-.single .related li:last-child,
-.single .latest--post li:last-child {
+.single .related li:last-child {
   margin-bottom: 0;
 }
 .single .favorit-posts li .thum img,
-.single .related li .thum img,
-.single .latest--post li .thum img {
+.single .related li .thum img {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
   margin: 3px;
 }
 .single .favorit-posts time,
-.single .related time,
-.single .latest--post time {
+.single .related time {
   font-size: 1em;
 }
 .single .favorit-posts .title,
-.single .related .title,
-.single .latest--post .title {
+.single .related .title {
   margin: .3em 0 .6em;
   font-size: 1.25em;
   line-height: 1.4;
@@ -2794,30 +2771,19 @@ ul.foot_navi li a {
 .shareHtmlFrame .shareThumb {
   float: left;
   margin: 0 1em 0 0;
-  width: 150px;
 }
 .shareHtmlFrame .shareThumb .shareThumbImg {
-  max-width: 100%;
+  width: 150px;
   height: auto;
   border: 1px solid #d5d5d5;
   padding: 5px;
   background: #f2f2f2;
-  box-sizing: border-box;
-}
-.shareHtmlFrame .sharemain {
-  margin-left: 170px;
-}
-.shareHtmlFrame .sharemain .shop-more-info {
-  margin-top: 1em;
-  font-size: .85em;
-}
-.shareHtmlFrame .sharemain .shop-more-info li {
-  margin: 0;
 }
 .shareHtmlFrame .shareTitle {
   line-height: 1.3;
 }
 
+/*ポチレバ*/
 /*横線のあるスタイル*/
 .hr {
   position: relative;
@@ -3038,20 +3004,6 @@ ul.foot_navi li a {
   color: #008fde;
 }
 
-.btn--map {
-  padding: 1em;
-  background: #c62828;
-  color: #fff;
-  border-radius: 3px;
-  float: right;
-  text-decoration: none;
-}
-.btn--map:after {
-  content: "";
-  clear: both;
-  display: block;
-}
-
 .post-type-archive-work article:hover {
   background: none;
 }
@@ -3121,130 +3073,6 @@ ul.foot_navi li a {
 .side-fav-posts ol li .content-main a {
   text-decoration: none;
   color: #908181;
-}
-
-.omission {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  width: 22em;
-  display: inline-block;
-  vertical-align: middle;
-  text-decoration: none;
-}
-
-/*apphtml*/
-.apphtml {
-  margin-bottom: 2em;
-}
-.apphtml:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.apphtml h3 .apptitle a {
-  text-decoration: none;
-}
-.apphtml .appicon {
-  display: block;
-  width: 150px;
-  height: 150px;
-  float: left;
-  margin: 0 1em 2em 0;
-}
-.apphtml .appicon a img {
-  border: 1px solid #f9f9f9;
-  border-radius: 16px;
-}
-.apphtml .appinfo {
-  display: inline-block;
-}
-.apphtml .appinfo span {
-  display: block;
-}
-.apphtml .app-ss {
-  clear: both;
-  background: #f9f9f9;
-  padding: 1em 0;
-  text-align: center;
-}
-.apphtml .app-ss li {
-  display: inline-block;
-  width: 44%;
-  margin: 0 2.3%;
-}
-.apphtml .app-ss li:before {
-  content: none;
-}
-.apphtml .app_dw_bt {
-  text-decoration: none;
-  background: #c62828;
-  padding: .5em 1em;
-  color: #fff;
-  display: inline-block;
-  float: right;
-  border-radius: 3px;
-}
-.apphtml .app_dw_bt:before {
-  content: "\f179";
-  font-family: FontAwesome;
-  margin-right: .3em;
-}
-
-/*ポチレバ*/
-.pochireba {
-  margin-bottom: 2em;
-}
-.pochireba a .pochi_img {
-  display: inline-block;
-  border-radius: 10px;
-  float: left;
-}
-.pochireba .pochi_info {
-  margin-left: 73px;
-}
-
-.crayon-table tbody {
-  border: none !important;
-}
-.crayon-table tbody tr td {
-  min-width: 0 !important;
-}
-
-.post_content {
-  overflow: hidden;
-}
-
-.acf-map {
-  width: 99.5%;
-  height: 300px;
-  border: #ccc solid 1px;
-  margin: 0 0 2em;
-}
-
-.acf-map img {
-  max-width: none;
-}
-
-.mypost {
-  width: 300px;
-  border: 1px solid #638199;
-  overflow: hidden;
-  position: relative;
-  margin: 2em 0;
-}
-.mypost:before {
-  content: "関連";
-  background: #638199;
-  padding: 3px;
-  position: absolute;
-  z-index: 500;
-  color: #fff;
-  font-weight: bold;
-}
-.mypost .mypost__title {
-  padding: 1em;
-  border-top: 1px solid #638199;
 }
 
 .icon-fb {

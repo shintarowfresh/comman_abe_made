@@ -32,30 +32,8 @@
         <div class="side-fav-posts">
             <h3><i class="fa fa-trophy"></i> 人気記事ランキング</h3>
 
-            <?php $posts = get_posts(array(
-                 'posts_per_page' => 5,
-                 'meta_key' => 'views',
-                 'post_type' => 'post',
-                 'orderby' => 'meta_value_num'
-             )); ?>
-            <ol>
-            <?php foreach($posts as $post) : ?>
-            <li>
-                <div class="content-thum">
-                    <?php if(has_post_thumbnail()): ?>
-                    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-                    <?php else :?>
-                    <a href="<?php the_permalink(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/no-thum.png" alt="サムネイルはありません"></a>
-                    <?php endif ;?>
-                </div><!--/.content-thum-->
-                <div class="content-main">
+            <?php my_pop_list( 3, 5 ); ?>
 
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-
-                </div>
-            </li>
-            <?php endforeach; ?>
-            </ol>
         </div>
         </aside>
         <?php endif ;?>

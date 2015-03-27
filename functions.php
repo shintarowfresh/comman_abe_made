@@ -61,7 +61,7 @@ function comman_scripts() {
 
 
     wp_deregister_script('jquery');
-    wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-1.11.2.min.js', array(), null, true);
+    wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-1.11.2.min.js', array(), null);
 
     // メインの js
     wp_enqueue_script( 'script-js', get_template_directory_uri() . '/js/script.min.js', array() ,null, true);
@@ -198,34 +198,6 @@ function custom_excerpt_more($more) {
 add_filter('excerpt_more', 'custom_excerpt_more');
 
 
-//アクセス数の取得
-function get_post_views( $postID ) {
-    $count_key = 'post_views_count';
-    $count     = get_post_meta( $postID, $count_key, true );
-    if ( $count == '' ) {
-        delete_post_meta( $postID, $count_key );
-        add_post_meta( $postID, $count_key, '0' );
-
-        return "0 views";
-    }
-
-    return $count . '';
-}
-
-//アクセス数の保存
-function set_post_views( $postID ) {
-    $count_key = 'post_views_count';
-    $count     = get_post_meta( $postID, $count_key, true );
-    if ( $count == '' ) {
-        $count = 0;
-        delete_post_meta( $postID, $count_key );
-        add_post_meta( $postID, $count_key, '0' );
-    } else {
-        $count ++;
-        update_post_meta( $postID, $count_key, $count );
-    }
-}
-
 //ページの親子関係判別
 function is_child( $parent = '' ) {
     global $post;
@@ -307,25 +279,53 @@ function change_validation_message($message, $form)
 
 //関連記事用ショートコード
 function articleFunc($atts) {
-	extract(shortcode_atts(array(
-		'mode' => null,'type' => null,'id' => null,
-		'y' => null,'m' => null,'d' => null,
-		'numberposts' => 5,'offset' => null,'order' => 'DESC','orderby' => 'post_date','meta_key' => null,
-		'include' => null,'exclude' => null,
-		'head' => null,'tail' => null,
-	),$atts));
- 
-	if($mode != null) $mode = '&'.$mode.'='.$id;
-	$post = get_posts('post_status=publish&numberposts='.$numberposts.'&offset='.$offset.'&order='.$order.'&orderby='.$orderby.'&include='.$include.'&year='.$y.'&monthnum='.$m.'&day='.$d.'&exclude='.get_the_ID().','.$exclude.'&meta_key='.$meta_key.$mode);
- 
-	foreach ($post as $item){
-		$im = wp_get_attachment_image_src(get_post_thumbnail_id($item->ID),'cat-img',true);
-		$date = date('Y.m.d',strtotime(get_post($item->ID)->post_date));
-		$update = date('Y.m.d',strtotime(get_post($item->ID)->post_modified));
-		$echo .= $type=='custom' ? '<div class="mypost"><a href="'.get_permalink($item->ID).'"><img src="'.$im[0].'"><div class="mypost__title"></a>【関連】&nbsp;<a href="'.get_permalink($item->ID).'">'.$item->post_title.'</a></div></div>'
-		: $head.'<a href="'.get_permalink($item->ID).'">'.$item->post_title.'</a>'.$tail;
-	}
- 
-	return $echo;
+    extract(shortcode_atts(array(
+        'mode' => null,'type' => null,'id' => null,
+        'y' => null,'m' => null,'d' => null,
+        'numberposts' => 5,'offset' => null,'order' => 'DESC','orderby' => 'post_date','meta_key' => null,
+        'include' => null,'exclude' => null,
+        'head' => null,'tail' => null,
+    ),$atts));
+
+    if($mode != null) $mode = '&'.$mode.'='.$id;
+    $post = get_posts('post_status=publish&numberposts='.$numberposts.'&offset='.$offset.'&order='.$order.'&orderby='.$orderby.'&include='.$include.'&year='.$y.'&monthnum='.$m.'&day='.$d.'&exclude='.get_the_ID().','.$exclude.'&meta_key='.$meta_key.$mode);
+
+    foreach ($post as $item){
+        $im = wp_get_attachment_image_src(get_post_thumbnail_id($item->ID),'cat-img',true);
+        $date = date('Y.m.d',strtotime(get_post($item->ID)->post_date));
+        $update = date('Y.m.d',strtotime(get_post($item->ID)->post_modified));
+        $echo .= $type=='custom' ? '<div class="mypost"><a href="'.get_permalink($item->ID).'"><img src="'.$im[0].'"><div class="mypost__title"></a>【関連】&nbsp;<a href="'.get_permalink($item->ID).'">'.$item->post_title.'</a></div></div>'
+            : $head.'<a href="'.get_permalink($item->ID).'">'.$item->post_title.'</a>'.$tail;
+    }
+
+    return $echo;
 }
 add_shortcode('article','articleFunc');
+
+//jetpuckの機能を止める。
+function dequeue_devicepx() {
+wp_dequeue_script( 'devicepx' );
+}
+add_action( 'wp_enqueue_scripts', 'dequeue_devicepx', 20 );
+
+//jetpuckで人気記事
+function my_pop_list( $target_days, $n ) {
+	$i = 0;
+	$args = array( 'days'=>$target_days, 'limit'=>$n+2 );
+	$top_posts = stats_get_csv( 'postviews', $args );
+	echo "<ol>\n";
+	foreach ( $top_posts as $value ) {
+		$my_id = $value['post_id']; //投稿ID取得
+		if ( $my_id != 0 && $my_id != get_the_ID() && get_post_type($my_id) == 'post' ) { //homeと現在のページは除外で、投稿のみ
+			if( has_post_thumbnail($my_id) ) { //サムネイルの有無
+				$pop_img = get_the_post_thumbnail( $my_id, thumbnail, array('alt'=>get_the_title($my_id)) );
+			} else {
+				$pop_img = '<img src="noimage.png" width="100" height="100" />';
+			}
+			echo '<li><div class="content-thum"><a href="'.$value['post_permalink'].'">'.$pop_img.'</a></div><div class="content-main"><a href="'.$value['post_permalink'].'">'.$value['post_title'].'</a>('.$value['views']."views)</div></li>\n";
+			$i++;
+			if ( $i >= $n ) { break; } //指定数を超えたら終了
+		}	
+	}
+	echo "</ol>\n";
+}

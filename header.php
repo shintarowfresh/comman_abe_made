@@ -30,7 +30,6 @@
 <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico" type="image/vnd.microsoft.icon">
 <link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico" type="image/vnd.microsoft.icon">
 
-
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
 <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
@@ -51,6 +50,7 @@
 
 
 <?php wp_head(); ?>
+
 
 
 <!--[if lt IE 9]>
@@ -106,7 +106,7 @@
             <img class="load" src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon-loading.gif" alt="ローディング">
 
             <!--ヘッダー部分-->
-            <div class="heda">
+            <div class="head">
 
                 <div class="variable">
                     <a class="panel_btn  nonmover" href="javascript:void(0)"><span class="panel_btn_icon" return false;></span></a>
