@@ -1358,12 +1358,10 @@ nav.menu .blog a:before {
   height: 500px;
   margin-bottom: 2em;
   overflow: hidden;
+  text-align: center;
 }
 .social .sns-section:last-child {
   margin-bottom: 0;
-}
-.social .sns-section .fb_iframe_widget, .social .sns-section .fb_iframe_widget[style], .social .sns-section .fb_iframe_widget iframe[style], .social .sns-section .fb_iframe_widget span {
-  width: 100% !important;
 }
 .social .sns-section > img {
   margin: 0 auto;

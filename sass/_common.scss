@@ -1445,6 +1445,7 @@ nav.menu {
         height: 500px;
         @include mb;
         overflow: hidden;
+        text-align: center;
 
 
         &:first-child {
@@ -1456,7 +1457,6 @@ nav.menu {
         }
 
         .fb_iframe_widget, .fb_iframe_widget[style], .fb_iframe_widget iframe[style], .fb_iframe_widget span {
-            width:100% !important;
         }
 
         >img {
