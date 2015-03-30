@@ -216,6 +216,11 @@ $author_badge = get_field('author_badge', 'user_'. $author_id ); // image field,
 
                 <p>この記事は「<?php the_category(' '); ?>」カテゴリーです。</p>
 
+                <div class="each-auther">
+                <?php if ($author_id == "7" ) :?>
+                <?php endif ;?>
+                </div>
+
                 <div class="fb-like scale" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
 
                 <?php else: ?>
