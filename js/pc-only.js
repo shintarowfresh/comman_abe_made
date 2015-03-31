@@ -25,7 +25,8 @@ $(window).on('load', function () {
                 visibleBottom = scrollTop + windowHeight,
                 targetBottom = targetPosition.top + targetHeight,
                 footerPosition = footer.position(),
-                footerTop = footerPosition.top;
+                footerTop = footerPosition.top,
+			   windowPos = $(window).scrollTop();
 
             if (subHeight > mainHeight) {
                 jQuery('.main').height(subHeight);
@@ -39,17 +40,16 @@ $(window).on('load', function () {
                         'position': 'fixed',
                         'bottom': visibleBottom - footerTop + 'px'
                     });
-
-                } else {
+				}
+				else {
 
                     target.css({
                         'position': 'fixed',
                         'bottom': 0
                     });
                 }
-
-            } else {
-
+            } 
+			else {
                 target.css({
                     'position': 'static'
                 });
