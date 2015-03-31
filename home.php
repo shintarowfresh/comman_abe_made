@@ -24,62 +24,13 @@ get_header(); ?>
 
        <div class="inner">
 
-           <h2>世界のウェブサイトの数は1000000000を突破しました。</h2>
-
-           <div class="social-btn">
-               <ul>
-                   <li class="tt"><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja">ツイート</a></li>
-                   <li class="ff"><div class="fb-like" data-href="https://www.facebook.com/comman.inc" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div></li>
-                   <li class="gg"><div class="g-plusone" data-annotation="inline" data-width="300"></div></li>
-               </ul>
-           </div>
-
-           <p>ちなみにこれ「10<strong>おく</strong>」です。</p>
-
-           <p><a href="http://www.afpbb.com/articles/-/3026121">世界のウェブサイト数、10億件を突破　写真1枚　国際ニュース：AFPBB News</a></p>
-
-           <h3><i class="fa fa-comment-o"></i> 10億サイト！？　今からホームページを作ってももう遅い？　そんなことはありません。</h3>
-
-           <h3><i class="fa fa-comment-o"></i> あなたのページはネットの中で主張できていますか？　確認できていますか？</h3>
-
-           <p>インターネットの歴史は<strong>まだまだ浅い</strong>んです。</p>
-
-           <p>webの進化はすさまじいですが、それでもwebを使っての実践的な発信は<strong class="good">始まったばかり。</strong></p>
-
-           <p>もしあなたが<strong class="bad">乗り遅れてしまった</strong>と感じているのであれば、<strong class="good">問題ありません。</strong></p>
-
-           <p><strong>するっと手になじんで、更新しやすく、制作会社だけに頼らないwebページ運営が可能だったら</strong>、webでもっとワクワク出来ませんか？</p>
-
-           <h4 class="balloon">こんなお悩み、もってませんか？？</h4>
-
-           <ul class="problem">
-               <li><i class="fa fa-check-square-o"></i> webページを作りたいけど、誰に頼んでいいかわからない！　<strong>しっかり作ってサポートしてくれる人は誰？</strong></li>
-               <li><i class="fa fa-check-square-o"></i> webページを管理する人と上手くコミュニケーション出来ない。<strong>何を言っているのかわからない！</strong></li>
-               <li><i class="fa fa-check-square-o"></i> web担当者の<strong>モチベーションが落ちている！</strong></li>
-           </ul>
-
-           <p>とっても多いお悩みですが、解決するのは<strong class="bad">意外と大変</strong>ですよね。</p>
-
-           <p>webをとりまくアレコレさえクリアーできれば、<strong>あなたはあなたの得意で生産的なことに時間をもっと使えるはずです。</strong></p>
-
-           <h3><i class="fa fa-question-circle"></i> カンマンは何ができるの？　他とどう違うの？</h3>
-
-           <p>カンマンはホームページ制作・システム開発の分野で<strong class="good">16年の実績</strong>がある徳島のホームページ制作会社です。</p>
-
-           <p>webページを作ることはもちろん、運用や集客面でのサポートも、また、ネットを使って起きたトラブルにもトータルでサポート出来る確かな技術力をもってます。</p>
-
-           <p>このホームページにはサンプルをたくさん用意しました。</p>
-
-           <p>サンプルを見てビビッと来るものがあれば<a href="/contact/">簡単なフォーム</a>よりお問い合わせ下さい。<a href="/works/#other">webサイト作成以外のご相談</a>もお気軽にどうぞ。</p>
-
-           <h4 class="balloon">お電話にてお問い合わせのお客様へ</h4>
-
-           <h4><strong><i class="fa fa-phone"></i> 088 - 611 - 2333</strong> 「ホームページを見て電話しました」</h4>
-
-           <p>あなたのwebを使った発信のお手伝いが出来れば幸いです。</p>
-
-           <a class="btn__works" href="/message/">カンマンについて、より詳しく <i class="fa fa-arrow-circle-o-right"></i></a>
-           <a class="btn__works" href="/contact/">フォームからお問い合わせを送る <i class="fa fa-arrow-circle-o-right"></i></a>
+         <?php
+          $post_2785 = get_post(2785);
+          $content = $post_2785->post_content;
+          $content = apply_filters('the_content', $content);
+          $content = str_replace(']]>', ']]&gt;', $content);
+          echo $content;
+          ?>
 
        </div>
     </div><!--/.read-first-->
