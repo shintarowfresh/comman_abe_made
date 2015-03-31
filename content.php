@@ -152,11 +152,17 @@ $author_badge = get_field('author_badge', 'user_'. $author_id ); // image field,
                 if( !empty($location) ):
                 ?>
 
-                <h2>お店の情報「<?php the_field('shop-name'); ?>」さん</h2>
+                <h2>スポット情報！「<?php the_field('shop-name'); ?>」</h2>
 
                 <div class="shareHtmlFrame clearfix">
 
-                    <span class="shareThumb"><a href="<?php the_field('shop-link'); ?>" target="_blank"><img src="http://s.wordpress.com/mshots/v1/<?php urlencode( the_field('shop-link') ); ?>?w=300" class="shareThumbImg" border="0" alt="" /></a></span>
+
+                  <?PHP if( get_field('shop-link') ): ?>
+                  <span class="shareThumb"><a href="<?php the_field('shop-link'); ?>" target="_blank"><img src="http://s.wordpress.com/mshots/v1/<?php urlencode( the_field('shop-link') ); ?>?w=300" class="shareThumbImg" border="0" alt="" /></a></span>
+                  <?PHP elseif( get_field('spot-photo') ): ?>
+                  <span class="shareThumb"><img src="<?php the_field('spot-photo'); ?>" /></span>
+                  <?php endif ;?>
+
 
                     <div class="sharemain">
 
