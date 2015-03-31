@@ -1,4 +1,4 @@
-    $(window).on('load', function () {
+$(window).on('load', function () {
     var contentHeight = jQuery("html, body").height(),
         windowHeight = jQuery(window).height(),
         target = jQuery('#sidebar').find('.fix'),
