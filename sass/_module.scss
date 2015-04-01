@@ -7,6 +7,10 @@
 .shareHtmlFrame {
     margin: 0 0 2em;
 
+    hr {
+      display:none;
+    }
+
     .shareThumb {
         float: left;
         margin: 0 1em 0 0;
@@ -458,6 +462,7 @@
         .app-screen {
           display:block;
           text-align:center;
+          clear:both;
 
           img {
             margin:0 auto;

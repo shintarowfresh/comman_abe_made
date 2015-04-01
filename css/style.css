@@ -2820,6 +2820,9 @@ ul.foot_navi li a {
 .shareHtmlFrame {
   margin: 0 0 2em;
 }
+.shareHtmlFrame hr {
+  display: none;
+}
 .shareHtmlFrame .shareThumb {
   float: left;
   margin: 0 1em 0 0;
@@ -3202,6 +3205,7 @@ ul.foot_navi li a {
 .apphtml .app-screen {
   display: block;
   text-align: center;
+  clear: both;
 }
 .apphtml .app-screen img {
   margin: 0 auto;

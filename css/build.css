@@ -3748,6 +3748,10 @@ ul.foot_navi li a
 {
     margin: 0 0 2em;
 }
+.shareHtmlFrame hr
+{
+    display: none;
+}
 .shareHtmlFrame .shareThumb
 {
     float: left;
@@ -4270,6 +4274,7 @@ ul.foot_navi li a
 .apphtml .app-screen
 {
     display: block;
+    clear: both;
 
     text-align: center;
 }
