@@ -3194,6 +3194,18 @@ ul.foot_navi li a {
 .apphtml .appinfo span {
   display: block;
 }
+.apphtml .appinfo:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.apphtml .app-screen {
+  display: block;
+  text-align: center;
+}
+.apphtml .app-screen img {
+  margin: 0 auto;
+}
 .apphtml .app-ss {
   clear: both;
   background: #f9f9f9;

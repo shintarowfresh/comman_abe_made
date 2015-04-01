@@ -447,6 +447,21 @@
             span {
                 display: block;
             }
+
+            &:after {
+              content:"";
+              display:block;
+              clear:both;
+            }
+        }
+
+        .app-screen {
+          display:block;
+          text-align:center;
+
+          img {
+            margin:0 auto;
+          }
         }
 
     .app-ss {

@@ -4260,6 +4260,23 @@ ul.foot_navi li a
 {
     display: block;
 }
+.apphtml .appinfo:after
+{
+    display: block;
+    clear: both;
+
+    content: '';
+}
+.apphtml .app-screen
+{
+    display: block;
+
+    text-align: center;
+}
+.apphtml .app-screen img
+{
+    margin: 0 auto;
+}
 .apphtml .app-ss
 {
     clear: both;
