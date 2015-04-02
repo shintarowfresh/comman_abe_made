@@ -591,7 +591,70 @@
     }
 }
 
+/* カエレバ */
+.kaerebalink-box {
+  border: 1px solid #d5d5d5;
+  padding: 1em;
+  background: #f2f2f2;
+  margin-bottom: 2em;
 
+  .kaerebalink-image {
+    float: left;
+width: 140px;
+    img {
+      max-width:100%;
+      height:auto;
+    }
+	}
+	.kaerebalink-info {
+    margin-left: 160px;
+
+    a {
+      text-text-decoration:none;
+    }
+
+		.kaerebalink-name {
+
+			.kaerebalink-powered-date {
+        font-size:.7em;
+
+        a {
+          color:#666;
+        }
+			}
+		}
+		.kaerebalink-detail {
+		}
+		.kaerebalink-link1 {
+      margin-top:1em;
+
+			.shoplinkrakuten,
+      .shoplinkamazon {
+        display:inline-block;
+
+        a {
+          padding: 1em 2em;
+          background: #BD0000;
+          display: inline-block;
+          text-decoration: none;
+          color: #fff;
+          border-radius:3px;
+          font-weight:bold;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  margin: 0 8px 8px 0;
+        }
+			}
+			.shoplinkamazon {
+        a {
+          background: #FC9A18;
+        }
+			}
+		}
+	}
+	.booklink-footer {
+	}
+}
 
 @import "icon/*.png";
 

@@ -4403,6 +4403,74 @@ ul.foot_navi li a
     border-top: 1px solid #638199;
 }
 
+/* カエレバ */
+.kaerebalink-box
+{
+    margin-bottom: 2em;
+    padding: 1em;
+
+    border: 1px solid #d5d5d5;
+    background: #f2f2f2;
+}
+.kaerebalink-box .kaerebalink-image
+{
+    float: left;
+
+    width: 140px;
+}
+.kaerebalink-box .kaerebalink-image img
+{
+    max-width: 100%;
+    height: auto;
+}
+.kaerebalink-box .kaerebalink-info
+{
+    margin-left: 160px;
+}
+.kaerebalink-box .kaerebalink-info a
+{
+    text-text-decoration: none;
+}
+.kaerebalink-box .kaerebalink-info .kaerebalink-name .kaerebalink-powered-date
+{
+    font-size: .7em;
+}
+.kaerebalink-box .kaerebalink-info .kaerebalink-name .kaerebalink-powered-date a
+{
+    color: #666;
+}
+.kaerebalink-box .kaerebalink-info .kaerebalink-link1
+{
+    margin-top: 1em;
+}
+.kaerebalink-box .kaerebalink-info .kaerebalink-link1 .shoplinkrakuten,
+.kaerebalink-box .kaerebalink-info .kaerebalink-link1 .shoplinkamazon
+{
+    display: inline-block;
+}
+.kaerebalink-box .kaerebalink-info .kaerebalink-link1 .shoplinkrakuten a,
+.kaerebalink-box .kaerebalink-info .kaerebalink-link1 .shoplinkamazon a
+{
+    font-weight: bold;
+
+    display: inline-block;
+
+    margin: 0 8px 8px 0;
+    padding: 1em 2em;
+
+    text-decoration: none;
+
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: 3px;
+    background: #bd0000;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+}
+.kaerebalink-box .kaerebalink-info .kaerebalink-link1 .shoplinkamazon a
+{
+    background: #fc9a18;
+}
+
 .icon-fb
 {
     background-position: 0 0;
