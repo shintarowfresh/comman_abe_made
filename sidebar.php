@@ -27,18 +27,6 @@
             <a href="/category/staff-blog/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/banner/blog.jpg" alt="スタッフブログ"></a>
         </aside>
 
-        <?php if( is_single() ) :?>
-        <aside>
-        <div class="side-fav-posts">
-            <h3><i class="fa fa-trophy"></i> 人気記事ランキング</h3>
-
-            <?php my_pop_list( 3, 5 ); ?>
-
-        </div>
-        </aside>
-        <?php endif ;?>
-
-
         <aside>
             <a href="http://www.comman.co.jp/tag/%E3%81%86%E3%81%95%E3%81%8E/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/banner/sano.jpg" alt="さのさんはウサギ愛がすごい"></a>
         </aside>
