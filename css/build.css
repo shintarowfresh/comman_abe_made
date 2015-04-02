@@ -3147,7 +3147,7 @@ ul.foot_navi li a
 
     border: 2px solid #c62828;
     border-radius: 2px;
-    background-size: 50%;
+    background-position: 50%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
 }
 .single .cta h3
