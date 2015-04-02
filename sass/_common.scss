@@ -2613,6 +2613,7 @@ ul.foot_navi {
         border: 2px solid $main;
         @include border-radius(2px);
         @include box-shadow(0 2px 8px rgba(0, 0, 0, 0.08));
+        background-size:50%;
 
         h3 {
             font-weight: 900;
