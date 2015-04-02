@@ -12,7 +12,7 @@
             <div class="inner">
 
                 <div class="sns-section">
-                  
+
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/sns-tw-head.jpg" alt="カンマンのTwitter">
                     <a class="twitter-timeline" href="https://twitter.com/konkatsusns/lists/comman-staff" data-widget-id="555579654145200128">https://twitter.com/konkatsusns/lists/comman-staffのツイート</a>
                 </div>
@@ -318,9 +318,7 @@
 <script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
 
 <?php
-
 $location = get_field('shop-location');
-
 if( !empty($location) ):
 ?>
 
@@ -348,7 +346,7 @@ if( !empty($location) ):
 
             // vars
             var args = {
-                zoom        : 16,
+                zoom        : 13,
                 center        : new google.maps.LatLng(0, 0),
                 mapTypeId    : google.maps.MapTypeId.ROADMAP,
                 draggable: false,
