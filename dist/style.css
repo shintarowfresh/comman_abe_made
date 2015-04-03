@@ -3277,7 +3277,7 @@ ul.foot_navi li a {
 
 .mypost {
   width: 300px;
-  border: 1px solid #638199;
+  border: 1px solid #d5d5d5;
   overflow: hidden;
   position: relative;
   margin: 2em 0;
@@ -3291,9 +3291,15 @@ ul.foot_navi li a {
   color: #fff;
   font-weight: bold;
 }
+.mypost .mypost__thum {
+  overflow: hidden;
+}
 .mypost .mypost__title {
   padding: 1em;
-  border-top: 1px solid #638199;
+  border-top: 1px solid #d5d5d5;
+}
+.mypost .mypost__title a {
+  text-decoration: none;
 }
 
 /* カエレバ */
