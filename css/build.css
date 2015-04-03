@@ -5575,6 +5575,113 @@ ul.foot_navi li a
     {
         display: inline-block;
     }
+
+    .category.category-staff-blog .content
+    {
+        background: #e4e0e0;
+    }
+    .category.category-staff-blog.archive article
+    {
+        overflow: hidden;
+
+        margin-bottom: 2em;
+        padding: 0;
+
+        border: 1px solid #d5d5d5;
+    }
+    .category.category-staff-blog .content-thum
+    {
+        position: relative;
+
+        float: none;
+        overflow: hidden;
+
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+
+        background: #fff;
+    }
+    .category.category-staff-blog .content-main
+    {
+        float: none;
+        overflow: hidden;
+
+        width: 100%;
+        margin-left: 0;
+        padding: 30px;
+
+        background: #fff;
+    }
+    .category.category-staff-blog .feat-posts a
+    {
+        transition: all .6s ease-in-out;
+        transition-duration: .6s;
+    }
+    .category.category-staff-blog .feat-posts ul
+    {
+        overflow: hidden;
+
+        margin-right: -20px;
+    }
+    .category.category-staff-blog .feat-posts ul li
+    {
+        position: relative;
+
+        float: left;
+
+        width: 23.3%;
+        margin-right: 20px;
+    }
+    .category.category-staff-blog .feat-posts ul li .feat-posts__thum
+    {
+        overflow: hidden;
+    }
+    .category.category-staff-blog .feat-posts ul li .feat-posts__thum img
+    {
+        z-index: 0;
+    }
+    .category.category-staff-blog .feat-posts ul li .feat-posts__title
+    {
+        position: absolute;
+        z-index: 100;
+        top: 0;
+
+        width: 100%;
+        height: 100%;
+
+        transition: all .6s ease-in-out;
+        transition-duration: .6s;
+
+        opacity: 0;
+
+        filter: alpha(opacity=0);
+        background: #c62828;
+    }
+    .category.category-staff-blog .feat-posts ul li .feat-posts__title h2
+    {
+        font-size: 1.2em;
+        font-weight: bold;
+
+        position: relative;
+        top: 50%;
+
+        margin: 0;
+        margin-top: -50px;
+        padding: 10px;
+
+        color: #fff;
+    }
+    .category.category-staff-blog .feat-posts a:hover
+    {
+        opacity: 1;
+        filter: alpha(opacity=100);
+    }
+    .category.category-staff-blog .feat-posts a:hover .feat-posts__title
+    {
+        opacity: .95;
+        filter: alpha(opacity=95);
+    }
 }
 /* ブレイクポイント調整用 */
 @media screen and (min-width: 1100px)

@@ -931,6 +931,95 @@
         display: inline-block;
     }
 
+  .category.category-staff-blog {
+
+    .content {
+      background:$bg-color;
+    }
+
+    &.archive article {
+      overflow: hidden;
+      padding: 0;
+      border: 1px solid #d5d5d5;
+      margin-bottom: 2em;
+    }
+
+    .content-thum {
+      position: relative;
+      float: none;
+      width: 100%;
+      max-width: 100%;
+      padding: 0px;
+      overflow:hidden;
+      background:#fff;
+    }
+
+    .content-main {
+      float: none;
+      width: 100%;
+      margin-left: 0;
+      background:#fff;
+      overflow: hidden;
+      padding: 30px;
+    }
+
+    .feat-posts {
+      a {
+        transition:all .6s ease-in-out;
+        transition-duration: .6s;
+      }
+
+      ul {
+        margin-right: -20px;
+        overflow: hidden;
+
+        li {
+          width: 23.3%;
+          float: left;
+          margin-right: 20px;
+          position:relative;
+
+          .feat-posts__thum {
+            overflow:hidden;
+            img {
+              z-index:0;
+            }
+          }
+          .feat-posts__title {
+            position: absolute;
+            top: 0;
+            z-index: 100;
+            opacity:0;
+            background:$main;
+            transition:all .6s ease-in-out;
+            transition-duration: .6s;
+            height:100%;
+            width:100%;
+
+            h2 {
+              color:#fff;
+              padding:10px;
+              margin: 0;
+              position: relative;
+              top: 50%;
+              margin-top: -50px;
+              font-size:1.2em;
+              font-weight:bold;
+            }
+          }
+        }
+      }
+
+      a:hover {
+        opacity:1;
+
+        .feat-posts__title {
+          opacity:.95;
+        }
+      }
+    }
+  }
+
 }//950
 
 

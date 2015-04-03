@@ -4173,6 +4173,80 @@ ul.foot_navi li a {
   .member > ul > li:last-child {
     display: inline-block;
   }
+
+  .category.category-staff-blog .content {
+    background: #e4e0e0;
+  }
+  .category.category-staff-blog.archive article {
+    overflow: hidden;
+    padding: 0;
+    border: 1px solid #d5d5d5;
+    margin-bottom: 2em;
+  }
+  .category.category-staff-blog .content-thum {
+    position: relative;
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    padding: 0px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .category.category-staff-blog .content-main {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    background: #fff;
+    overflow: hidden;
+    padding: 30px;
+  }
+  .category.category-staff-blog .feat-posts a {
+    transition: all .6s ease-in-out;
+    transition-duration: .6s;
+  }
+  .category.category-staff-blog .feat-posts ul {
+    margin-right: -20px;
+    overflow: hidden;
+  }
+  .category.category-staff-blog .feat-posts ul li {
+    width: 23.3%;
+    float: left;
+    margin-right: 20px;
+    position: relative;
+  }
+  .category.category-staff-blog .feat-posts ul li .feat-posts__thum {
+    overflow: hidden;
+  }
+  .category.category-staff-blog .feat-posts ul li .feat-posts__thum img {
+    z-index: 0;
+  }
+  .category.category-staff-blog .feat-posts ul li .feat-posts__title {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    opacity: 0;
+    background: #c62828;
+    transition: all .6s ease-in-out;
+    transition-duration: .6s;
+    height: 100%;
+    width: 100%;
+  }
+  .category.category-staff-blog .feat-posts ul li .feat-posts__title h2 {
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+    position: relative;
+    top: 50%;
+    margin-top: -50px;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  .category.category-staff-blog .feat-posts a:hover {
+    opacity: 1;
+  }
+  .category.category-staff-blog .feat-posts a:hover .feat-posts__title {
+    opacity: .95;
+  }
 }
 /* ブレイクポイント調整用 */
 @media screen and (min-width: 1100px) {
