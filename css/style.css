@@ -3353,6 +3353,40 @@ ul.foot_navi li a {
   background: #FC9A18;
 }
 
+/* blog */
+.faceLinkIconBox {
+  margin-top: 30px;
+}
+.faceLinkIconBox .cnt {
+  position: relative;
+  float: left;
+  margin-top: 30px;
+  padding-left: 15px;
+}
+.faceLinkIconBox .cnt:before {
+  display: block;
+  top: 0px;
+  position: absolute;
+  transform: scale(0.8);
+  transition: 0.3s;
+}
+.faceLinkIconBox .cnt.bando:before {
+  content: url(../img/blog/faceIcon/linkIconFaceBando.png);
+}
+.faceLinkIconBox .cnt.ogawa:before {
+  top: -55px;
+  content: url(../img/blog/faceIcon/linkIconFaceOgawa.png);
+}
+.faceLinkIconBox .cnt:hover:before {
+  top: -60px;
+  transform: scale(1);
+  transition: 0.3s;
+}
+.faceLinkIconBox .cnt:hover.ogawa:before {
+  top: -100px;
+  content: url(../img/blog/faceIcon/linkIconFaceOgawa.png);
+}
+
 .icon-fb {
   background-position: 0 0;
 }

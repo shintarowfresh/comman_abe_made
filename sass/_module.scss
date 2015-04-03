@@ -664,6 +664,44 @@ width: 140px;
 	}
 }
 
+/* blog */
+
+.faceLinkIconBox {
+    margin-top: 30px;
+    .cnt {
+        position: relative;
+        float: left;
+        margin-top: 30px;
+        padding-left: 15px;
+        &:before{
+                display: block;
+                top: 0px;
+                position: absolute;
+                transform: scale(0.8);
+                transition: 0.3s;
+        }
+        &.bando:before {
+            content: url(../img/blog/faceIcon/linkIconFaceBando.png);
+        }
+        &.ogawa:before {
+            top: -55px;
+            content: url(../img/blog/faceIcon/linkIconFaceOgawa.png);
+        }
+        &:hover {
+            &:before {
+                top: -60px;
+                transform: scale(1);
+                transition: 0.3s;
+            }
+            &.ogawa:before {
+                top: -100px;
+                content: url(../img/blog/faceIcon/linkIconFaceOgawa.png);
+            }
+        }
+    }
+}
+
+
 @import "icon/*.png";
 
 @include all-icon-sprites;
