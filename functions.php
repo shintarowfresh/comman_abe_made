@@ -294,7 +294,7 @@ function articleFunc($atts) {
         $im = wp_get_attachment_image_src(get_post_thumbnail_id($item->ID),'cat-img',true);
         $date = date('Y.m.d',strtotime(get_post($item->ID)->post_date));
         $update = date('Y.m.d',strtotime(get_post($item->ID)->post_modified));
-        $echo .= $type=='custom' ? '<div class="mypost"><a href="'.get_permalink($item->ID).'"><img src="'.$im[0].'"><div class="mypost__title"></a>【関連】&nbsp;<a href="'.get_permalink($item->ID).'">'.$item->post_title.'</a></div></div>'
+        $echo .= $type=='custom' ? '<div class="mypost"><div class="mypost__thum"><a href="'.get_permalink($item->ID).'"><img src="'.$im[0].'"></a></div><div class="mypost__title"><a href="'.get_permalink($item->ID).'">【関連】&nbsp;<a href="'.get_permalink($item->ID).'">'.$item->post_title.'</a></div></div>'
             : $head.'<a href="'.get_permalink($item->ID).'">'.$item->post_title.'</a>'.$tail;
     }
 
