@@ -4255,7 +4255,7 @@ ul.foot_navi li a {
     position: relative;
     top: 50%;
     margin-top: -50px;
-    font-size: 1em;
+    font-size: .9em;
     font-weight: bold;
   }
   .category.category-staff-blog .feat-posts a:hover {
