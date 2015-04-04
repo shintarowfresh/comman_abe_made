@@ -12,7 +12,7 @@
         <?php if(has_post_thumbnail()): ?>
 
           <a href="<?php the_permalink(); ?>">
-          <?php if( is_mobile() ) :?>
+          <?php if( wp_is_mobile() ) :?>
           <?php the_post_thumbnail(); ?>
           <?php else :?>
           <?php the_post_thumbnail('single-eye'); ?>
