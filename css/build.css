@@ -2944,6 +2944,13 @@ ul.foot_navi li a
 
     color: #111;
 }
+.single .content-main .title:before
+{
+    display: block;
+    clear: both;
+
+    content: '';
+}
 .single .content-thum,
 .single .content-main
 {

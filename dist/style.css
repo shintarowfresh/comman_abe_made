@@ -2183,6 +2183,11 @@ ul.foot_navi li a {
   color: #111;
   font-weight: bold;
 }
+.single .content-main .title:before {
+  content: "";
+  display: block;
+  clear: both;
+}
 .single .content-thum, .single .content-main {
   float: none;
   width: 100%;

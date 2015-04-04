@@ -2434,6 +2434,12 @@ ul.foot_navi {
             font-size: 2em;
             color: #111;
             font-weight: bold;
+
+            &:before {
+              content:"";
+              display:block;
+              clear:both;
+            }
         }
     }
 
