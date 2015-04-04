@@ -964,23 +964,38 @@
     }
 
     .feat-posts {
+
+      .feat-posts__inner {
+        padding: 1.64%;
+        background: #fff;
+
+        h3 {
+          text-align: center;
+          margin-bottom: 10px;
+          font-weight: bold;
+          color:$main;
+        }
+      }
+
       a {
         transition:all .6s ease-in-out;
         transition-duration: .6s;
       }
 
       ul {
-        margin-right: -20px;
+        margin-right: -2.03%;
         overflow: hidden;
+        padding:5px;
 
         li {
-          width: 23.3%;
+          width: 22.97%;
           float: left;
-          margin-right: 20px;
+          margin-right: 2.03%;
           position:relative;
 
           .feat-posts__thum {
             overflow:hidden;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
             img {
               z-index:0;
             }
@@ -1003,7 +1018,7 @@
               position: relative;
               top: 50%;
               margin-top: -50px;
-              font-size:1.2em;
+              font-size:1em;
               font-weight:bold;
             }
           }

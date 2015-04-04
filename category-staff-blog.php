@@ -12,6 +12,10 @@ get_header(); ?>
 
     <div class="feat-posts inner">
 
+      <div class="feat-posts__inner">
+
+        <h3>注目の記事！</h3>
+
       <ul>
         <?php $args = array(
           'posts_per_page'=>'4',
@@ -39,8 +43,8 @@ get_header(); ?>
     Not Found.
 <?php endif; ?>
       </ul>
-
-    </div>
+    </div><!-- /.feat-posts__inner -->
+    </div><!-- /.feat-posts -->
 
 <?php endif ; //モバイルの時は出さない ?>
 
