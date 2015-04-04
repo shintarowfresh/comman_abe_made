@@ -40,6 +40,7 @@
             ?>
         </div><!--/.content-thum-->
         <?php endif ;?>
+
         <?php endif ; ?>
 
         <div itemscope itemtype="http://schema.org/Article" class="content-main">
@@ -47,8 +48,8 @@
             <header>
 
                 <?php
-$author_id = get_the_author_meta( 'ID' );
-$author_badge = get_field('author_badge', 'user_'. $author_id ); // image field, return type = "Image Object"
+                $author_id = get_the_author_meta( 'ID' );
+                $author_badge = get_field('author_badge', 'user_'. $author_id );
                 ?>
 
                 <time itemprop="datePublished" content="<?php the_time( 'Y-n-j' ); ?>"><span class="entry-date date updated"><?php the_time( 'Y.n.j' ); ?></span></time>
@@ -69,7 +70,6 @@ $author_badge = get_field('author_badge', 'user_'. $author_id ); // image field,
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </h2>
                 <?php endif ;?>
-
 
                 <div class="single__meta-data">
 
@@ -96,23 +96,25 @@ $author_badge = get_field('author_badge', 'user_'. $author_id ); // image field,
 
                 </div>
 
-
-
             </header>
 
             <section itemprop="articleBody">
 
                 <?php if ( is_singular() ) : ?>
 
+                <?php if( get_field('youtube') ): ?>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/<?php the_field('youtube'); ?>?showinfo=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <?php else :?>
                 <div class="content-thum">
                     <?php echo get_the_post_thumbnail($post->ID, 'single-eye',array('data-lazy' => 'false')); ?>
                 </div><!--/.content-thum-->
-
+                <?php endif; ?>
 
                 <?php if(strpos(get_the_content(),'id="more-')) :
                 global $more; $more = 0;
                 the_content(''); ?>
-
 
                 <?php
                 $mycontent = $post->post_content;

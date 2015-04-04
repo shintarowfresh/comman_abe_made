@@ -557,6 +557,7 @@ p .btn__works {
   position: relative;
   width: 100%;
   padding-top: 56.25%;
+  margin-bottom: 2em;
 }
 .video iframe {
   position: absolute;
