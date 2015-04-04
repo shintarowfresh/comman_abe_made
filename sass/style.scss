@@ -126,8 +126,6 @@
         }
     }
 
-
-
     .top-copy {
         display: block;
         color: #000;
@@ -917,7 +915,9 @@
         /*正方形のバナー*/
         height: 300px;
     }
-
+    .banner--square-wrap {
+        overflow: hidden;
+    }
 
     .single .share ul li {
         margin-right: 15px;
@@ -952,6 +952,10 @@
       padding: 0px;
       overflow:hidden;
       background:#fff;
+
+        img {
+            width: 100%;
+        }
     }
 
     .content-main {
@@ -1034,6 +1038,14 @@
       }
     }
   }
+
+    .kaerebalink-image {
+        float: left;
+        width: 150px;
+    }
+    .kaerebalink-info {
+        margin-left: 170px;
+    }
 
 }//950
 
@@ -1141,6 +1153,15 @@
         font-size: 1.2em;
     }
 
+    .three-two {
+        overflow: hidden;
+
+        .main {
+            margin-right: 30px;
+            width: 39em;
+        }
+    }
+
     .img_container {
         height: 300px;
     }
@@ -1154,6 +1175,17 @@
 
 @media screen and (min-width: 1600px) {
 
+    .inner {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .three-two {
+        .main {
+            width: 55em;
+        }
+    }
+
     .variable {
         width: 1600px;
     }
@@ -1164,12 +1196,19 @@
         margin: 0 auto;
     }
 
-    .inner {
-        max-width: 1280px;
-    }
-
     .top-copy {
         font-size: 1.4em;
+    }
+
+    .single section {
+        margin-right: 120px;
+    }
+    .single .content-main .title {
+        font-size: 2.3em;
+    }
+
+    .single .content-main .one-more-post .title {
+        font-size: 1.5em;
     }
 
 }

@@ -4431,7 +4431,7 @@ ul.foot_navi li a
 {
     float: left;
 
-    width: 140px;
+    width: 90px;
 }
 .kaerebalink-box .kaerebalink-image img
 {
@@ -4440,7 +4440,7 @@ ul.foot_navi li a
 }
 .kaerebalink-box .kaerebalink-info
 {
-    margin-left: 160px;
+    margin-left: 105px;
 }
 .kaerebalink-box .kaerebalink-info a
 {
@@ -5568,6 +5568,11 @@ ul.foot_navi li a
         height: 300px;
     }
 
+    .banner--square-wrap
+    {
+        overflow: hidden;
+    }
+
     .single .share ul li
     {
         margin-right: 15px;
@@ -5608,6 +5613,10 @@ ul.foot_navi li a
         padding: 0;
 
         background: #fff;
+    }
+    .category.category-staff-blog .content-thum img
+    {
+        width: 100%;
     }
     .category.category-staff-blog .content-main
     {
@@ -5708,6 +5717,18 @@ ul.foot_navi li a
         opacity: .95;
         filter: alpha(opacity=95);
     }
+
+    .kaerebalink-image
+    {
+        float: left;
+
+        width: 150px;
+    }
+
+    .kaerebalink-info
+    {
+        margin-left: 170px;
+    }
 }
 /* ブレイクポイント調整用 */
 @media screen and (min-width: 1100px)
@@ -5803,6 +5824,16 @@ ul.foot_navi li a
         margin-left: 2.1em;
     }
 
+    .three-two
+    {
+        overflow: hidden;
+    }
+    .three-two .main
+    {
+        width: 39em;
+        margin-right: 30px;
+    }
+
     .img_container
     {
         height: 300px;
@@ -5815,6 +5846,17 @@ ul.foot_navi li a
 }
 @media screen and (min-width: 1600px)
 {
+    .inner
+    {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .three-two .main
+    {
+        width: 55em;
+    }
+
     .variable
     {
         width: 1600px;
@@ -5827,14 +5869,24 @@ ul.foot_navi li a
         margin: 0 auto;
     }
 
-    .inner
-    {
-        max-width: 1280px;
-    }
-
     .top-copy
     {
         font-size: 1.4em;
+    }
+
+    .single section
+    {
+        margin-right: 120px;
+    }
+
+    .single .content-main .title
+    {
+        font-size: 2.3em;
+    }
+
+    .single .content-main .one-more-post .title
+    {
+        font-size: 1.5em;
     }
 }
 .lt-ie9 .fa,

@@ -3316,14 +3316,14 @@ ul.foot_navi li a {
 }
 .kaerebalink-box .kaerebalink-image {
   float: left;
-  width: 140px;
+  width: 90px;
 }
 .kaerebalink-box .kaerebalink-image img {
   max-width: 100%;
   height: auto;
 }
 .kaerebalink-box .kaerebalink-info {
-  margin-left: 160px;
+  margin-left: 105px;
 }
 .kaerebalink-box .kaerebalink-info a {
   text-text-decoration: none;
@@ -4167,6 +4167,10 @@ ul.foot_navi li a {
     height: 300px;
   }
 
+  .banner--square-wrap {
+    overflow: hidden;
+  }
+
   .single .share ul li {
     margin-right: 15px;
   }
@@ -4196,6 +4200,9 @@ ul.foot_navi li a {
     padding: 0px;
     overflow: hidden;
     background: #fff;
+  }
+  .category.category-staff-blog .content-thum img {
+    width: 100%;
   }
   .category.category-staff-blog .content-main {
     float: none;
@@ -4263,6 +4270,15 @@ ul.foot_navi li a {
   }
   .category.category-staff-blog .feat-posts a:hover .feat-posts__title {
     opacity: .95;
+  }
+
+  .kaerebalink-image {
+    float: left;
+    width: 150px;
+  }
+
+  .kaerebalink-info {
+    margin-left: 170px;
   }
 }
 /* ブレイクポイント調整用 */
@@ -4335,6 +4351,14 @@ ul.foot_navi li a {
     font-size: 1.2em;
   }
 
+  .three-two {
+    overflow: hidden;
+  }
+  .three-two .main {
+    margin-right: 30px;
+    width: 39em;
+  }
+
   .img_container {
     height: 300px;
   }
@@ -4344,6 +4368,15 @@ ul.foot_navi li a {
   }
 }
 @media screen and (min-width: 1600px) {
+  .inner {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .three-two .main {
+    width: 55em;
+  }
+
   .variable {
     width: 1600px;
   }
@@ -4354,12 +4387,20 @@ ul.foot_navi li a {
     margin: 0 auto;
   }
 
-  .inner {
-    max-width: 1280px;
-  }
-
   .top-copy {
     font-size: 1.4em;
+  }
+
+  .single section {
+    margin-right: 120px;
+  }
+
+  .single .content-main .title {
+    font-size: 2.3em;
+  }
+
+  .single .content-main .one-more-post .title {
+    font-size: 1.5em;
   }
 }
 .lt-ie9 .fa,

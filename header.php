@@ -99,7 +99,7 @@
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-        <div id="fb-root"></div>
+    <div id="fb-root"></div>
 
         <div id="wrapper" class="wrapper">
 
@@ -189,7 +189,7 @@
                 </div><!--/.variable-->
             </div><!--/.panel-->
 
-            <?php if (is_home())://トップページのみ ?>
+            <?php if (is_home()): //トップページのみ ?>
 
             <!--お知らせバナー-->
             <!-- <div class="head_top_news content_full">

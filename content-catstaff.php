@@ -7,17 +7,17 @@
 
     <article <?php post_class(); ?>>
 
-      <div class="content-thum">
+        <div class="content-thum">
 
-        <?php if(has_post_thumbnail()): ?>
+            <?php if(has_post_thumbnail()): ?>
 
-          <a href="<?php the_permalink(); ?>">
-          <?php if( wp_is_mobile() ) :?>
-          <?php the_post_thumbnail(); ?>
-          <?php else :?>
-          <?php the_post_thumbnail('single-eye'); ?>
-          <?php endif ;?>
-          </a>
+            <a href="<?php the_permalink(); ?>">
+                <?php if( wp_is_mobile() ) :?>
+                <?php the_post_thumbnail(); ?>
+                <?php else :?>
+                <?php the_post_thumbnail('single-eye'); ?>
+                <?php endif ;?>
+            </a>
 
             <?php
             $days = 1;
@@ -29,7 +29,7 @@
             }
             ?>
 
-        <?php else :?>
+            <?php else :?>
 
             <a href="<?php the_permalink(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/no-thum.png" alt="サムネイルはありません"></a>
 
@@ -43,9 +43,9 @@
             }
             ?>
 
-        <?php endif ;?>
+            <?php endif ;?>
 
-      </div><!--/.content-thum-->
+        </div><!--/.content-thum-->
 
         <div itemscope itemtype="http://schema.org/Article" class="content-main">
 
@@ -79,7 +79,7 @@
 
             <section itemprop="articleBody">
 
-                    <?php the_excerpt(); // 記事の抜粋を表示 ?>
+                <?php the_excerpt(); // 記事の抜粋を表示 ?>
 
             </section>
 

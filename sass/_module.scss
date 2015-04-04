@@ -608,35 +608,35 @@
 
   .kaerebalink-image {
     float: left;
-width: 140px;
+width: 90px;
     img {
       max-width:100%;
       height:auto;
     }
-	}
-	.kaerebalink-info {
-    margin-left: 160px;
+    }
+    .kaerebalink-info {
+    margin-left: 105px;
 
     a {
       text-text-decoration:none;
     }
 
-		.kaerebalink-name {
+        .kaerebalink-name {
 
-			.kaerebalink-powered-date {
+            .kaerebalink-powered-date {
         font-size:.7em;
 
         a {
           color:#666;
         }
-			}
-		}
-		.kaerebalink-detail {
-		}
-		.kaerebalink-link1 {
+            }
+        }
+        .kaerebalink-detail {
+        }
+        .kaerebalink-link1 {
       margin-top:1em;
 
-			.shoplinkrakuten,
+            .shoplinkrakuten,
       .shoplinkamazon {
         display:inline-block;
 
@@ -652,16 +652,16 @@ width: 140px;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   margin: 0 8px 8px 0;
         }
-			}
-			.shoplinkamazon {
+            }
+            .shoplinkamazon {
         a {
           background: #FC9A18;
         }
-			}
-		}
-	}
-	.booklink-footer {
-	}
+            }
+        }
+    }
+    .booklink-footer {
+    }
 }
 
 /* blog */
