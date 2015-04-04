@@ -536,7 +536,6 @@ p {
     position: relative;
     width: 100%;
     padding-top: 56.25%;
-    margin-bottom: 2em;
 
     iframe {
         position: absolute;
@@ -545,6 +544,10 @@ p {
         width: 100% !important;
         height: 100% !important;
     }
+}
+
+.single .video {
+    margin-bottom: 2em;
 }
 
 .clearfix {

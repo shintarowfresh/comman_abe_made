@@ -809,7 +809,6 @@ p .btn__works
     position: relative;
 
     width: 100%;
-    margin-bottom: 2em;
     padding-top: 56.25%;
 }
 .video iframe
@@ -820,6 +819,11 @@ p .btn__works
 
     width: 100% !important;
     height: 100% !important;
+}
+
+.single .video
+{
+    margin-bottom: 2em;
 }
 
 .clearfix:after

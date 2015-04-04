@@ -1,6 +1,6 @@
 <?php
 /**
- * スタッフブログアーカイブ用テンプレート
+ * スタッフブログアーカイブ用ループテンプレート
  */
  ?>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
@@ -15,7 +15,15 @@
                 <?php if( wp_is_mobile() ) :?>
                 <?php the_post_thumbnail(); ?>
                 <?php else :?>
-                <?php the_post_thumbnail('single-eye'); ?>
+
+                    <?php if( get_field('youtube') ): ?>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/<?php the_field('youtube'); ?>?showinfo=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                    <?php else :?>
+                    <?php the_post_thumbnail('single-eye'); ?>
+                    <?php endif; ?>
+
                 <?php endif ;?>
             </a>
 
