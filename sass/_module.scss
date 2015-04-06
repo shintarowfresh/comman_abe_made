@@ -701,6 +701,29 @@ width: 90px;
     }
 }
 
+.sec-mein-head {
+    padding: .3em .7em;
+    background: darken( $bg-color , 9% );
+    color: #000;
+    font-weight: bold;
+    border-radius: 3px;
+    color: $l-brown;
+}
+
+/*サイドバーのカテゴリー*/
+.side-cat-list {
+    ul {
+        li {
+            a {
+                text-decoration: none;
+                height: 3em;
+                display: block;
+                line-height: 3em;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+}
 
 @import "icon/*.png";
 

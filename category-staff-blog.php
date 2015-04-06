@@ -12,7 +12,7 @@ get_header(); ?>
 
         <div class="feat-posts__inner">
 
-            <h3>注目の記事！</h3>
+            <h3 class="sec-mein-head">注目の記事！</h3>
 
             <div class="feat-arousel">
                 <?php $args = array(
@@ -41,6 +41,7 @@ get_header(); ?>
                 Not Found.
                 <?php endif; ?>
             </div>
+
         </div><!-- /.feat-posts__inner -->
 
     </div><!-- /.feat-posts -->
@@ -50,6 +51,8 @@ get_header(); ?>
         <div class="inner">
 
             <div class="main">
+
+                <h3 class="sec-mein-head">新着記事！</h3>
 
                 <div class="container">
 

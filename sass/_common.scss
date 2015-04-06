@@ -562,8 +562,6 @@ p {
         h3 {
             text-align: center;
             margin-bottom: 10px;
-            font-weight: bold;
-            color:$main;
         }
     }
     .slick-slide {
@@ -1498,6 +1496,7 @@ nav.menu {
         color: #fff;
         padding: 5px;
     }
+
     aside {
         margin-bottom: 1.5em;
         &:last-child {
@@ -1505,6 +1504,11 @@ nav.menu {
         }
         img {
             margin: 0 auto;
+        }
+
+        &.side-search,
+        .smb{
+            margin-bottom: 3em;
         }
     }
 }
@@ -2164,6 +2168,7 @@ ul.foot_navi {
         border: none;
         background: #fff;
         font-size: 1.3em;
+        border: 1px solid #d5d5d5;
     }
 
     #searchsubmit {

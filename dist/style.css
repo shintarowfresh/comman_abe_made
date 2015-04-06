@@ -571,8 +571,6 @@ p .btn__works {
 .feat-posts .feat-posts__inner h3 {
   text-align: center;
   margin-bottom: 10px;
-  font-weight: bold;
-  color: #c62828;
 }
 .feat-posts .slick-slide {
   padding: 10px;
@@ -1402,6 +1400,10 @@ nav.menu .blog a:before {
 .sub aside img {
   margin: 0 auto;
 }
+.sub aside.side-search,
+.sub aside .smb {
+  margin-bottom: 3em;
+}
 
 /*トップページのSNS連携*/
 .social {
@@ -1953,6 +1955,7 @@ ul.foot_navi li a {
   border: none;
   background: #fff;
   font-size: 1.3em;
+  border: 1px solid #d5d5d5;
 }
 #searchform #searchsubmit {
   height: 4em;
@@ -3423,6 +3426,24 @@ ul.foot_navi li a {
 .faceLinkIconBox .cnt:hover.ogawa:before {
   top: -100px;
   content: url(../img/blog/faceIcon/linkIconFaceOgawa.png);
+}
+
+.sec-mein-head {
+  padding: .3em .7em;
+  background: #cec8c8;
+  color: #000;
+  font-weight: bold;
+  border-radius: 3px;
+  color: #f9f9f9;
+}
+
+/*サイドバーのカテゴリー*/
+.side-cat-list ul li a {
+  text-decoration: none;
+  height: 3em;
+  display: block;
+  line-height: 3em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .icon-fb {
