@@ -531,7 +531,7 @@ p {
 * Description of section, whether or not it has media queries, etc.
 */
 
-.feat-arousel  {
+.feat-carousel  {
     a {
         text-decoration: none;
     }
@@ -2165,10 +2165,11 @@ ul.foot_navi {
 #searchform {
     input#s {
         padding: 10px;
-        border: none;
         background: #fff;
         font-size: 1.3em;
         border: 1px solid #d5d5d5;
+        width: 200px;
+        margin: 0;
     }
 
     #searchsubmit {

@@ -14,9 +14,12 @@ get_header(); ?>
 
             <h3 class="sec-mein-head">注目の記事！</h3>
 
-            <div class="feat-arousel">
+            <div class="feat-carousel">
                 <?php $args = array(
-                    'posts_per_page'=>'8',
+                    'date_query' => array(
+                        array('after'=>'-２ weeks')
+                    ),
+                    'posts_per_page'=>'-1',
                     'tag' => 'feat',
                 ); ?>
 

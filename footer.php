@@ -187,7 +187,7 @@
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/bower_components/slick.js/slick/slick.min.js"></script>
 
 <script>
-    $('.feat-arousel').slick({
+    $('.feat-carousel').slick({
         dots: true,
         infinite: false,
         speed: 300,

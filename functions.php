@@ -240,12 +240,12 @@ function is_mobile() {
 }
 
 //検索結果を操作
-function SearchFilter($query) {
+/*function SearchFilter($query) {
     if ( !is_admin() && $query->is_main_query() && $query->is_search() ) {
         $query->set('post_type', 'work');
     }
 }
-add_action( 'pre_get_posts','SearchFilter' );
+add_action( 'pre_get_posts','SearchFilter' );*/
 
 
 //bodyのクラスにページスラッグ

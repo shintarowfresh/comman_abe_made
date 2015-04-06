@@ -552,17 +552,17 @@ p .btn__works {
 *
 * Description of section, whether or not it has media queries, etc.
 */
-.feat-arousel a {
+.feat-carousel a {
   text-decoration: none;
 }
-.feat-arousel .feat-posts__thum {
+.feat-carousel .feat-posts__thum {
   overflow: hidden;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
 }
-.feat-arousel .feat-posts__thum img {
+.feat-carousel .feat-posts__thum img {
   z-index: 0;
 }
-.feat-arousel .feat-posts__title h2 {
+.feat-carousel .feat-posts__title h2 {
   text-decoration: none;
   font-size: .9em;
   margin-top: 5px;
@@ -1952,10 +1952,11 @@ ul.foot_navi li a {
 
 #searchform input#s {
   padding: 10px;
-  border: none;
   background: #fff;
   font-size: 1.3em;
   border: 1px solid #d5d5d5;
+  width: 200px;
+  margin: 0;
 }
 #searchform #searchsubmit {
   height: 4em;

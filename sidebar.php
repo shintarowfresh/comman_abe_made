@@ -42,6 +42,15 @@
 
         </aside>
 
+        <?php if (is_single()) :?>
+        <aside>
+            <div class="side-fav-posts">
+               <h3>人気記事ランキング！</h3>
+                <?php my_pop_list( 7, 5 ); ?>
+            </div>
+        </aside>
+        <?php endif ;?>
+
         <aside class="banner--square">
 
             <div class="banner--square-wrap">
