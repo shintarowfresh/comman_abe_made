@@ -9,37 +9,9 @@
 
         <div class="content-thum">
 
-            <?php if(has_post_thumbnail()): ?>
-
             <a href="<?php the_permalink(); ?>">
-                <?php if( wp_is_mobile() ) :?>
-                <?php the_post_thumbnail(); ?>
-                <?php else :?>
-
-                    <?php if( get_field('youtube') ): ?>
-                <div class="video">
-                    <iframe src="https://www.youtube.com/embed/<?php the_field('youtube'); ?>?showinfo=0" frameborder="0" allowfullscreen></iframe>
-                </div>
-                    <?php else :?>
                     <?php the_post_thumbnail('single-eye'); ?>
-                    <?php endif; ?>
-
-                <?php endif ;?>
             </a>
-
-            <?php
-            $days = 1;
-            $today = date_i18n('U');
-            $entry = get_the_time('U');
-            $elapsed = date('U',($today - $entry)) / 43200;
-            if( $days > $elapsed ){
-                echo '<span class="new">本日更新！</span>';
-            }
-            ?>
-
-            <?php else :?>
-
-            <a href="<?php the_permalink(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/no-thum.png" alt="サムネイルはありません"></a>
 
             <?php
             $days = 1;
@@ -50,8 +22,6 @@
                 echo '<span class="new">本日更新！</span>';
             }
             ?>
-
-            <?php endif ;?>
 
         </div><!--/.content-thum-->
 

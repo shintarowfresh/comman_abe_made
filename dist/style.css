@@ -552,6 +552,35 @@ p .btn__works {
 *
 * Description of section, whether or not it has media queries, etc.
 */
+.feat-arousel a {
+  text-decoration: none;
+}
+.feat-arousel .feat-posts__thum {
+  overflow: hidden;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+}
+.feat-arousel .feat-posts__thum img {
+  z-index: 0;
+}
+.feat-arousel .feat-posts__title h2 {
+  text-decoration: none;
+  font-size: .9em;
+  margin-top: 5px;
+}
+
+.feat-posts .feat-posts__inner h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #c62828;
+}
+.feat-posts .slick-slide {
+  padding: 10px;
+}
+.feat-posts .slick-dots {
+  position: static;
+}
+
 /*埋め込みビデオのレスポンシブ*/
 .video {
   position: relative;
@@ -4215,65 +4244,6 @@ ul.foot_navi li a {
     background: #fff;
     overflow: hidden;
     padding: 30px;
-  }
-  .category.category-staff-blog .feat-posts .feat-posts__inner {
-    padding: 1.64%;
-    background: #fff;
-  }
-  .category.category-staff-blog .feat-posts .feat-posts__inner h3 {
-    text-align: center;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #c62828;
-  }
-  .category.category-staff-blog .feat-posts a {
-    transition: all .6s ease-in-out;
-    transition-duration: .6s;
-  }
-  .category.category-staff-blog .feat-posts ul {
-    margin-right: -2.03%;
-    overflow: hidden;
-    padding: 5px;
-  }
-  .category.category-staff-blog .feat-posts ul li {
-    width: 22.97%;
-    float: left;
-    margin-right: 2.03%;
-    position: relative;
-  }
-  .category.category-staff-blog .feat-posts ul li .feat-posts__thum {
-    overflow: hidden;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
-  }
-  .category.category-staff-blog .feat-posts ul li .feat-posts__thum img {
-    z-index: 0;
-  }
-  .category.category-staff-blog .feat-posts ul li .feat-posts__title {
-    position: absolute;
-    top: 0;
-    z-index: 100;
-    opacity: 0;
-    background: #c62828;
-    transition: all .6s ease-in-out;
-    transition-duration: .6s;
-    height: 100%;
-    width: 100%;
-  }
-  .category.category-staff-blog .feat-posts ul li .feat-posts__title h2 {
-    color: #fff;
-    padding: 10px;
-    margin: 0;
-    position: relative;
-    top: 50%;
-    margin-top: -50px;
-    font-size: .9em;
-    font-weight: bold;
-  }
-  .category.category-staff-blog .feat-posts a:hover {
-    opacity: 1;
-  }
-  .category.category-staff-blog .feat-posts a:hover .feat-posts__title {
-    opacity: .95;
   }
 
   .kaerebalink-image {

@@ -531,6 +531,50 @@ p {
 * Description of section, whether or not it has media queries, etc.
 */
 
+.feat-arousel  {
+    a {
+        text-decoration: none;
+    }
+
+        .feat-posts__thum {
+            overflow:hidden;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+
+            img {
+                z-index:0;
+            }
+        }
+
+        .feat-posts__title {
+
+            h2 {
+                text-decoration: none;
+                font-size: .9em;
+                margin-top: 5px;
+            }
+        }
+}
+
+.feat-posts {
+
+    .feat-posts__inner {
+
+        h3 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color:$main;
+        }
+    }
+    .slick-slide {
+        padding: 10px;
+    }
+    .slick-dots {
+        position: static;
+    }
+}
+
+
 /*埋め込みビデオのレスポンシブ*/
 .video {
     position: relative;

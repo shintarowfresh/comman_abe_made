@@ -21,6 +21,7 @@
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/sns-fb-head.jpg" alt="カンマンのfacebookページ">
                     <div class="fb-page" data-href="https://www.facebook.com/comman.inc?ref=bookmarks" data-width="500" data-height="400" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"></div>
                 </div>
+
             </div>
 
         </div><!--/.social-->
@@ -95,7 +96,6 @@
        <!--トップへのボタン-->
         <a id="to_top" class="btn__full to_top nonmover" href="#"><i class="fa fa-angle-double-up"></i> Top</a>
 
-
         <div class="foot foot-copy">
             <div class="inner">
 
@@ -109,7 +109,6 @@
 
             </div><!--/.inner-->
         </div><!--/.foot-copy-->
-
 
         <div class="foot__info">
             <div class="inner">
@@ -173,6 +172,7 @@
                 <div class="tar"><span>2000-<?php echo date('Y'); ?> <i class="fa fa-copyright"></i> Comman.inc</span></div>
             </div>
         </div>
+
     </div><!--/.footer-->
 </div><!--/.wrapper-->
 
@@ -181,9 +181,52 @@
 <?php wp_footer(); ?>
 
 
+
 <?php if( is_post_type_archive('work') || is_tax() || is_archive() ) :?>
 
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/bower_components/slick.js/slick/slick.min.js"></script>
+
+<script>
+    $('.feat-arousel').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
+
+</script>
+
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.autopager-1.0.0.js"></script>
+
     <script>
         //  最大ページ数取得
         var maxpage = <?php echo $wp_query->max_num_pages; ?>;
@@ -305,17 +348,18 @@
     </script>
 
 <?php endif ;?>
+
+
 <script type="text/javascript">// <![CDATA[
     $script([
         "//platform.twitter.com/widgets.js",
         "//connect.facebook.net/ja_JP/all.js#xfbml=1",
         "https://apis.google.com/js/plusone.js",
-        "//b.st-hatena.com/js/bookmark_button.js"], function() {
+        "//b.st-hatena.com/js/bookmark_button.js",
+        "https://widgets.getpocket.com/v1/j/btn.js"
+    ], function() {
     })
     // ]]></script>
-
-
-<script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
 
 <?php
 $location = get_field('shop-location');
@@ -487,7 +531,6 @@ if( !empty($location) ):
 
 <?php endif; ?>
 
-
 <script type="text/javascript">
     jQuery(document).ready(function(){
         jQuery('a[href^=http]')
@@ -495,7 +538,7 @@ if( !empty($location) ):
         .attr({target:"_blank"})
         .addClass("nonmover")
         ;})
-</script>
+</script><!--外部リンクをフェードさせない-->
 
     </body>
 </html>
