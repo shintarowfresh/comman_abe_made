@@ -30,7 +30,6 @@
 <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico" type="image/vnd.microsoft.icon">
 <link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico" type="image/vnd.microsoft.icon">
 
-
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
 <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
@@ -39,14 +38,7 @@
 <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
 <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
 
-
-<?php if(!is_mobile()):?>
-<!--[if (gte IE 9)|!(IE)]><!-->
-<?php wp_enqueue_script( 'pc-only',get_template_directory_uri() . '/js/pc-only.js', array('jquery'), null, true ); ?>
-<?php wp_enqueue_script( 'fade',get_template_directory_uri() . '/js/jquery.fademover.js', array('jquery'), null, true ); ?>
-<!--<![endif]-->
 <?php wp_enqueue_script( 'modernizr',get_template_directory_uri() . '/js/modernizr.js', array('jquery'), null ); ?>
-<?php endif ;?>
 
     <?php if(is_category('staff-blog')):?>
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/bower_components/slick.js/slick/slick-theme.css">

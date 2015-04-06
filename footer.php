@@ -178,8 +178,13 @@
 
 
 
-<?php wp_footer(); ?>
 
+<!--[if (gte IE 9)|!(IE)]><!-->
+<?php wp_enqueue_script( 'pc-only',get_template_directory_uri() . '/js/pc-only.js', array('jquery'), null, true ); ?>
+<?php wp_enqueue_script( 'fade',get_template_directory_uri() . '/js/jquery.fademover.js', array('jquery'), null, true ); ?>
+<!--<![endif]-->
+
+<?php wp_footer(); ?>
 
 
 <?php if( is_post_type_archive('work') || is_tax() || is_archive() ) :?>
