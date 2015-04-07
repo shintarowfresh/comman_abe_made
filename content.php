@@ -224,8 +224,9 @@
 
                 <p>この記事は「<?php the_category(' '); ?>」カテゴリーです。</p>
 
-                <div class="each-auther">
+                <div class="each-auther mb">
                 <?php if ($author_id == "7" ) :?>
+                    <a href="http://line.me/R/shop/detail/1047708" target="_blank"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/banner/lines_fotter.jpg" alt="LINE阿波弁スタンプ"></a>
                 <?php endif ;?>
                 </div>
 

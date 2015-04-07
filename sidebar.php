@@ -70,6 +70,16 @@
 
         </aside>
 
+        <aside>
+
+            <div class="banner--square-wrap">
+
+                <a href="https://store.line.me/stickershop/product/1047708/ja"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/banner/lines_side.jpg" alt="阿波弁LINEスタンプ"></a>
+
+            </div>
+
+        </aside>
+
         <aside class="banner--square">
 
             <div class="banner--square-wrap">

@@ -11,3 +11,11 @@
 .btn-on {
     opacity: 1 !important;
 }
+
+.mb-only {
+    display: block;
+
+    @media screen and (min-width: 950px) {
+        display: none;
+    }
+}

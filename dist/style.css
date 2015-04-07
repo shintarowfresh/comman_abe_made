@@ -2860,6 +2860,10 @@ ul.foot_navi li a {
   padding-bottom: 100%;
 }
 
+.mb {
+  margin-bottom: 2em;
+}
+
 /*sharehtml*/
 .shareHtmlFrame {
   margin: 0 0 2em;
@@ -4409,4 +4413,13 @@ ul.foot_navi li a {
 
 .btn-on {
   opacity: 1 !important;
+}
+
+.mb-only {
+  display: block;
+}
+@media screen and (min-width: 950px) {
+  .mb-only {
+    display: none;
+  }
 }
