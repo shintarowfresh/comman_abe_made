@@ -17,45 +17,6 @@ $(window).on('load', function () {
         windowHeight = jQuery(this).height();
     });
 
-    jQuery('#fix').each(function () {
-
-        jQuery(window).on('scroll', function () {
-
-            var scrollTop = jQuery(this).scrollTop(),
-                visibleBottom = scrollTop + windowHeight,
-                targetBottom = targetPosition.top + targetHeight,
-                footerPosition = footer.position(),
-                footerTop = footerPosition.top,
-			   windowPos = $(window).scrollTop();
-
-            if (subHeight > mainHeight) {
-                jQuery('.main').height(subHeight);
-            }
-
-            if (visibleBottom >= targetBottom) {
-
-                if (visibleBottom >= footerTop) {
-
-                    target.css({
-                        'position': 'fixed',
-                        'bottom': visibleBottom - footerTop + 'px'
-                    });
-				}
-				else {
-
-                    target.css({
-                        'position': 'fixed',
-                        'bottom': 0
-                    });
-                }
-            } 
-			else {
-                target.css({
-                    'position': 'static'
-                });
-            }
-        });
-    });
 });
 
 jQuery(document).ready(function () {
@@ -229,3 +190,89 @@ jQuery(document).ready(function () {
         });
     });
 });
+
+
+window.onload =function () {
+    sidebarFix();
+}
+/*  サイドバー追従
+----------------------------------------------- */
+function sidebarFix() {
+
+
+    var tarObj = $("#sidebar");//ターゲットサイドバー
+    tarObj.css({
+        "position":"absolute"
+    });
+    $(".three-two .sub").css({"position":"relative"});
+
+    //上下判定用
+    var start_pos = 0;
+
+    //移動範囲用
+    var moveLimitBox = $(".three-two .main");//上下範囲の目安
+    var moveLimitBoxMarginTop = parseInt( $(".three-two").css('margin-top'),10);
+    var limitPosTop = moveLimitBox.position().top;
+
+    //上スクロール時の余白
+    var topMargin = 30;
+
+    $(window).scroll(function(e){
+
+        var tarPosTop = tarObj.position()['top'];
+        var mainObj = $(".three-two .main");//サイドバーに付随するオブジェクト
+
+        /* スクロール量取得 */
+        winScrollTop = $(window).scrollTop();
+        /* windowの高さ */
+        winHeight = $(window).height();
+        /* windowの幅 */
+        winWidth = $(window).width();
+        /* windowの幅 */
+        sideBarStartWidth = 600;
+        if( winWidth < sideBarStartWidth ){ return; }
+
+        var current_pos = $(this).scrollTop();
+
+        /*  下スクロール
+        ----------------------------------------------- */
+        if (current_pos > start_pos) {
+
+            //スタート位置
+            //ウインドの全体の下部分 > ターゲットオブジェクトのお尻におっついたら
+            if( winScrollTop + winHeight > mainObj.position().top + tarObj.position().top +  tarObj.outerHeight()){
+                tarObj.css({"top": winScrollTop - ( tarObj.height() + mainObj.position().top - winHeight )  + "px" });
+            }
+
+            //ウインドの全体の下部分
+            //mainObjが下にたどり着いたら
+            if( winScrollTop - limitPosTop > mainObj.outerHeight() - winHeight  ){
+                tarObj.css({"top": mainObj.height() - tarObj.height() + "px" });
+            }
+
+
+        /*  上スクロール
+        ----------------------------------------------- */
+        } else {
+
+            if( winScrollTop - limitPosTop + topMargin > 0 ){
+
+                if( winScrollTop + topMargin < mainObj.position().top + tarObj.position().top ){
+
+                    tarObj.css({"top": winScrollTop - mainObj.position().top + topMargin + "px" });
+
+                }
+            }else {
+
+                tarObj.css({"top": "0px" });
+
+            }
+
+        }
+        
+        start_pos = current_pos;
+    });
+
+
+}
+
