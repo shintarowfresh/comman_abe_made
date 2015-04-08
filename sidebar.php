@@ -22,12 +22,16 @@
 
     <div id="fix" class="fix">
 
+        <?php if ( is_single() || is_category('staff-blog') ) :?>
+
         <aside class="side-cat-list">
             <h3 class="sec-mein-head">カテゴリ</h3>
             <ul>
                 <?php wp_list_categories('orderby=name&depth=2&exclude=1&title_li='); ?>
             </ul>
         </aside>
+
+        <?php endif ;?>
 
         <aside class="side-search">
             <?php get_search_form(); ?>
@@ -46,7 +50,7 @@
         <aside>
             <div class="side-fav-posts">
                <h3>人気記事ランキング！</h3>
-                <?php my_pop_list( 7, 5 ); ?>
+                <?php my_pop_list( 3, 5 ); ?>
             </div>
         </aside>
         <?php endif ;?>
