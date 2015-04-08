@@ -222,6 +222,10 @@
 
                 <?php if ( is_singular() ) : ?>
 
+                <?php if( get_field('referrers') ): ?>
+                <p>via.<?php the_field('referrers'); ?></p>
+                <?php endif; ?>
+
                 <p>この記事は「<?php the_category(' '); ?>」カテゴリーです。</p>
 
                 <div class="each-auther mb">
