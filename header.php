@@ -188,10 +188,10 @@
             <?php if (is_home()): //トップページのみ ?>
 
             <!--お知らせバナー-->
-            <!-- <div class="head_top_news content_full">
+            <div class="head_top_news content_full">
                 <a href="/recruit/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/bosyu.png" alt="募集する">
                 <img class="news_banner_mobile" src="<?php echo get_stylesheet_directory_uri(); ?>/img/bannar_news_mobile.png" alt="プログラマー募集" /></a>
-            </div> -->
+            </div>
 
             <!--画像イメージ領域-->
             <div class="img_sec content_full">

@@ -395,10 +395,9 @@ if( !empty($location) ):
 
             // vars
             var args = {
-                zoom        : 13,
+                zoom        : 12,
                 center        : new google.maps.LatLng(0, 0),
                 mapTypeId    : google.maps.MapTypeId.ROADMAP,
-                draggable: false,
                 scrollwheel: false
             };
 
