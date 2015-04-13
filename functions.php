@@ -344,3 +344,18 @@ function posts_custom_id_columns($column_name, $id){
         	echo $id;
     }
 }
+
+//投稿者でもiframeが使えるように
+// フィルタの登録
+add_filter('content_save_pre','test_save_pre');
+ 
+function test_save_pre($content){
+    global $allowedposttags;
+ 
+    // iframeとiframeで使える属性を指定する
+    $allowedposttags['iframe'] = array('class' => array () , 'src'=>array() , 'width'=>array(),
+    'height'=>array() , 'frameborder' => array() , 'scrolling'=>array(),'marginheight'=>array(),
+    'marginwidth'=>array());
+ 
+    return $content;
+}

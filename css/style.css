@@ -1171,9 +1171,14 @@ nav.menu .blog a:before {
 }
 .content > p, .content table, .content .table, .content blockquote {
   margin-bottom: 2em;
+  border-left: 1px solid #c62828;
+  padding-left: 1em;
 }
 .content > p:last-child, .content table:last-child, .content .table:last-child, .content blockquote:last-child {
   margin-bottom: none;
+}
+.content blockquote h5 {
+  text-align: right;
 }
 .content .inner p, .content .inner ul {
   margin-bottom: 2em;

@@ -1638,6 +1638,9 @@ nav.menu .blog a:before
 .content blockquote
 {
     margin-bottom: 2em;
+    padding-left: 1em;
+
+    border-left: 1px solid #c62828;
 }
 .content > p:last-child,
 .content table:last-child,
@@ -1645,6 +1648,10 @@ nav.menu .blog a:before
 .content blockquote:last-child
 {
     margin-bottom: none;
+}
+.content blockquote h5
+{
+    text-align: right;
 }
 .content .inner p,
 .content .inner ul

@@ -1256,8 +1256,17 @@ nav.menu {
 
     >p , table , .table , blockquote {
         margin-bottom: 2em;
+        border-left: 1px solid $main;
+        padding-left: 1em;
+
         &:last-child {
             margin-bottom: none;
+        }
+    }
+
+    blockquote {
+        h5 {
+            text-align: right;
         }
     }
 
