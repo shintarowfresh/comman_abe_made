@@ -728,6 +728,14 @@ width: 90px;
     }
 }
 
+.kwout {
+    margin-bottom: 2em;
+
+    img {
+        display: inline-block;
+    }
+}
+
 @import "icon/*.png";
 
 @include all-icon-sprites;
