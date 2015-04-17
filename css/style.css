@@ -552,12 +552,19 @@ p .btn__works {
 *
 * Description of section, whether or not it has media queries, etc.
 */
+.feat-posts__icon {
+  position: absolute;
+  z-index: 200 !important;
+  max-width: 62px;
+}
+
 .feat-carousel a {
   text-decoration: none;
 }
 .feat-carousel .feat-posts__thum {
   overflow: hidden;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  position: relative;
 }
 .feat-carousel .feat-posts__thum img {
   z-index: 0;
@@ -2083,6 +2090,20 @@ ul.foot_navi li a {
   font-weight: bold;
   padding: 3px;
   font-size: .8em;
+  padding-right: 10px;
+}
+.new::after {
+  display: block;
+  content: "";
+  height: 1.6em;
+  width: 1em;
+  background: #c62828;
+  position: absolute;
+  top: 0;
+  left: 92%;
+  padding: 3px;
+  font-size: .8em;
+  transform: skewX(-20deg);
 }
 
 .content-main {
@@ -2206,6 +2227,9 @@ ul.foot_navi li a {
 }
 
 /*ブログsingle*/
+.single .content-main iframe {
+  max-width: 100%;
+}
 .single .content-main a[href^="https://github.com/"] {
   background: #c62828;
   color: #fff;

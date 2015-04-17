@@ -531,6 +531,12 @@ p {
 * Description of section, whether or not it has media queries, etc.
 */
 
+.feat-posts__icon {
+    position: absolute;
+    z-index: 200 !important;
+    max-width: 62px;
+}
+
 .feat-carousel  {
     a {
         text-decoration: none;
@@ -539,6 +545,7 @@ p {
         .feat-posts__thum {
             overflow:hidden;
             box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+            position: relative;
 
             img {
                 z-index:0;
@@ -2333,6 +2340,21 @@ ul.foot_navi {
     font-weight: bold;
     padding: 3px;
     font-size: .8em;
+    padding-right: 10px;
+
+    &::after {
+        display: block;
+        content: "";
+        height: 1.6em;
+        width: 1em;
+        background: $main;
+        position: absolute;
+        top: 0;
+        left: 92%;
+        padding: 3px;
+        font-size: .8em;
+        transform: skewX(-20deg);
+    }
 }
 
 .content-main {
@@ -2475,6 +2497,10 @@ ul.foot_navi {
 .single {
 
     .content-main {
+
+        iframe {
+            max-width: 100%;
+        }
 
         a[href^="https://github.com/"] {
             background: $main;

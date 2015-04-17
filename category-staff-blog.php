@@ -12,8 +12,6 @@ get_header(); ?>
 
         <div class="feat-posts__inner">
 
-            <h3 class="sec-mein-head">注目の記事！</h3>
-
             <div class="feat-carousel">
                 <?php $args = array(
                     'date_query' => array(
@@ -30,6 +28,7 @@ get_header(); ?>
                 <div>
                     <a href="<?php the_permalink(); ?>">
                         <div class="feat-posts__thum">
+                            <img class="feat-posts__icon" src="<?php echo get_stylesheet_directory_uri(); ?>/img/feat.png" alt="注目の記事">
                             <?php the_post_thumbnail('single-eye'); ?>
                         </div>
 
