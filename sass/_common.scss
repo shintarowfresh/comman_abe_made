@@ -2498,8 +2498,17 @@ ul.foot_navi {
 
     .content-main {
 
+        footer {
+            position: relative;
+            z-index: 500;
+        }
+
         iframe {
             max-width: 100%;
+
+            &.fb_iframe_widget_lift {
+                max-width: 450px;
+            }
         }
 
         a[href^="https://github.com/"] {

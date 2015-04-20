@@ -3007,9 +3007,18 @@ ul.foot_navi li a
 }
 
 /*ブログsingle*/
+.single .content-main footer
+{
+    position: relative;
+    z-index: 500;
+}
 .single .content-main iframe
 {
     max-width: 100%;
+}
+.single .content-main iframe.fb_iframe_widget_lift
+{
+    max-width: 450px;
 }
 .single .content-main a[href^='https://github.com/']
 {
