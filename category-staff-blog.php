@@ -15,7 +15,7 @@ get_header(); ?>
             <div class="feat-carousel">
                 <?php $args = array(
                     'date_query' => array(
-                        array('after'=>'-２ weeks')
+                        array('after'=>'-2 weeks')
                     ),
                     'posts_per_page'=>'-1',
                     'tag' => 'feat',
