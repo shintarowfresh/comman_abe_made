@@ -1049,6 +1049,60 @@ nav.menu {
     }
 }
 
+/*ブログヘッダー*/
+#blog-header {
+    background: $main;
+    margin-bottom: 2em;
+    text-align: center;
+    position: relative;
+    min-height: 45px;
+    opacity: 1;
+    transition: opacity .6s cubic-bezier(.57, 0, .47, 1) 0;
+    transition-duration: .6s;
+
+    &.fixed {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 999;
+        opacity: .9;
+
+        #blog-header-logo {
+            width: 130px;
+            right: 20px;
+        }
+
+        .blog-head-text {
+            opacity: 1;
+        }
+    }
+}
+
+#blog-header-logo {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    width: 92px;
+    transition: width .3s cubic-bezier(.31, .12, .64, 1.01) ,right .3s cubic-bezier(.31, .12, .64, 1.01) .3s;
+    transition-duration: .3s;
+}
+
+.blog-head-text {
+    position: absolute;
+    margin: auto;
+    left: 80px;
+    right: 0;
+    color: #fff;
+    font-size: .5em;
+    padding-top: 14px;
+    opacity: 0;
+    transition: opacity .6s cubic-bezier(.31, .12, .64, 1.01) .3s;
+    transition-duration: .6s;
+}
+
+
 .top-copy {
     display: none;
 }

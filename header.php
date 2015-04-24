@@ -218,6 +218,13 @@
             <div class="banner-sec">
             </div>
 
+            <?php elseif( is_category('staff-blog') ) :?>
+
+            <div id="blog-header">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/blog-head-logo.png" alt="かんマンのブログ！" id="blog-header-logo">
+                <h5 class="blog-head-text">カンマンのオウンドメディア</h5>
+            </div>
+
             <?php else :?>
 
             <?php

@@ -20,15 +20,31 @@ $(window).on('load', function () {
 });
 
 jQuery(document).ready(function () {
-    
+
+    var box = $("#blog-header");
+    var boxTop = box.offset().top;
+
+    $(window).scroll(function(){
+        if($(window).scrollTop() >= boxTop){
+
+            box.addClass("fixed");
+            $("body").css("margin-top","40px");
+
+        }else{
+
+            box.removeClass("fixed");
+            $("body").css("margin-top","0px");
+        }
+    });
+
     //ふわっとなる挙動
         jQuery('.content_full , .content ,#panel , #footer ,#breadcrumb').fadeMover({
             'effectType': 3,
             'outDelay' : '30',
             'nofadeOut': 'nonmover'
         });
-        
-        
+
+
 
     jQuery('.party-people').click(function () {
         jQuery('.cover').animate({
@@ -269,7 +285,7 @@ function sidebarFix() {
             }
 
         }
-        
+
         start_pos = current_pos;
     });
 
