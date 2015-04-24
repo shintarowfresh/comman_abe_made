@@ -1229,13 +1229,18 @@ nav.menu .blog a:before {
 .content > p, .content table, .content .table, .content blockquote {
   margin-bottom: 2em;
   border-left: 1px solid #c62828;
-  padding-left: 1em;
+  padding: 1.5em 1em .5em 2em;
+}
+.content > p p, .content table p, .content .table p, .content blockquote p {
+  font-size: 1.1em;
 }
 .content > p:last-child, .content table:last-child, .content .table:last-child, .content blockquote:last-child {
   margin-bottom: none;
 }
-.content blockquote h5 {
-  text-align: right;
+.content blockquote h5 a {
+  text-decoration: none;
+  font-size: .7em;
+  color: #908181;
 }
 .content .inner p, .content .inner ul {
   margin-bottom: 2em;
@@ -4345,7 +4350,7 @@ ul.foot_navi li a {
 
   .fix {
     width: 300px;
-    padding-bottom: 48px;
+    padding-bottom: 30px;
     display: block;
   }
 
@@ -4414,6 +4419,10 @@ ul.foot_navi li a {
 
   .kaerebalink-info {
     margin-left: 170px;
+  }
+
+  #next {
+    margin-bottom: 30px;
   }
 }
 /* ブレイクポイント調整用 */

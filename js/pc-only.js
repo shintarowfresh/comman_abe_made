@@ -21,21 +21,24 @@ $(window).on('load', function () {
 
 jQuery(document).ready(function () {
 
-    var box = $("#blog-header");
-    var boxTop = box.offset().top;
+    jQuery("#blog-header").each(function() {
+        var box = $("#blog-header");
+        var boxTop = box.offset().top;
 
-    $(window).scroll(function(){
-        if($(window).scrollTop() >= boxTop){
+        $(window).scroll(function(){
+            if($(window).scrollTop() >= boxTop){
 
-            box.addClass("fixed");
-            $("body").css("margin-top","40px");
+                box.addClass("fixed");
+                $("body").css("margin-top","40px");
 
-        }else{
+            }else{
 
-            box.removeClass("fixed");
-            $("body").css("margin-top","0px");
-        }
+                box.removeClass("fixed");
+                $("body").css("margin-top","0px");
+            }
+        });
     });
+
 
     //ふわっとなる挙動
         jQuery('.content_full , .content ,#panel , #footer ,#breadcrumb').fadeMover({
@@ -231,7 +234,7 @@ function sidebarFix() {
     var limitPosTop = moveLimitBox.position().top;
 
     //上スクロール時の余白
-    var topMargin = 30;
+    var topMargin = 65;
 
     $(window).scroll(function(e){
 

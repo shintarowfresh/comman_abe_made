@@ -1723,9 +1723,16 @@ nav.menu .blog a:before
 .content blockquote
 {
     margin-bottom: 2em;
-    padding-left: 1em;
+    padding: 1.5em 1em .5em 2em;
 
     border-left: 1px solid #c62828;
+}
+.content > p p,
+.content table p,
+.content .table p,
+.content blockquote p
+{
+    font-size: 1.1em;
 }
 .content > p:last-child,
 .content table:last-child,
@@ -1734,9 +1741,13 @@ nav.menu .blog a:before
 {
     margin-bottom: none;
 }
-.content blockquote h5
+.content blockquote h5 a
 {
-    text-align: right;
+    font-size: .7em;
+
+    text-decoration: none;
+
+    color: #908181;
 }
 .content .inner p,
 .content .inner ul
@@ -5826,7 +5837,7 @@ ul.foot_navi li a
         display: block;
 
         width: 300px;
-        padding-bottom: 48px;
+        padding-bottom: 30px;
     }
 
     /*お見積もり価格表調整*/
@@ -5916,6 +5927,11 @@ ul.foot_navi li a
     .kaerebalink-info
     {
         margin-left: 170px;
+    }
+
+    #next
+    {
+        margin-bottom: 30px;
     }
 }
 /* ブレイクポイント調整用 */

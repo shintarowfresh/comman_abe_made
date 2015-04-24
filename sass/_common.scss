@@ -1318,7 +1318,11 @@ nav.menu {
     >p , table , .table , blockquote {
         margin-bottom: 2em;
         border-left: 1px solid $main;
-        padding-left: 1em;
+        padding: 1.5em 1em .5em 2em;
+
+        p {
+            font-size: 1.1em;
+        }
 
         &:last-child {
             margin-bottom: none;
@@ -1327,7 +1331,11 @@ nav.menu {
 
     blockquote {
         h5 {
-            text-align: right;
+            a {
+                text-decoration: none;
+                font-size: .7em;
+                color: $d-brown;
+            }
         }
     }
 
