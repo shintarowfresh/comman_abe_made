@@ -30,6 +30,7 @@
 <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico" type="image/vnd.microsoft.icon">
 <link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico" type="image/vnd.microsoft.icon">
 
+
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
 <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
