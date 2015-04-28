@@ -353,7 +353,7 @@
 <script type="text/javascript">// <![CDATA[
     $script([
         "//platform.twitter.com/widgets.js",
-        "//connect.facebook.net/ja_JP/all.js#xfbml=1",
+        "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0",
         "https://apis.google.com/js/plusone.js",
         "//b.st-hatena.com/js/bookmark_button.js",
         "https://widgets.getpocket.com/v1/j/btn.js"
