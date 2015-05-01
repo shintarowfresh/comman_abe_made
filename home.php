@@ -24,6 +24,7 @@ get_header(); ?>
 
        <div class="inner">
 
+
          <?php
           $post_2785 = get_post(2785);
           $content = $post_2785->post_content;
