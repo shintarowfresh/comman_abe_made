@@ -21,7 +21,7 @@ get_header(); ?>
 
                 <h2><i class="fa fa-database"></i> <?php wp_title(''); ?></h2>
 
-            <?php elseif( is_auter() ) :?>
+            <?php elseif( is_author() ) :?>
 
                 <h2><i class="fa fa-database"></i> <?php wp_title(''); ?>の書いた記事一覧</h2>
 
