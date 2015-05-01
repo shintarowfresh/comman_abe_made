@@ -3987,11 +3987,11 @@ ul.foot_navi li a
     margin-bottom: .5em;
     padding: .5em;
 
-    content: '参照リンク';
+    content: '関連リンク';
     text-align: center;
 
-    color: #fff;
-    background: #908181;
+    color: rgba(198, 40, 40, .3);
+    background: rgba(144, 129, 129, .09);
 }
 .shareHtmlFrame:hover .shareTitle a
 {
@@ -4823,6 +4823,47 @@ ul.foot_navi li a
 .kwout img
 {
     display: inline-block;
+}
+
+.matome
+{
+    padding: 1.5em 1em;
+
+    border-radius: 3px;
+    background: rgba(198, 40, 40, .05);
+    box-shadow: 0 0 3px rgba(198, 40, 40, .3);
+}
+.matome li
+{
+    font-weight: bold;
+}
+
+.comman_peaple
+{
+    overflow: hidden;
+
+    padding: 1em;
+
+    border-radius: 3px;
+    background: #f2f2f2;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .17);
+}
+.comman_peaple img
+{
+    float: left;
+
+    width: 140px;
+    margin: 0 10px 10px 0;
+
+    border-radius: 50%;
+}
+.comman_peaple h5
+{
+    margin: 0 0 .6em;
+}
+.comman_peaple br
+{
+    display: none;
 }
 
 .icon-fb

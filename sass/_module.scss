@@ -14,13 +14,13 @@
     border-radius: 3px;
 
     &:before {
-        content: '参照リンク';
+        content:"関連リンク";
         display: block;
         text-align: center;
-        background: $d-brown;
+        background: rgba(144, 129, 129, 0.09);
         margin-bottom: .5em;
         padding: .5em;
-        color: #fff;
+        color: rgba($main , .3);
     }
 
     &:hover {
@@ -762,6 +762,40 @@ width: 90px;
 
     img {
         display: inline-block;
+    }
+}
+
+.matome {
+    background: rgba($main , .05);
+    padding: 1.5em 1em;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba($main , 0.3);
+
+    li {
+        font-weight: bold;
+    }
+}
+
+.comman_peaple {
+    background: #f2f2f2;
+    padding: 1em;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.17);
+    overflow: hidden;
+
+    img {
+        width: 140px;
+        margin: 0 10px 10px 0;
+        border-radius: 50%;
+        float: left;
+    }
+
+    h5 {
+        margin: 0 0 .6em;
+    }
+
+    br {
+        display: none;
     }
 }
 
