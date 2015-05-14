@@ -799,6 +799,45 @@ width: 90px;
     }
 }
 
+.content-matome {
+    padding: 1em;
+    margin-bottom: 2em;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgba($main , 0.3);
+
+    ol,
+    ul {
+        padding: 0 1em;
+        background: #fff;
+
+        li {
+            font-weight: bold;
+            padding-left: 1.5em;
+            position: relative;
+
+            &:after {
+                content: "\f046";
+                font-family: FontAwesome;
+                margin-right: 10px;
+                color: #CFCFCF;
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+}
+
+.single section .content-matome h3 {
+    font-weight: bold;
+    margin-top: 1em;
+    padding: 5px 5px 5px 10px;
+    border-right: none;
+    border-left: 2px solid $sub;
+    border-radius: 0;
+    background: rgba($sub , .05);
+}
+
 @import "icon/*.png";
 
 @include all-icon-sprites;

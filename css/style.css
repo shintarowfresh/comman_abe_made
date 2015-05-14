@@ -3621,6 +3621,44 @@ ul.foot_navi li a {
   display: none;
 }
 
+.content-matome {
+  padding: 1em;
+  margin-bottom: 2em;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 0 3px rgba(198, 40, 40, 0.3);
+}
+.content-matome ol,
+.content-matome ul {
+  padding: 0 1em;
+  background: #fff;
+}
+.content-matome ol li,
+.content-matome ul li {
+  font-weight: bold;
+  padding-left: 1.5em;
+  position: relative;
+}
+.content-matome ol li:after,
+.content-matome ul li:after {
+  content: "\f046";
+  font-family: FontAwesome;
+  margin-right: 10px;
+  color: #CFCFCF;
+  position: absolute;
+  left: 0;
+}
+
+.single section .content-matome h3 {
+  font-weight: bold;
+  margin-top: 1em;
+  padding: 5px 5px 5px 10px;
+  border-right: none;
+  border-left: 2px solid #638199;
+  border-radius: 0;
+  background: rgba(99, 129, 153, 0.05);
+}
+
 .icon-fb {
   background-position: 0 0;
 }
