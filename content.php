@@ -402,7 +402,7 @@
                                 $args = array(
                                     'post_type' => 'post',
                                     'post_status' => 'publish',
-                                    'meta_key' =>  'scc_share_count_total',
+                                    'meta_key' =>  'scc_share_count_hatebu',
                                     'orderby'  =>  'meta_value_num',
                                     'posts_per_page' => 5
                                 );
@@ -463,12 +463,12 @@
 
                         <ul>
                         <?php
-                    $args = array(
-                    'posts_per_page' => 5 ,
-                    'category' => 8
-                    );
-                    $myposts = get_posts( $args );
-                    foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+                        $args = array(
+                        'posts_per_page' => 5 ,
+                        'category' => 8
+                        );
+                        $myposts = get_posts( $args );
+                        foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 
                         <li>
 
