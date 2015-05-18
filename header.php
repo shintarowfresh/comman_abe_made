@@ -31,6 +31,12 @@
 <link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico" type="image/vnd.microsoft.icon">
 
 
+    <script type="text/javascript" async defer
+            src="https://apis.google.com/js/platform.js?publisherid=104507479293840026203">
+    </script>
+
+<link href="https://plus.google.com/104507479293840026203" rel="publisher" />
+
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
 <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
